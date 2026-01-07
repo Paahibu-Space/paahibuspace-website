@@ -1,5 +1,6 @@
 import PageHero from "@/components/sections/PageHero";
 import Testimonials from "@/components/sections/Testimonials";
+import ProgramOverview from "@/components/sections/ProgramOverview";
 import Button from "@/components/ui/Button";
 
 export default function GrowProgramPage() {
@@ -30,6 +31,13 @@ export default function GrowProgramPage() {
     },
   ];
 
+  const features = [
+    "Business Acceleration: Scale your startup with expert guidance.",
+    "Executive Coaching: 1-on-1 sessions with seasoned leaders.",
+    "Access to Capital: Connect with investors and funding opportunities.",
+    "Global Network: Join a community of high-achieving women.",
+  ];
+
   return (
     <>
       <PageHero
@@ -42,6 +50,13 @@ export default function GrowProgramPage() {
         className="bg-primary"
       />
       
+      <ProgramOverview 
+        title="Accelerate Your Growth"
+        description="The GROW program is our premier accelerator tailored for women-led startups and professionals looking to break the glass ceiling. We combine rigorous training, mentorship, and direct access to opportunities."
+        features={features}
+        image="https://lh3.googleusercontent.com/aida-public/AB6AXuB3PXs83D1jkSp_jurz2k8J4ElQ6EuLmInkMCN6jynoPMkScopqb3U9gxBSlmVa5SSdVUuST9QUzTYOrI7FYZYb3zaXY7VQ-BTU-HZHGoV210w-ABGvaPkwt33dTd3YLlGYkzi_FYBu7iwfjBo5dy8k3yw1QTW-D85rcE5CI1I7auPhuSd_7GuORXDCxpATvzLy75ggJuSHPDBJVeTBCY9MDtfrN0EFYYxI0rOfSFWYNSxKm7au_CmFQOHwNi-DOQHsSUnwCzl61Ck"
+      />
+
       <div className="py-20 bg-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">

@@ -5,6 +5,7 @@ import ProgramRoadmap from "@/components/sections/ProgramRoadmap";
 import MentorsGrid from "@/components/sections/MentorsGrid";
 import Testimonials from "@/components/sections/Testimonials";
 import ApplySteps from "@/components/sections/ApplySteps";
+import FAQ from "@/components/sections/FAQ";
 import Button from "@/components/ui/Button";
 
 export default function TechsiStarsProgram() {
@@ -127,6 +128,21 @@ export default function TechsiStarsProgram() {
     }
   ];
 
+  const faqs = [
+    {
+        question: "Do I need prior coding experience?",
+        answer: "No prior experience is required for our foundational track. We look for passion, commitment, and a willingness to learn."
+    },
+    {
+        question: "Is this program free?",
+        answer: "Yes, thanks to our partners, full scholarships are available for all admitted participants."
+    },
+    {
+        question: "What is the time commitment?",
+        answer: "Expect to dedicate about 6-10 hours per week, including live sessions and self-paced project work."
+    }
+  ];
+
   return (
     <>
       <PageHero
@@ -154,6 +170,7 @@ export default function TechsiStarsProgram() {
       <MentorsGrid mentors={mentors} />
       <Testimonials testimonials={testimonials} />
       <ApplySteps steps={applySteps} />
+      <FAQ faqs={faqs} />
     </>
   );
 }

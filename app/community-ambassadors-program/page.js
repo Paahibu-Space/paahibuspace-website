@@ -1,5 +1,8 @@
 import PageHero from "@/components/sections/PageHero";
 import ProgramObjectives from "@/components/sections/ProgramObjectives";
+import ImpactAction from "@/components/sections/ImpactAction";
+import ProgramBenefits from "@/components/sections/ProgramBenefits";
+import ProgramCTA from "@/components/sections/ProgramCTA";
 import Button from "@/components/ui/Button";
 
 export default function CommunityAmbassadorsPage() {
@@ -21,6 +24,25 @@ export default function CommunityAmbassadorsPage() {
     },
   ];
 
+  const benefits = [
+    {
+        title: "Global Certification",
+        description: "Receive a recognized certificate of leadership upon program completion."
+    },
+    {
+        title: "Exclusive Mentorship",
+        description: "Get paired with industry leaders in technology and social entrepreneurship."
+    },
+    {
+        title: "Resource Kit & Swag",
+        description: "Access to presentation decks, branding materials, and official Paahibu merchandise."
+    },
+    {
+        title: "Annual Summit Invite",
+        description: "An all-expenses-paid trip to our annual leadership summit for top performers."
+    }
+  ];
+
   return (
     <>
       <PageHero
@@ -35,6 +57,20 @@ export default function CommunityAmbassadorsPage() {
          <Button size="lg" variant="secondary" className="mt-8">Become an Ambassador</Button>
       </PageHero>
       <ProgramObjectives objectives={objectives} />
+      <ImpactAction />
+      <ProgramBenefits 
+        title="Why Join the Movement?"
+        description="Beyond making an impact, you'll grow your career and network."
+        benefits={benefits}
+        image="https://lh3.googleusercontent.com/aida-public/AB6AXuDgr64FCmHsqAbAkC-di4Bi-_yg7aS13CBSC_1XbAIUbEQwMVUoR2WXmhsd-tJUyF8ivS2AYOEES2Gblr0Pv-ltp1IO2rlmctWNOLbzu50xR4neMstjrFYb5ZbtsaO59VreJdVkzC_9Q3hyAt6dHSYgbQJRQVld82S7tScUcEEkEYWqhaWrMv4lkU88b7WgzcqbxT05XtQ9FxjBFrDrzXquQM1S8mKGslSK0EKnieNLbdDCt8bQBnlnqm_qMGFoNSBoEMFhOTk0QvG9"
+        ctaText="Apply to be an Ambassador"
+      />
+      <ProgramCTA
+        title="Ready to Lead?"
+        description="Join a network of changemakers. Apply today to become a Community Ambassador and start driving impact in your region."
+        primaryAction={{ label: "Apply to Be a Community Ambassador" }}
+        secondaryAction={{ label: "Learn More About Roles" }}
+      />
     </>
   );
 }

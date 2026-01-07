@@ -1,0 +1,36 @@
+export default function PhilosophySection() {
+  return (
+    <section className="py-24 bg-background-light" id="philosophy">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mb-16 md:text-center max-w-3xl mx-auto">
+          <h2 className="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Our Philosophy</h2>
+          <h3 className="text-3xl font-black text-neutral-dark sm:text-4xl">Holistic Growth Pillars</h3>
+          <p className="mt-4 text-lg text-neutral-gray">We believe that technical skills alone aren't enough. Our approach nurtures the whole person through three core pillars.</p>
+        </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="group relative rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-green-50 text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
+              <span className="material-symbols-outlined" style={{ fontSize: '32px' }}>favorite</span>
+            </div>
+            <h4 className="mb-3 text-xl font-bold text-neutral-dark">Safe Space</h4>
+            <p className="text-neutral-gray leading-relaxed">Creating psychological safety where failing is part of learning and questions are always encouraged.</p>
+          </div>
+          <div className="group relative rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+              <span className="material-symbols-outlined" style={{ fontSize: '32px' }}>terminal</span>
+            </div>
+            <h4 className="mb-3 text-xl font-bold text-neutral-dark">Skill Building</h4>
+            <p className="text-neutral-gray leading-relaxed">Practical, hands-on technical training in coding, design, and data science tailored for market needs.</p>
+          </div>
+          <div className="group relative rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+              <span className="material-symbols-outlined" style={{ fontSize: '32px' }}>groups</span>
+            </div>
+            <h4 className="mb-3 text-xl font-bold text-neutral-dark">Community First</h4>
+            <p className="text-neutral-gray leading-relaxed">Building a lifelong network of support, peer mentorship, and sisterhood across the continent.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,21 +1,27 @@
-import Hero from "@/components/sections/Hero";
-import Story from "@/components/sections/Story";
-import Mission from "@/components/sections/Mission";
-import WhyWomenInTech from "@/components/sections/WhyWomenInTech";
-import Stats from "@/components/sections/Stats";
-import GrowCommunity from "@/components/sections/GrowCommunity";
-import Team from "@/components/sections/Team";
+import HeroSectionOne from "@/components/sections/HeroSectionOne";
+import HeroSectionTwo from "@/components/sections/HeroSectionTwo";
+import QuoteSection from "@/components/sections/QuoteSection";
+import PhilosophySection from "@/components/sections/PhilosophySection";
+import ProgramsShowcase from "@/components/sections/ProgramsShowcase";
+import FemalePerspective from "@/components/sections/FemalePerspective";
+import ImpactSection from "@/components/sections/ImpactSection";
+import CommunityStories from "@/components/sections/CommunityStories";
+import PartnersSection from "@/components/sections/PartnersSection";
+import NewsletterSection from "@/components/sections/NewsletterSection";
 
 export default function Home() {
   return (
     <main className="flex-1 flex flex-col items-center w-full">
-      <Hero />
-      <Story />
-      <Mission />
-      <WhyWomenInTech />
-      <Stats />
-      <GrowCommunity />
-      <Team />
+      <HeroSectionOne />
+      <HeroSectionTwo />
+      <QuoteSection />
+      <PhilosophySection />
+      <ProgramsShowcase />
+      <FemalePerspective />
+      <ImpactSection />
+      <CommunityStories />
+      <PartnersSection />
+      <NewsletterSection />
     </main>
   );
 }
