@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Paahibu Space - Empowering African Women in Tech</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#262973",
+                        "accent": "#f6871f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#14141e",
+                        "neutral-dark": "#121216",
+                        "neutral-gray": "#6a6a81",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "sans": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .group:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-gray-100 font-display min-h-screen flex flex-col">
+    <div
+        class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-[#eee9f1] dark:border-gray-800">
+        <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-sm">
+            <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+                <a class="flex items-center gap-3" href="#">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+                        <span class="material-symbols-outlined" style="font-size: 28px;">diversity_2</span>
+                    </div>
+                    <h1 class="text-xl font-bold tracking-tight text-primary">Paahibu Space</h1>
+                </a>
+                <div class="hidden items-center gap-8 md:flex">
+                    <div class="group relative">
+                        <button
+                            class="flex items-center gap-1 text-sm font-medium text-neutral-dark hover:text-accent transition-colors py-6">
+                            Programs
+                            <span class="material-symbols-outlined text-lg">expand_more</span>
+                        </button>
+                        <div
+                            class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-screen max-w-4xl opacity-0 invisible translate-y-2 transition-all duration-200 ease-out bg-white rounded-2xl shadow-xl border border-gray-100 p-6 z-50">
+                            <div class="grid grid-cols-12 gap-8">
+                                <div class="col-span-8 grid grid-cols-2 gap-6">
+                                    <div>
+                                        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">
+                                            Learning
+                                            Paths</h3>
+                                        <a class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                                            href="#">
+                                            <div
+                                                class="bg-blue-50 text-primary p-2 rounded-lg group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                                                <span class="material-symbols-outlined">code</span>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-bold text-neutral-dark">Web Development</div>
+                                                <div class="text-xs text-neutral-gray mt-1">Full-stack bootcamp for
+                                                    beginners</div>
+                                            </div>
+                                        </a>
+                                        <a class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                                            href="#">
+                                            <div
+                                                class="bg-orange-50 text-accent p-2 rounded-lg group-hover/item:bg-accent group-hover/item:text-white transition-colors">
+                                                <span class="material-symbols-outlined">data_usage</span>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-bold text-neutral-dark">Data Science</div>
+                                                <div class="text-xs text-neutral-gray mt-1">Analytics and visualization
+                                                    skills</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Growth
+                                            &amp; Support</h3>
+                                        <a class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                                            href="#">
+                                            <div
+                                                class="bg-purple-50 text-purple-600 p-2 rounded-lg group-hover/item:bg-purple-600 group-hover/item:text-white transition-colors">
+                                                <span class="material-symbols-outlined">supervisor_account</span>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-bold text-neutral-dark">Mentorship</div>
+                                                <div class="text-xs text-neutral-gray mt-1">Connect with industry
+                                                    leaders
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                                            href="#">
+                                            <div
+                                                class="bg-green-50 text-green-600 p-2 rounded-lg group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
+                                                <span class="material-symbols-outlined">rocket_launch</span>
+                                            </div>
+                                            <div>
+                                                <div class="text-sm font-bold text-neutral-dark">Founder's Lab</div>
+                                                <div class="text-xs text-neutral-gray mt-1">Incubator for female
+                                                    founders
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-span-4 bg-primary/5 rounded-xl p-6 flex flex-col justify-between">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-primary mb-2">Next Cohort</h3>
+                                        <p class="text-sm text-neutral-gray mb-4">Applications are open for the Summer
+                                            2024
+                                            Web Dev intake.</p>
+                                    </div>
+                                    <button
+                                        class="w-full rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-900 transition-all">
+                                        Apply Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative">
+                        <button
+                            class="flex items-center gap-1 text-sm font-medium text-neutral-dark hover:text-accent transition-colors py-6">
+                            About
+                            <span class="material-symbols-outlined text-lg">expand_more</span>
+                        </button>
+                        <div
+                            class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible translate-y-2 transition-all duration-200 ease-out bg-white rounded-xl shadow-xl border border-gray-100 p-2 z-50">
+                            <a class="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+                                href="#mission">Our Mission</a>
+                            <a class="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+                                href="#team">Leadership Team</a>
+                            <a class="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+                                href="#philosophy">Philosophy</a>
+                            <a class="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+                                href="#partners">Partners</a>
+                        </div>
+                    </div>
+                    <a class="text-sm font-medium text-neutral-dark hover:text-accent transition-colors"
+                        href="#impact">Impact</a>
+                    <a class="text-sm font-medium text-neutral-dark hover:text-accent transition-colors"
+                        href="#blog">Stories</a>
+                </div>
+                <div class="hidden md:flex">
+                    <button
+                        class="rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-orange-600 hover:shadow transition-all">
+                        Join Us
+                    </button>
+                </div>
+                <div class="flex md:hidden">
+                    <button class="text-neutral-dark hover:text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main class="flex-grow">
+        <section class="relative overflow-hidden py-16 lg:py-24 bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col gap-6 text-center lg:text-left order-2 lg:order-1">
+                        <div class="space-y-4">
+                            <h1
+                                class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-text-main dark:text-white leading-[1.1]">
+                                Empowering African <span class="text-primary">Women in Tech</span>
+                            </h1>
+                            <p
+                                class="text-lg text-text-muted dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                                A professional platform balancing credibility with warm approachability to transform the
+                                tech landscape. We are building the future, one line of code at a time.
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                            <button
+                                class="h-12 px-8 rounded-lg bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-primary/20 transition-all hover:scale-105">
+                                Join the Community
+                            </button>
+                            <button
+                                class="h-12 px-8 rounded-lg bg-white border border-gray-200 hover:border-primary/50 hover:text-primary text-text-main text-base font-semibold shadow-sm transition-all">
+                                View Programs
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative order-1 lg:order-2">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-100 relative group">
+                            <div class="absolute -top-10 -right-10 w-40 h-40 bg-accent-teal/20 rounded-full blur-3xl">
+                            </div>
+                            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Group of diverse women working together on laptops in a modern office setting"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBv8g6PhAq7vMfCFsi06XeTlvHkhVLkeYEvvVH8NAGQcOB3S9FTN9VJbSHCkkYqNyxJtzkkCkLulxR8uLURSWYE0MM9REJ-dgEPeAAMrwaM1-UTBEcSuUdfNctF7fOZ9yu70rp5GP8RnkwMvOQxn9fVqFV06DUeF01D5yU00YcYEGZfoyZOj8s46LYMjXNwNdP2pWNfMAc7BFeQcZuN55Bq4tb8w8StqGfPiJSexJfHk_lNO5FTsgVQb41pRfMmZYECTEeybnr5sp4");'>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-white dark:bg-[#1f1823] relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent-teal font-bold tracking-wider uppercase text-sm mb-2 block">Our
+                        Purpose</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-main dark:text-white mb-4">Our Mission</h2>
+                    <p class="text-lg text-text-muted dark:text-gray-300">
+                        We are dedicated to bridging the gap and fostering excellence through three core pillars
+                        designed to uplift every member of our community.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div
+                        class="group hover-lift bg-background-light dark:bg-background-dark rounded-xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft h-full flex flex-col">
+                        <div
+                            class="mb-6 text-brand-orange group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <span class="material-symbols-outlined text-[80px]"
+                                style="font-size: 80px;">door_open</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-navy mb-3">ACCESS</h3>
+                        <p class="text-text-muted dark:text-gray-400 mb-6 leading-relaxed flex-grow">
+                            Bridging the digital divide by providing essential resources to those who need them most. We
+                            ensure no talent is left behind due to lack of opportunity.
+                        </p>
+                        <div class="bg-white dark:bg-[#251d29] rounded-lg p-4 mt-auto">
+                            <p
+                                class="text-xs font-bold text-text-main dark:text-gray-200 uppercase tracking-wider mb-3">
+                                Offerings</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>Technical Scholarships</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>Hardware Grants</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>High-Speed Internet Access</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="group hover-lift bg-background-light dark:bg-background-dark rounded-xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft h-full flex flex-col">
+                        <div
+                            class="mb-6 text-brand-orange group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <span class="material-symbols-outlined text-[80px]"
+                                style="font-size: 80px;">lightbulb</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-navy mb-3">INNOVATE</h3>
+                        <p class="text-text-muted dark:text-gray-400 mb-6 leading-relaxed flex-grow">
+                            Fostering creativity and technical excellence through hands-on experimentation. We create
+                            safe spaces for bold ideas and cutting-edge development.
+                        </p>
+                        <div class="bg-white dark:bg-[#251d29] rounded-lg p-4 mt-auto">
+                            <p
+                                class="text-xs font-bold text-text-main dark:text-gray-200 uppercase tracking-wider mb-3">
+                                Offerings</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>Global Hackathons</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>R&amp;D Innovation Labs</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>Tech Showcases</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="group hover-lift bg-background-light dark:bg-background-dark rounded-xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft h-full flex flex-col">
+                        <div
+                            class="mb-6 text-brand-orange group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <span class="material-symbols-outlined text-[80px]"
+                                style="font-size: 80px;">trending_up</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-navy mb-3">TRANSFORM</h3>
+                        <p class="text-text-muted dark:text-gray-400 mb-6 leading-relaxed flex-grow">
+                            Changing career trajectories and leadership landscapes permanently. We don't just teach
+                            code; we build the next generation of industry leaders.
+                        </p>
+                        <div class="bg-white dark:bg-[#251d29] rounded-lg p-4 mt-auto">
+                            <p
+                                class="text-xs font-bold text-text-main dark:text-gray-200 uppercase tracking-wider mb-3">
+                                Offerings</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>Leadership Coaching</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>Job Placement Partners</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-text-muted dark:text-gray-400">
+                                    <span
+                                        class="material-symbols-outlined text-accent-teal text-lg shrink-0">check_circle</span>
+                                    <span>Global Alumni Network</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-12">
+                    <button
+                        class="flex items-center gap-2 h-14 px-10 rounded-full bg-primary hover:bg-primary-dark text-white text-lg font-bold shadow-lg shadow-primary/25 transition-all hover:-translate-y-1">
+                        <span>Join the Mission</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full bg-[#faf9fb] dark:bg-[#1a141e] py-10">
+            <div class="container mx-auto px-6 max-w-[960px] text-center">
+                <h2
+                    class="text-[#161019] dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-4">
+                    Why Join Hands With Us?
+                </h2>
+                <p class="text-[#555] dark:text-[#bbb] text-lg max-w-2xl mx-auto">
+                    We are more than just a network. We are a movement designed to uplift, connect, and propel you
+                    forward.
+                </p>
+            </div>
+        </section>
+
+        <section class="w-full bg-[#faf9fb] dark:bg-[#1a141e] pb-24">
+            <div class="container mx-auto px-6 max-w-[1080px] flex flex-col gap-20">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
+                    <div class="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                        <img alt="Two women colleagues discussing work on a laptop"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Two women colleagues discussing work on a laptop"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7DckuQvtfBkrRePEC3mzwmaCR3bfXhiIWlgvxGp2kRxRh6srXH3aTRvQ_UfY_VZjp09mW6eotu0CDEF1xrby-wkTqD0ZYp76jLLWzsN6ayPKKN340lsF9SCzpkFbz0eXqLxo7ffLszk0--9xK8tZApGwypJnScsf81GTgeCJ-gjx25yMGSxn6sRHllYU-BVrwQ8VvzbWQ4BLj-mdWl0eqfiXmR7eBHrdQHUhcXGjL4VEBpTC-sTwhBS3vVd6J0uk3x9MHfzwu-wQ" />
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg  flex flex-col gap-4 justify-center h-fit">
+                        <div
+                            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined">handshake</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#161019] dark:text-white">Building Relationships</h3>
+                        <p class="text-[#555] dark:text-[#bbb] leading-relaxed">
+                            We focus on mentorship and deep peer-to-peer connections rather than just transactional
+                            networking. Here, you find partners, collaborators, and friends—not just contacts in a
+                            database.
+                        </p>
+                        <a class="mt-2 text-primary font-bold text-sm hover:underline flex items-center gap-1" href="#">
+                            Learn about Mentorship <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 group">
+                    <div class="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                        <img alt="Group of diverse friends laughing together outdoors"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Group of diverse friends laughing together outdoors"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_hC0uiCbx57H_IVbqO7xWx5IfEzUYDrgPqLRKBdc-ERCkZl5l2n2kzex_YDyoRLWhU0eya0m-q8UQZKePH3jC7VHX3DcwrO0XxHYTsUD5Z0HA4YRUrVG6fzvXCbq0nJxCb1hNWbu5bipjOGu1vH145mNYZcKbbuyjapk9axvLuRB7cWSlG1JAFsw0Xgav8afgAowaEprxe0llw91YSC51UKFsxHEWqa4WXksljQkPTinTHkyU5elbkpQ5U0ItdAejJNH5Uxxjm4k" />
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg  flex flex-col gap-4 justify-center h-fit">
+                        <div
+                            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined">diversity_1</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#161019] dark:text-white">One Big Family</h3>
+                        <p class="text-[#555] dark:text-[#bbb] leading-relaxed">
+                            Experience a supportive, non-competitive atmosphere where everyone wins. We believe in
+                            lifting each other up as we climb, creating a safe space to share challenges and celebrate
+                            wins.
+                        </p>
+                        <a class="mt-2 text-primary font-bold text-sm hover:underline flex items-center gap-1" href="#">
+                            Join the Family <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
+                    <div class="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                        <img alt="Confident woman leading a presentation in an office"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Confident woman leading a presentation in an office"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCghx274muUBcaIf5e6HRoWO6VsbVGhkA_91iQQ3LIxYRK5sYRoP37aZuS9pwxSYFOITZvHjqOjpYUb-gnwtX4k-BV9WhlmZ3X7ymr7ZcPcqXbC56wPZiJdJW3DpIbNAo5Emaxtl0R2qt311id-6UUyXqNQQDYIrf1nSDETHdx4V4l-Sdq6oYqlDm_BNznZs7IXVrskOR-uvrDayirT2yg-rE1OoxQaOV5-lVTmVgZnMxFmwWepJCeB78xRkVyactJ81djwJql5HU4" />
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
+                        <div
+                            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined">stars</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#161019] dark:text-white">Standing Out</h3>
+                        <p class="text-[#555] dark:text-[#bbb] leading-relaxed">
+                            Our ecosystem provides visibility and career acceleration unique to the market. We help you
+                            showcase your skills to the world through exclusive events, features, and partner
+                            opportunities.
+                        </p>
+                        <a class="mt-2 text-primary font-bold text-sm hover:underline flex items-center gap-1" href="#">
+                            See Success Stories <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-primary text-white relative mt-auto">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-6 py-16 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Column 1: Brand & About -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <!-- Abstract Logo using shapes if no image provided -->
+                        <div
+                            class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-primary font-bold text-xl shadow-lg">
+                            P</div>
+                        <span class="text-xl font-bold tracking-wide">Paahibu Space</span>
+                    </div>
+                    <p class="text-sm leading-6 text-gray-300">
+                        Bridging the gender gap in technology through education, mentorship, and entrepreneurship.
+                        We are
+                        building the future of tech in Africa.
+                    </p>
+                    <div class="flex gap-4 pt-2">
+                        <!-- Social Placeholders using Material Symbols as requested -->
+                        <a aria-label="Twitter"
+                            class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-white transition-all duration-300 group"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined group-hover:scale-110 transition-transform">alternate_email</span>
+                        </a>
+                        <a aria-label="LinkedIn"
+                            class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-white transition-all duration-300 group"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined group-hover:scale-110 transition-transform">work</span>
+                        </a>
+                        <a aria-label="Facebook"
+                            class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-white transition-all duration-300 group"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined group-hover:scale-110 transition-transform">thumb_up</span>
+                        </a>
+                        <a aria-label="Instagram"
+                            class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-white transition-all duration-300 group"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined group-hover:scale-110 transition-transform">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">Explore
+                    </h3>
+                    <ul class="space-y-4" role="list">
+                        <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                href="#"><span class="material-symbols-outlined text-[16px]">chevron_right</span>About
+                                Us</a></li>
+                        <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                href="#"><span class="material-symbols-outlined text-[16px]">chevron_right</span>Our
+                                Programs</a></li>
+                        <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                href="#"><span
+                                    class="material-symbols-outlined text-[16px]">chevron_right</span>Impact</a>
+                        </li>
+                        <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                href="#"><span class="material-symbols-outlined text-[16px]">chevron_right</span>Get
+                                Involved</a></li>
+                        <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                href="#"><span
+                                    class="material-symbols-outlined text-[16px]">chevron_right</span>Donate</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact Info -->
+                <div>
+                    <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">Contact Us
+                    </h3>
+                    <ul class="space-y-4" role="list">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-accent shrink-0 mt-0.5">location_on</span>
+                            <span class="text-sm leading-6 text-gray-300">Insurance Road Wa-UWR<br />Ghana</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent shrink-0">call</span>
+                            <a class="text-sm leading-6 text-gray-300 hover:text-white" href="tel:+233247254326">+233 24
+                                725
+                                4326</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent shrink-0">mail</span>
+                            <a class="text-sm leading-6 text-gray-300 hover:text-white"
+                                href="mailto:info@paahibuspace.org">info@paahibuspace.org</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 4: Hours & Legal -->
+                <div>
+                    <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">Office
+                        Hours</h3>
+                    <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="material-symbols-outlined text-accent">schedule</span>
+                            <span class="text-sm font-medium text-white">Opening Times</span>
+                        </div>
+                        <div class="space-y-2 mt-3">
+                            <div class="flex justify-between text-sm text-gray-300">
+                                <span>Mon - Fri</span>
+                                <span class="text-white font-medium">9am - 5pm</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-300">
+                                <span>Weekends</span>
+                                <span class="text-gray-500">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Copyright Bar -->
+        <div class="border-t border-white/10 bg-[#1e2160]/50">
+            <div
+                class="max-w-7xl mx-auto px-6 py-8 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs leading-5 text-gray-400 text-center md:text-left">
+                    © 2024 Paahibu Space. All rights reserved.
+                </p>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                    <a class="text-xs leading-5 text-gray-400 hover:text-white transition-colors" href="#">Privacy
+                        Policy</a>
+                    <a class="text-xs leading-5 text-gray-400 hover:text-white transition-colors" href="#">Terms of
+                        Service</a>
+                    <a class="text-xs leading-5 text-gray-400 hover:text-white transition-colors" href="#">Cookie
+                        Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

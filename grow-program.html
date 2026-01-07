@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GROW Program - Paahibu Space</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Outfit:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F6871F", // Vibrant Orange
+                        "navy": "#272974",    // Deep Navy Blue
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#272974",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "heading": ["Outfit", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar hide for horizontal scrolling areas if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-navy font-display antialiased overflow-x-hidden">
+    <!-- TopNavBar -->
+
+    <!-- Breadcrumbs -->
+    <div class="w-full bg-background-light border-b border-[#f4ede7]/50">
+        <div class="max-w-[1280px] mx-auto px-5 md:px-10 py-4">
+            <div class="flex flex-wrap items-center gap-2 text-sm">
+                <a class="text-navy/60 hover:text-primary font-medium" href="#">Home</a>
+                <span class="material-symbols-outlined text-navy/40 text-[16px]">chevron_right</span>
+                <a class="text-navy/60 hover:text-primary font-medium" href="#">Programs</a>
+                <span class="material-symbols-outlined text-navy/40 text-[16px]">chevron_right</span>
+                <span class="text-primary font-bold">GROW</span>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <section class="relative w-full">
+        <div class="relative w-full min-h-[600px] flex items-center bg-cover bg-center bg-no-repeat"
+            data-alt="Group of professional African women collaborating around a laptop in a modern office"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRdFiMRpqmNbxPY8WsR20SNza8O_GpKnatlh5ik_iOBSfRyJXgvHX3nHMpIy93mEQjF7E_GwQGoerylwRKNY-uFOaSdGKrvWDz3ntG-tTX0_Hg7j6SJ7DR8MgJP8VTK2muH5Mw5u9YdF4iNB5huURxWdyPODye4eM_Du1RgnYZbZi1eyQSKE_-k_JDeSk0gdCLlFEEYG3vE8uwc9Pth4r938rUJyrB54ic-TTK8lrGAsW8_1xcg8SCQNQUubhhU-ahqCx9KrjO-UU");'>
+            <!-- Navy Overlay -->
+            <div class="absolute inset-0 bg-navy/85 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/90 to-navy/40"></div>
+            <div class="relative z-10 w-full max-w-[1280px] mx-auto px-5 md:px-10 py-20">
+                <div class="max-w-2xl flex flex-col gap-6">
+                    <h1 class="text-white font-heading text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+                        GROW Program
+                    </h1>
+                    <h2 class="text-primary text-xl md:text-2xl font-medium tracking-wide">
+                        Girls &amp; Women Rising on the Web
+                    </h2>
+                    <p class="text-white/80 text-lg md:text-xl max-w-lg leading-relaxed">
+                        Join a transformative journey designed to empower African women through technology, mentorship,
+                        and community leadership.
+                    </p>
+                    <div class="pt-4">
+                        <button
+                            class="bg-primary hover:bg-orange-600 text-white text-base md:text-lg font-bold px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-orange-500/20 flex items-center gap-2">
+                            Apply Now
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program Overview -->
+    <section class="py-20 bg-background-light">
+        <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col gap-6">
+                    <h2 class="text-navy font-heading text-3xl md:text-4xl font-bold leading-tight">
+                        Empowering Women, Building Networks
+                    </h2>
+                    <div class="w-16 h-1 bg-primary rounded-full"></div>
+                    <p class="text-navy/70 text-lg leading-relaxed">
+                        The GROW Program is a safe and empowering community for women entrepreneurs, freelancers,
+                        founders, and young professionals. We focus on personal and professional development, providing
+                        the critical business support needed to thrive in the digital economy.
+                    </p>
+                    <p class="text-navy/70 text-lg leading-relaxed">
+                        Beyond skills, we address systemic barriers through rigorous research and advocacy, ensuring
+                        that the path to success is accessible for every woman.
+                    </p>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-navy/5 relative">
+                    <span class="absolute top-8 left-8 text-primary/20 transform -translate-x-2 -translate-y-2">
+                        <span class="material-symbols-outlined text-[80px]">format_quote</span>
+                    </span>
+                    <blockquote class="relative z-10">
+                        <p class="text-xl md:text-2xl font-medium text-navy italic leading-relaxed">
+                            "When women support each other, incredible things happen. GROW isn't just a program; it's a
+                            movement redefining the future of African tech."
+                        </p>
+                        <footer class="mt-6 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                                <img alt="Sarah M." class="w-full h-full object-cover"
+                                    data-alt="Portrait of Sarah M., Program Director"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8lsGQQ4HHJvX1MDQBkb_qWrJOSBtT3xqsuyVIl0ZU188uxes7UrJyLbPETJg-HwuWgcbA_HTTgwM_T9JxciRDzbJ8Nc-31VDOsFldmSnuyL6srvLt867p007c_gDsjjjgT7UuapV_pHUkmLY1Hl30E2YVKXiMTPKzSGRyMcm1uRRVLHT0zKX3AY9Fe1Oy6zevQ9WGfh58_RTo1b0ZbcaU1cZQv2rDh24grcym1sEOr2Sym-oPC8yXp3Mrx3UJeSEhlDU6P_UN2_c" />
+                            </div>
+                            <div>
+                                <cite class="not-italic font-bold text-navy block">Sarah M.</cite>
+                                <span class="text-sm text-primary font-medium">Program Director</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Key Focus Areas -->
+    <section class="py-20 bg-white">
+        <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-navy font-heading text-3xl md:text-4xl font-bold mb-4">Key Focus Areas</h2>
+                <p class="text-navy/60 text-lg">Our approach is holistic, targeting three pillars essential for
+                    sustainable growth.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="group p-8 rounded-2xl bg-background-light border border-navy/5 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/5">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-navy/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">groups</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Community Building</h3>
+                    <p class="text-navy/70 leading-relaxed">Creating a supportive network for collaboration and growth,
+                        where members can share resources and experiences.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="group p-8 rounded-2xl bg-background-light border border-navy/5 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/5">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-navy/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">trending_up</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Professional Development</h3>
+                    <p class="text-navy/70 leading-relaxed">Providing high-level skills training and resources tailored
+                        for career advancement and entrepreneurial success.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="group p-8 rounded-2xl bg-background-light border border-navy/5 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/5">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-navy/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">campaign</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">Advocacy &amp; Engagement</h3>
+                    <p class="text-navy/70 leading-relaxed">Addressing systemic barriers through active policy
+                        engagement and championing gender-responsive frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Benefits for Members -->
+    <section class="py-20 bg-background-light">
+        <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5">
+                    <h2 class="text-navy font-heading text-3xl md:text-4xl font-bold mb-6">Benefits for Members</h2>
+                    <p class="text-navy/70 text-lg mb-8">
+                        Joining GROW means gaining access to an ecosystem designed for your success. We provide the
+                        tools, you bring the ambition.
+                    </p>
+                    <div class="hidden lg:block rounded-2xl overflow-hidden h-[400px]">
+                        <img alt="Member Benefits" class="w-full h-full object-cover"
+                            data-alt="Woman smiling while working on a tablet in a sunny workspace"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeNRbYurjvnPFd5kuVyYwmsTEmoNCTU27ranX0lFA5nHD0tmmSel7YahE0VQ5Rpp9PBYYfrtb8gDNSrNm3KSn3ciy11d7ZblqHRmV6iBglzemJNCEVsQ27uGEvoE9wRl1Tv1AshLoecggc6bbOJmZUgA5rLPKknrPHjv6uosIIwdIqM--dOLWtJxfMgqg4lTKmdhen3jgNtrK4dIUnbhQNNeyW_cuIySlJiPb_rCAraUMOo9qmATKoUAyzI1u-T2woi8WnjTNiyA4" />
+                    </div>
+                </div>
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <div class="space-y-4">
+                        <!-- Accordion Item 1 -->
+                        <div class="bg-white rounded-xl border border-navy/10 overflow-hidden">
+                            <details class="group p-6" open="">
+                                <summary
+                                    class="flex cursor-pointer items-center justify-between text-navy font-bold text-lg md:text-xl">
+                                    <span>Personal Development</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div
+                                    class="mt-4 text-navy/70 leading-relaxed border-t border-navy/5 pt-4 animate-fadeIn">
+                                    Gain access to exclusive mentorship programs connecting you with industry leaders.
+                                    We focus on leadership skills, public speaking, and confidence building to help you
+                                    navigate professional spaces effectively.
+                                </div>
+                            </details>
+                        </div>
+                        <!-- Accordion Item 2 -->
+                        <div class="bg-white rounded-xl border border-navy/10 overflow-hidden">
+                            <details class="group p-6">
+                                <summary
+                                    class="flex cursor-pointer items-center justify-between text-navy font-bold text-lg md:text-xl">
+                                    <span>Business Support</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="mt-4 text-navy/70 leading-relaxed border-t border-navy/5 pt-4">
+                                    Receive strategic business advice, digital toolkits, and direct access to market
+                                    opportunities. Our workshops cover everything from financial literacy to digital
+                                    marketing strategies tailored for small businesses.
+                                </div>
+                            </details>
+                        </div>
+                        <!-- Accordion Item 3 -->
+                        <div class="bg-white rounded-xl border border-navy/10 overflow-hidden">
+                            <details class="group p-6">
+                                <summary
+                                    class="flex cursor-pointer items-center justify-between text-navy font-bold text-lg md:text-xl">
+                                    <span>Networking Opportunities</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="mt-4 text-navy/70 leading-relaxed border-t border-navy/5 pt-4">
+                                    Connect with peers across the continent. Participate in members-only events,
+                                    collaborative projects, and industry meetups that open doors to partnerships and new
+                                    ventures.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Impact Highlights -->
+    <section class="py-20 bg-navy text-white relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+            <div class="absolute -top-[100px] -left-[100px] w-[400px] h-[400px] bg-primary rounded-full blur-[100px]">
+            </div>
+            <div class="absolute top-[20%] right-[10%] w-[200px] h-[200px] bg-blue-400 rounded-full blur-[80px]"></div>
+        </div>
+        <div class="max-w-[1280px] mx-auto px-5 md:px-10 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-white font-heading text-3xl md:text-4xl font-bold">Our Impact So Far</h2>
+                <p class="text-white/70 mt-4 max-w-2xl mx-auto">Measuring the change we bring to the ecosystem through
+                    data and stories.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-5xl md:text-6xl font-black text-primary mb-2">500+</div>
+                    <div class="text-xl font-medium text-white">Active Members</div>
+                    <p class="text-white/60 text-sm mt-2">Across 12 different regions</p>
+                </div>
+                <div class="p-6 border-y md:border-y-0 md:border-x border-white/10">
+                    <div class="text-5xl md:text-6xl font-black text-primary mb-2">85%</div>
+                    <div class="text-xl font-medium text-white">Business Growth</div>
+                    <p class="text-white/60 text-sm mt-2">Reported by participants within 1 year</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-5xl md:text-6xl font-black text-primary mb-2">20+</div>
+                    <div class="text-xl font-medium text-white">Policy Engagements</div>
+                    <p class="text-white/60 text-sm mt-2">Advocating for digital inclusion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Member Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+            <h2 class="text-navy font-heading text-3xl md:text-4xl font-bold text-center mb-16">Voices of GROW</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-background-light p-8 rounded-2xl relative">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">format_quote</span>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img alt="Amina K." class="w-14 h-14 rounded-full object-cover border-2 border-primary"
+                            data-alt="Portrait of Amina K."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHU5x5r74aRsO-M90yUoArKZDOlyRqcK8WZZ-JB1kgAhzB7ixi5Ry6ywv30_QQPQ970tM9ZB-xdUAdre8Bz4T_OQRE-EJjqehIpeXkglCOTUizJyw_qLrB-UzpT7luvMKS6_I8GpzjxKDsoY8JkfXJn3Wj_zhRPFa7_JgaMD3SoHaVDydoG72i68AT875B6EavFNXXEAEBMhg6BmWu2Bvtih-ktUmGAL-viItERjsQo_lBAdnNOjBSX9l9G-MCPuYXekQKs8FtCbA" />
+                        <div>
+                            <div class="font-bold text-navy">Amina K.</div>
+                            <div class="text-xs text-primary font-bold uppercase tracking-wide">Tech Founder</div>
+                        </div>
+                    </div>
+                    <p class="text-navy/70 leading-relaxed text-sm">
+                        "The mentorship I received helped me pivot my startup during a critical time. The community here
+                        is unmatched—truly sisters in tech."
+                    </p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-background-light p-8 rounded-2xl relative shadow-lg shadow-navy/5 transform md:-translate-y-4 border border-primary/20">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">format_quote</span>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img alt="Chioma O." class="w-14 h-14 rounded-full object-cover border-2 border-primary"
+                            data-alt="Portrait of Chioma O."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgSfLhkS24XlmdkGHqXsyT6gwD4oJpQLSSY4QztPQppCSIQmRSd3eylvnUA0EWlOzzH-0nknexjtwrLS6wH73oIXLDhH_zJeBeZKsBGM-oWcg2WxKQdNzFzdi6HJKJ9wTCoIlyyK7HjHO6F-XdlarsB_dC9G5OZFyNIUfF5MlCeBrXqe2iP7GUj0Gvk7IPw9GrR5pqFUB-RPo36HWEdFMwfMTb_2jz6Obe9F6UDnzXoVBXdDAde0vH_M2yLYSRfivhbIjuAVpcMSg" />
+                        <div>
+                            <div class="font-bold text-navy">Chioma O.</div>
+                            <div class="text-xs text-primary font-bold uppercase tracking-wide">Freelance Designer</div>
+                        </div>
+                    </div>
+                    <p class="text-navy/70 leading-relaxed text-sm">
+                        "I found my first major international client through a GROW networking event. This program gave
+                        me the confidence to charge what I'm worth."
+                    </p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-background-light p-8 rounded-2xl relative">
+                    <span
+                        class="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">format_quote</span>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img alt="Zainab A." class="w-14 h-14 rounded-full object-cover border-2 border-primary"
+                            data-alt="Portrait of Zainab A."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_w_MMQ48gJ3q3rNx2zN3W3J_YKZZfS1XlCUJH-wIFM-5rQUbPM2Wg1GojKgOMRT-lKGQTfdQZbWq4R96EPSTpP1McI_UTw97nQelRJwG79q-xaaIx17weXl_9QoXNU2QOgXlDP7-uwppDO_SQgvL8KSSgdaNJpPST3tRe929luj49IICYz7iV0hLQDYMJQZxCn6ITblugcY2HuhmjUTJVN_VSmhYqyq-Qq22_V3AJNO5CSl6LLPYVi3KS9YqsCjougr7-Rycb4Q" />
+                        <div>
+                            <div class="font-bold text-navy">Zainab A.</div>
+                            <div class="text-xs text-primary font-bold uppercase tracking-wide">Policy Analyst</div>
+                        </div>
+                    </div>
+                    <p class="text-navy/70 leading-relaxed text-sm">
+                        "Advocating for digital rights is tough, but doing it with the backing of the GROW network makes
+                        our voice so much stronger in policy circles."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Join CTA -->
+    <section class="py-24 bg-background-light border-t border-navy/5">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <h2 class="text-navy font-heading text-4xl md:text-5xl font-bold mb-6">Ready to GROW?</h2>
+            <p class="text-navy/60 text-xl mb-10 max-w-2xl mx-auto">
+                Join a community that is reshaping the narrative of African women in technology and business.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-primary hover:bg-orange-600 text-white text-lg font-bold px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-orange-500/20 w-full sm:w-auto">
+                    Apply to GROW
+                </button>
+                <button
+                    class="bg-transparent border-2 border-navy text-navy hover:bg-navy hover:text-white text-lg font-bold px-8 py-4 rounded-lg transition-all w-full sm:w-auto">
+                    Learn More About Impact
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>WiDiB Program - Paahibu Space</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b31ee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101122",
+                        "text-main": "#0d0e1b",
+                        "text-secondary": "#4c4e9a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20">
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-12 sm:py-20 lg:py-24">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div class="flex flex-col gap-6 order-2 lg:order-1">
+                        <div
+                            class="inline-flex items-center self-start gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            <span class="text-xs font-bold uppercase tracking-wider">Now Accepting Applications</span>
+                        </div>
+                        <h1
+                            class="text-4xl sm:text-5xl lg:text-6xl font-black text-text-main dark:text-white leading-[1.1] tracking-tight">
+                            Level Up Your <span class="text-primary">Side Hustle</span>
+                        </h1>
+                        <p class="text-lg text-text-secondary dark:text-gray-400 leading-relaxed max-w-xl">
+                            The Women in Digital Business (WiDiB) Program is a 5-week intensive virtual journey designed
+                            to empower young African women with hands-on digital skills, personalized coaching, and a
+                            supportive sisterhood.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <button
+                                class="bg-primary hover:bg-blue-700 text-white px-8 py-3.5 rounded-xl text-base font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
+                                <span>Apply for Cohort 4</span>
+                                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                            </button>
+                            <button
+                                class="bg-white hover:bg-gray-50 text-text-main border border-gray-200 px-8 py-3.5 rounded-xl text-base font-bold transition-all dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[20px]">play_circle</span>
+                                <span>Watch Success Stories</span>
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-4 pt-6 text-sm text-text-secondary dark:text-gray-500">
+                            <div class="flex -space-x-3">
+                                <img alt="Female participant portrait smiling"
+                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover"
+                                    data-alt="portrait of a young african woman smiling"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpkI9Nw2AqDHIQuRJCI9PKBnwQL78ConMEYT6mIdv6z_UaQQuRjP8LybR-CtWRW2SDznoXLw8IYR8RWzgWexuVutdeTu0iGOE5W9oU27J-_H6A6Vxo23soi5POY038u5Yx876q7JFrT8zxq-268k_kO6qBNOMmqPCRrz3x4mc5rhiE8eEFgKnXZpxAwWC22vmmymBDebHG9xJ5-01ya6JpMtw_ez3qvNuef49HREa6Kiy7bOZMWDaHT3VRaE2_QH1SlfMe8uY4704P" />
+                                <img alt="Woman working on laptop"
+                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover"
+                                    data-alt="portrait of a woman in business attire"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnIIEsfsGzqiNoypussJAlQcKYqOub8DQfK5eIuL6C4lD0GtLo43pOpwW4VRA6-9sCgLUD070dL0moe4nSY2x-TNcbJ327k3lOaiolXFQ0oQ6NPOqwZmjUtHsf7D2Br4rsyZsih7aym_i29e_8YeIfaBbMZCuOBefZuys5fuq4bMSP8w9Jc_0LbMjuINL1U3m2aAKfxoza_ICy1OaIgUE6vuFPCsHTHDENLM9D9NtpG-5z-NdYh80JkMwrl8Y0USvoEXlGsPux2CDj" />
+                                <img alt="Smiling student with notebook"
+                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover"
+                                    data-alt="portrait of a smiling female student"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUfqZJXzNpbY9BfGZq0KB3aDUx0j2VkGz2fIqaO-0Bu3Hnkco0BK-1k_klyoClac7083qSd1o2szq9E1iKPYaLxGtLnXsnPrRtv6hcZ2x_8VRsieKk3xKa2a-oqU-3RS5fyHFPGgynocvVsd5nioTf1YGkn5dIKffH055amj4n5XyyQQlxMzL2rUEUryeqohOSrchfnMCWvk4AhNkPG3qUsB1RQNftwIbFyk-k1vUWJAmhPLWhxpa1A20SapUMBBIb9nBKOLvQvFZs" />
+                                <div
+                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs font-bold text-primary">
+                                    +500
+                                </div>
+                            </div>
+                            <p>Join 500+ alumnae building the future.</p>
+                        </div>
+                    </div>
+                    <div class="relative order-1 lg:order-2">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-purple-500/20 rounded-[2rem] blur-2xl opacity-70">
+                        </div>
+                        <div
+                            class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
+                            <img alt="Group of diverse women collaborating on laptops in a modern office"
+                                class="w-full h-full object-cover aspect-[4/3]"
+                                data-alt="Diverse group of african women working together on laptops in a bright workspace"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ8huE0b3gF2l_kMqcHDKKCk_uES7HEJBVXxnw7w362MbZy7JR_a1wS1_KSjnkTR9sdO4pKE0hHsXrC2Et9e2bhUjNxjM6Dq0UGruyCwbnBkO8fEIOSv6FiVQLYNVl3Z1ni1AMSkpIo5LCsJOH5miJmb4K5sXCi8fs7sx3ZNiydk96xfcsE5K2ZPC7fJP-aN6fWuH9RF-QaOLk77GWV9qBiAdWSv4bS8IYdUcWlM9BInT0PtR36mGx7BRBxhgPh-dFBP84Pqnk2l82" />
+                            <div
+                                class="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm p-4 rounded-xl border border-gray-100 dark:border-gray-700 shadow-lg">
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="p-2 bg-green-100 text-green-600 rounded-lg dark:bg-green-900/30 dark:text-green-400">
+                                        <span class="material-symbols-outlined">verified</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-text-main dark:text-white text-sm">Applications Open
+                                        </p>
+                                        <p class="text-xs text-text-secondary dark:text-gray-400">Deadline: October
+                                            15th, 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats / Trust Bar -->
+        <section class="border-y border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col gap-1">
+                        <span class="text-3xl font-black text-text-main dark:text-white">5</span>
+                        <span class="text-sm font-medium text-text-secondary uppercase tracking-wide">Weeks
+                            Duration</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-3xl font-black text-text-main dark:text-white">100%</span>
+                        <span class="text-sm font-medium text-text-secondary uppercase tracking-wide">Virtual
+                            Program</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-3xl font-black text-text-main dark:text-white">50+</span>
+                        <span class="text-sm font-medium text-text-secondary uppercase tracking-wide">Expert
+                            Mentors</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-3xl font-black text-text-main dark:text-white">FREE</span>
+                        <span class="text-sm font-medium text-text-secondary uppercase tracking-wide">Cost to
+                            Join</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features Grid -->
+        <section class="py-20 bg-background-light dark:bg-background-dark">
+            <div class="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-text-main dark:text-white mb-4">Empowering Your
+                        Business Journey</h2>
+                    <p class="text-text-secondary dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                        We provide the ecosystem you need to transform your side hustle into a sustainable digital
+                        business.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow group">
+                        <div
+                            class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Hands-on Training</h3>
+                        <p class="text-text-secondary dark:text-gray-400 leading-relaxed">
+                            Master content creation, e-commerce strategies, and branding through practical, interactive
+                            workshops.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow group">
+                        <div
+                            class="w-12 h-12 bg-purple-50 dark:bg-purple-900/20 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">person_celebrate</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Personalized Coaching</h3>
+                        <p class="text-text-secondary dark:text-gray-400 leading-relaxed">
+                            Get dedicated 1-on-1 guidance from industry experts to refine your specific business
+                            strategy and pitch.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow group">
+                        <div
+                            class="w-12 h-12 bg-amber-50 dark:bg-amber-900/20 rounded-xl flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">inventory_2</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Free Toolkits</h3>
+                        <p class="text-text-secondary dark:text-gray-400 leading-relaxed">
+                            Access premium website development tools, Canva templates, and finance sheets at absolutely
+                            no cost.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Timeline Section -->
+        <section class="py-20 bg-white dark:bg-gray-900/50">
+            <div class="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">The
+                        Curriculum</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-text-main dark:text-white">5 Weeks to Transformation
+                    </h2>
+                </div>
+                <div class="relative">
+                    <!-- Vertical Line -->
+                    <div
+                        class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 -translate-x-1/2">
+                    </div>
+                    <div class="space-y-12 relative z-10">
+                        <!-- Week 1 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start group">
+                            <div class="md:w-1/2 md:text-right md:pr-12 pl-16 md:pl-0 order-2 md:order-1">
+                                <h3
+                                    class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                    Digital Foundations &amp; Branding</h3>
+                                <p class="text-text-secondary dark:text-gray-400 mt-2">Setting up your digital presence
+                                    and defining your unique brand voice.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border-4 border-primary flex items-center justify-center shadow-lg z-20">
+                                <span class="text-xs font-bold text-text-main dark:text-white">W1</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-16 order-3 md:order-2 hidden md:block">
+                                <span
+                                    class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-lg text-xs font-medium text-gray-500">Kickoff</span>
+                            </div>
+                        </div>
+                        <!-- Week 2 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start group">
+                            <div
+                                class="md:w-1/2 md:text-right md:pr-12 pl-16 md:pl-0 order-2 md:order-1 hidden md:block">
+                                <span
+                                    class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-lg text-xs font-medium text-gray-500">Creative
+                                    Lab</span>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border-4 border-primary flex items-center justify-center shadow-lg z-20">
+                                <span class="text-xs font-bold text-text-main dark:text-white">W2</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-16 order-3 md:order-2">
+                                <h3
+                                    class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                    Content Creation &amp; Social Media</h3>
+                                <p class="text-text-secondary dark:text-gray-400 mt-2">Hands-on workshops for Reels,
+                                    TikTok, and copywriting that converts.</p>
+                            </div>
+                        </div>
+                        <!-- Week 3 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start group">
+                            <div class="md:w-1/2 md:text-right md:pr-12 pl-16 md:pl-0 order-2 md:order-1">
+                                <h3
+                                    class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                    E-commerce &amp; Sales Tools</h3>
+                                <p class="text-text-secondary dark:text-gray-400 mt-2">Setting up shops, payment
+                                    gateways, and managing customer relationships.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border-4 border-primary flex items-center justify-center shadow-lg z-20">
+                                <span class="text-xs font-bold text-text-main dark:text-white">W3</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-16 order-3 md:order-2 hidden md:block">
+                                <span
+                                    class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-lg text-xs font-medium text-gray-500">Sales
+                                    Focus</span>
+                            </div>
+                        </div>
+                        <!-- Week 4 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start group">
+                            <div
+                                class="md:w-1/2 md:text-right md:pr-12 pl-16 md:pl-0 order-2 md:order-1 hidden md:block">
+                                <span
+                                    class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-lg text-xs font-medium text-gray-500">Management</span>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border-4 border-primary flex items-center justify-center shadow-lg z-20">
+                                <span class="text-xs font-bold text-text-main dark:text-white">W4</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-16 order-3 md:order-2">
+                                <h3
+                                    class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                    Business Finance &amp; Strategy</h3>
+                                <p class="text-text-secondary dark:text-gray-400 mt-2">Pricing models, bookkeeping
+                                    basics, and sustainable growth planning.</p>
+                            </div>
+                        </div>
+                        <!-- Week 5 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start group">
+                            <div class="md:w-1/2 md:text-right md:pr-12 pl-16 md:pl-0 order-2 md:order-1">
+                                <h3
+                                    class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                    Pitching &amp; Launch Day</h3>
+                                <p class="text-text-secondary dark:text-gray-400 mt-2">Final presentations, feedback
+                                    sessions, and graduation ceremony.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-white border-4 border-primary flex items-center justify-center shadow-lg z-20">
+                                <span class="material-symbols-outlined text-[20px]">flag</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-16 order-3 md:order-2 hidden md:block">
+                                <span
+                                    class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-lg text-xs font-medium text-gray-500">Finale</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Community & Wellbeing Section -->
+        <section class="py-24 bg-primary text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+            </div>
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white border border-white/20 mb-6">
+                            <span class="material-symbols-outlined text-[18px]">favorite</span>
+                            <span class="text-xs font-bold uppercase tracking-wider">Community First</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black mb-6 leading-tight">More Than Just a Course, It's a
+                            <span class="text-yellow-300">Sisterhood</span>.</h2>
+                        <p class="text-blue-100 text-lg mb-8 leading-relaxed">
+                            We believe that entrepreneurship can be lonely, but it doesn't have to be. Our program
+                            includes dedicated well-being sessions, peer support circles, and mental health resources to
+                            ensure you thrive personally as your business grows.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-yellow-300">check_circle</span>
+                                <span class="font-medium">Weekly mental wellness check-ins</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-yellow-300">check_circle</span>
+                                <span class="font-medium">Supportive peer accountability groups</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-yellow-300">check_circle</span>
+                                <span class="font-medium">Lifetime access to the WiDiB Alumni network</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img alt="Two women having a conversation and laughing"
+                                class="rounded-2xl w-full h-64 object-cover transform translate-y-8 shadow-xl"
+                                data-alt="Two women colleagues talking and laughing in an office setting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAElga9w3Xm2qKK3-TQtQUIx-jsVFqqcc70W-ghQd3bQaCF0n-I2d5IGnXIW7rJIP_L7pA2mpWlwF09W6_OH_LaeWlvu8wXFAuCz-GTsga6e159Y89Ig2T4hdgGTVYAw0-PLEijOMlEhZUQ2mRllDZqEOJVuEjYyQ89qQj8M8QxWIS6VpB4KZWekORwPl2kpVX8aHMm1SojmDbOXDAvK-wz7p83lOEDyibkJHIDKvhJJnb6gxVGNdqUqiT8FDaHASUqqj6ysc3un6oX" />
+                            <img alt="Group of women cheering" class="rounded-2xl w-full h-64 object-cover shadow-xl"
+                                data-alt="Group of diverse women raising hands in celebration"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf64SvXKxHXUQO3ZjjOJeovxiAWN1wJlkVp8bd19i9soPsrzhKQPZyXIC46ewXfIKlHvJ6FMg5iYRHP3YAG4KQFX7lHXzNV4_qEw06jHOysE9ebfPcO6gMEvQM0uJES675DDbeJ4pMRj7Hol4FRiFLY5tOtFTJh6Vzjein3HQ4UGaXx3oOqHlHJOM8fGJrQ9L-ZPncJcWDukMae1gBe173NWj937bA3KmiW-AW0AvnLRW4h7FUj6OE8qMH76QVmUM4J6Fc_-ZCa5wJ" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-20 bg-background-light dark:bg-background-dark">
+            <div class="max-w-[800px] mx-auto px-4 text-center">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-[2rem] p-10 sm:p-16 shadow-xl border border-gray-100 dark:border-gray-700">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-text-main dark:text-white mb-6">Ready to Start Your
+                        Journey?</h2>
+                    <p class="text-text-secondary dark:text-gray-400 mb-8 text-lg">
+                        Spaces are limited for our upcoming cohort. Apply now to secure your spot and start building the
+                        future you deserve.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button
+                            class="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-blue-500/30 w-full sm:w-auto">
+                            Apply Now - It's Free
+                        </button>
+                        <button
+                            class="px-8 py-4 rounded-xl text-lg font-bold text-text-main border border-gray-200 hover:bg-gray-50 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 transition-all w-full sm:w-auto">
+                            Download Syllabus
+                        </button>
+                    </div>
+                    <p class="mt-6 text-sm text-text-secondary dark:text-gray-500">
+                        Application Deadline: October 15th • No prior experience required
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+
+</html>

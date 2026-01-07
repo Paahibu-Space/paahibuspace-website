@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Program Page Template - Paahibu Space Updates</title>
+    <meta content="Empowering African women in technology through mentorship and capacity building."
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#272974",
+                        secondary: "#f6871f",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#f8fafc",
+                        "surface-dark": "#1e293b",
+                        "text-light": "#334155",
+                        "text-dark": "#e2e8f0",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Outfit", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <script>
+        // Check for saved user preference, if any, on load
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
+    <header class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32">
+        <div class="absolute inset-0 z-0">
+            <img alt="Diverse group of women in a tech meeting"
+                class="w-full h-full object-cover opacity-10 dark:opacity-20"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn8Lm2B8UpUQXb6LLaWVRIv32d_to-4ufjeLH-QxaOdBt2sS24dfFyYde_jMR_MqZACALnc_8MH7ZRctncIp8qJQ9O9Mm4hw7Rd_AC8nsyESAfQswX6_blhXDHUVmvRhIk19nrYR-Z910g_JD7SDMRT2W1IAVN77axbGBKUHimNUgvtf6hniNSt8njeFAwQuENjSSU4UFyd-O7iHf8X3odnXx4mpfEmcgXsSS5jjhw9BN-zpyEL1f8KyxJh8w5KIq4szjiHNhqse4" />
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-background-light/80 via-background-light/60 to-background-light dark:from-background-dark/90 dark:via-background-dark/70 dark:to-background-dark">
+            </div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="space-y-8 animate-fade-in-up">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-secondary/10 dark:bg-secondary/20 text-secondary font-bold text-sm uppercase tracking-wider">
+                        Aspiring Women in Tech
+                    </span>
+                    <h1 class="text-4xl lg:text-6xl font-display font-bold text-primary dark:text-white leading-tight">
+                        TechsiStars <span class="text-secondary">Mentorship</span> Bootcamp
+                    </h1>
+                    <p class="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
+                        Bridging the gap in tech. This hybrid mentorship program connects aspiring girls with
+                        established female tech experts, offering mentorship and capacity-building opportunities to
+                        foster the next generation of leaders.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            Apply Now
+                            <span class="material-icons-round text-xl">arrow_forward</span>
+                        </button>
+                        <button
+                            class="border-2 border-primary dark:border-white text-primary dark:text-white hover:bg-primary/5 dark:hover:bg-white/10 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2">
+                            <span class="material-icons-round text-xl">file_download</span>
+                            Download Brochure
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:block relative mt-12 lg:mt-0 group">
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-30 blur-lg group-hover:opacity-40 transition-opacity duration-500">
+                    </div>
+                    <img alt="Women collaborating on a tech project"
+                        class="relative rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-[1.02] border-4 border-white dark:border-gray-800"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxjPobnXvS2F0LMYrOBL0fqM-YTzDetqkIeaPk4waW-iYPKg7bpkQmtq6OwMSePwHS978K6wG-UMFmzF5thLWYLeH3ci7hqmcW-ncOgJlecaROeNqVzYjnue6HBzVIKmovzmglr-D0eaSADsYNHVoAXm2YJPUifuHDbv27pxtzp8w4t_9VwZjgdbUCMBCoUuf36Ai54C7mq2y_DWbydjSUEzVsKQzn1F5eeGTXCPhdywCnHbe4VKCIM3ikzQynhEHW43aI1OIeNBM" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-20 bg-surface-light dark:bg-surface-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <h2 class="text-3xl font-display font-bold text-primary dark:text-white">Why We Need This</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">
+                        TechsiStars addresses a critical gap. Women remain significantly underrepresented in technology
+                        leadership roles across Africa. We aim to dismantle barriers and build a pipeline of confident
+                        female tech leaders.
+                    </p>
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+                                <span class="material-icons-round text-red-600 dark:text-red-400">block</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-light dark:text-white">Limited Access to Mentorship</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Many aspiring young women lack
+                                    direct access to role models in the industry.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center">
+                                <span
+                                    class="material-icons-round text-yellow-600 dark:text-yellow-400">psychology</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-light dark:text-white">Skills Gap</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Disconnect between academic theory
+                                    and practical, job-ready tech skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="lg:col-span-5 bg-white dark:bg-background-dark p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
+                    <h3 class="text-xl font-bold mb-6 text-primary dark:text-white">Representation Matters</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-600 dark:text-gray-300">Women in Tech
+                                    Leadership</span>
+                                <span class="text-sm font-bold text-secondary">Only 24%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                                <div class="bg-secondary h-3 rounded-full" style="width: 24%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-600 dark:text-gray-300">Women in STEM
+                                    (Africa)</span>
+                                <span class="text-sm font-bold text-primary dark:text-blue-400">Less than 30%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                                <div class="bg-primary h-3 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
+                        <div class="flex items-center gap-4">
+                            <span class="text-4xl font-display font-bold text-primary dark:text-white">500+</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 leading-tight">Women upskilled
+                                since<br />program inception</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-primary dark:text-white mb-4">Program Goals
+                </h2>
+                <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">Our strategic objectives designed to
+                    accelerate your career growth.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-100 dark:hover:border-gray-700 group">
+                    <div
+                        class="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-icons-round text-3xl text-secondary">handshake</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-3">Foster Mentorship</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Creating dynamic spaces for knowledge exchange
+                        between experts and learners.</p>
+                </div>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-100 dark:hover:border-gray-700 group">
+                    <div
+                        class="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-icons-round text-3xl text-secondary">school</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-3">Skill Development</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Practical, hands-on sessions in coding, product
+                        design, and cybersecurity.</p>
+                </div>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-100 dark:hover:border-gray-700 group">
+                    <div
+                        class="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-icons-round text-3xl text-secondary">rocket_launch</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-3">Career Exposure</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Direct exposure to diverse tech career paths and
+                        industry opportunities.</p>
+                </div>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-100 dark:hover:border-gray-700 group">
+                    <div
+                        class="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-icons-round text-3xl text-secondary">groups</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-3">Community Building</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Building a supportive network of future female
+                        tech leaders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-primary dark:bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 rounded-full bg-secondary opacity-10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 rounded-full bg-blue-500 opacity-10 blur-3xl">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:flex lg:gap-16 items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-3xl lg:text-5xl font-display font-bold mb-6">What You Will Gain</h2>
+                    <p class="text-blue-100 text-lg mb-8">
+                        Beyond technical skills, TechsiStars prepares you for the holistic challenges of a career in
+                        technology.
+                    </p>
+                    <img alt="Students learning together" class="rounded-xl shadow-2xl border border-white/10"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkzEgNQXZZvwrJk-rXsoRiVh2pVuI_hkIfP16t_VH01czrlKJ1YJZ76XU7reSKFIEpDnyH1HiIqs36goO3k5IG7maipHTVgzq-4YRcXoDD8487RYdJ3U9uEC75TJyJtvn9iqjKcVPdY0ns8f3K2qeU1p26PfhvbS4ki8eNd-Sfy5yh0EeF6t39437JvvjtWkERbD46bK-OT4_fdOpZOZiujxQNeGeWkKqNsNE5VTZ_RpwN488uhLALvV5WmC9kCyDE4VcaqJe4kFs" />
+                </div>
+                <div class="lg:w-1/2">
+                    <ul class="space-y-6">
+                        <li
+                            class="flex items-start gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary flex items-center justify-center mt-1">
+                                <span class="material-icons-round text-white text-sm">check</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Experienced Female Mentors</h4>
+                                <p class="text-blue-100 text-sm">Be matched with leaders working across various tech
+                                    fields who understand your journey.</p>
+                            </div>
+                        </li>
+                        <li
+                            class="flex items-start gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary flex items-center justify-center mt-1">
+                                <span class="material-icons-round text-white text-sm">check</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Tech Career Exposure</h4>
+                                <p class="text-blue-100 text-sm">Explore paths from software development to product
+                                    design, data science, and cybersecurity.</p>
+                            </div>
+                        </li>
+                        <li
+                            class="flex items-start gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary flex items-center justify-center mt-1">
+                                <span class="material-icons-round text-white text-sm">check</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Hands-on Capacity Building</h4>
+                                <p class="text-blue-100 text-sm">Participate in tech challenges and skill development
+                                    workshops that build your portfolio.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-surface-light dark:bg-surface-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-display font-bold text-primary dark:text-white">Program Roadmap</h2>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">A 6-week journey of intensive learning and growth.</p>
+            </div>
+            <div class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-6 md:ml-10 space-y-12">
+                <div class="relative pl-10 md:pl-16">
+                    <span
+                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-secondary border-4 border-white dark:border-surface-dark"></span>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-primary dark:text-white">Weeks 1-2: Foundations</h3>
+                        <span class="text-sm font-semibold text-secondary uppercase tracking-wider">Virtual</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Introduction to tech ecosystems, digital literacy,
+                        and goal setting with mentors.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span
+                            class="px-3 py-1 bg-white dark:bg-gray-800 rounded-md text-xs font-medium text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-700">6
+                            Hours/Week</span>
+                        <span
+                            class="px-3 py-1 bg-white dark:bg-gray-800 rounded-md text-xs font-medium text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-700">Workshop</span>
+                    </div>
+                </div>
+                <div class="relative pl-10 md:pl-16">
+                    <span
+                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-white dark:border-surface-dark"></span>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-primary dark:text-white">Weeks 3-4: Deep Dive</h3>
+                        <span class="text-sm font-semibold text-secondary uppercase tracking-wider">Hybrid</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">specialized tracks: choose between Coding, Design,
+                        or Data. Hands-on projects begin.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span
+                            class="px-3 py-1 bg-white dark:bg-gray-800 rounded-md text-xs font-medium text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-700">10
+                            Hours/Week</span>
+                        <span
+                            class="px-3 py-1 bg-white dark:bg-gray-800 rounded-md text-xs font-medium text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-700">Project
+                            Work</span>
+                    </div>
+                </div>
+                <div class="relative pl-10 md:pl-16">
+                    <span
+                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-white dark:border-surface-dark"></span>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-primary dark:text-white">Weeks 5-6: Capstone &amp; Launch</h3>
+                        <span class="text-sm font-semibold text-secondary uppercase tracking-wider">In-Person</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Final project presentation, career fair, and
+                        graduation ceremony.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span
+                            class="px-3 py-1 bg-white dark:bg-gray-800 rounded-md text-xs font-medium text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-700">Intensive</span>
+                        <span
+                            class="px-3 py-1 bg-white dark:bg-gray-800 rounded-md text-xs font-medium text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-700">Demo
+                            Day</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-10 bg-white">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-secondary text-4xl font-heading font-bold mb-4">Meet Our Mentors</h2>
+                    <p class="text-gray-600 text-lg max-w-2xl">Industry leaders from top tech companies dedicating their
+                        time to guide the next generation.</p>
+                </div>
+                <a class="hidden md:flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                    Become a Mentor <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Mentor 1 -->
+                <div class="flex flex-col gap-4">
+                    <div class="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                        <img alt="Portrait of Sarah K., Software Engineer"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQkTogd_J8B_fbNXZ2o_BigwuSxdlZ3FFmxaypAtiO7xQAPt-KNT1LQSHC8DKNJJZ-wAjWkq212SNpITVZy7X8KPDdr5U_2OeU7VtObFgDykZMtF9F60CeEZVYa2T0igwIw1UHWUxwJ-GI5YGq5MIgHsgSRc-nro4XbdfMUAMkmMRAVVvx7C-RFVPg2UczRTIs8YGtOw_CA4B-TsHN1DAkwTQqlj55ONiRscjZZIhziimJ07zNDwMXTbwk9UA-D5oiwnZp4SFbJ0w" />
+                    </div>
+                    <div>
+                        <h4 class="text-secondary font-bold text-lg">Sarah K.</h4>
+                        <p class="text-primary font-medium text-sm mb-2">Software Engineer at TechCorp</p>
+                        <p class="text-gray-500 text-sm line-clamp-2">"I believe in lifting as we climb. Mentorship is
+                            the bridge to opportunity."</p>
+                    </div>
+                </div>
+                <!-- Mentor 2 -->
+                <div class="flex flex-col gap-4">
+                    <div class="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                        <img alt="Portrait of Amina D., Data Scientist"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-barLttpklVc17_IrFNu7Mlw9FiUua0GwNToEPDc0GE9f_KrfKYDqPhh6u1sE_wVRm8kCtFZhIy7mMtFmtIs6910wqnAud-86rV9LM4Ym-1OJ4L-vJAkzJqjLrPAHIdLHfuzg140ofv7UQi9NQUojLeMql_25qcUnzB6iNuB_mTZ_59bnLr2GvRZfIUsZOVfHsFB9MkrlGOyd8d9NliwcSSAevKV7qvAeX0qsNSE0vmWy4dYX0Fj-7nGbxvdOcy0U_2SUHhvNy0Q" />
+                    </div>
+                    <div>
+                        <h4 class="text-secondary font-bold text-lg">Amina D.</h4>
+                        <p class="text-primary font-medium text-sm mb-2">Data Scientist at DataFlow</p>
+                        <p class="text-gray-500 text-sm line-clamp-2">"Data tells a story, and I want to help young
+                            women write their own."</p>
+                    </div>
+                </div>
+                <!-- Mentor 3 -->
+                <div class="flex flex-col gap-4">
+                    <div class="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                        <img alt="Portrait of David M., Startup Founder"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmNf0sXuvW68GH5xcNB3UhBlczGWHsVKq2Y9uNgPeFEZx_94Wxyo9OzkCsOXs8y2FjlPKFDbEHU5ed_SV2t5M9wfQnzhwZlv-nRvqcWZ1sVMuGAg0qZYefmSIAMNykPcRDMRxdX0BPEYTu7m_6XQ4HOaz4RoN7y37oQi0-mTsYtl4maAEojxfA03ePvYoiXLLhchVneFDSVwDtgn7VC-jb1ybqWF0MAbnYmv0LrCUi6t8VdMdJLvCVunY7FAPIQzWNkoR2DC4gZXA" />
+                    </div>
+                    <div>
+                        <h4 class="text-secondary font-bold text-lg">David M.</h4>
+                        <p class="text-primary font-medium text-sm mb-2">Founder at AgriTech Solutions</p>
+                        <p class="text-gray-500 text-sm line-clamp-2">"Innovation starts with a curious mind. I'm here
+                            to fuel that curiosity."</p>
+                    </div>
+                </div>
+                <!-- Mentor 4 -->
+                <div class="flex flex-col gap-4">
+                    <div class="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                        <img alt="Portrait of Grace O., Product Manager"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-q36ijlZbwR7Wsi_XNFI8u8WkuYe_aCapxpopCg7hP1dHlDutzDYpKcudMwgYR7qMSmWBIojZdmdFgZgBzDG6ZAD3Qtllkj6W-5ybikF1xdYNt9v77cSEKsm0XfsFuQJnizLJl5pDmS9jsgkrtlTVJoU20wHuoPz5IbP0w-n0jGJ8EJbyPyPvHHhsVxbJa9Ws1QpHGLU-tbJIYr4P4MwW6tfCz9_G8TAIRkDbIntuoRIijVS5SWk2zt2LuLKyCctENP65TyUSzAk" />
+                    </div>
+                    <div>
+                        <h4 class="text-secondary font-bold text-lg">Grace O.</h4>
+                        <p class="text-primary font-medium text-sm mb-2">Product Manager at FinServe</p>
+                        <p class="text-gray-500 text-sm line-clamp-2">"Building products that solve real problems is my
+                            passion."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 md:hidden text-center">
+                <a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                    Become a Mentor <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-display font-bold text-center text-primary dark:text-white mb-12">Voices of Change
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl relative">
+                    <span
+                        class="material-icons-round text-6xl text-gray-200 dark:text-gray-700 absolute top-4 right-4">format_quote</span>
+                    <div class="flex items-center gap-4 mb-6 relative z-10">
+                        <img alt="Portrait of Amina"
+                            class="w-16 h-16 rounded-full object-cover border-2 border-secondary"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqpYuLax1etq3JMXeQwKzi7ecenS_oNwL-NPhRdLpK5A_eNXhbYB49ujSl3jHyAIQwj6dvNpSZdXmK-DPYeKt21S3aHAidh-iqJscMGme1aVEkjQIY0y-AEw2CG9nfPrQ3ZpViSs2QO3gdUH-W6Mc8a-WDtu5Bn43golXevqX5Qy8-AAKYfTVFVZescEtspJgLfBee6bmZiWXDmVHdolBzqSNC5pOcIxMsaDwWnVKpuQ8F9RZ3KGSXpJyy2cmS3KZzTjvfOVIkvRc" />
+                        <div>
+                            <h4 class="font-bold text-primary dark:text-white">Amina K.</h4>
+                            <p class="text-sm text-secondary">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic relative z-10">
+                        "The mentorship I received during TechsiStars was life-changing. My mentor didn't just teach me
+                        to code; she taught me how to navigate the industry as a woman."
+                    </p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl relative">
+                    <span
+                        class="material-icons-round text-6xl text-gray-200 dark:text-gray-700 absolute top-4 right-4">format_quote</span>
+                    <div class="flex items-center gap-4 mb-6 relative z-10">
+                        <img alt="Portrait of Sarah"
+                            class="w-16 h-16 rounded-full object-cover border-2 border-secondary"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9K9kTZh73nJx_sKfNEWg8RaN3LM9bwOeSsLWSNcwA9cgBhmuQ9s6Hv4MBOwEYjWB3ghars_1zi_Whq9EPNKbXdiphJTXALw1OY6YVL6LkPW3FO0-W2kiZhJeCSGaF6lWNAAOScvYLOje0fCdX9SVal4sDYdC65Dp1MzV_glzF-VJrWlUvHcKO_pjmjzcdTmLLQbrzZpq4_mWGSlPNn6evm5so2yEg8w2oDiz8DItZi79Y08qh5WmxJmjUJI9CYGmuT-y_C9WkVNM" />
+                        <div>
+                            <h4 class="font-bold text-primary dark:text-white">Sarah M.</h4>
+                            <p class="text-sm text-secondary">Product Designer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic relative z-10">
+                        "Before this program, I thought tech wasn't for me. Now, I'm leading design sprints at a fintech
+                        startup. The confidence I gained is my biggest asset."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-display font-bold text-primary dark:text-white mb-8">How to Apply</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                                1</div>
+                            <div>
+                                <h4 class="font-bold text-text-light dark:text-white">Submit Online Application</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Fill out the form with your details
+                                    and a short essay.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                                2</div>
+                            <div>
+                                <h4 class="font-bold text-text-light dark:text-white">Assessment &amp; Interview</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Complete a basic logic test and a
+                                    virtual interview.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                                3</div>
+                            <div>
+                                <h4 class="font-bold text-text-light dark:text-white">Onboarding</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Get accepted and receive your
+                                    starter kit and schedule.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-12 lg:mt-0 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border-t-4 border-secondary sticky top-24">
+                    <h3 class="text-2xl font-bold text-primary dark:text-white mb-2">Ready to Start?</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Applications for the next cohort are closing soon.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500 dark:text-gray-400">Deadline:</span>
+                            <span class="font-bold text-text-light dark:text-white">October 15th, 2023</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500 dark:text-gray-400">Format:</span>
+                            <span class="font-bold text-text-light dark:text-white">Hybrid</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500 dark:text-gray-400">Cost:</span>
+                            <span class="font-bold text-green-600 dark:text-green-400">Full Scholarship Available</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-4 rounded-xl shadow-lg transition-transform transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        Apply Now
+                        <span class="material-icons-round">arrow_forward</span>
+                    </button>
+                    <p class="text-xs text-center text-gray-400 mt-4">Limited spots available for this cohort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-display font-bold text-center text-primary dark:text-white mb-12">Frequently Asked
+                Questions</h2>
+            <div class="space-y-4">
+                <details class="group bg-surface-light dark:bg-surface-dark rounded-xl">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6">
+                        <span class="text-lg text-text-light dark:text-white">Do I need prior coding experience?</span>
+                        <span class="transition group-open:rotate-180">
+                            <span class="material-icons-round text-primary dark:text-gray-400">expand_more</span>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 dark:text-gray-300 mt-0 px-6 pb-6">
+                        No prior experience is required for our foundational track. We look for passion, commitment, and
+                        a willingness to learn.
+                    </div>
+                </details>
+                <details class="group bg-surface-light dark:bg-surface-dark rounded-xl">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6">
+                        <span class="text-lg text-text-light dark:text-white">Is this program free?</span>
+                        <span class="transition group-open:rotate-180">
+                            <span class="material-icons-round text-primary dark:text-gray-400">expand_more</span>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 dark:text-gray-300 mt-0 px-6 pb-6">
+                        Yes, thanks to our partners, full scholarships are available for all admitted participants.
+                    </div>
+                </details>
+                <details class="group bg-surface-light dark:bg-surface-dark rounded-xl">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6">
+                        <span class="text-lg text-text-light dark:text-white">What is the time commitment?</span>
+                        <span class="transition group-open:rotate-180">
+                            <span class="material-icons-round text-primary dark:text-gray-400">expand_more</span>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 dark:text-gray-300 mt-0 px-6 pb-6">
+                        Expect to dedicate about 6-10 hours per week, including live sessions and self-paced project
+                        work.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

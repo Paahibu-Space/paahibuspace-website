@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Paahibu Space - WiDEI Program</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "text-main": "#0d1b12",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display overflow-x-hidden antialiased">
+    <!-- Hero Section -->
+    <header class="relative w-full min-h-[600px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        data-alt="African women in a market setting smiling and looking at a smartphone screen"
+        style='background-image: linear-gradient(to right, rgba(16, 34, 22, 0.85) 0%, rgba(16, 34, 22, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCn4Br8YOkzYhaMOEC6q8h2Ordjvn9ZERZ-Yv9y-aShetxLo8M4_affGun19w8q-qt7tPtIWBvbVZxLMsecKw9HRa6PZimE3jZmJHUzRVF29C8ZvgxL7PhpECG6RpLBc1m7F7kgKcTebzHXCUZw7ssXXZIL3jxFVq3U_dl0WkAs-x57AL9h2ndFi6DrEW7nNzK_LpylFLz3i7apDoUrSKNmjZ14Fcmpepqy4ARyB1wEHDHPGIy8bFvtsKzGl2MpHPA6CXu6JO_UlD-f");'>
+        <div class="max-w-7xl w-full px-4 md:px-10 py-20 flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1 flex flex-col gap-6 text-center md:text-left">
+                <div
+                    class="inline-flex items-center justify-center md:justify-start gap-2 text-primary font-bold tracking-wide uppercase text-xs">
+                    <span class="w-8 h-[2px] bg-primary"></span>
+                    Women in Digital Economy Initiative
+                </div>
+                <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                    Bridging the Tradition <span class="text-primary">Digital Gap</span>
+                </h1>
+                <p class="text-gray-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0 font-light">
+                    Empowering women-led businesses in the informal sector with digital tools for economic independence.
+                    Connecting tradition with modernity through practical tech education.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
+                    <button
+                        class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-[#0d1b12] text-base font-bold hover:bg-[#0fd650] transition-colors shadow-lg shadow-primary/20">
+                        Support the Program
+                    </button>
+                    <button
+                        class="flex items-center justify-center rounded-lg h-12 px-8 bg-white/10 backdrop-blur-md border border-white/20 text-white text-base font-bold hover:bg-white/20 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <!-- Floating Stat Card (Decorative) -->
+            <div
+                class="hidden lg:block w-80 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="bg-primary/20 p-3 rounded-full text-primary">
+                        <span class="material-symbols-outlined">storefront</span>
+                    </div>
+                    <div>
+                        <p class="text-white/60 text-xs uppercase font-semibold">Active Businesses</p>
+                        <p class="text-white font-bold text-xl">Digitizing Markets</p>
+                    </div>
+                </div>
+                <p class="text-white/80 text-sm leading-relaxed">
+                    "Since joining WiDEI, I've moved my bead inventory to WhatsApp and sales have doubled."
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <div class="size-8 rounded-full bg-gray-300 bg-cover bg-center"
+                        data-alt="Portrait of a smiling African woman"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBraoJmlypejhJl3cB4iOoCKR8sSYP7t3PxD8PQEZbDdQPbQ8reiW7zDPIsAhzwva56eLhaZ3XIRqkc8ECZlCW9URiSAO-2cI_Sy_LAOn_apCDeIo8SSjdepb-DPW-Cpc3WiTDEVwqorQ6bUj9gI9dcGm2rs6F1kEHuZ2XKSnXmtTMge2jkShOTYkNwLfEd3ZP6tfVn3fUb2sFgsQKP6xm_BdvFQocRFdqak1Uxr6HgT4jOybviowx8T0JOK1Tn5yquJ-jYelPLLys-');">
+                    </div>
+                    <span class="text-white text-xs font-bold">Adwoa, Kumasi Market</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Mission & Stats Section -->
+    <section class="py-16 md:py-24 px-4 md:px-10 bg-background-light dark:bg-background-dark">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Digitizing the Informal Sector</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                We focus on women-led businesses in rural and underrepresented communities. By equipping them with
+                skills to digitize traditional practices—like weaving, pottery, and trading—we strengthen their economic
+                future and preserve cultural heritage through modern channels.
+            </p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Stat 1 -->
+            <div
+                class="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-all text-center">
+                <div
+                    class="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                    <span class="material-symbols-outlined text-3xl">school</span>
+                </div>
+                <p class="text-4xl font-black text-text-main dark:text-white mb-2">500+</p>
+                <p class="text-gray-500 dark:text-gray-400 font-medium">Women Trained</p>
+            </div>
+            <!-- Stat 2 -->
+            <div
+                class="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-all text-center">
+                <div
+                    class="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                    <span class="material-symbols-outlined text-3xl">public</span>
+                </div>
+                <p class="text-4xl font-black text-text-main dark:text-white mb-2">30</p>
+                <p class="text-gray-500 dark:text-gray-400 font-medium">Communities Reached</p>
+            </div>
+            <!-- Stat 3 -->
+            <div
+                class="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-all text-center">
+                <div
+                    class="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                    <span class="material-symbols-outlined text-3xl">trending_up</span>
+                </div>
+                <p class="text-4xl font-black text-text-main dark:text-white mb-2">40%</p>
+                <p class="text-gray-500 dark:text-gray-400 font-medium">Avg. Business Growth</p>
+            </div>
+        </div>
+    </section>
+    <!-- Key Pillars / "Tradition Meets Tech" -->
+    <section class="py-20 bg-white dark:bg-[#0a160e] px-4 md:px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <h2 class="text-primary font-bold uppercase tracking-wider text-sm mb-2">Our Methodology</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-text-main dark:text-white">Tradition Meets Tech</h3>
+                </div>
+                <p class="max-w-md text-gray-600 dark:text-gray-400 text-sm md:text-base text-right md:text-left">
+                    We don't just teach code; we integrate digital tools into the daily fabric of market life.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-background-light dark:bg-white/5 rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10">
+                    <div class="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Women gathering in an open market discussion"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJw5ISheLw-aR26Jh8B3lrrKTrUeUIlg3ji-U7V_4MA5P9-3To4Uh2nOinZUyM1LXVFVlYZ7TOnofwu1huirXKyExsJsTL5Zc8ldPjedrv9GdKPgQvqUX-_POqW1RIPaRDWA-Xe6uVJ0-1LrMRbyxC_jApcwC19uH9B8Xd1dFpiKn9JjjfZyMPQpHeqaJhdYk47-2PvvHOB0oDAbA-6ncsyteoPgzIk5S73VxIupEAsdQA-B430E6xBl0-Q9V1DboEXld5cLXqwX9y');">
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shadow-sm -mt-12 relative z-10 mb-4 text-primary">
+                            <span class="material-symbols-outlined">groups</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Market Clinics</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">On-site workshops right in the heart of
+                            local markets, minimizing disruption to daily trade while maximizing attendance.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-background-light dark:bg-white/5 rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10">
+                    <div class="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Close up of hands using a mobile phone for business"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCh6devtBIVCmwOR-RHmNW761e3OQKY-XlHJEorZnyg8uvlsbUtnt1qg0vUP499xutF0wQnn2VX9PfmBFhOnupK_TI4a44Vo_cibse2fiodKJV_HUpIEuzT6Je_MfqrZ5jtIIp387UD_2OdHlFuduFVQRMZ2LhavRwU_U7lx8vwD5SQfxAMTzhkhJ-x8H0LY-kzvr_oNypec1ncqs4KYSRYrVnBN5hpVKx3Nm3XBxM8Aol9ECzJu20QhQuP8Rfonl7Q6fw6-wBCnkT5');">
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shadow-sm -mt-12 relative z-10 mb-4 text-primary">
+                            <span class="material-symbols-outlined">chat</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">WhatsApp Shops</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Converting the most popular messaging app
+                            into a powerful storefront. Catalogues, quick replies, and status updates.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-background-light dark:bg-white/5 rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10">
+                    <div class="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Traditional beadwork being documented"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBErKZtXs74uxckFhhSYnP6JFc0-I4MMZJVda_4sFf5A-WgBOgjCHSA9rLeb4taVf-7UbWMGwzWiYG7rcB1HI64IMrHMd0zSCoM_vudlofys16Al44qf8a5-gJwB0YP-H13t7t_IBdqAzCb6mrmZXflFj3McfvQ1ZZoe-0msrlHaZtNspUS8RCdz0CEtEB_7pWHVlUL0pv120N4zua693qvs2yfYFhMAfMkHy5ep2A9Nlf51ULDm1r2B7GnpZZsm9qPWYdEXFa0C6uM');">
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shadow-sm -mt-12 relative z-10 mb-4 text-primary">
+                            <span class="material-symbols-outlined">inventory_2</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Trade Incubation</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Specialized digital inventory tracking for
+                            artisans. Preserving traditional crafts by accessing global digital markets.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="bg-background-light dark:bg-white/5 rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10">
+                    <div class="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Woman explaining something using local gestures"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKGfNt1DIMfI3f8FF6rXBeZfVYzROzmu8x1GZJM_ryAWAOVEm3ZPFbe2nIPQZkZ0DPyJSglrhfe1SRqpb7OSkjSis8zFfzVUWxZm5vq4_dlN8kvBNgeKYwHJAkg-2wr9i76x0uyKKGTQtIymTgjMB0uVybGfNTbk3YapJck27wVoHYIEF-H5ftmkXGSv-SsVpxgC1gBoDrXZIgjh8pWN5CTbXRXgwR7mOECFo-bUHSLYm3QM-PKbjVOAZ2vRRmxOxHW5KJCAz3_-BX');">
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shadow-sm -mt-12 relative z-10 mb-4 text-primary">
+                            <span class="material-symbols-outlined">translate</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Local Context</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Breaking down complex digital concepts using
+                            local dialects and culturally resonant analogies for true understanding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Roadmap Section -->
+    <section class="py-20 bg-background-light dark:bg-background-dark px-4 md:px-10">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-center text-3xl font-bold mb-16">The Journey to Independence</h2>
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-white/10 -ml-[1px]">
+                </div>
+                <!-- Step 1 -->
+                <div class="relative flex flex-col md:flex-row items-center gap-8 mb-16 group">
+                    <div class="md:w-1/2 flex md:justify-end">
+                        <div
+                            class="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 md:text-right w-full md:w-auto md:max-w-md">
+                            <h4 class="text-xl font-bold text-primary mb-2">Community Entry</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">We engage community leaders and trade
+                                unions to build trust and understand specific local needs before any training begins.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-8 md:left-1/2 -ml-4 size-8 rounded-full bg-primary border-4 border-white dark:border-background-dark flex items-center justify-center z-10">
+                        <span class="material-symbols-outlined text-[#0d1b12] text-sm font-bold">one</span>
+                    </div>
+                    <div class="md:w-1/2 pl-16 md:pl-0"></div>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative flex flex-col md:flex-row items-center gap-8 mb-16 group">
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div
+                        class="absolute left-8 md:left-1/2 -ml-4 size-8 rounded-full bg-primary border-4 border-white dark:border-background-dark flex items-center justify-center z-10">
+                        <span class="material-symbols-outlined text-[#0d1b12] text-sm font-bold">2d</span>
+                    </div>
+                    <div class="w-full md:w-1/2 pl-16 md:pl-0">
+                        <div
+                            class="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 w-full md:max-w-md">
+                            <h4 class="text-xl font-bold text-primary mb-2">Skills Transfer</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Conducting practical, trade-based
+                                workshops. Women learn to create digital catalogues, manage customer contacts, and
+                                process digital payments.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative flex flex-col md:flex-row items-center gap-8 group">
+                    <div class="md:w-1/2 flex md:justify-end">
+                        <div
+                            class="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 md:text-right w-full md:w-auto md:max-w-md">
+                            <h4 class="text-xl font-bold text-primary mb-2">Sustainable Growth</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Long-term mentorship and access to a
+                                network of women entrepreneurs ensuring businesses don't just survive, but thrive
+                                online.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-8 md:left-1/2 -ml-4 size-8 rounded-full bg-primary border-4 border-white dark:border-background-dark flex items-center justify-center z-10">
+                        <span class="material-symbols-outlined text-[#0d1b12] text-sm font-bold">3p</span>
+                    </div>
+                    <div class="md:w-1/2 pl-16 md:pl-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Impact Story Spotlight -->
+    <section class="py-20 bg-white dark:bg-[#0a160e] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-10">
+            <div
+                class="bg-background-light dark:bg-white/5 rounded-3xl p-8 md:p-12 border border-gray-100 dark:border-white/10">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="absolute inset-0 bg-primary/20 rounded-2xl transform translate-x-4 translate-y-4">
+                        </div>
+                        <img alt="Amina showing her products on a tablet to a customer"
+                            class="relative rounded-2xl shadow-xl w-full object-cover h-[400px]"
+                            data-alt="African woman smiling and holding a tablet in a fabric shop"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxksYy8ZL7QYGZoSxMkWBzfLvYUxhnImQoCZmZEZjnu7AtCoeUrzAQGC9YW6j79ZLF13FC9V0d9yQdTtN7GpN8GcSIb0_Gjj6V7EFqrW6_fZGDLp8Is6ExvVbcuY8bbyGmG9_BDW7vEoNPD32sy7A2aHytJFZCwtCExCk16nu7tapmw2_3Cg_hqfQ3UMzo12cGvAw4qFPfabdoXno0xbSDjsSmvv77_70J-3leY0FV5uc6JInVLg7ZKt_qm5QUpPhNjiFtMLQdG6JT" />
+                        <div
+                            class="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                            <p class="text-primary font-bold text-xs uppercase mb-1">Impact Spotlight</p>
+                            <p class="text-white font-medium">"My fabrics are now sold in the capital city, but I still
+                                live in my village."</p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="h-px w-10 bg-primary"></span>
+                            <span class="text-primary font-bold uppercase tracking-wider text-sm">Success Story</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-text-main dark:text-white leading-tight">
+                            Meet Amina: From Market Stall to Online Enterprise
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                            Amina, a 34-year-old fabric weaver, used to rely solely on foot traffic in her local market.
+                            Seasonal rains often meant zero income for weeks.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                            Through the WiDEI program, she digitized her inventory. We helped her set up a WhatsApp
+                            Business profile and taught her how to photograph her intricate patterns. Today, Amina
+                            receives orders from across the country, coordinates delivery via mobile money, and has
+                            hired two apprentices.
+                        </p>
+                        <a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
+                            href="#">
+                            Read more stories like Amina's
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Activity Gallery -->
+    <section class="py-20 px-4 md:px-10 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center">Program in Action</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
+                <!-- Large Item -->
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl">
+                    <img alt="Group training session outdoors"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="Group of African women in a circle learning about technology outdoors"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXP3jLj4PGTOB7PRHiM7H9_l0e8WF2jMItFeaCLzsnUVSMiAW-lc6e0McNp4AS9gq_jlwZBl0zeTRxBgu7y92YVPftMkhW03vgvg0h7JTmF4nxXcv80P91L5gr6ox_QcIAQha46HCImr3pWkqLerdIXQ7fmBqyb9ut6wyXvKE40ndyo6X1JA_RBPd0485JZi-WwQ4l9gLOyl995wMpqbMLb1G8dPj9G4-hyZ6jDAOIDODl7_-y6WeCHTSu89JfSsgunvFkxIODk_S0" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span
+                            class="bg-primary text-[#0d1b12] text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Training</span>
+                        <h3 class="text-white text-xl font-bold">Outdoor Digital Literacy Class</h3>
+                    </div>
+                </div>
+                <!-- Small Item -->
+                <div class="relative group overflow-hidden rounded-xl">
+                    <img alt="Hands holding phone"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="Close up of black hands holding a smartphone showing a graph"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxOt3DUEFE_IH6iIQIy7HbwYXGb4oJeQ9ZNE9ukCc95tASSBYpuFpIPLC0f9TnGqt31pNrD6jiCR3iQJK2_XLyHzLebHM-p_ny01Z78rw9V2f87i2IYbAABEP7gHAT5U9CicbocbvafkwkgbamSTEGDH_OCpQt3v3ZpJsAqJk5hlmNQcrZXnfjaLRtbQw_OkDB95fV6WrjU0EKH_89EGtzXj3A3ZMVXbActz_vSBbGRuSqexrvLxUlSa1yp8Ffl1iTI7sK0bdGoZW5" />
+                    <div class="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
+                        <h3 class="text-white text-sm font-bold">Mobile Money Tools</h3>
+                    </div>
+                </div>
+                <!-- Small Item -->
+                <div class="relative group overflow-hidden rounded-xl">
+                    <img alt="Woman smiling"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="Portrait of a happy African woman at work"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1F3Q6gnayM32ep05hPRouDodCbQUmR_I9vFi03iWaywB3TokB-EWXljiTy0xeveT0c1hqV6hUDGEfBdJn60A3Tf5nxCsg5wozCaC7-jTQ44z_a4ArrS3h3A_zbx8rHcK0PsGExfewHWvbz9vtnOJuvV4piUY2KWj0NJiSQsQScrLYUUU1_vknnRISixF20vp7DKskDK74qQTwojmvbB4BtAKjh4EG8kiLsPbsz_K4yMKxJvrx9qgClwSPTivpnxg0KVFVQWINLJ3t" />
+                    <div class="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
+                        <h3 class="text-white text-sm font-bold">Empowerment</h3>
+                    </div>
+                </div>
+                <!-- Wide Item -->
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-xl">
+                    <img alt="Collaborative work"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="Two women looking at a laptop screen together"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoKYpieAcvktKt6Zf9xVFHy9EMgaWQx-NAM7FRiT2bD9lHyfS-zQii-vjYAuI6CDlHofv7yRWC9mIuXJTBapIYxTGNR72VFVYZsEm6TUFr8iwe3mY0qQ3TwZnFA7zqwBo8ZLMQTYH6kXOmAZwhfEFZSWfd0K10GAORrspZ2nZa5yB7ftwjYRYqiFe3t7QFvRfRzSBr80ZbyWcz7ZDazv_HNfCV9BWRjrvCNMsDY0HrtfFBIYMKwHSb1bOaR3s-1hAPUE8tzgrd2RVN" />
+                    <div class="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
+                        <h3 class="text-white text-sm font-bold">Peer Mentorship</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer CTA -->
+    <section class="py-24 bg-primary text-[#0d1b12]">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">Help Us Bridge the Gap</h2>
+            <p class="text-xl font-medium opacity-80 mb-10 max-w-2xl mx-auto">
+                Your support provides data bundles, smartphones, and training materials for women in rural communities.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-[#0d1b12] text-white px-8 py-4 rounded-lg font-bold hover:bg-black transition-colors shadow-lg">
+                    Donate Now
+                </button>
+                <button
+                    class="bg-white/20 backdrop-blur-sm border-2 border-[#0d1b12] text-[#0d1b12] px-8 py-4 rounded-lg font-bold hover:bg-white/30 transition-colors">
+                    Become a Partner
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+</body>
+
+</html>

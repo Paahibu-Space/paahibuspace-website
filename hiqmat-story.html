@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html class="" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hiqmat's Impact Story - Paahibu Space</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#262973",
+                        "secondary": "#f6871f", // Adding the requested orange
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#14141e",
+                        "surface-dark": "#1f1f2e",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "sans": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #14141e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #262973;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f6871f;
+        }
+
+                .group:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200">
+    <!-- Top Navigation -->
+    <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-sm">
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+            <a class="flex items-center gap-3" href="#">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+                    <span class="material-symbols-outlined" style="font-size: 28px;">diversity_2</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight text-primary">Paahibu Space</h1>
+            </a>
+            <div class="hidden items-center gap-8 md:flex">
+                <div class="group relative">
+                    <button
+                        class="flex items-center gap-1 text-sm font-medium text-neutral-dark hover:text-accent transition-colors py-6">
+                        Programs
+                        <span class="material-symbols-outlined text-lg">expand_more</span>
+                    </button>
+                    <div
+                        class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-screen max-w-4xl opacity-0 invisible translate-y-2 transition-all duration-200 ease-out bg-white rounded-2xl shadow-xl border border-gray-100 p-6 z-50">
+                        <div class="grid grid-cols-12 gap-8">
+                            <div class="col-span-8 grid grid-cols-2 gap-6">
+                                <div>
+                                    <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Learning
+                                        Paths</h3>
+                                    <a class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                                        href="#">
+                                        <div
+                                            class="bg-blue-50 text-primary p-2 rounded-lg group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                                            <span class="material-symbols-outlined">code</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-bold text-neutral-dark">Web Development</div>
+                                            <div class="text-xs text-neutral-gray mt-1">Full-stack bootcamp for
+                                                beginners</div>
+                                        </div>
+                                    </a>
+                                    <a class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                                        href="#">
+                                        <div
+                                            class="bg-orange-50 text-accent p-2 rounded-lg group-hover/item:bg-accent group-hover/item:text-white transition-colors">
+                                            <span class="material-symbols-outlined">data_usage</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-bold text-neutral-dark">Data Science</div>
+                                            <div class="text-xs text-neutral-gray mt-1">Analytics and visualization
+                                                skills</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Growth
+                                        &amp; Support</h3>
+                                    <a class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                                        href="#">
+                                        <div
+                                            class="bg-purple-50 text-purple-600 p-2 rounded-lg group-hover/item:bg-purple-600 group-hover/item:text-white transition-colors">
+                                            <span class="material-symbols-outlined">supervisor_account</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-bold text-neutral-dark">Mentorship</div>
+                                            <div class="text-xs text-neutral-gray mt-1">Connect with industry leaders
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                                        href="#">
+                                        <div
+                                            class="bg-green-50 text-green-600 p-2 rounded-lg group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
+                                            <span class="material-symbols-outlined">rocket_launch</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-bold text-neutral-dark">Founder's Lab</div>
+                                            <div class="text-xs text-neutral-gray mt-1">Incubator for female founders
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-span-4 bg-primary/5 rounded-xl p-6 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-bold text-primary mb-2">Next Cohort</h3>
+                                    <p class="text-sm text-neutral-gray mb-4">Applications are open for the Summer 2024
+                                        Web Dev intake.</p>
+                                </div>
+                                <button
+                                    class="w-full rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-900 transition-all">
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative">
+                    <button
+                        class="flex items-center gap-1 text-sm font-medium text-neutral-dark hover:text-accent transition-colors py-6">
+                        About
+                        <span class="material-symbols-outlined text-lg">expand_more</span>
+                    </button>
+                    <div
+                        class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible translate-y-2 transition-all duration-200 ease-out bg-white rounded-xl shadow-xl border border-gray-100 p-2 z-50">
+                        <a class="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+                            href="#mission">Our Mission</a>
+                        <a class="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+                            href="#team">Leadership Team</a>
+                        <a class="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+                            href="#philosophy">Philosophy</a>
+                        <a class="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+                            href="#partners">Partners</a>
+                    </div>
+                </div>
+                <a class="text-sm font-medium text-neutral-dark hover:text-accent transition-colors"
+                    href="#impact">Impact</a>
+                <a class="text-sm font-medium text-neutral-dark hover:text-accent transition-colors"
+                    href="#blog">Stories</a>
+            </div>
+            <div class="hidden md:flex">
+                <button
+                    class="rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-orange-600 hover:shadow transition-all">
+                    Join Us
+                </button>
+            </div>
+            <div class="flex md:hidden">
+                <button class="text-neutral-dark hover:text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content Wrapper -->
+    <div class="relative flex flex-col pt-[64px]">
+        <!-- Hero Section -->
+        <div class="relative w-full overflow-hidden bg-background-dark py-12 md:py-20 lg:py-24">
+            <!-- Background Decoration -->
+            <div
+                class="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[128px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div class="layout-container flex flex-col px-4 md:px-10 lg:px-40 items-center">
+                <div class="layout-content-container max-w-[1280px] w-full">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left Content -->
+                        <div class="flex flex-col gap-6 order-2 lg:order-1">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="bg-primary/30 text-secondary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Impact
+                                    Story</span>
+                                <span class="text-gray-400 text-sm">5 min read</span>
+                            </div>
+                            <h1
+                                class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
+                                Empowering the Future: <span
+                                    class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Hiqmat's
+                                    Story</span>
+                            </h1>
+                            <p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-[540px]">
+                                Advocating for girls' education and safety in the digital age. Discover how Hiqmat
+                                Sungdeme Saani is changing the narrative for young women in tech through determination
+                                and courage.
+                            </p>
+                            <div class="flex flex-wrap gap-4 pt-4">
+                                <button
+                                    class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary/80 text-white text-base font-bold transition-all shadow-lg shadow-primary/20 gap-2">
+                                    <span class="material-symbols-outlined">play_circle</span>
+                                    <span>Watch Video</span>
+                                </button>
+                                <button
+                                    class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 border border-gray-600 hover:border-white hover:bg-white/5 text-white text-base font-medium transition-all">
+                                    <span>Share Story</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Right Image -->
+                        <div class="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+                            <div
+                                class="relative w-full max-w-[500px] aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60 z-10">
+                                </div>
+                                <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                    data-alt="Young African woman smiling confidently in a tech office environment"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRBWd06ICRCTWR3hhjGXgrpoCYpqw0sfzdn1yXh0qq7AF-glqiQk4sBYifYAbb1iUoSn5gWj3D561v-y5JM5mv7tEt5biFzm4jSOX4-ATxohMiEV9DHVHYwAE2U8Uqh3CV2HjFY-5y6ptrDAVk8MUdfMQHSzArlbI8W7d2ixMoxsL7BFBMYfShP8oCE1kV_CN7eI0Y6VC3649OgVhgYuiYl43wC3zrO-DkJ_Pphd1LA50Dek3EF0-wpDYnxT_Nb6kC00vIPCmuBcww");'>
+                                </div>
+                                <!-- Floating Card -->
+                                <div
+                                    class="absolute bottom-6 left-6 right-6 z-20 bg-surface-dark/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-lg">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-secondary/20 p-2 rounded-lg text-secondary">
+                                            <span class="material-symbols-outlined">campaign</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-gray-400 font-medium uppercase">Current Role</p>
+                                            <p class="text-white text-sm font-bold">Digital Safety Advocate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Decorative elements -->
+                            <div
+                                class="absolute -z-10 -right-4 -bottom-4 w-full h-full border-2 border-secondary/30 rounded-2xl hidden md:block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Quote Section -->
+        <div class="w-full bg-surface-dark border-y border-white/5 py-16">
+            <div class="layout-container px-4 md:px-10 lg:px-40 flex justify-center">
+                <div class="max-w-[800px] text-center flex flex-col items-center gap-6">
+                    <span class="material-symbols-outlined text-6xl text-secondary opacity-80">format_quote</span>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white italic">
+                        "Technology is not just a tool; it's a weapon against inequality. When we empower a girl with
+                        digital skills, we empower a community."
+                    </h3>
+                    <div class="flex flex-col items-center gap-1">
+                        <p class="text-secondary font-bold text-lg">Hiqmat Sungdeme Saani</p>
+                        <p class="text-gray-400 text-sm">Paahibu Space Alumni &amp; Mentor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The Journey Section (Grid + Feature) -->
+        <div class="w-full bg-background-dark py-20 relative">
+            <div class="layout-container px-4 md:px-10 lg:px-40 flex justify-center">
+                <div class="layout-content-container max-w-[1280px] w-full flex flex-col gap-16">
+                    <!-- Text Content -->
+                    <div class="grid lg:grid-cols-12 gap-10">
+                        <div class="lg:col-span-5 flex flex-col gap-6">
+                            <h2 class="text-secondary text-sm font-bold tracking-wider uppercase">The Spark</h2>
+                            <h3 class="text-3xl md:text-4xl font-bold text-white leading-tight">Bridging the Gender
+                                Digital Divide</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Hiqmat's journey began with a simple observation: the digital divide wasn't just about
+                                access to devices, but about the safety and confidence to use them. Growing up in a
+                                community where tech was seen as a "boy's club," she saw how online harassment and lack
+                                of role models discouraged girls from pursuing tech careers.
+                            </p>
+                            <p class="text-gray-300 leading-relaxed">
+                                Instead of accepting the status quo, she decided to become the change she wanted to see.
+                                She joined Paahibu Space, where she not only learned coding but also discovered her
+                                voice as an advocate.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Feature Cards -->
+                            <div
+                                class="bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-secondary/50 transition-colors group">
+                                <div
+                                    class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors mb-4">
+                                    <span class="material-symbols-outlined">shield</span>
+                                </div>
+                                <h4 class="text-white text-lg font-bold mb-2">Digital Safety</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Leading workshops on how to stay safe
+                                    online, combating cyberbullying and harassment.</p>
+                            </div>
+                            <div
+                                class="bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-secondary/50 transition-colors group">
+                                <div
+                                    class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors mb-4">
+                                    <span class="material-symbols-outlined">school</span>
+                                </div>
+                                <h4 class="text-white text-lg font-bold mb-2">Tech Education</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Teaching basic coding and digital
+                                    literacy to over 200 girls in rural communities.</p>
+                            </div>
+                            <div
+                                class="bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-secondary/50 transition-colors group">
+                                <div
+                                    class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors mb-4">
+                                    <span class="material-symbols-outlined">campaign</span>
+                                </div>
+                                <h4 class="text-white text-lg font-bold mb-2">Advocacy</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Speaking at regional forums to
+                                    influence policy changes regarding digital inclusion.</p>
+                            </div>
+                            <div
+                                class="bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-secondary/50 transition-colors group">
+                                <div
+                                    class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors mb-4">
+                                    <span class="material-symbols-outlined">diversity_2</span>
+                                </div>
+                                <h4 class="text-white text-lg font-bold mb-2">Mentorship</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Creating a peer-to-peer support network
+                                    for young women entering the tech space.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Timeline Section -->
+        <div class="w-full bg-surface-dark py-20 border-t border-white/5">
+            <div class="layout-container px-4 md:px-10 lg:px-40 flex justify-center">
+                <div class="max-w-[960px] w-full flex flex-col gap-12">
+                    <div class="text-center mb-4">
+                        <h2 class="text-3xl font-bold text-white mb-4">Milestones of Impact</h2>
+                        <p class="text-gray-400">Tracking Hiqmat's growth from student to leader</p>
+                    </div>
+                    <div class="relative">
+                        <!-- Vertical Line -->
+                        <div
+                            class="absolute left-[20px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-primary/20">
+                        </div>
+                        <!-- Item 1 -->
+                        <div class="relative flex gap-8 mb-12 group">
+                            <div
+                                class="relative z-10 flex-none w-[42px] h-[42px] rounded-full bg-background-dark border-2 border-secondary flex items-center justify-center shadow-[0_0_15px_rgba(246,135,31,0.3)]">
+                                <span class="material-symbols-outlined text-secondary text-sm">lightbulb</span>
+                            </div>
+                            <div
+                                class="flex-1 bg-background-dark p-6 rounded-lg border border-white/5 hover:border-secondary/30 transition-all">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold text-white">The Realization</h3>
+                                    <span
+                                        class="text-secondary text-sm font-bold bg-secondary/10 px-2 py-1 rounded">2018</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">Hiqmat identifies the lack of female representation in
+                                    her school's computer lab and decides to pursue tech despite social stigma.</p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="relative flex gap-8 mb-12 group">
+                            <div
+                                class="relative z-10 flex-none w-[42px] h-[42px] rounded-full bg-background-dark border-2 border-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary text-sm">login</span>
+                            </div>
+                            <div
+                                class="flex-1 bg-background-dark p-6 rounded-lg border border-white/5 hover:border-primary/50 transition-all">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold text-white">Joining Paahibu Space</h3>
+                                    <span
+                                        class="text-primary text-sm font-bold bg-primary/20 px-2 py-1 rounded">2020</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">Enrolls in the "Girls in ICT" bootcamp. Learns web
+                                    development and meets mentors who encourage her advocacy work.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="relative flex gap-8 mb-12 group">
+                            <div
+                                class="relative z-10 flex-none w-[42px] h-[42px] rounded-full bg-background-dark border-2 border-white flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-sm">campaign</span>
+                            </div>
+                            <div
+                                class="flex-1 bg-background-dark p-6 rounded-lg border border-white/5 hover:border-white/30 transition-all">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold text-white">First Advocacy Campaign</h3>
+                                    <span
+                                        class="text-gray-300 text-sm font-bold bg-white/10 px-2 py-1 rounded">2021</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">Launches "Safe Space Online," a community initiative to
+                                    teach 50 local girls about internet safety and privacy settings.</p>
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="relative flex gap-8 group">
+                            <div
+                                class="relative z-10 flex-none w-[42px] h-[42px] rounded-full bg-secondary border-2 border-white flex items-center justify-center shadow-lg shadow-secondary/40">
+                                <span class="material-symbols-outlined text-white text-sm">trophy</span>
+                            </div>
+                            <div
+                                class="flex-1 bg-gradient-to-r from-background-dark to-primary/10 p-6 rounded-lg border border-secondary/30 hover:shadow-lg hover:shadow-secondary/10 transition-all">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold text-white">Regional Recognition</h3>
+                                    <span
+                                        class="text-secondary text-sm font-bold bg-secondary/10 px-2 py-1 rounded">2023</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">Awarded "Young Changemaker of the Year" for her
+                                    impactful work in bridging the digital gender divide in Northern Ghana.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action Section -->
+        <div class="w-full bg-primary relative overflow-hidden">
+            <!-- Decorative Patterns -->
+            <div class="absolute inset-0 opacity-10"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDv0jaIERxQkrEW7_r8T5XWODPN2V6Ly5nu7_t9m_2s1evuyUUmYPfPlsqG_TBgYn9gzmUSl67HnAnpsEgy3y5BWmFwO28DBLLcmM_UHIp57gZE5C50PVU1mftUC7urChVHk65WYs_g-2ZDc9Uo-Ud-um0x5Bu3Ngy1rBL4zBnqknBZC5X4ml_mx2DMTMf8qI7QVcVVuDTSuunO7t_oXIpadwlV0VNiyTugG8g02JlcmljiKaWYC3yH8vx3sbjMbqn8UimByJGJ5WmM");'>
+            </div>
+            <div class="layout-container px-4 md:px-10 lg:px-40 flex justify-center py-20 relative z-10">
+                <div class="max-w-[800px] text-center flex flex-col items-center gap-8">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Help Us Create More Stories
+                        Like Hiqmat's</h2>
+                    <p class="text-blue-100 text-lg md:text-xl max-w-[600px]">
+                        Your support provides the resources, mentorship, and safe spaces needed for young women to
+                        thrive in technology.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                        <button
+                            class="bg-secondary hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform hover:scale-105 shadow-xl shadow-black/20">
+                            Donate Now
+                        </button>
+                        <button
+                            class="bg-transparent border-2 border-white/30 hover:bg-white/10 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
+                            Become a Mentor
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="bg-primary text-white relative mt-auto">
+            <!-- Main Footer Content -->
+            <div class="max-w-7xl mx-auto px-6 py-16 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <!-- Column 1: Brand & About -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-2">
+                            <!-- Abstract Logo using shapes if no image provided -->
+                            <div
+                                class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-primary font-bold text-xl shadow-lg">
+                                P</div>
+                            <span class="text-xl font-bold tracking-wide">Paahibu Space</span>
+                        </div>
+                        <p class="text-sm leading-6 text-gray-300">
+                            Bridging the gender gap in technology through education, mentorship, and entrepreneurship.
+                            We are
+                            building the future of tech in Africa.
+                        </p>
+                        <div class="flex gap-4 pt-2">
+                            <!-- Social Placeholders using Material Symbols as requested -->
+                            <a aria-label="Twitter"
+                                class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-white transition-all duration-300 group"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined group-hover:scale-110 transition-transform">alternate_email</span>
+                            </a>
+                            <a aria-label="LinkedIn"
+                                class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-white transition-all duration-300 group"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined group-hover:scale-110 transition-transform">work</span>
+                            </a>
+                            <a aria-label="Facebook"
+                                class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-white transition-all duration-300 group"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined group-hover:scale-110 transition-transform">thumb_up</span>
+                            </a>
+                            <a aria-label="Instagram"
+                                class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-white transition-all duration-300 group"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined group-hover:scale-110 transition-transform">photo_camera</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Column 2: Quick Links -->
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">Explore
+                        </h3>
+                        <ul class="space-y-4" role="list">
+                            <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                    href="#"><span
+                                        class="material-symbols-outlined text-[16px]">chevron_right</span>About
+                                    Us</a></li>
+                            <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                    href="#"><span class="material-symbols-outlined text-[16px]">chevron_right</span>Our
+                                    Programs</a></li>
+                            <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                    href="#"><span
+                                        class="material-symbols-outlined text-[16px]">chevron_right</span>Impact</a>
+                            </li>
+                            <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                    href="#"><span class="material-symbols-outlined text-[16px]">chevron_right</span>Get
+                                    Involved</a></li>
+                            <li><a class="text-sm leading-6 text-gray-300 hover:text-accent transition-colors flex items-center gap-2"
+                                    href="#"><span
+                                        class="material-symbols-outlined text-[16px]">chevron_right</span>Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column 3: Contact Info -->
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">Contact Us
+                        </h3>
+                        <ul class="space-y-4" role="list">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-accent shrink-0 mt-0.5">location_on</span>
+                                <span class="text-sm leading-6 text-gray-300">Insurance Road Wa-UWR<br />Ghana</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-accent shrink-0">call</span>
+                                <a class="text-sm leading-6 text-gray-300 hover:text-white"
+                                    href="tel:+233247254326">+233 24 725
+                                    4326</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-accent shrink-0">mail</span>
+                                <a class="text-sm leading-6 text-gray-300 hover:text-white"
+                                    href="mailto:info@paahibuspace.org">info@paahibuspace.org</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column 4: Hours & Legal -->
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">Office
+                            Hours</h3>
+                        <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="material-symbols-outlined text-accent">schedule</span>
+                                <span class="text-sm font-medium text-white">Opening Times</span>
+                            </div>
+                            <div class="space-y-2 mt-3">
+                                <div class="flex justify-between text-sm text-gray-300">
+                                    <span>Mon - Fri</span>
+                                    <span class="text-white font-medium">9am - 5pm</span>
+                                </div>
+                                <div class="flex justify-between text-sm text-gray-300">
+                                    <span>Weekends</span>
+                                    <span class="text-gray-500">Closed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-white/10 bg-[#1e2160]/50">
+                <div
+                    class="max-w-7xl mx-auto px-6 py-8 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-xs leading-5 text-gray-400 text-center md:text-left">
+                        © 2024 Paahibu Space. All rights reserved.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                        <a class="text-xs leading-5 text-gray-400 hover:text-white transition-colors" href="#">Privacy
+                            Policy</a>
+                        <a class="text-xs leading-5 text-gray-400 hover:text-white transition-colors" href="#">Terms of
+                            Service</a>
+                        <a class="text-xs leading-5 text-gray-400 hover:text-white transition-colors" href="#">Cookie
+                            Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
