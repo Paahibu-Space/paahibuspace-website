@@ -1,15 +1,36 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Navigation() {
+  const pathname = usePathname();
+  
+  const isActive = (path) => pathname === path;
+
   return (
-    <div className="flex items-center gap-8">
+    <div className="flex items-center gap-6 lg:gap-8">
+      <Link
+        href="/"
+        className={cn(
+          "text-sm font-medium transition-colors hover:text-secondary",
+          isActive("/") ? "text-secondary font-bold" : "text-neutral-dark"
+        )}
+      >
+        Home
+      </Link>
+
       {/* Programs Mega Menu */}
       <div className="group relative">
-        <button className="flex items-center gap-1 text-sm font-medium text-neutral-dark hover:text-secondary transition-colors py-6">
+        <button className={cn(
+          "flex items-center gap-1 text-sm font-medium transition-colors py-6 hover:text-secondary",
+           isActive("/programs") || isActive("/techsistars-program") || isActive("/grow-program") ? "text-secondary font-bold" : "text-neutral-dark"
+        )}>
           Programs
           <span className="material-symbols-outlined text-lg">expand_more</span>
         </button>
-        <div className="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-screen max-w-4xl opacity-0 invisible translate-y-2 bg-white rounded-2xl shadow-xl border border-gray-100 p-6 z-50">
+        <div className="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-screen max-w-4xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out bg-white rounded-2xl shadow-xl border border-gray-100 p-6 z-50">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-8 grid grid-cols-2 gap-6">
               <div>
@@ -48,13 +69,29 @@ export default function Navigation() {
                     </div>
                   </div>
                 </Link>
+                 <Link
+                  href="/widei-program"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                >
+                  <div className="bg-pink-50 text-pink-500 p-2 rounded-lg group-hover/item:bg-pink-500 group-hover/item:text-white transition-colors">
+                    <span className="material-symbols-outlined">groups_3</span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-neutral-dark">
+                      WiDEI
+                    </div>
+                    <div className="text-xs text-neutral-gray mt-1">
+                     Digital Entrepreneurship
+                    </div>
+                  </div>
+                </Link>
               </div>
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">
                   Growth & Support
                 </h3>
                 <Link
-                  href="/grow-program"
+                  href="/techsistars-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
                 >
                   <div className="bg-purple-50 text-purple-600 p-2 rounded-lg group-hover/item:bg-purple-600 group-hover/item:text-white transition-colors">
@@ -67,12 +104,12 @@ export default function Navigation() {
                       Mentorship
                     </div>
                     <div className="text-xs text-neutral-gray mt-1">
-                      Connect with industry leaders
+                      TechsiStars Mentorship Program
                     </div>
                   </div>
                 </Link>
                 <Link
-                  href="/programs"
+                  href="/grow-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
                 >
                   <div className="bg-green-50 text-green-600 p-2 rounded-lg group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
@@ -85,7 +122,25 @@ export default function Navigation() {
                       Founder's Lab
                     </div>
                     <div className="text-xs text-neutral-gray mt-1">
-                      Incubator for female founders
+                      GROW Incubator
+                    </div>
+                  </div>
+                </Link>
+                 <Link
+                  href="/widib-program"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                >
+                  <div className="bg-yellow-50 text-yellow-600 p-2 rounded-lg group-hover/item:bg-yellow-600 group-hover/item:text-white transition-colors">
+                    <span className="material-symbols-outlined">
+                      analytics
+                    </span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-neutral-dark">
+                      WIBID
+                    </div>
+                    <div className="text-xs text-neutral-gray mt-1">
+                      Business Development
                     </div>
                   </div>
                 </Link>
@@ -100,9 +155,9 @@ export default function Navigation() {
                   Applications are open for the Summer 2024 Web Dev intake.
                 </p>
               </div>
-              <button className="w-full rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-900 transition-all cursor-pointer">
+              <Link href="/involve" className="w-full text-center rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-900 transition-all cursor-pointer">
                 Apply Now
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -110,11 +165,20 @@ export default function Navigation() {
 
       {/* About Mega Menu */}
       <div className="group relative">
-        <button className="flex items-center gap-1 text-sm font-medium text-neutral-dark hover:text-secondary transition-colors py-6">
+        <button className={cn(
+          "flex items-center gap-1 text-sm font-medium transition-colors py-6 hover:text-secondary",
+           isActive("/about") || isActive("/mission") || isActive("/team") || isActive("/philosophy") ? "text-secondary font-bold" : "text-neutral-dark"
+        )}>
           About
           <span className="material-symbols-outlined text-lg">expand_more</span>
         </button>
-        <div className="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible translate-y-2 bg-white rounded-xl shadow-xl border border-gray-100 p-2 z-50">
+        <div className="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out bg-white rounded-xl shadow-xl border border-gray-100 p-2 z-50">
+          <Link
+            href="/about"
+            className="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
+          >
+            Overview
+          </Link>
           <Link
             href="/mission"
             className="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
@@ -133,32 +197,32 @@ export default function Navigation() {
           >
             Philosophy
           </Link>
-          <Link
-            href="/#partners"
-            className="block px-4 py-2 text-sm text-neutral-dark hover:bg-gray-50 hover:text-primary rounded-lg"
-          >
-            Partners
-          </Link>
         </div>
       </div>
 
       <Link
         href="/impact"
-        className="text-sm font-medium text-neutral-dark hover:text-secondary transition-colors"
+         className={cn(
+          "text-sm font-medium transition-colors hover:text-secondary",
+          isActive("/impact") ? "text-secondary font-bold" : "text-neutral-dark"
+        )}
       >
         Impact
       </Link>
       <Link
         href="/stories"
-        className="text-sm font-medium text-neutral-dark hover:text-secondary transition-colors"
+         className={cn(
+          "text-sm font-medium transition-colors hover:text-secondary",
+          isActive("/stories") ? "text-secondary font-bold" : "text-neutral-dark"
+        )}
       >
         Stories
       </Link>
       
       <div className="ml-4">
-        <button className="rounded-full bg-secondary px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-orange-600 hover:shadow transition-all cursor-pointer">
+        <Link href="/involve" className="rounded-full bg-secondary px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-orange-600 hover:shadow transition-all cursor-pointer">
           Join Us
-        </button>
+        </Link>
       </div>
     </div>
   );
