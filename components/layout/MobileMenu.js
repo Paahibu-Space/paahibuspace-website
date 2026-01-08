@@ -109,23 +109,20 @@ export default function MobileMenu({ open, setOpen }) {
                   </button>
                   {activeSubmenu === 'programs' && (
                     <div className="mt-2 space-y-2 pl-4">
-                      <Link href="/programs" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                        Web Development
-                      </Link>
-                      <Link href="/programs" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                        Data Science
+                      <Link href="/techsistars-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        TechsiStars
                       </Link>
                       <Link href="/widei-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
                         WiDEI
-                      </Link>
-                      <Link href="/techsistars-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                        TechsiStars
                       </Link>
                        <Link href="/grow-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
                         GROW Program
                       </Link>
                       <Link href="/widib-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                        WIBID
+                        WiDiB
+                      </Link>
+                      <Link href="/community-ambassadors-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        Community Ambassadors
                       </Link>
                     </div>
                   )}

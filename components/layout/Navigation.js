@@ -63,112 +63,90 @@ export default function Navigation() {
             <div className="col-span-8 grid grid-cols-2 gap-6">
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">
-                  Learning Paths
-                </h3>
-                <Link
-                  href="/programs"
-                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
-                >
-                  <div className="bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 p-2 rounded-lg group-hover/item:bg-primary group-hover/item:text-white dark:group-hover/item:text-white transition-colors">
-                    <span className="material-symbols-outlined">code</span>
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-primary dark:group-hover/item:text-white transition-colors">
-                      Web Development
-                    </div>
-                    <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
-                      Full-stack bootcamp for beginners
-                    </div>
-                  </div>
-                </Link>
-                <Link
-                  href="/programs"
-                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
-                >
-                  <div className="bg-orange-50 dark:bg-orange-900/20 text-secondary dark:text-orange-400 p-2 rounded-lg group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
-                    <span className="material-symbols-outlined">data_usage</span>
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-neutral-dark dark:text-white">
-                      Data Science
-                    </div>
-                    <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
-                      Analytics and visualization skills
-                    </div>
-                  </div>
-                </Link>
-                 <Link
-                  href="/widei-program"
-                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
-                >
-                  <div className="bg-pink-50 dark:bg-pink-900/20 text-pink-500 dark:text-pink-400 p-2 rounded-lg group-hover/item:bg-pink-500 group-hover/item:text-white transition-colors">
-                    <span className="material-symbols-outlined">groups_3</span>
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-neutral-dark dark:text-white">
-                      WiDEI
-                    </div>
-                    <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
-                     Digital Entrepreneurship
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div>
-                <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">
-                  Growth & Support
+                  Digital Skills
                 </h3>
                 <Link
                   href="/techsistars-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
                   <div className="bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 p-2 rounded-lg group-hover/item:bg-purple-600 group-hover/item:text-white transition-colors">
-                    <span className="material-symbols-outlined">
-                      supervisor_account
-                    </span>
+                    <span className="material-symbols-outlined">school</span>
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-neutral-dark dark:text-white">
-                      Mentorship
+                    <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-purple-600 dark:group-hover/item:text-white transition-colors">
+                      TechsiStars
                     </div>
                     <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
-                      TechsiStars Mentorship Program
+                      Mentorship & Technical Skills
                     </div>
                   </div>
                 </Link>
                 <Link
-                  href="/grow-program"
+                  href="/widei-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
                   <div className="bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 p-2 rounded-lg group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
-                    <span className="material-symbols-outlined">
-                      rocket_launch
-                    </span>
+                    <span className="material-symbols-outlined">public</span>
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-neutral-dark dark:text-white">
-                      Founder's Lab
+                    <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-green-600 dark:group-hover/item:text-white transition-colors">
+                      WiDEI
                     </div>
                     <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
-                      GROW Incubator
+                      Bridging the Digital Gap
                     </div>
                   </div>
                 </Link>
-                 <Link
+              </div>
+              <div>
+                <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">
+                  Entrepreneurship & Leadership
+                </h3>
+                <Link
+                  href="/grow-program"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
+                >
+                  <div className="bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 p-2 rounded-lg group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                    <span className="material-symbols-outlined">rocket_launch</span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-primary dark:group-hover/item:text-white transition-colors">
+                      GROW Incubator
+                    </div>
+                    <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
+                      For Aspiring Founders
+                    </div>
+                  </div>
+                </Link>
+                <Link
                   href="/widib-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
                   <div className="bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400 p-2 rounded-lg group-hover/item:bg-yellow-600 group-hover/item:text-white transition-colors">
-                    <span className="material-symbols-outlined">
-                      analytics
-                    </span>
+                    <span className="material-symbols-outlined">storefront</span>
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-neutral-dark dark:text-white">
-                      WIBID
+                    <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-yellow-600 dark:group-hover/item:text-white transition-colors">
+                      WiDiB
                     </div>
                     <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
-                      Business Development
+                      Digital Business Transformation
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/community-ambassadors-program"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
+                >
+                  <div className="bg-orange-50 dark:bg-orange-900/20 text-secondary dark:text-orange-400 p-2 rounded-lg group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
+                    <span className="material-symbols-outlined">campaign</span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-secondary dark:group-hover/item:text-white transition-colors">
+                      Ambassadors
+                    </div>
+                    <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
+                      Lead Change in Your Community
                     </div>
                   </div>
                 </Link>

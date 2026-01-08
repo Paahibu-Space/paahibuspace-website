@@ -1,87 +1,301 @@
-import PageHero from "@/components/sections/PageHero";
-import ProgramObjectives from "@/components/sections/ProgramObjectives";
-import ImpactSpotlight from "@/components/sections/ImpactSpotlight";
-import ProgramGallery from "@/components/sections/ProgramGallery";
-import ProgramCTA from "@/components/sections/ProgramCTA";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 export default function WideiProgramPage() {
-  const objectives = [
-    {
-      title: "Digital Innovation",
-      description: "Harnessing digital tools to solve local problems and create value.",
-      iconKey: "skill",
-    },
-    {
-      title: "Entrepreneurial Spirit",
-      description: "Fostering a mindset of ownership and creative problem solving.",
-      iconKey: "mentorship",
-    },
-    {
-      title: "Policy Advocacy",
-      description: "Championing policies that support women in the digital economy.",
-      iconKey: "community",
-    },
-     {
-      title: "Global Connectivity",
-      description: "Connecting local innovators with global markets and resources.",
-      iconKey: "career",
-    },
-  ];
-
-  const galleryImages = [
-    {
-        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAXP3jLj4PGTOB7PRHiM7H9_l0e8WF2jMItFeaCLzsnUVSMiAW-lc6e0McNp4AS9gq_jlwZBl0zeTRxBgu7y92YVPftMkhW03vgvg0h7JTmF4nxXcv80P91L5gr6ox_QcIAQha46HCImr3pWkqLerdIXQ7fmBqyb9ut6wyXvKE40ndyo6X1JA_RBPd0485JZi-WwQ4l9gLOyl995wMpqbMLb1G8dPj9G4-hyZ6jDAOIDODl7_-y6WeCHTSu89JfSsgunvFkxIODk_S0",
-        alt: "Outdoor Digital Literacy Class",
-        title: "Outdoor Digital Literacy Class",
-        tag: "Training"
-    },
-    {
-        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxOt3DUEFE_IH6iIQIy7HbwYXGb4oJeQ9ZNE9ukCc95tASSBYpuFpIPLC0f9TnGqt31pNrD6jiCR3iQJK2_XLyHzLebHM-p_ny01Z78rw9V2f87i2IYbAABEP7gHAT5U9CicbocbvafkwkgbamSTEGDH_OCpQt3v3ZpJsAqJk5hlmNQcrZXnfjaLRtbQw_OkDB95fV6WrjU0EKH_89EGtzXj3A3ZMVXbActz_vSBbGRuSqexrvLxUlSa1yp8Ffl1iTI7sK0bdGoZW5",
-        alt: "Mobile Money Tools",
-        title: "Mobile Money Tools"
-    },
-    {
-        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB1F3Q6gnayM32ep05hPRouDodCbQUmR_I9vFi03iWaywB3TokB-EWXljiTy0xeveT0c1hqV6hUDGEfBdJn60A3Tf5nxCsg5wozCaC7-jTQ44z_a4ArrS3h3A_zbx8rHcK0PsGExfewHWvbz9vtnOJuvV4piUY2KWj0NJiSQsQScrLYUUU1_vknnRISixF20vp7DKskDK74qQTwojmvbB4BtAKjh4EG8kiLsPbsz_K4yMKxJvrx9qgClwSPTivpnxg0KVFVQWINLJ3t",
-        alt: "Empowerment",
-        title: "Empowerment"
-    },
-    {
-        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCoKYpieAcvktKt6Zf9xVFHy9EMgaWQx-NAM7FRiT2bD9lHyfS-zQii-vjYAuI6CDlHofv7yRWC9mIuXJTBapIYxTGNR72VFVYZsEm6TUFr8iwe3mY0qQ3TwZnFA7zqwBo8ZLMQTYH6kXOmAZwhfEFZSWfd0K10GAORrspZ2nZa5yB7ftwjYRYqiFe3t7QFvRfRzSBr80ZbyWcz7ZDazv_HNfCV9BWRjrvCNMsDY0HrtfFBIYMKwHSb1bOaR3s-1hAPUE8tzgrd2RVN",
-        alt: "Peer Mentorship",
-        title: "Peer Mentorship"
-    }
-  ];
-
   return (
     <>
-      <PageHero
-        title={
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-display">
-            WiDEI <span className="text-secondary">Program</span>
-          </h1>
-        }
-        description="Women in Digital Entrepreneurship & Innovation. A collaborative platform fostering creativity, shared growth, and advocacy for digital inclusion policies."
-        className="bg-primary"
-      >
-         <Button size="lg" variant="secondary" className="mt-8">Join the Initiative</Button>
-      </PageHero>
-      <ProgramObjectives objectives={objectives} />
-      <ImpactSpotlight 
-        title="Meet Amina: From Market Stall to Online Enterprise"
-        story="Amina, a 34-year-old fabric weaver, used to rely solely on foot traffic in her local market. Seasonal rains often meant zero income for weeks."
-        backgroundStory="Through the WiDEI program, she digitized her inventory. We helped her set up a WhatsApp Business profile and taught her how to photograph her intricate patterns. Today, Amina receives orders from across the country, coordinates delivery via mobile money, and has hired two apprentices."
-        quote="My fabrics are now sold in the capital city, but I still live in my village."
-        personName="Amina"
-        image="https://lh3.googleusercontent.com/aida-public/AB6AXuBq_q_j5Yc3t4o7nU8wz7S9tC0qR8vE6xL1kZ2yF3mG4H5p-I7J9rK0sT8uV1bX5W9dY6aZ3e4fH8g0iJ1kL2mN3oP4qQ5rS6tU7vW8xY9z-A0bC1dD2e3fG4h5i6jK7lM8n9oP0qR1s2t3uV4wX5y6z7A8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3"
-      />
-      <ProgramGallery images={galleryImages} />
-      <ProgramCTA
-        title="Help Us Bridge the Gap"
-        description="Your support provides data bundles, smartphones, and training materials for women in rural communities."
-        primaryAction={{ label: "Donate Now" }}
-        secondaryAction={{ label: "Become a Partner" }}
-      />
+      {/* Breadcrumbs */}
+      <div className="bg-background-light dark:bg-background-dark border-b border-gray-100 dark:border-white/10 relative z-20">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+             <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                 <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+                 <span className="material-symbols-outlined text-[16px]">chevron_right</span>
+                 <Link href="/programs" className="hover:text-primary transition-colors">Programs</Link>
+                 <span className="material-symbols-outlined text-[16px]">chevron_right</span>
+                 <span className="font-semibold text-primary">WiDEI</span>
+             </div>
+         </div>
+     </div>
+
+     {/* Hero Section */}
+     <header className="relative w-full min-h-[600px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+         style={{backgroundImage: 'linear-gradient(to right, rgba(16, 34, 22, 0.85) 0%, rgba(16, 34, 22, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCn4Br8YOkzYhaMOEC6q8h2Ordjvn9ZERZ-Yv9y-aShetxLo8M4_affGun19w8q-qt7tPtIWBvbVZxLMsecKw9HRa6PZimE3jZmJHUzRVF29C8ZvgxL7PhpECG6RpLBc1m7F7kgKcTebzHXCUZw7ssXXZIL3jxFVq3U_dl0WkAs-x57AL9h2ndFi6DrEW7nNzK_LpylFLz3i7apDoUrSKNmjZ14Fcmpepqy4ARyB1wEHDHPGIy8bFvtsKzGl2MpHPA6CXu6JO_UlD-f")'}}>
+         <div className="max-w-7xl w-full px-4 md:px-10 py-20 flex flex-col md:flex-row items-center gap-10">
+             <div className="flex-1 flex flex-col gap-6 text-center md:text-left">
+                 <div className="inline-flex items-center justify-center md:justify-start gap-2 text-secondary font-bold tracking-wide uppercase text-xs">
+                     <span className="w-8 h-[2px] bg-secondary"></span>
+                     Women in Digital Economy Initiative
+                 </div>
+                 <h1 className="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                     Bridging the Tradition <span className="text-secondary">Digital Gap</span>
+                 </h1>
+                 <p className="text-gray-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0 font-light">
+                     Empowering women-led businesses in the informal sector with digital tools for economic independence.
+                     Connecting tradition with modernity through practical tech education.
+                 </p>
+                 <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
+                     {/* <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-secondary text-[#0d1b12] text-base font-bold hover:bg-secondary/80 transition-colors shadow-lg shadow-primary/20">
+                         Support the Program
+                     </button> */}
+                 </div>
+             </div>
+             {/* Floating Stat Card */}
+             <div className="hidden lg:block w-80 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                 <div className="flex items-center gap-4 mb-4">
+                     <div className="bg-primary/20 p-3 rounded-full text-primary">
+                         <span className="material-symbols-outlined">storefront</span>
+                     </div>
+                     <div>
+                         <p className="text-white/60 text-xs uppercase font-semibold">Active Businesses</p>
+                         <p className="text-white font-bold text-xl">Digitizing Markets</p>
+                     </div>
+                 </div>
+                 <p className="text-white/80 text-sm leading-relaxed">
+                     "Since joining WiDEI, I’ve acquired new customers and
+significantly improved my business branding,
+marketing, and operations. Thanks to Paahibu
+Space and the WiDiB Initiative"
+                 </p>
+                 <div className="mt-4 flex items-center gap-2">
+                     <div className="w-8 h-8 rounded-full bg-gray-300 bg-cover bg-center" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBraoJmlypejhJl3cB4iOoCKR8sSYP7t3PxD8PQEZbDdQPbQ8reiW7zDPIsAhzwva56eLhaZ3XIRqkc8ECZlCW9URiSAO-2cI_Sy_LAOn_apCDeIo8SSjdepb-DPW-Cpc3WiTDEVwqorQ6bUj9gI9dcGm2rs6F1kEHuZ2XKSnXmtTMge2jkShOTYkNwLfEd3ZP6tfVn3fUb2sFgsQKP6xm_BdvFQocRFdqak1Uxr6HgT4jOybviowx8T0JOK1Tn5yquJ-jYelPLLys-')"}}></div>
+                     <span className="text-white text-xs font-bold">Sherifa Fuseini, CEO - Sheady Enterprise</span>
+                 </div>
+             </div>
+         </div>
+     </header>
+
+     {/* Mission & Stats Section */}
+     <section className="py-16 md:py-24 px-4 md:px-10 bg-background-light dark:bg-background-dark">
+         <div className="max-w-4xl mx-auto text-center mb-12">
+             <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-neutral-dark dark:text-white">Digitizing the Informal Sector</h2>
+             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                 We focus on women-led businesses in rural and underrepresented communities. By equipping them with
+                 skills to digitize traditional practices—like weaving, pottery, and trading—we strengthen their economic
+                 future and preserve cultural heritage through modern channels.
+             </p>
+         </div>
+         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+             {/* Stat 1 */}
+             <div className="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md dark:shadow-md transition-all text-center">
+                 <div className="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-dark:bg-primary group-hover:text-white group-dark:text-white transition-colors">
+                     <span className="material-symbols-outlined text-3xl">school</span>
+                 </div>
+                 <p className="text-4xl font-black text-neutral-dark dark:text-white mb-2">500+</p>
+                 <p className="text-gray-500 dark:text-gray-400 font-medium">Women Trained</p>
+             </div>
+             {/* Stat 2 */}
+             <div className="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-all text-center">
+                 <div className="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-dark:bg-primary group-hover:text-white group-dark:text-white transition-colors">
+                     <span className="material-symbols-outlined text-3xl">public</span>
+                 </div>
+                 <p className="text-4xl font-black text-neutral-dark dark:text-white mb-2">30</p>
+                 <p className="text-gray-500 dark:text-gray-400 font-medium">Communities Reached</p>
+             </div>
+             {/* Stat 3 */}
+             <div className="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-all text-center">
+                 <div className="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-dark:bg-primary group-hover:text-white group-dark:text-white transition-colors">
+                     <span className="material-symbols-outlined text-3xl">trending_up</span>
+                 </div>
+                 <p className="text-4xl font-black text-neutral-dark dark:text-white mb-2">40%</p>
+                 <p className="text-gray-500 dark:text-gray-400 font-medium">Avg. Business Growth</p>
+             </div>
+         </div>
+     </section>
+
+     {/* Our Methodology */}
+     <section className="py-20 bg-white dark:bg-[#0a160e] px-4 md:px-10">
+         <div className="max-w-7xl mx-auto">
+             <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                 <div>
+                     <h2 className="text-primary font-bold uppercase tracking-wider text-sm mb-2 dark:text-white">Our Methodology</h2>
+                     <h3 className="text-3xl md:text-4xl font-bold text-neutral-dark dark:text-white">Tradition Meets Tech</h3>
+                 </div>
+                 <p className="max-w-md text-gray-600 dark:text-gray-400 text-sm md:text-base text-right md:text-left">
+                     We don't just teach code; we integrate digital tools into the daily fabric of market life.
+                 </p>
+             </div>
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                 {[
+                     {
+                         title: "Market Clinics",
+                         desc: "On-site workshops right in the heart of local markets, minimizing disruption to daily trade while maximizing attendance.",
+                         icon: "groups",
+                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDJw5ISheLw-aR26Jh8B3lrrKTrUeUIlg3ji-U7V_4MA5P9-3To4Uh2nOinZUyM1LXVFVlYZ7TOnofwu1huirXKyExsJsTL5Zc8ldPjedrv9GdKPgQvqUX-_POqW1RIPaRDWA-Xe6uVJ0-1LrMRbyxC_jApcwC19uH9B8Xd1dFpiKn9JjjfZyMPQpHeqaJhdYk47-2PvvHOB0oDAbA-6ncsyteoPgzIk5S73VxIupEAsdQA-B430E6xBl0-Q9V1DboEXld5cLXqwX9y"
+                     },
+                     {
+                         title: "WhatsApp Shops",
+                         desc: "Converting the most popular messaging app into a powerful storefront. Catalogues, quick replies, and status updates.",
+                         icon: "chat",
+                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCh6devtBIVCmwOR-RHmNW761e3OQKY-XlHJEorZnyg8uvlsbUtnt1qg0vUP499xutF0wQnn2VX9PfmBFhOnupK_TI4a44Vo_cibse2fiodKJV_HUpIEuzT6Je_MfqrZ5jtIIp387UD_2OdHlFuduFVQRMZ2LhavRwU_U7lx8vwD5SQfxAMTzhkhJ-x8H0LY-kzvr_oNypec1ncqs4KYSRYrVnBN5hpVKx3Nm3XBxM8Aol9ECzJu20QhQuP8Rfonl7Q6fw6-wBCnkT5"
+                     },
+                     {
+                         title: "Trade Incubation",
+                         desc: "Specialized digital inventory tracking for artisans. Preserving traditional crafts by accessing global digital markets.",
+                         icon: "inventory_2",
+                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBErKZtXs74uxckFhhSYnP6JFc0-I4MMZJVda_4sFf5A-WgBOgjCHSA9rLeb4taVf-7UbWMGwzWiYG7rcB1HI64IMrHMd0zSCoM_vudlofys16Al44qf8a5-gJwB0YP-H13t7t_IBdqAzCb6mrmZXflFj3McfvQ1ZZoe-0msrlHaZtNspUS8RCdz0CEtEB_7pWHVlUL0pv120N4zua693qvs2yfYFhMAfMkHy5ep2A9Nlf51ULDm1r2B7GnpZZsm9qPWYdEXFa0C6uM"
+                     },
+                     {
+                         title: "Local Context",
+                         desc: "Breaking down complex digital concepts using local dialects and culturally resonant analogies for true understanding.",
+                         icon: "translate",
+                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKGfNt1DIMfI3f8FF6rXBeZfVYzROzmu8x1GZJM_ryAWAOVEm3ZPFbe2nIPQZkZ0DPyJSglrhfe1SRqpb7OSkjSis8zFfzVUWxZm5vq4_dlN8kvBNgeKYwHJAkg-2wr9i76x0uyKKGTQtIymTgjMB0uVybGfNTbk3YapJck27wVoHYIEF-H5ftmkXGSv-SsVpxgC1gBoDrXZIgjh8pWN5CTbXRXgwR7mOECFo-bUHSLYm3QM-PKbjVOAZ2vRRmxOxHW5KJCAz3_-BX"
+                     }
+                 ].map((item, i) => (
+                     <div key={i} className="bg-background-light dark:bg-white/5 rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10">
+                         <div className="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                             style={{backgroundImage: `url('${item.img}')`}}></div>
+                         <div className="p-6">
+                             <div className="w-10 h-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shadow-sm -mt-12 relative z-10 mb-4 text-primary">
+                                 <span className="material-symbols-outlined">{item.icon}</span>
+                             </div>
+                             <h4 className="text-xl font-bold mb-2 text-neutral-dark dark:text-white">{item.title}</h4>
+                             <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
+                         </div>
+                     </div>
+                 ))}
+             </div>
+         </div>
+     </section>
+
+     {/* Roadmap */}
+     <section className="py-20 bg-background-light dark:bg-background-dark px-4 md:px-10">
+         <div className="max-w-5xl mx-auto">
+             <h2 className="text-center text-3xl font-bold mb-16 text-neutral-dark dark:text-white">The Journey to Independence</h2>
+             <div className="relative">
+                 {/* Vertical Line */}
+                 <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-white/10 md:-ml-[1px]"></div>
+                 
+                 {/* Step 1 */}
+                 <div className="relative flex flex-col md:flex-row items-center gap-8 mb-16 group">
+                     <div className="md:w-1/2 flex md:justify-end">
+                         <div className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 md:text-right w-full md:w-auto md:max-w-md">
+                             <h4 className="text-xl font-bold text-primary dark:text-white mb-2">Community Entry</h4>
+                             <p className="text-gray-600 dark:text-gray-300 text-sm">We engage community leaders and trade unions to build trust and understand specific local needs before any training begins.</p>
+                         </div>
+                     </div>
+                     <div className="absolute left-8 md:left-1/2 -ml-4 w-8 h-8 rounded-full bg-primary border-4 border-white dark:border-background-dark flex items-center justify-center z-10">
+                         <span className="material-symbols-outlined text-[#0d1b12] text-sm font-bold">counter_1</span>
+                     </div>
+                     <div className="md:w-1/2 pl-16 md:pl-0"></div>
+                 </div>
+
+                 {/* Step 2 */}
+                 <div className="relative flex flex-col md:flex-row items-center gap-8 mb-16 group">
+                     <div className="hidden md:block md:w-1/2"></div>
+                     <div className="absolute left-8 md:left-1/2 -ml-4 w-8 h-8 rounded-full bg-primary border-4 border-white dark:border-background-dark flex items-center justify-center z-10">
+                         <span className="material-symbols-outlined text-[#0d1b12] text-sm font-bold">counter_2</span>
+                     </div>
+                     <div className="w-full md:w-1/2 pl-16 md:pl-0">
+                         <div className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 w-full md:max-w-md">
+                             <h4 className="text-xl font-bold text-primary dark:text-white mb-2">Skills Transfer</h4>
+                             <p className="text-gray-600 dark:text-gray-300 text-sm">Conducting practical, trade-based workshops. Women learn to create digital catalogues, manage customer contacts, and process digital payments.</p>
+                         </div>
+                     </div>
+                 </div>
+
+                 {/* Step 3 */}
+                 <div className="relative flex flex-col md:flex-row items-center gap-8 group">
+                     <div className="md:w-1/2 flex md:justify-end">
+                         <div className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 md:text-right w-full md:w-auto md:max-w-md">
+                             <h4 className="text-xl font-bold text-primary dark:text-white mb-2">Sustainable Growth</h4>
+                             <p className="text-gray-600 dark:text-gray-300 text-sm">Long-term mentorship and access to a network of women entrepreneurs ensuring businesses don't just survive, but thrive online.</p>
+                         </div>
+                     </div>
+                     <div className="absolute left-8 md:left-1/2 -ml-4 w-8 h-8 rounded-full bg-primary border-4 border-white dark:border-background-dark flex items-center justify-center z-10">
+                         <span className="material-symbols-outlined text-[#0d1b12] text-sm font-bold">counter_3</span>
+                     </div>
+                     <div className="md:w-1/2 pl-16 md:pl-0"></div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     {/* Impact Story */}
+     <section className="py-20 bg-white dark:bg-[#0a160e] overflow-hidden">
+         <div className="max-w-7xl mx-auto px-4 md:px-10">
+             <div className="bg-background-light dark:bg-white/5 rounded-3xl p-8 md:p-12 border border-gray-100 dark:border-white/10">
+                 <div className="flex flex-col lg:flex-row gap-12 items-center">
+                     <div className="w-full lg:w-1/2 relative">
+                         <div className="absolute inset-0 bg-primary/20 rounded-2xl transform translate-x-4 translate-y-4"></div>
+                         <img src="/images/stories/vivian_ackon.png" 
+                             alt="Vivian Ackon" className="relative rounded-2xl shadow-xl w-full object-cover h-[400px]" />
+                         <div className="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                             <p className="text-secondary font-bold text-xs uppercase mb-1">Impact Spotlight</p>
+                             <p className="text-white font-medium">"The training helped me to create a business plan that guides our operations."</p>
+                             <p className="text-gray-300 text-xs mt-1">- Vivian Ackon, CEO Divine Apparel</p>
+                         </div>
+                     </div>
+                     <div className="w-full lg:w-1/2">
+                         <div className="flex items-center gap-2 mb-4">
+                             <span className="h-px w-10 bg-primary dark:bg-secondary"></span>
+                             <span className="text-primary font-bold uppercase tracking-wider text-sm dark:text-secondary">Meet Vivian Ackon - CEO, Divine Apparel</span>
+                         </div>
+                         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-neutral-dark dark:text-white leading-tight">
+                             From Concept to Branded Reality
+                         </h2>
+                         <div className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed space-y-4">
+                             <p>
+                                 "Divine Apparel specializes in quality men's wears. It was borne during my participation in the WiDiB & WiDEI programs. The training helped me to create a business plan that guides our operations."
+                             </p>
+                             <p>
+                                 "With Paahibu Space’s support, we branded, including a new logo, and gained digital marketing, storytelling, branding and customer engagement skills which have helped transformed how we connect with clients."
+                             </p>
+                             <p>
+                                 "We’ve since enhanced our online presence and now offer personalized engravings on items like belts, watches, and wallets, adding a special touch for our customers."
+                             </p>
+                         </div>
+                         <a className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all dark:text-secondary" href="/stories">
+                             Read more stories
+                             <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     {/* Activity Gallery */}
+     <section className="py-20 px-4 md:px-10 bg-background-light dark:bg-background-dark">
+         <div className="max-w-7xl mx-auto">
+             <h2 className="text-3xl font-bold mb-10 text-center text-neutral-dark dark:text-white">Program in Action</h2>
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
+                 {/* Large Item */}
+                 <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl">
+                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXP3jLj4PGTOB7PRHiM7H9_l0e8WF2jMItFeaCLzsnUVSMiAW-lc6e0McNp4AS9gq_jlwZBl0zeTRxBgu7y92YVPftMkhW03vgvg0h7JTmF4nxXcv80P91L5gr6ox_QcIAQha46HCImr3pWkqLerdIXQ7fmBqyb9ut6wyXvKE40ndyo6X1JA_RBPd0485JZi-WwQ4l9gLOyl995wMpqbMLb1G8dPj9G4-hyZ6jDAOIDODl7_-y6WeCHTSu89JfSsgunvFkxIODk_S0" alt="Training" />
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+                     <div className="absolute bottom-0 left-0 p-6">
+                         <span className="bg-primary text-[#0d1b12] text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Training</span>
+                         <h3 className="text-white text-xl font-bold">Outdoor Digital Literacy Class</h3>
+                     </div>
+                 </div>
+                 {/* Small Item */}
+                 <div className="relative group overflow-hidden rounded-xl">
+                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxOt3DUEFE_IH6iIQIy7HbwYXGb4oJeQ9ZNE9ukCc95tASSBYpuFpIPLC0f9TnGqt31pNrD6jiCR3iQJK2_XLyHzLebHM-p_ny01Z78rw9V2f87i2IYbAABEP7gHAT5U9CicbocbvafkwkgbamSTEGDH_OCpQt3v3ZpJsAqJk5hlmNQcrZXnfjaLRtbQw_OkDB95fV6WrjU0EKH_89EGtzXj3A3ZMVXbActz_vSBbGRuSqexrvLxUlSa1yp8Ffl1iTI7sK0bdGoZW5" alt="Mobile tools" />
+                     <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
+                         <h3 className="text-white text-sm font-bold">Mobile Money Tools</h3>
+                     </div>
+                 </div>
+                 {/* Small Item */}
+                 <div className="relative group overflow-hidden rounded-xl">
+                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1F3Q6gnayM32ep05hPRouDodCbQUmR_I9vFi03iWaywB3TokB-EWXljiTy0xeveT0c1hqV6hUDGEfBdJn60A3Tf5nxCsg5wozCaC7-jTQ44z_a4ArrS3h3A_zbx8rHcK0PsGExfewHWvbz9vtnOJuvV4piUY2KWj0NJiSQsQScrLYUUU1_vknnRISixF20vp7DKskDK74qQTwojmvbB4BtAKjh4EG8kiLsPbsz_K4yMKxJvrx9qgClwSPTivpnxg0KVFVQWINLJ3t" alt="Empowerment" />
+                     <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
+                         <h3 className="text-white text-sm font-bold">Empowerment</h3>
+                     </div>
+                 </div>
+                 {/* Wide Item */}
+                 <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-xl">
+                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoKYpieAcvktKt6Zf9xVFHy9EMgaWQx-NAM7FRiT2bD9lHyfS-zQii-vjYAuI6CDlHofv7yRWC9mIuXJTBapIYxTGNR72VFVYZsEm6TUFr8iwe3mY0qQ3TwZnFA7zqwBo8ZLMQTYH6kXOmAZwhfEFZSWfd0K10GAORrspZ2nZa5yB7ftwjYRYqiFe3t7QFvRfRzSBr80ZbyWcz7ZDazv_HNfCV9BWRjrvCNMsDY0HrtfFBIYMKwHSb1bOaR3s-1hAPUE8tzgrd2RVN" alt="Peer Mentorship" />
+                     <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
+                         <h3 className="text-white text-sm font-bold">Peer Mentorship</h3>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
     </>
   );
 }
