@@ -8,33 +8,33 @@ export default function LeadershipTeam() {
     },
     {
       name: "David Okonkwo",
-      role: "Head of Operations",
+      role: "COO / Finance Director",
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuBUCGh-u0qNcd0_ndAwKwfXoaZwO9HD9yWdOqz0i_LfmOpji-dGOJHoGUpIuSiEsGv0IQtNDsLFPOCHo4oSy_62_aBIA5e8-MBAtDJPbLle7z3Ce21hlzVF_rbIn8WCl5OlOHmLW0JqlRDeIHBaOyS2dfRzWKcBeZ4QadHVxGX_ZRwrE4Ku5p4fCsbr85pJgGWERMi10PocEslWMytjH6VzQrpCX1texADB5hCj2BmGhtv9642rW3Xov-yGxH8yKb3zWKIUrUQA05I",
     },
     {
       name: "Amina Bello",
-      role: "Program Director",
+      role: "Head of Programs & Influencing",
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuAEDhWrKT95K7UsuopvyyKjdBcvrZlcAt1avCmVPgBodcb60ssNfGk7U9v7M-wBDwNrNk4ZRtQHMkpsczG5PWyuC34v-saFqHj5_8V3ENvTxSMDaxxSGggsKzxWo3j8UXYk7yOrUUrW6bZXIQwWq7Uw9IL4KFlwLsabC1FifLZYVpMwEx7gTcF-kBRskANKsxy-KPjDOAw8a3rg-VnVF51tN0C9rRYevbpW0HHTrxXF8A0nBSCvK4Ge2r2IQYOuGYK6El2vc4qhm_A",
     },
     {
       name: "Kwame Mensah",
-      role: "Tech Lead",
+      role: "Chief Technology Officer",
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuCqAkCFOvbWegRF_-jEvdd7EoJuOtYsbL0-VjO3cQDjFVkX7vCsxxdk-fxB6q-cjBhJBxTzcKGbrfT6V9qPs6TJOwyrpiF9l1KU-bsmVmUPb-wqHjE2eSncF4vZrZm1zbM8udO8L56cKeSr7WQulvqLRH63DoLToZdIDGRB7jW-fsj_gpTHqgG-6spoCJV0qXQV-_yjeUNxB8iFvxltj0UD558EV5eumpmO4b10wScX5MbUlM6rNoqlI_BPTHmloU3BkxSyrXM_guU",
     },
   ];
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-background-light">
+    <section className="py-20 px-6 md:px-12 bg-background-light dark:bg-background-dark/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4">
             Leadership Team
           </h2>
           <div className="h-1 w-24 bg-primary mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Our executive team brings decades of experience in technology,
             education, and social entrepreneurship to guide Paahibu Space.
           </p>
@@ -44,7 +44,7 @@ export default function LeadershipTeam() {
           {leaders.map((leader, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4]"
+              className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-200 dark:bg-gray-700"
             >
               <img
                 alt={leader.name}
@@ -61,14 +61,14 @@ export default function LeadershipTeam() {
                 <h3 className="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   {leader.name}
                 </h3>
-                <p className="text-primary font-medium text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                <p className="text-secondary dark:text-secondary font-medium text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                   {leader.role}
                 </p>
                 <div className="flex gap-3 mt-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
-                  <a className="text-white hover:text-primary" href="#">
+                  <a className="text-white hover:text-secondary dark:hover:text-secondary" href="#">
                     <span className="material-symbols-outlined text-sm">link</span>
                   </a>
-                  <a className="text-white hover:text-primary" href="#">
+                  <a className="text-white hover:text-secondary dark:hover:text-secondary" href="#">
                     <span className="material-symbols-outlined text-sm">mail</span>
                   </a>
                 </div>

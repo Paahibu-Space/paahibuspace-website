@@ -2,6 +2,7 @@ import PageHero from "@/components/sections/PageHero";
 import LeadershipTeam from "@/components/sections/LeadershipTeam";
 import AdvisoryBoard from "@/components/sections/AdvisoryBoard";
 import GlobalReach from "@/components/sections/GlobalReach";
+import CommunityAmbassadors from "@/components/sections/CommunityAmbassadors";
 import TeamCTA from "@/components/sections/TeamCTA";
 
 export default function TeamPage() {
@@ -24,6 +25,7 @@ export default function TeamPage() {
       />
       <LeadershipTeam />
       <AdvisoryBoard />
+      <CommunityAmbassadors />
       <GlobalReach />
       <TeamCTA />
     </>

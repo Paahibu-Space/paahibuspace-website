@@ -14,6 +14,7 @@ export default function ProgramsPage() {
           </h1>
         }
         description="Our programs are designed to break barriers and create opportunities for women and girls in the Upper West Region and beyond."
+        className="bg-primary"
       />
       <ProgramsGrid />
       <RegionalImpact />

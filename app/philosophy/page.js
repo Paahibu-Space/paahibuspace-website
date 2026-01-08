@@ -31,6 +31,72 @@ export default function PhilosophyPage() {
             </div>
          </div>
       </section>
+
+      {/* How We Do It Section */}
+      <section className="py-20 px-6 md:px-12 bg-white dark:bg-background-dark">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary dark:text-white relative z-10 mb-6">
+            How We Do It
+          </h2>
+          <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 mb-16 text-lg leading-relaxed">
+            At Paahibu Space, we employ a multi-faceted approach to empowerment, ensuring women and youth are equipped with the holistic support needed to lead in the digital age.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+            {/* Digital Skills & Entrepreneurship */}
+            <div className="bg-orange-50 dark:bg-orange-900/20 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-orange-100 dark:border-orange-900/30 shadow-sm hover:shadow-md">
+              <div className="w-14 h-14 mb-6 text-primary flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
+                <span className="material-symbols-outlined text-3xl">computer</span>
+              </div>
+              <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
+                Digital Skills & Entrepreneurship
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                Providing comprehensive training in coding, digital marketing, and business management to build future-ready careers.
+              </p>
+            </div>
+
+            {/* Policy & Advocacy */}
+            <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-green-100 dark:border-green-900/30 shadow-sm hover:shadow-md">
+              <div className="w-14 h-14 mb-6 text-green-600 dark:text-green-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
+                <span className="material-symbols-outlined text-3xl">campaign</span>
+              </div>
+              <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
+                Policy & Advocacy
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                Championing gender-inclusive policies and breaking systemic barriers to ensure equal access to technology.
+              </p>
+            </div>
+
+            {/* Community & Network Building */}
+            <div className="bg-red-50 dark:bg-red-900/20 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-red-100 dark:border-red-900/30 shadow-sm hover:shadow-md">
+              <div className="w-14 h-14 mb-6 text-red-500 dark:text-red-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
+                <span className="material-symbols-outlined text-3xl">groups</span>
+              </div>
+              <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
+                Community & Network Building
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                Fostering a supportive ecosystem of peers, mentors, and industry leaders to catalyze growth and collaboration.
+              </p>
+            </div>
+
+            {/* Mentorship & Leadership */}
+            <div className="bg-pink-50 dark:bg-pink-900/20 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-pink-100 dark:border-pink-900/30 shadow-sm hover:shadow-md">
+              <div className="w-14 h-14 mb-6 text-pink-500 dark:text-pink-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
+                <span className="material-symbols-outlined text-3xl">volunteer_activism</span>
+              </div>
+              <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
+                Mentorship & Leadership
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                Nurturing the next generation of leaders through personalized guidance from established industry professionals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <PhilosophyValues />
     </>
   );

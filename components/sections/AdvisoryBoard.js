@@ -27,44 +27,51 @@ export default function AdvisoryBoard() {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-white">
+    <section className="py-20 px-6 md:px-12 bg-background-light dark:bg-background-dark border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-          <div className="mb-6 md:mb-0">
-            <h2 className="text-3xl font-bold text-secondary">
-              Advisory Board
-            </h2>
-            <p className="mt-2 text-gray-600 max-w-lg">
-              Providing strategic guidance and industry insights to ensure our
-              programs remain relevant and impactful.
-            </p>
-          </div>
-          <a
-            className="text-secondary font-semibold flex items-center hover:underline"
-            href="#"
-          >
-            View Full Board{" "}
-            <span className="material-symbols-outlined ml-1 text-sm">
-              arrow_forward
-            </span>
-          </a>
+            <div className="mb-6 md:mb-0">
+                <h2 className="text-3xl font-bold text-secondary dark:text-white">Advisory Board</h2>
+                <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-lg">
+                    Providing strategic guidance and industry insights to ensure our programs remain relevant and
+                    impactful.
+                </p>
+            </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {advisors.map((advisor, index) => (
             <div
               key={index}
-              className="bg-background-light rounded-lg p-4 shadow-sm hover:shadow-md transition text-center border border-gray-100"
+              className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-200 dark:bg-gray-700"
             >
-              <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary">
-                <img
-                  alt={advisor.name}
-                  className="w-full h-full object-cover"
-                  src={advisor.image}
-                />
+              <img
+                alt={advisor.name}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src={advisor.image}
+              />
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(39, 41, 116, 0.9) 0%, rgba(39, 41, 116, 0.6) 50%, transparent 100%)",
+                }}
+              >
+                <h3 className="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  {advisor.name}
+                </h3>
+                <p className="text-primary font-medium text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                  {advisor.role}
+                </p>
+                <div className="flex gap-3 mt-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
+                  <a className="text-white hover:text-primary" href="#">
+                    <span className="material-symbols-outlined text-sm">link</span>
+                  </a>
+                  <a className="text-white hover:text-primary" href="#">
+                    <span className="material-symbols-outlined text-sm">mail</span>
+                  </a>
+                </div>
               </div>
-              <h3 className="font-bold text-secondary">{advisor.name}</h3>
-              <p className="text-xs text-gray-500 mt-1">{advisor.role}</p>
             </div>
           ))}
         </div>

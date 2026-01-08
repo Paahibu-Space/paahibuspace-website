@@ -44,15 +44,7 @@ export default function ImpactCommunity() {
               Our programs are designed to create lasting change through
               structured learning and meaningful connections.
             </p>
-            <Link
-              className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all"
-              href="/programs"
-            >
-              View all programs{" "}
-              <span className="material-symbols-outlined text-sm">
-                arrow_forward
-              </span>
-            </Link>
+            
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-2/3">
             {features.map((feature, index) => (

@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 export default function TeamCTA() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-secondary text-white relative overflow-hidden">
+    <section className="py-24 px-6 md:px-12 bg-primary text-white relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{
@@ -19,7 +19,7 @@ export default function TeamCTA() {
           or volunteer as mentors. Help us shape the future of African tech.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="primary" size="lg" className="rounded-full h-auto py-4 text-lg">View Open Positions</Button>
+          <Button variant="secondary" size="lg" className="rounded-full h-auto py-4 text-lg">View Open Positions</Button>
           <Button variant="white-outline" size="lg" className="rounded-full h-auto py-4 text-lg">Contact Us</Button>
         </div>
       </div>

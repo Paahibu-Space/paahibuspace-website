@@ -69,11 +69,11 @@ export default function Navigation() {
                   href="/programs"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
-                  <div className="bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 p-2 rounded-lg group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                  <div className="bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 p-2 rounded-lg group-hover/item:bg-primary group-hover/item:text-white dark:group-hover/item:text-white transition-colors">
                     <span className="material-symbols-outlined">code</span>
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-neutral-dark dark:text-white">
+                    <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-primary dark:group-hover/item:text-white transition-colors">
                       Web Development
                     </div>
                     <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
@@ -255,8 +255,8 @@ export default function Navigation() {
              <span className="material-symbols-outlined text-2xl">light_mode</span>
           )}
         </button>
-        <Link href="/involve" className="rounded-full bg-secondary px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-orange-600 hover:shadow transition-all cursor-pointer">
-          Join Us
+        <Link href="/involve" className="rounded-full bg-secondary px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-secondary/80 hover:shadow transition-all cursor-pointer">
+          Get Involved
         </Link>
       </div>
     </div>

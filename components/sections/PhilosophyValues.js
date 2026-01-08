@@ -68,7 +68,7 @@ export default function PhilosophyValues() {
         </div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-secondary dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-white mb-4">
             Our Philosophy
           </h2>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
@@ -83,7 +83,7 @@ export default function PhilosophyValues() {
                 alt={activeValue.caption}
                 className="w-full h-full object-cover transition-opacity duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full text-white">
                 <h3 className="font-bold text-2xl mb-2">
                   {activeValue.caption}
@@ -122,7 +122,7 @@ export default function PhilosophyValues() {
                   className="p-6 cursor-pointer flex justify-between items-center"
                   onClick={() => setActiveIndex(index)}
                 >
-                  <h3 className="font-bold text-xl text-secondary dark:text-white flex items-center gap-3">
+                  <h3 className="font-bold text-xl text-primary dark:text-white flex items-center gap-3">
                     <span className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary text-sm font-bold">
                       {item.id}
                     </span>
@@ -153,7 +153,7 @@ export default function PhilosophyValues() {
                                 {item.tags.map((tag, i) => (
                                 <div
                                     key={i}
-                                    className="px-4 py-2 bg-gray-50 dark:bg-gray-700/50 rounded-lg text-sm font-medium text-secondary dark:text-blue-200 border border-gray-100 dark:border-gray-600"
+                                    className="px-4 py-2 bg-gray-50 dark:bg-gray-700/50 rounded-lg text-sm font-medium text-primary dark:text-blue-200 border border-gray-100 dark:border-gray-600"
                                 >
                                     {tag}
                                 </div>
