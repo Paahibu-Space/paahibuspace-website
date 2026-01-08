@@ -9,9 +9,7 @@ export default function Footer() {
           {/* Column 1: Brand & About */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-primary font-bold text-xl shadow-lg">
-                P
-              </div>
+<img src="/logo.png" alt="Paahibu Space Logo" className="h-12 w-auto object-contain bg-white rounded-full p-1" />
               <span className="text-xl font-bold tracking-wide">Paahibu Space</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">

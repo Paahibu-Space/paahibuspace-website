@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function NewsletterSection() {
   return (
     <div className="relative flex min-h-[50vh] flex-col items-center justify-center p-4 sm:p-8">
-      <div className="relative w-full max-w-[800px] overflow-hidden rounded-2xl bg-gray-50 dark:bg-zinc-800 border border-gray-100 dark:border-zinc-700 transition-colors duration-300">
+      <div className="relative w-full max-w-[800px] overflow-hidden rounded-2xl dark:bg-gray-50 dark:bg-zinc-800 border border-gray-100 dark:border-zinc-700 transition-colors duration-300">
         <div className="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-blue-100/50 dark:bg-primary/10 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -ml-16 -mb-16 h-64 w-64 rounded-full bg-orange-100/30 dark:bg-orange-500/10 blur-3xl"></div>
         <div className="relative flex flex-col items-center px-6 py-12 sm:px-12 sm:py-16 text-center">

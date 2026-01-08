@@ -28,18 +28,18 @@ export default function ImpactSection() {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-2xl transition-colors">
             <div className="flex items-center gap-4 mb-6">
-              <div className="h-16 w-16 rounded-full bg-cover bg-center"
+              <div className="h-16 w-16 rounded-full bg-cover bg-center border-2 border-primary/10 dark:border-white/10"
                 data-alt="Portrait of Sarah, a confident young African woman"
                 style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNoimbwvsR-UYUfUM48hr0ZfROKVfsF74wb0OyuB0i1onQdjUvyKpTnomoUAwlSLfQIu77ktTmDxlBrt4hgNxVvaeOFSGINZm-L-Gr4aBMpupXwqhUy2jU2aNuFVuHeb-WxLK8XrXM-JyfIXarQ6ye4T8rVx4astPNPMM4pHjCWhznewzEKO_Po0nkVW6O4FhfsLHobGKFgkzsUJhzNub6hwWowon16b8-yyXKZl9PenpI6yUlL1maXwVlm0gqB6jxQT8ldFxhsIBR')" }}>
               </div>
               <div>
-                <h4 className="text-lg font-bold text-neutral-dark">Sarah M.</h4>
-                <p className="text-sm text-neutral-gray">Alumni, Data Science Cohort</p>
+                <h4 className="text-lg font-bold text-neutral-dark dark:text-white">Sarah M.</h4>
+                <p className="text-sm text-neutral-gray dark:text-gray-400">Alumni, Data Science Cohort</p>
               </div>
             </div>
-            <p className="text-neutral-dark text-lg italic leading-relaxed mb-6">
+            <p className="text-neutral-dark dark:text-gray-100 text-lg italic leading-relaxed mb-6">
               "Before Paahibu, I thought tech wasn't for me. The community here didn't just teach me Python; they taught me to believe in my voice. Now, I lead a data team at a major fintech company."
             </p>
             <div className="flex items-center text-secondary">

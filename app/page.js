@@ -1,5 +1,4 @@
-import HeroSectionOne from "@/components/sections/HeroSectionOne";
-import HeroSectionTwo from "@/components/sections/HeroSectionTwo";
+import HeroSlider from "@/components/sections/HeroSlider";
 import QuoteSection from "@/components/sections/QuoteSection";
 import PhilosophySection from "@/components/sections/PhilosophySection";
 import ProgramsShowcase from "@/components/sections/ProgramsShowcase";
@@ -11,9 +10,8 @@ import NewsletterSection from "@/components/sections/NewsletterSection";
 
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col items-center w-full">
-      <HeroSectionOne />
-      <HeroSectionTwo />
+    <main className="">
+      <HeroSlider />
       <QuoteSection />
       <PhilosophySection />
       <ProgramsShowcase />

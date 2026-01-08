@@ -1,98 +1,188 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import { cn } from "@/lib/utils";
 
-export default function MobileMenu({ onClose }) {
-  return (
-    <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-lg p-6 flex flex-col gap-4 md:hidden z-50 overflow-y-auto max-h-[calc(100vh-5rem)]">
-      <Link
-        href="/"
-        onClick={onClose}
-        className="text-base font-medium text-neutral-dark hover:text-primary"
-      >
-        Home
-      </Link>
+export default function MobileMenu({ open, setOpen }) {
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    setMounted(true);
+    // Initialize theme
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      setTheme("light");
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      setTheme("light");
+      localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  const toggleSubmenu = (menu) => {
+    setActiveSubmenu(activeSubmenu === menu ? null : menu);
+  };
+
+  if (!mounted) return null;
+
+  return createPortal(
+    <div className={cn(
+        "fixed inset-0 z-[999] lg:hidden transition-opacity duration-300",
+        open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+    )}>
+      {/* Backdrop */}
+      <div 
+        className={cn(
+            "fixed inset-0 bg-black/25 backdrop-blur-sm transition-opacity duration-300",
+            open ? "opacity-100" : "opacity-0"
+        )}
+        onClick={() => setOpen(false)}
+      />
       
-      <div className="border-t border-gray-100 pt-4">
-        <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Programs</p>
-        <Link
-          href="/programs"
-          onClick={onClose}
-          className="block py-2 text-base font-medium text-neutral-dark hover:text-primary pl-4 border-l-2 border-transparent hover:border-primary"
-        >
-          Learning Paths
-        </Link>
-        <Link
-          href="/techsistars-program"
-          onClick={onClose}
-          className="block py-2 text-base font-medium text-neutral-dark hover:text-primary pl-4 border-l-2 border-transparent hover:border-primary"
-        >
-           TechsiStars Mentorship
-        </Link>
-        <Link
-          href="/grow-program"
-          onClick={onClose}
-          className="block py-2 text-base font-medium text-neutral-dark hover:text-primary pl-4 border-l-2 border-transparent hover:border-primary"
-        >
-          GROW Program
-        </Link>
-         <Link
-          href="/widei-program"
-          onClick={onClose}
-          className="block py-2 text-base font-medium text-neutral-dark hover:text-primary pl-4 border-l-2 border-transparent hover:border-primary"
-        >
-          WiDEI Initiative
-        </Link>
-      </div>
+      {/* Menu Panel */}
+      <div className={cn(
+          "fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-white dark:bg-background-dark px-6 py-6 sm:max-w-sm border-l border-gray-100 dark:border-gray-800 shadow-2xl transition-transform duration-300 ease-in-out",
+          open ? "translate-x-0" : "translate-x-full"
+      )}>
+        <div className="flex items-center justify-between">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setOpen(false)}>
+            <img src="/logo.png" alt="Paahibu Space Logo" className="h-8 w-auto object-contain" />
+             <span className="font-bold text-lg text-primary dark:text-white">Paahibu Space</span>
+          </Link>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-neutral-dark dark:text-white transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "light" ? (
+                 <span className="material-symbols-outlined text-2xl">dark_mode</span>
+              ) : (
+                 <span className="material-symbols-outlined text-2xl">light_mode</span>
+              )}
+            </button>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-neutral-dark dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+               <span className="material-symbols-outlined text-2xl">close</span>
+            </button>
+          </div>
+        </div>
+        <div className="mt-6 flow-root">
+          <div className="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700/50">
+            <div className="space-y-2 py-6">
+              <Link
+                href="/"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={() => setOpen(false)}
+              >
+                Home
+              </Link>
+              
+               {/* Programs Submenu */}
+               <div>
+                  <button onClick={() => toggleSubmenu('programs')} className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                    Programs
+                    <span className={`material-symbols-outlined text-lg transition-transform ${activeSubmenu === 'programs' ? 'rotate-180' : ''}`}>expand_more</span>
+                  </button>
+                  {activeSubmenu === 'programs' && (
+                    <div className="mt-2 space-y-2 pl-4">
+                      <Link href="/programs" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        Web Development
+                      </Link>
+                      <Link href="/programs" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        Data Science
+                      </Link>
+                      <Link href="/widei-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        WiDEI
+                      </Link>
+                      <Link href="/techsistars-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        TechsiStars
+                      </Link>
+                       <Link href="/grow-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        GROW Program
+                      </Link>
+                      <Link href="/widib-program" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        WIBID
+                      </Link>
+                    </div>
+                  )}
+               </div>
 
-       <div className="border-t border-gray-100 pt-4">
-        <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">About</p>
-        <Link
-          href="/about"
-          onClick={onClose}
-          className="block py-2 text-base font-medium text-neutral-dark hover:text-primary pl-4 border-l-2 border-transparent hover:border-primary"
-        >
-           Overview
-        </Link>
-        <Link
-          href="/mission"
-          onClick={onClose}
-          className="block py-2 text-base font-medium text-neutral-dark hover:text-primary pl-4 border-l-2 border-transparent hover:border-primary"
-        >
-           Mission & Vision
-        </Link>
-        <Link
-          href="/team"
-          onClick={onClose}
-          className="block py-2 text-base font-medium text-neutral-dark hover:text-primary pl-4 border-l-2 border-transparent hover:border-primary"
-        >
-           Leadership
-        </Link>
-        <Link
-          href="/philosophy"
-          onClick={onClose}
-          className="block py-2 text-base font-medium text-neutral-dark hover:text-primary pl-4 border-l-2 border-transparent hover:border-primary"
-        >
-           Philosophy
-        </Link>
-      </div>
+              {/* About Submenu */}
+              <div>
+                  <button onClick={() => toggleSubmenu('about')} className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                    About
+                    <span className={`material-symbols-outlined text-lg transition-transform ${activeSubmenu === 'about' ? 'rotate-180' : ''}`}>expand_more</span>
+                  </button>
+                  {activeSubmenu === 'about' && (
+                    <div className="mt-2 space-y-2 pl-4">
+                      <Link href="/about" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        Overview
+                      </Link>
+                      <Link href="/mission" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        Our Mission
+                      </Link>
+                      <Link href="/team" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                        Leadership Team
+                      </Link>
+                      <Link href="/philosophy" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                         Philosophy
+                      </Link>
+                    </div>
+                  )}
+               </div>
 
-      <Link
-        href="/impact"
-        onClick={onClose}
-        className="text-base font-medium text-neutral-dark hover:text-primary border-t border-gray-100 pt-4"
-      >
-        Impact
-      </Link>
-      <Link
-        href="/stories"
-        onClick={onClose}
-        className="text-base font-medium text-neutral-dark hover:text-primary"
-      >
-        Stories
-      </Link>
-      
-      <Link href="/involve" onClick={onClose} className="w-full text-center rounded-full bg-secondary px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-orange-600 transition-all mt-4">
-        Join Us
-      </Link>
-    </div>
+              <Link
+                href="/impact"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={() => setOpen(false)}
+              >
+                Impact
+              </Link>
+              <Link
+                href="/stories"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={() => setOpen(false)}
+              >
+                Stories
+              </Link>
+            </div>
+            <div className="py-6">
+              <Link
+                href="/involve"
+                className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={() => setOpen(false)}
+              >
+                Join Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>,
+    document.body
   );
 }

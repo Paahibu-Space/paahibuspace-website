@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Typography */
   --font-display: var(--font-lexend);
   --font-sans: var(--font-lexend);
 
   /* Brand Colors */
-  --color-primary: #262973;
+  --color-primary: #00194C;
   --color-secondary: #f6871f;
   --color-accent: #f6871f;
 
@@ -26,9 +28,16 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Manual dark mode overrides if needed for specific variables */
+  :root[class~="dark"] {
+    --color-background: var(--color-background-dark);
+    --color-surface: var(--color-surface-dark);
+    --color-text: #ffffff;
+  }
 }
 
-/* Start Legacy Utilities */
+/* Material Symbols */
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
@@ -52,14 +61,13 @@
 
 /* Mega Menu Helper */
 .mega-menu {
-    transition-property: all;
-    transition-duration: 200ms;
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .group:hover .mega-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
-/* End Legacy Utilities */
