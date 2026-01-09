@@ -1,7 +1,23 @@
 import Link from "next/link";
-import Button from "@/components/ui/Button";
+import { fetchAPI } from "@/lib/api";
+import ProgramCTA from "@/components/ui/ProgramCTA";
 
-export default function WidibProgramPage() {
+export default async function WidibProgramPage() {
+  const programs = await fetchAPI("/api/v1/programs") || [];
+  const widibProgram = programs.find(p => p.name.includes("WiDiB")) || { 
+      id: 102, 
+      name: "WiDiB Program",
+      is_application_open: false,
+      application_start_date: "2024-10-01"
+  };
+
+  const currentCohortNote = widibProgram.is_application_open 
+    ? "Applications are open!"
+    : (widibProgram.application_start_date 
+        ? `Limited spots available for ${new Date(widibProgram.application_start_date).toLocaleString('default', { month: 'long' })} Session.`
+        : "Join the waitlist for the next session."
+      );
+
   return (
     <>
       {/* Breadcrumbs */}
@@ -20,7 +36,7 @@ export default function WidibProgramPage() {
      {/* Hero Section */}
      <section className="relative bg-primary dark:bg-primary/5 overflow-hidden pt-20 pb-32 lg:pt-32 lg:pb-48">
          <div className="absolute inset-0">
-             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKGfNt1DIMfI3f8FF6rXBeZfVYzROzmu8x1GZJM_ryAWAOVEm3ZPFbe2nIPQZkZ0DPyJSglrhfe1SRqpb7OSkjSis8zFfzVUWxZm5vq4_dlN8kvBNgeKYwHJAkg-2wr9i76x0uyKKGTQtIymTgjMB0uVybGfNTbk3YapJck27wVoHYIEF-H5ftmkXGSv-SsVpxgC1gBoDrXZIgjh8pWN5CTbXRXgwR7mOECFo-bUHSLYm3QM-PKbjVOAZ2vRRmxOxHW5KJCAz3_-BX" 
+             <img src="/assets/images/programs/widib.webp" 
                  alt="Women Business Owners" className="w-full h-full object-cover opacity-20" />
              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/80"></div>
          </div>
@@ -37,9 +53,12 @@ export default function WidibProgramPage() {
                  Practical social media marketing and financial literacy.
              </p>
              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                 <button className="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl">
-                     Join the Waitlist
-                 </button>
+                 <ProgramCTA 
+                    program={widibProgram}
+                    labelOpen="Apply Now"
+                    labelClosed="Join the Waitlist"
+                    className="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 shadow-xl"
+                 />
                  <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
                      Download Syllabus
                  </button>
@@ -73,6 +92,72 @@ export default function WidibProgramPage() {
              </div>
          </div>
      </div>
+
+      {/* Patricia Naah Story Section */}
+      <section className="program-highlighted-story py-20 bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+                <div className="text-section lg:w-1/2">
+                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+                        Patricia Naah Story:<br />
+                        <span className="text-secondary">Project Management for Female Entrepreneurs</span>
+                    </h2>
+                    <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        See how our practical project management training empowers women to streamline their businesses and achieve sustainable growth.
+                    </p>
+                </div>
+
+                <div className="video-section lg:w-1/2 w-full">
+                    <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
+                        <iframe 
+                            className="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/FPcD75pIb_I?si=E6QmyO7gmy1E9ypd" 
+                            title="Patricia Naah Story" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerPolicy="strict-origin-when-cross-origin" 
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      {/* MSME Spotlight */}
+      <section className="py-20 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">MSME Spotlight</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+                {/* Sherifa */}
+                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl shadow-blue-500/5 border border-blue-100 dark:border-gray-700 relative hover:-translate-y-1 transition-transform duration-300">
+                    <div className="flex items-center gap-4 mb-6">
+                        <div className="h-16 w-16 rounded-full bg-cover bg-center border-2 border-blue-500" style={{backgroundImage: "url('/assets/images/team/sherifa.jpg')"}}></div>
+                        <div>
+                            <h4 className="font-bold text-gray-900 dark:text-white text-lg">Sherifa Fuseini</h4>
+                            <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">CEO, Sheady Enterprise</p>
+                        </div>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 italic mb-4 leading-relaxed">
+                        "The training completely transformed how I run my business. I learned to manage operations efficiently using digital tools and even started designing my own business flyers, saving costs I used to spend on hiring designers. Sheady Enterprise is now thriving."
+                    </p>
+                </div>
+                {/* Vivian */}
+                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl shadow-purple-500/5 border border-purple-100 dark:border-gray-700 relative hover:-translate-y-1 transition-transform duration-300">
+                    <div className="flex items-center gap-4 mb-6">
+                         <div className="h-16 w-16 rounded-full bg-cover bg-center border-2 border-purple-500" style={{backgroundImage: "url('/assets/images/team/vivian.jpg')"}}></div>
+                        <div>
+                            <h4 className="font-bold text-gray-900 dark:text-white text-lg">Vivian Ackon</h4>
+                            <p className="text-sm text-purple-600 dark:text-purple-400 font-medium">CEO, Divine Apparel</p>
+                        </div>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 italic mb-4 leading-relaxed">
+                        "With Paahibu Space’s support, we branded, including a new logo, and gained digital marketing, storytelling, and customer engagement skills which have helped transformed how we connect with clients. We’ve since enhanced our online presence."
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
 
      {/* Features Grid */}
      <section className="py-24 bg-white dark:bg-background-dark">
@@ -248,32 +333,35 @@ export default function WidibProgramPage() {
                         <div className="grid grid-cols-2 gap-4">
                             <img alt="Two women having a conversation and laughing"
                                 className="rounded-2xl w-full h-64 object-cover transform translate-y-8 shadow-xl"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAElga9w3Xm2qKK3-TQtQUIx-jsVFqqcc70W-ghQd3bQaCF0n-I2d5IGnXIW7rJIP_L7pA2mpWlwF09W6_OH_LaeWlvu8wXFAuCz-GTsga6e159Y89Ig2T4hdgGTVYAw0-PLEijOMlEhZUQ2mRllDZqEOJVuEjYyQ89qQj8M8QxWIS6VpB4KZWekORwPl2kpVX8aHMm1SojmDbOXDAvK-wz7p83lOEDyibkJHIDKvhJJnb6gxVGNdqUqiT8FDaHASUqqj6ysc3un6oX" />
+                                src="/assets/images/programs/widib-goals.webp" />
                             <img alt="Group of women cheering" className="rounded-2xl w-full h-64 object-cover shadow-xl"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf64SvXKxHXUQO3ZjjOJeovxiAWN1wJlkVp8bd19i9soPsrzhKQPZyXIC46ewXfIKlHvJ6FMg5iYRHP3YAG4KQFX7lHXzNV4_qEw06jHOysE9ebfPcO6gMEvQM0uJES675DDbeJ4pMRj7Hol4FRiFLY5tOtFTJh6Vzjein3HQ4UGaXx3oOqHlHJOM8fGJrQ9L-ZPncJcWDukMae1gBe173NWj937bA3KmiW-AW0AvnLRW4h7FUj6OE8qMH76QVmUM4J6Fc_-ZCa5wJ" />
+                                src="/assets/images/programs/widib-why.webp" />
                         </div>
                     </div>
                 </div>
             </div>
       </section>
 
-     {/* Footer CTA */}
-     <section className="py-20 bg-primary text-white text-center"
-     
-     style={{
-          background: "linear-gradient(135deg, #1e215d 0%, #262973 100%)",
-        }}>
-         <div className="max-w-3xl mx-auto px-4">
-             <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
-             <p className="text-xl text-blue-100 mb-10">
-                 Join 200+ women who have transformed their side hustles into thriving brands.
-             </p>
-             <button className="bg-white text-blue-900 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-colors shadow-2xl">
-                 Apply for Next Cohort
-             </button>
-             <p className="mt-4 text-sm text-blue-200">Limited spots available for October Session.</p>
-         </div>
-     </section>
+      {/* Footer CTA */}
+      <section className="py-20 bg-primary text-white text-center"
+      
+      style={{
+           background: "linear-gradient(135deg, #1e215d 0%, #262973 100%)",
+         }}>
+          <div className="max-w-3xl mx-auto px-4">
+              <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
+              <p className="text-xl text-blue-100 mb-10">
+                  Join 200+ women who have transformed their side hustles into thriving brands.
+              </p>
+              <ProgramCTA 
+                 program={widibProgram}
+                 labelOpen="Apply for Next Cohort"
+                 labelClosed="Join Waitlist"
+                 className="bg-white text-blue-900 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-colors shadow-2xl"
+              />
+              <p className="mt-4 text-sm text-blue-200">{currentCohortNote}</p>
+          </div>
+      </section>
     </>
   );
 }

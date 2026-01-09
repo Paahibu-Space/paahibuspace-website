@@ -46,12 +46,12 @@ export default function RegionalImpact() {
             <img
               alt="Students collaborating on digital projects in Ghana"
               className="rounded-xl w-full h-80 object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8I5c7zYmrrJlqp-eJXqiaNII9p2X1dXJMGfl8gAhXpk7Pxn7WNUcKHmrVIwtA2LFxx5UYZYfoK5tQgr0I4mxKdoYWCY2KOfN0qzcec82k_hcG3fTu4JCkeL5iGhhOREWdXYx4aYmULC11_Xsdy6chdK5tNzGnICUTdHxxjB7mUnAugWUNnUMdhp_CDBW7s8HzEww2AWUlg6k0zQ-jeZ8NiouLoK84URDHV0t5foSaLKtVhwUqGPF34B8_HHHfMhz4nySwJ11fDF6S"
+              src="/assets/images/programs/women-trained.png"
             />
             <div className="absolute -bottom-6 -left-6 bg-secondary text-white p-6 rounded-xl shadow-lg max-w-xs">
               <p className="font-bold text-2xl">500+</p>
               <p className="text-sm opacity-90">
-                Women & Girls Trained This Year
+                Women & Girls Trained
               </p>
             </div>
           </div>

@@ -6,15 +6,18 @@ import { cn } from "@/lib/utils";
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const totalSlides = 2;
 
   useEffect(() => {
+    if (isVideoOpen) return; // Pause auto-slide when video is open
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
     }, 6000); // Auto slide every 6 seconds
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isVideoOpen]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -43,7 +46,7 @@ export default function HeroSlider() {
                   Accepting New Cohort Applications
                 </div>
                 <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
-                  Hey sis, you belong in <span className="text-primary dark:text-blue-400">tech</span> too.
+                  Hey sis, you belong in tech too.
                 </h1>
                 <p className="text-lg leading-relaxed text-neutral-gray dark:text-gray-300 max-w-lg">
                   Empowering African women and youth through technology and entrepreneurship. We are bridging the gender gap by providing safe spaces, education, and mentorship.
@@ -54,6 +57,7 @@ export default function HeroSlider() {
                     Explore Programs
                   </Link>
                   <button
+                    onClick={() => setIsVideoOpen(true)}
                     className="flex items-center gap-2 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-3.5 text-base font-semibold text-neutral-dark dark:text-white hover:border-primary/30 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
                     <span className="material-symbols-outlined text-accent filled">play_circle</span>
                     Watch Our Story
@@ -63,7 +67,7 @@ export default function HeroSlider() {
               <div className="relative lg:h-full w-full flex items-center justify-center">
                 <div className="relative w-full aspect-[4/3] lg:aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
                   <div className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYAU-ZRtsAe7wVWjjajAni93uPswYWbHGI5Jz4TdS7ZxVOHx2jmE6Q3-HmOTNjIV4TobcpBDHl1faK7q6gYOwfIreiM7UiHQ_fois1FpDxRm21Yn8vHMbGZqHObS-M0TvXVXqQnSLyRme2GhCbFiNoKC9So1crqiTWMVSQtp3rTZ-LRDvQ4Jnue3siRNvHThLsIolrg-dGVCuO8XeGt898STszDbubmHyKhP1X-xzN-sQhmdtfsZyy840nZ6Ke2HMF9V5bwvt06DJJ')" }}>
+                    style={{ backgroundImage: "url('/assets/images/hero/hiqmat-in-action.webp')" }}>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60">
                   </div>
@@ -73,8 +77,8 @@ export default function HeroSlider() {
                         <span className="material-symbols-outlined filled">code</span>
                       </div>
                       <div>
-                        <p className="text-xs text-neutral-gray font-medium uppercase tracking-wider">Current Cohort</p>
-                        <p className="text-sm font-bold text-primary">Web Development Bootcamp</p>
+                        <p className="text-xs text-neutral-gray font-medium uppercase tracking-wider">Featured Program</p>
+                        <p className="text-sm font-bold text-primary">GROW in Action</p>
                       </div>
                     </div>
                   </div>
@@ -85,6 +89,8 @@ export default function HeroSlider() {
             </div>
           </div>
         </section>
+
+
 
         {/* Slide 2 - From HeroSectionTwo.js */}
         <section className="w-full shrink-0 flex items-center py-8 lg:py-16 relative">
@@ -97,7 +103,7 @@ export default function HeroSlider() {
                   </span>
                   <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
                     Hey Sis,<br />
-                    <span className="text-primary dark:text-blue-400">You Belong in Tech Too</span>
+                    You Belong in Tech Too
                   </h1>
                   <h2 className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-normal leading-relaxed max-w-xl">
                     Empowering African women with the skills, mentorship, and community needed to thrive in the global
@@ -141,17 +147,17 @@ export default function HeroSlider() {
                   </div>
                   <div className="absolute inset-0 z-20 overflow-hidden rounded-2xl shadow-2xl bg-gray-200 dark:bg-gray-800 group">
                     <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                      style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMasD0an8yjMTCkUfdGhSXODn84RCXXCPyPfUpxpRhx_aMqPUHtlY-lvMnZIAR9HiiW7bO_4-6ID8PhvAoIb-5ofFJYHMKqj1rScYxWrRt1KQrN-5magg0zueMTD9okG58_j6jxrQGQbzXgTRGSGizEdRCOquIXJrmUgu4gLJPa3v7slQR7qsZ7cujdU9DyZkChWVeB-xhy_nkC6tyJFkxjbi_jMVGJSsPRVAPGUn_1V3TXl8ZKD35aOjP9Iwhe7e0fmOKTkA5l74')" }}>
+                      style={{ backgroundImage: "url('https://updates.paahibuspace.org/assets/frontend/images/female-in-tech.png')" }}>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-6 sm:p-8 text-white w-full">
                       <div className="flex gap-2 mb-2">
-                        <span className="px-2 py-1 text-xs font-bold bg-white/20 backdrop-blur-md rounded text-white border border-white/10">Tech Summit 2023</span>
+                        <span className="px-2 py-1 text-xs font-bold bg-white/20 backdrop-blur-md rounded text-white border border-white/10">Creatives Meetup</span>
                       </div>
                       <p className="text-xl sm:text-2xl font-bold font-heading leading-tight mb-2">Building the Future Together</p>
                       <div className="flex items-center gap-2 text-sm text-gray-200">
                         <span className="material-symbols-outlined text-base">location_on</span>
-                        <span>Lagos, Nigeria</span>
+                        <span>Wa, UWR-Ghana</span>
                       </div>
                     </div>
                   </div>
@@ -160,7 +166,7 @@ export default function HeroSlider() {
                       <span className="material-symbols-outlined">code</span>
                     </div>
                     <div>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Daily Coding Challenges</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Creatives Meetup</p>
                       <p className="text-sm font-bold text-neutral-dark dark:text-white">Active Now</p>
                     </div>
                   </div>
@@ -199,6 +205,30 @@ export default function HeroSlider() {
         ))}
       </div>
 
+
+      
+      {/* Video Modal - Placed outside the slider transform container */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+          <div className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl aspect-video">
+            <button 
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10 bg-black/50 rounded-full p-2 transition-colors"
+            >
+              <span className="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/TXlUCuEc6Qw?autoplay=1" 
+              title="Paahibu Space Story" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

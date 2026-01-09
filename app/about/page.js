@@ -5,8 +5,19 @@ import WhyWomenInTech from "@/components/sections/WhyWomenInTech";
 import Stats from "@/components/sections/Stats";
 import GrowCommunity from "@/components/sections/GrowCommunity";
 import LeadershipTeam from "@/components/sections/LeadershipTeam";
+import { fetchAPI } from "@/lib/api";
 
-export default function AboutPage() {
+export default async function AboutPage() {
+    // Helper to safely get the category name whether it's a string or an object (API usually returns relation object)
+  const getCategory = (member) => {
+    if (typeof member.category === 'object' && member.category !== null) {
+      return member.category.name || "";
+    }
+    return member.category || "";
+  };
+  const team = await fetchAPI("/api/v1/team") || [];
+  const leadership = team.filter(m => getCategory(m) === 'Leadership');
+  
   return (
     <>
       <PageHero
@@ -16,13 +27,13 @@ export default function AboutPage() {
           </>
         }
         description="Breaking barriers and building futures through technology, mentorship, and entrepreneurship."
-        backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuChVnKlRze4PAP6RUwKXPEJVGO_xknBh7I7IrWtys_RrkCQ4JJGANdGSw1-dS2H3ZRz_lTY9XTwnPBmY23bHQsC702gjL3g4BsHLsIookfOrmEGXcMHWDDGggLCt3b6tJMkf06xYQ9PXV0kFuUntURKXaXPC2Rx4RzNtJJq78Va1beJJr8tYKd6B84IcbD_6AzwykNs79skTza8mARXHqYGqtNeBLfh2761q_DUdo__6cbvI9an8L_iS9ER0Pu8ctwIw19Gf8h2NgzA"
+        backgroundImage="/assets/images/bg/team-with-grow.webp"
       />
       <Story />
       <Mission />
       <WhyWomenInTech />
       <Stats />
-      <LeadershipTeam />
+      <LeadershipTeam members={leadership} />
       <GrowCommunity />
     </>
   );

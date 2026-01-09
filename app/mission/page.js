@@ -39,7 +39,7 @@ export default function MissionPage() {
                   data-alt="Group of diverse women working together on laptops in a modern office setting"
                   style={{
                     backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBv8g6PhAq7vMfCFsi06XeTlvHkhVLkeYEvvVH8NAGQcOB3S9FTN9VJbSHCkkYqNyxJtzkkCkLulxR8uLURSWYE0MM9REJ-dgEPeAAMrwaM1-UTBEcSuUdfNctF7fOZ9yu70rp5GP8RnkwMvOQxn9fVqFV06DUeF01D5yU00YcYEGZfoyZOj8s46LYMjXNwNdP2pWNfMAc7BFeQcZuN55Bq4tb8w8StqGfPiJSexJfHk_lNO5FTsgVQb41pRfMmZYECTEeybnr5sp4")',
+                      'url("/assets/images/programs/widib.webp")',
                   }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
@@ -212,7 +212,7 @@ export default function MissionPage() {
               <img
                 alt="Two women colleagues discussing work on a laptop"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7DckuQvtfBkrRePEC3mzwmaCR3bfXhiIWlgvxGp2kRxRh6srXH3aTRvQ_UfY_VZjp09mW6eotu0CDEF1xrby-wkTqD0ZYp76jLLWzsN6ayPKKN340lsF9SCzpkFbz0eXqLxo7ffLszk0--9xK8tZApGwypJnScsf81GTgeCJ-gjx25yMGSxn6sRHllYU-BVrwQ8VvzbWQ4BLj-mdWl0eqfiXmR7eBHrdQHUhcXGjL4VEBpTC-sTwhBS3vVd6J0uk3x9MHfzwu-wQ"
+                src="/assets/images/collab-impact.png"
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
@@ -238,7 +238,7 @@ export default function MissionPage() {
               <img
                 alt="Group of diverse friends laughing together outdoors"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_hC0uiCbx57H_IVbqO7xWx5IfEzUYDrgPqLRKBdc-ERCkZl5l2n2kzex_YDyoRLWhU0eya0m-q8UQZKePH3jC7VHX3DcwrO0XxHYTsUD5Z0HA4YRUrVG6fzvXCbq0nJxCb1hNWbu5bipjOGu1vH145mNYZcKbbuyjapk9axvLuRB7cWSlG1JAFsw0Xgav8afgAowaEprxe0llw91YSC51UKFsxHEWqa4WXksljQkPTinTHkyU5elbkpQ5U0ItdAejJNH5Uxxjm4k"
+                src="/assets/images/longterm-sus.png"
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
@@ -264,7 +264,7 @@ export default function MissionPage() {
               <img
                 alt="Confident woman leading a presentation in an office"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCghx274muUBcaIf5e6HRoWO6VsbVGhkA_91iQQ3LIxYRK5sYRoP37aZuS9pwxSYFOITZvHjqOjpYUb-gnwtX4k-BV9WhlmZ3X7ymr7ZcPcqXbC56wPZiJdJW3DpIbNAo5Emaxtl0R2qt311id-6UUyXqNQQDYIrf1nSDETHdx4V4l-Sdq6oYqlDm_BNznZs7IXVrskOR-uvrDayirT2yg-rE1OoxQaOV5-lVTmVgZnMxFmwWepJCeB78xRkVyactJ81djwJql5HU4"
+                src="/assets/images/leadership.png"
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">

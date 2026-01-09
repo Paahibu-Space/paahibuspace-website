@@ -1,8 +1,50 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 
 export default function NewsletterSection() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle");
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus("loading");
+    try {
+        const response = await fetch("/api/v1/newsletter/subscribe", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+        });
+
+        if (response.ok) {
+            setStatus("success");
+            setMessage("Thank you for subscribing!");
+            setEmail("");
+        } else {
+            const errorData = await response.json().catch(() => ({}));
+            setStatus("error");
+            
+            // Check for Laravel validation errors
+            if (errorData.errors) {
+                 const firstError = Object.values(errorData.errors)[0];
+                 setMessage(Array.isArray(firstError) ? firstError[0] : firstError);
+            } else {
+                 setMessage(errorData.message || "Something went wrong. Please try again.");
+            }
+        }
+    } catch (err) {
+        console.error(err);
+        setStatus("error");
+        setMessage("Connection failed. Please check your internet.");
+    }
+  };
+
   return (
     <div className="relative flex min-h-[50vh] flex-col items-center justify-center p-4 sm:p-8">
       <div className="relative w-full max-w-[800px] overflow-hidden rounded-2xl dark:bg-gray-50 dark:bg-zinc-800 border border-gray-100 dark:border-zinc-700 transition-colors duration-300">
@@ -16,20 +58,35 @@ export default function NewsletterSection() {
             Empowering African women in technology. Get the latest opportunities, mentorship updates, and tech news delivered directly to your inbox.
           </p>
           <div className="w-full max-w-lg">
-            <form className="flex flex-col gap-3 sm:flex-row sm:items-stretch" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col gap-3 sm:flex-row sm:items-stretch" onSubmit={handleSubscribe}>
               <div className="relative flex-grow">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <span className="material-symbols-outlined text-slate-400">mail</span>
                 </div>
-                <input aria-label="Email address"
+                <input 
+                  aria-label="Email address"
                   className="block w-full rounded-lg border-0 bg-white dark:bg-zinc-700 py-3.5 pl-10 pr-4 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:ring-inset shadow-sm sm:text-sm sm:leading-6"
-                  placeholder="Enter your email address" required="" type="email" />
+                  placeholder="Enter your email address" 
+                  required
+                  type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={status === 'loading' || status === 'success'}
+                />
               </div>
-              <button className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200"
-                type="submit">
-                Subscribe Now
+              <button 
+                className={`inline-flex items-center justify-center rounded-lg px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 ${status === 'loading' ? 'bg-gray-400 cursor-not-allowed' : 'bg-primary hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'}`}
+                type="submit"
+                disabled={status === 'loading' || status === 'success'}
+              >
+                {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe Now'}
               </button>
             </form>
+             {message && (
+                <p className={`mt-3 text-sm font-medium ${status === 'error' ? 'text-red-500' : 'text-green-600'}`}>
+                  {message}
+                </p>
+              )}
           </div>
           <p className="mt-4 text-sm text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
             <span className="material-symbols-outlined text-[16px]">lock</span>

@@ -1,6 +1,23 @@
 import Link from "next/link";
+import { fetchAPI } from "@/lib/api";
+import ProgramCTA from "@/components/ui/ProgramCTA";
 
-export default function TechsiStarsProgram() {
+export default async function TechsiStarsProgram() {
+  const programs = await fetchAPI("/api/v1/programs") || [];
+  const techsistarsProgram = programs.find(p => p.name.includes("TechsiStars")) || { 
+      id: 101, 
+      slug: "techsistars-program",
+      name: "TechsiStars Mentorship Program",
+      is_application_open: true,
+      application_status: "Open",
+      application_start_date: "2026-01-01",
+      application_end_date: "2026-12-31"
+  };
+
+  const nextCohortDate = techsistarsProgram.application_start_date 
+      ? new Date(techsistarsProgram.application_start_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      : "TBA";
+
   return (
     <>
         {/* Breadcrumbs */}
@@ -33,19 +50,17 @@ export default function TechsiStarsProgram() {
                         and career readiness training.
                     </p>
                     <div className="flex flex-wrap gap-4">
-                        <button className="bg-secondary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-700 transition-all shadow-lg shadow-purple-200 dark:shadow-none flex items-center gap-2">
-                            <span>Apply for Cohort 4</span>
-                            <span className="material-symbols-outlined">arrow_forward</span>
-                        </button>
-                        <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all flex items-center gap-2">
-                            <span className="material-symbols-outlined">download</span>
-                            <span>Download Brochure</span>
-                        </button>
+                        <ProgramCTA 
+                           program={techsistarsProgram} 
+                           labelOpen="Apply for Cohort 4"
+                           labelClosed="Join Waitlist"
+                           className="bg-secondary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-700 shadow-lg"
+                        />
                     </div>
                 </div>
                 <div className="relative lg:h-[600px] w-full hidden lg:block">
                     <div className="absolute top-10 right-0 w-[80%] h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-[6px] border-white dark:border-gray-800 z-10 transform rotate-2 hover:rotate-0 transition-all duration-500">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ8huE0b3gF2l_kMqcHDKKCk_uES7HEJBVXxnw7w362MbZy7JR_a1wS1_KSjnkTR9sdO4pKE0hHsXrC2Et9e2bhUjNxjM6Dq0UGruyCwbnBkO8fEIOSv6FiVQLYNVl3Z1ni1AMSkpIo5LCsJOH5miJmb4K5sXCi8fs7sx3ZNiydk96xfcsE5K2ZPC7fJP-aN6fWuH9RF-QaOLk77GWV9qBiAdWSv4bS8IYdUcWlM9BInT0PtR36mGx7BRBxhgPh-dFBP84Pqnk2l82" 
+                        <img src="/assets/images/programs/techsistars2.webp" 
                              alt="Women in Tech" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent"></div>
                         <div className="absolute bottom-8 left-8 text-white">
@@ -148,7 +163,7 @@ export default function TechsiStarsProgram() {
             <div className="flex flex-col lg:flex-row items-center gap-16">
                 <div className="w-full lg:w-1/2 relative group">
                     <div className="absolute inset-0 bg-secondary rounded-3xl transform rotate-3 transition-transform group-hover:rotate-6"></div>
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoKYpieAcvktKt6Zf9xVFHy9EMgaWQx-NAM7FRiT2bD9lHyfS-zQii-vjYAuI6CDlHofv7yRWC9mIuXJTBapIYxTGNR72VFVYZsEm6TUFr8iwe3mY0qQ3TwZnFA7zqwBo8ZLMQTYH6kXOmAZwhfEFZSWfd0K10GAORrspZ2nZa5yB7ftwjYRYqiFe3t7QFvRfRzSBr80ZbyWcz7ZDazv_HNfCV9BWRjrvCNMsDY0HrtfFBIYMKwHSb1bOaR3s-1hAPUE8tzgrd2RVN" 
+                    <img src="/assets/images/programs/techsistars.webp" 
                          alt="Coding workshop" 
                          className="relative rounded-3xl shadow-2xl w-full object-cover h-[500px] bg-gray-200" />
                 </div>
@@ -326,41 +341,39 @@ export default function TechsiStarsProgram() {
       {/* Testimonials */}
     <section className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-display font-bold text-center text-primary dark:text-white mb-12">Voices of Change
+            <h2 className="text-3xl font-display font-bold text-center text-primary dark:text-white mb-12">Alumnae Spotlight
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white dark:bg-surface-dark p-8 rounded-2xl relative">
                     <span
                         className="material-symbols-outlined text-6xl text-gray-200 dark:text-gray-700 absolute top-4 right-4">format_quote</span>
                     <div className="flex items-center gap-4 mb-6 relative z-10">
-                        <img alt="Portrait of Amina"
+                        <img alt="Portrait of Adenike"
                             className="w-16 h-16 rounded-full object-cover border-2 border-secondary"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqpYuLax1etq3JMXeQwKzi7ecenS_oNwL-NPhRdLpK5A_eNXhbYB49ujSl3jHyAIQwj6dvNpSZdXmK-DPYeKt21S3aHAidh-iqJscMGme1aVEkjQIY0y-AEw2CG9nfPrQ3ZpViSs2QO3gdUH-W6Mc8a-WDtu5Bn43golXevqX5Qy8-AAKYfTVFVZescEtspJgLfBee6bmZiWXDmVHdolBzqSNC5pOcIxMsaDwWnVKpuQ8F9RZ3KGSXpJyy2cmS3KZzTjvfOVIkvRc" />
+                            src="/assets/images/team/adenike.jpg" />
                         <div>
-                            <h4 className="font-bold text-primary dark:text-white">Amina K.</h4>
-                            <p className="text-sm text-secondary">Frontend Developer</p>
+                            <h4 className="font-bold text-primary dark:text-white">Adenike Owoeye</h4>
+                            <p className="text-sm text-secondary">Backend Developer</p>
                         </div>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 italic relative z-10">
-                        "The mentorship I received during TechsiStars was life-changing. My mentor didn't just teach me
-                        to code; she taught me how to navigate the industry as a woman."
+                        "My journey as a Backend Developer started the day I joined the TechsiStars Mentorship Program. I was truly blessed with an incredible mentor whose guidance made all the difference. Without her, I wouldn’t be where I am today."
                     </p>
                 </div>
                 <div className="bg-white dark:bg-surface-dark p-8 rounded-2xl relative">
                     <span
                         className="material-symbols-outlined text-6xl text-gray-200 dark:text-gray-700 absolute top-4 right-4">format_quote</span>
                     <div className="flex items-center gap-4 mb-6 relative z-10">
-                        <img alt="Portrait of Sarah"
+                        <img alt="Portrait of Fauzia"
                             className="w-16 h-16 rounded-full object-cover border-2 border-secondary"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9K9kTZh73nJx_sKfNEWg8RaN3LM9bwOeSsLWSNcwA9cgBhmuQ9s6Hv4MBOwEYjWB3ghars_1zi_Whq9EPNKbXdiphJTXALw1OY6YVL6LkPW3FO0-W2kiZhJeCSGaF6lWNAAOScvYLOje0fCdX9SVal4sDYdC65Dp1MzV_glzF-VJrWlUvHcKO_pjmjzcdTmLLQbrzZpq4_mWGSlPNn6evm5so2yEg8w2oDiz8DItZi79Y08qh5WmxJmjUJI9CYGmuT-y_C9WkVNM" />
+                            src="/assets/images/team/fauzia.jpg" />
                         <div>
-                            <h4 className="font-bold text-primary dark:text-white">Sarah M.</h4>
-                            <p className="text-sm text-secondary">Product Designer</p>
+                            <h4 className="font-bold text-primary dark:text-white">Fauzia Katali Yakubu</h4>
+                            <p className="text-sm text-secondary">UX Research Intern</p>
                         </div>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 italic relative z-10">
-                        "Before this program, I thought tech wasn't for me. Now, I'm leading design sprints at a fintech
-                        startup. The confidence I gained is my biggest asset."
+                        "From knowing nothing about design to confidently navigating Figma and creating designs, it’s been a truly exciting journey. The mentorship gave me not just technical skills but also the confidence to believe I belong in this space."
                     </p>
                 </div>
             </div>
@@ -395,7 +408,7 @@ export default function TechsiStarsProgram() {
                         <div className="space-y-4 mb-8">
                             <div className="flex justify-between border-b border-purple-500 pb-2">
                                 <span className="opacity-80">Next Cohort:</span>
-                                <span className="font-bold">Oct 15th</span>
+                                <span className="font-bold">{nextCohortDate}</span>
                             </div>
                             <div className="flex justify-between border-b border-purple-500 pb-2">
                                 <span className="opacity-80">Format:</span>
@@ -406,9 +419,10 @@ export default function TechsiStarsProgram() {
                                 <span className="font-bold">Scholarship</span>
                             </div>
                         </div>
-                        <button className="w-full bg-secondary text-primary-700 font-bold py-4 rounded-xl hover:bg-secondary/80 transition-colors shadow-lg">
-                            Apply Now
-                        </button>
+                        <ProgramCTA 
+                           program={techsistarsProgram}
+                           className="w-full bg-secondary text-primary-700 font-bold py-4 rounded-xl hover:bg-secondary/80 transition-colors shadow-lg"
+                        />
                     </div>
                 </div>
             </div>

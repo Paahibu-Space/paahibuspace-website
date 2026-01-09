@@ -1,7 +1,15 @@
 import Link from "next/link";
-import Button from "@/components/ui/Button";
+import { fetchAPI } from "@/lib/api";
+import ProgramCTA from "@/components/ui/ProgramCTA";
 
-export default function WideiProgramPage() {
+export default async function WideiProgramPage() {
+  const programs = await fetchAPI("/api/v1/programs") || [];
+  const wideiProgram = programs.find(p => p.name.includes("WiDEI")) || { 
+      id: 100, 
+      name: "WiDEI",
+      is_application_open: false
+  };
+
   return (
     <>
       {/* Breadcrumbs */}
@@ -34,9 +42,12 @@ export default function WideiProgramPage() {
                      Connecting tradition with modernity through practical tech education.
                  </p>
                  <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
-                     {/* <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-secondary text-[#0d1b12] text-base font-bold hover:bg-secondary/80 transition-colors shadow-lg shadow-primary/20">
-                         Support the Program
-                     </button> */}
+                     <ProgramCTA
+                        program={wideiProgram}
+                        labelOpen="Join the Initiative"
+                        labelClosed="Join Waitlist"
+                        className="flex items-center justify-center rounded-lg h-12 px-8 bg-secondary text-[#0d1b12] text-base font-bold hover:bg-secondary/80 transition-colors shadow-lg shadow-primary/20"
+                     />
                  </div>
              </div>
              {/* Floating Stat Card */}
@@ -262,7 +273,7 @@ Space and the WiDiB Initiative"
                  {/* Large Item */}
                  <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl">
                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXP3jLj4PGTOB7PRHiM7H9_l0e8WF2jMItFeaCLzsnUVSMiAW-lc6e0McNp4AS9gq_jlwZBl0zeTRxBgu7y92YVPftMkhW03vgvg0h7JTmF4nxXcv80P91L5gr6ox_QcIAQha46HCImr3pWkqLerdIXQ7fmBqyb9ut6wyXvKE40ndyo6X1JA_RBPd0485JZi-WwQ4l9gLOyl995wMpqbMLb1G8dPj9G4-hyZ6jDAOIDODl7_-y6WeCHTSu89JfSsgunvFkxIODk_S0" alt="Training" />
+                         src="/assets/images/programs/widei-action1.png" alt="Training" />
                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
                      <div className="absolute bottom-0 left-0 p-6">
                          <span className="bg-primary text-[#0d1b12] text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Training</span>
@@ -272,7 +283,7 @@ Space and the WiDiB Initiative"
                  {/* Small Item */}
                  <div className="relative group overflow-hidden rounded-xl">
                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxOt3DUEFE_IH6iIQIy7HbwYXGb4oJeQ9ZNE9ukCc95tASSBYpuFpIPLC0f9TnGqt31pNrD6jiCR3iQJK2_XLyHzLebHM-p_ny01Z78rw9V2f87i2IYbAABEP7gHAT5U9CicbocbvafkwkgbamSTEGDH_OCpQt3v3ZpJsAqJk5hlmNQcrZXnfjaLRtbQw_OkDB95fV6WrjU0EKH_89EGtzXj3A3ZMVXbActz_vSBbGRuSqexrvLxUlSa1yp8Ffl1iTI7sK0bdGoZW5" alt="Mobile tools" />
+                         src="/assets/images/programs/widei-action3.png" alt="Mobile tools" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
                          <h3 className="text-white text-sm font-bold">Mobile Money Tools</h3>
                      </div>
@@ -280,7 +291,7 @@ Space and the WiDiB Initiative"
                  {/* Small Item */}
                  <div className="relative group overflow-hidden rounded-xl">
                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1F3Q6gnayM32ep05hPRouDodCbQUmR_I9vFi03iWaywB3TokB-EWXljiTy0xeveT0c1hqV6hUDGEfBdJn60A3Tf5nxCsg5wozCaC7-jTQ44z_a4ArrS3h3A_zbx8rHcK0PsGExfewHWvbz9vtnOJuvV4piUY2KWj0NJiSQsQScrLYUUU1_vknnRISixF20vp7DKskDK74qQTwojmvbB4BtAKjh4EG8kiLsPbsz_K4yMKxJvrx9qgClwSPTivpnxg0KVFVQWINLJ3t" alt="Empowerment" />
+                         src="/assets/images/programs/widei-action2.png" alt="Empowerment" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
                          <h3 className="text-white text-sm font-bold">Empowerment</h3>
                      </div>
@@ -288,7 +299,7 @@ Space and the WiDiB Initiative"
                  {/* Wide Item */}
                  <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-xl">
                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoKYpieAcvktKt6Zf9xVFHy9EMgaWQx-NAM7FRiT2bD9lHyfS-zQii-vjYAuI6CDlHofv7yRWC9mIuXJTBapIYxTGNR72VFVYZsEm6TUFr8iwe3mY0qQ3TwZnFA7zqwBo8ZLMQTYH6kXOmAZwhfEFZSWfd0K10GAORrspZ2nZa5yB7ftwjYRYqiFe3t7QFvRfRzSBr80ZbyWcz7ZDazv_HNfCV9BWRjrvCNMsDY0HrtfFBIYMKwHSb1bOaR3s-1hAPUE8tzgrd2RVN" alt="Peer Mentorship" />
+                         src="/assets/images/programs/widei-action4.png" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
                          <h3 className="text-white text-sm font-bold">Peer Mentorship</h3>
                      </div>

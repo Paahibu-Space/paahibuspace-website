@@ -220,6 +220,14 @@ export default function Navigation() {
         )}>
         Stories
       </Link>
+      <Link
+        href="/blog"
+         className={cn(
+          "text-sm font-medium transition-colors hover:text-secondary",
+          isActive("/blog") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
+        )}>
+        Blog
+      </Link>
       
       <div className="ml-4 flex items-center gap-4">
         <button

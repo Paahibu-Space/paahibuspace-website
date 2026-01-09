@@ -6,14 +6,14 @@ export default function PhilosophyPage() {
   return (
     <>
       <section className="relative w-full min-h-[500px] flex items-center justify-center bg-primary overflow-hidden py-20 px-4 md:px-0">
-         <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80')" }}></div>
+         <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/assets/images/bg/philosophy-bg.png')" }}></div>
          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div className="relative order-2 md:order-1 hidden md:block">
                  <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
                     <img 
                       alt="Women in tech collaboration" 
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB58QEJ1u-QhLOp7wkGmCkkpsICP1UOPB9bKMAuzkjARmFRgTjdbjiZw0x-0tq9VDOkb3NtbkKvFpPsFyDDWuA0v02NheC5QoBBn9jXVr75Um5o3OiEzvk3L15ET1Ik1gDr2WdkgBKvjAbqa2stq6yxje5CNxikgHHWcRpIzYNBy5atcugqS0GOxE1dsKbYQ37JiOFt-HBrq1Ofe7VEf9DpwxiDZyKNP9KpPO0bNbV1OeC2CuoxaqTQU0Uu47tQPwWjUSoSRzXvAnU" 
+                      src="/assets/images/conn-emp.png" 
                     />
                  </div>
                  <div className="absolute -bottom-6 -right-6 bg-secondary p-4 rounded-xl shadow-lg hidden lg:block">

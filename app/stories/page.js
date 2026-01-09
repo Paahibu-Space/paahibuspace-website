@@ -1,6 +1,9 @@
 import StoriesGrid from "@/components/sections/StoriesGrid";
+import { fetchAPI } from "@/lib/api";
 
-export default function StoriesPage() {
+export default async function StoriesPage() {
+  const stories = await fetchAPI("/api/v1/stories") || [];
+
   return (
     <>
       <section className="bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800 py-12 md:py-16">
@@ -20,7 +23,7 @@ export default function StoriesPage() {
             </div>
         </div>
       </section>
-      <StoriesGrid />
+      <StoriesGrid initialStories={stories} />
     </>
   );
 }

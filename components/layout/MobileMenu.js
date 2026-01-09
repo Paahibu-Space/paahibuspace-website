@@ -166,6 +166,13 @@ export default function MobileMenu({ open, setOpen }) {
               >
                 Stories
               </Link>
+              <Link
+                href="/blog"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={() => setOpen(false)}
+              >
+                Blog
+              </Link>
             </div>
             <div className="py-6">
               <Link

@@ -8,7 +8,7 @@ export default function Story() {
             data-alt="Close up of a young African woman smiling while coding"
             style={{
               backgroundImage:
-                'url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_1acxFSzjk4CD7F1s4DMmR6I3NlsqIHX3C_qbTq53Lt6b0ANLRPfT3addwPOFABuPyrBXZ02Ks5pY11DPgsp8YdfxJ30XQCvuGHzm92rYLeAvKU0qOzhRRHafqIm34SIejH9d_JWCCrSNE6S7n3k9KS0FKtR05I6MsV93sTV1UHZbNBOio9Y1Nu0EF1lIjmAdqS8bJ9P42mlwzGfFzD-Myau4QhNppysYVJ23jcr9wTzO5nSLZFrccB0DWu0nyWY7CQrTS9ffKiAh")',
+                'url("/assets/images/youthled.png")',
             }}
           ></div>
           <div className="absolute bottom-4 right-4 bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-lg backdrop-blur-sm shadow-sm">
@@ -38,14 +38,6 @@ export default function Story() {
             social, environmental and digital inequalities that hinder women’s participation in
             the workforce, leadership and business ecosystem.
           </p>
-          <div className="pt-4">
-            <button className="flex items-center gap-2 text-primary dark:text-secondary font-bold hover:gap-3 transition-all cursor-pointer">
-              <span>Read our full history</span>
-              <span className="material-symbols-outlined text-sm">
-                arrow_forward
-              </span>
-            </button>
-          </div>
         </div>
       </div>
     </section>

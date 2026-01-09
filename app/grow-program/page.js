@@ -2,41 +2,17 @@ import PageHero from "@/components/sections/PageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import ProgramOverview from "@/components/sections/ProgramOverview";
 import Button from "@/components/ui/Button";
+import { fetchAPI } from "@/lib/api";
+import ProgramCTA from "@/components/ui/ProgramCTA";
 
-export default function GrowProgramPage() {
-  const testimonials = [
-    {
-      author: "Amina K.",
-      role: "Tech Founder",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuDHU5x5r74aRsO-M90yUoArKZDOlyRqcK8WZZ-JB1kgAhzB7ixi5Ry6ywv30_QQPQ970tM9ZB-xdUAdre8Bz4T_OQRE-EJjqehIpeXkglCOTUizJyw_qLrB-UzpT7luvMKS6_I8GpzjxKDsoY8JkfXJn3Wj_zhRPFa7_JgaMD3SoHaVDydoG72i68AT875B6EavFNXXEAEBMhg6BmWu2Bvtih-ktUmGAL-viItERjsQo_lBAdnNOjBSX9l9G-MCPuYXekQKs8FtCbA",
-      quote:
-        "The mentorship I received helped me pivot my startup during a critical time. The community here is unmatched—truly sisters in tech.",
-    },
-    {
-      author: "Chioma O.",
-      role: "Freelance Designer",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuDgSfLhkS24XlmdkGHqXsyT6gwD4oJpQLSSY4QztPQppCSIQmRSd3eylvnUA0EWlOzzH-0nknexjtwrLS6wH73oIXLDhH_zJeBeZKsBGM-oWcg2WxKQdNzFzdi6HJKJ9wTCoIlyyK7HjHO6F-XdlarsB_dC9G5OZFyNIUfF5MlCeBrXqe2iP7GUj0Gvk7IPw9GrR5pqFUB-RPo36HWEdFMwfMTb_2jz6Obe9F6UDnzXoVBXdDAde0vH_M2yLYSRfivhbIjuAVpcMSg",
-      quote:
-        "I found my first major international client through a GROW networking event. This program gave me the confidence to charge what I'm worth.",
-    },
-    {
-      author: "Zainab A.",
-      role: "Policy Analyst",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuAO_w_MMQ48gJ3q3rNx2zN3W3J_YKZZfS1XlCUJH-wIFM-5rQUbPM2Wg1GojKgOMRT-lKGQTfdQZbWq4R96EPSTpP1McI_UTw97nQelRJwG79q-xaaIx17weXl_9QoXNU2QOgXlDP7-uwppDO_SQgvL8KSSgdaNJpPST3tRe929luj49IICYz7iV0hLQDYMJQZxCn6ITblugcY2HuhmjUTJVN_VSmhYqyq-Qq22_V3AJNO5CSl6LLPYVi3KS9YqsCjougr7-Rycb4Q",
-      quote:
-        "Advocating for digital rights is tough, but doing it with the backing of the GROW network makes our voice so much stronger in policy circles.",
-    },
-  ];
-
-  const features = [
-    "Business Acceleration: Scale your startup with expert guidance.",
-    "Executive Coaching: 1-on-1 sessions with seasoned leaders.",
-    "Access to Capital: Connect with investors and funding opportunities.",
-    "Global Network: Join a community of high-achieving women.",
-  ];
+export default async function GrowProgramPage() {
+  // Fetch programs and find GROW
+  const programs = await fetchAPI("/api/v1/programs") || [];
+  const growProgram = programs.find(p => p.name.includes("GROW")) || { 
+      id: 99, 
+      name: "GROW Program",
+      is_application_open: false // Safe fallback
+  };
 
   return (
     <>
@@ -44,9 +20,9 @@ export default function GrowProgramPage() {
       <div className="w-full bg-background-light dark:bg-background-dark border-b border-[#f4ede7]/50 dark:border-white/10">
         <div className="max-w-7xl mx-auto px-5 md:px-10 py-4">
             <div className="flex flex-wrap items-center gap-2 text-sm">
-                <a className="text-navy/60 dark:text-gray-400 hover:text-primary font-medium" href="#">Home</a>
+                <a className="text-navy/60 dark:text-gray-400 hover:text-primary font-medium" href="/">Home</a>
                 <span className="material-symbols-outlined text-navy/40 dark:text-gray-600 text-[16px]">chevron_right</span>
-                <a className="text-navy/60 dark:text-gray-400 hover:text-primary font-medium" href="#">Programs</a>
+                <a className="text-navy/60 dark:text-gray-400 hover:text-primary font-medium" href="/#programs">Programs</a>
                 <span className="material-symbols-outlined text-navy/40 dark:text-gray-600 text-[16px]">chevron_right</span>
                 <span className="text-primary font-bold">GROW</span>
             </div>
@@ -55,7 +31,7 @@ export default function GrowProgramPage() {
 
       <section className="relative w-full min-h-[600px] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0, 25, 76, 0.9) 0%, rgba(0, 25, 76, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRdFiMRpqmNbxPY8WsR20SNza8O_GpKnatlh5ik_iOBSfRyJXgvHX3nHMpIy93mEQjF7E_GwQGoerylwRKNY-uFOaSdGKrvWDz3ntG-tTX0_Hg7j6SJ7DR8MgJP8VTK2muH5Mw5u9YdF4iNB5huURxWdyPODye4eM_Du1RgnYZbZi1eyQSKE_-k_JDeSk0gdCLlFEEYG3vE8uwc9Pth4r938rUJyrB54ic-TTK8lrGAsW8_1xcg8SCQNQUubhhU-ahqCx9KrjO-UU")`
+          backgroundImage: `linear-gradient(to right, rgba(0, 25, 76, 0.9) 0%, rgba(0, 25, 76, 0.4) 100%), url("/assets/images/programs/grow-team.webp")`
         }}
       >
         <div className="max-w-7xl w-full mx-auto px-5 md:px-10 py-20">
@@ -71,7 +47,13 @@ export default function GrowProgramPage() {
              <p className="text-gray-200 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
                 Join a transformative journey designed to empower African women through technology, mentorship, and community leadership.
              </p>
-             <Button size="lg" className="mt-4 shadow-lg hover:shadow-orange-500/20">Apply Now</Button>
+             {/* Dynamic CTA */}
+             <ProgramCTA 
+                program={growProgram} 
+                className="mt-4" 
+                labelOpen="Apply Now"
+                labelClosed="Join Waitlist"
+             />
           </div>
         </div>
       </section>
@@ -178,7 +160,7 @@ export default function GrowProgramPage() {
                     </p>
                     <div className="hidden lg:block rounded-2xl overflow-hidden h-[400px]">
                         <img alt="Member Benefits" className="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeNRbYurjvnPFd5kuVyYwmsTEmoNCTU27ranX0lFA5nHD0tmmSel7YahE0VQ5Rpp9PBYYfrtb8gDNSrNm3KSn3ciy11d7ZblqHRmV6iBglzemJNCEVsQ27uGEvoE9wRl1Tv1AshLoecggc6bbOJmZUgA5rLPKknrPHjv6uosIIwdIqM--dOLWtJxfMgqg4lTKmdhen3jgNtrK4dIUnbhQNNeyW_cuIySlJiPb_rCAraUMOo9qmATKoUAyzI1u-T2woi8WnjTNiyA4" />
+                            src="/assets/images/programs/member-benefit.png" />
                     </div>
                 </div>
                 <div className="lg:col-span-7 flex flex-col justify-center">
@@ -338,7 +320,13 @@ export default function GrowProgramPage() {
                 Join a community that is reshaping the narrative of African women in technology and business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="shadow-lg">Apply to GROW</Button>
+                {/* Dynamic CTA */}
+                <ProgramCTA 
+                   program={growProgram} 
+                   className="shadow-lg" 
+                   labelOpen="Join GROW"
+                   labelClosed="Join Waitlist"
+                />
                 <Button variant="outline" size="lg" className="hover:bg-primary hover:text-white border-primary text-primary dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-primary">Learn More About Impact</Button>
             </div>
         </div>

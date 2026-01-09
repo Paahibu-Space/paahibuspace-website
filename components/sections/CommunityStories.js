@@ -1,45 +1,51 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-const stories = [
+const defaultStories = [
   {
-    name: "Amara N.",
-    role: "Senior Analyst at TechCorp",
-    cohort: "Data Science Cohort '23",
-    quote: "Joining Paahibu Space was the turning point in my career. The mentorship provided me with the confidence to step into a senior engineering role.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBrK3773tjMZJZ_Orhlfbj9cFyPiYZFyqW-cAkip3sBJdwIwwgigry63r7RF2rVJiSBUIOOXgGq2Km9wmwbxGRe5rT3A5SA4YnoekB9NCAZmZkb7VZ2VXBJ6ljI2AKZPtCuZCFNT-JRoo8eQjLBHioIs0EAvNBdm3Qya1XiAkTYPHlKKWEkkMJyOyuAhOczoshVWUucc-ke1kQ3yKXCyC9W1uXH24skUfeZ8m1NvhKmkqsKwrJ5ANoBSQqpRx__a0w7TvmDdMyK474",
-    thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuBKvQV9E0dmmsc-pbcQFwtNvbzeXjPFc7yxhWpwMka8sz6Iq4qe6JSK82GnC315pVVcW6zQkvgErfC6_2z_oAE081cto_Ds3NLQQcVHFl4uy9clh1rKSNoOnMwQ7eA7JPNsm1fWZNXtmitqUZMxSFqKyU3NXkjnNjTjtNwW5ujiHFMK_z0BeftIeFex1Wvoo2JpbW2h1UmlD3p_p93XOLyI3g8G-3xTzFbQM1CAQ5LgzN4J7eWTerERwZMT5GlnrJ8EoQCS3d89Pwg"
+    name: "Adenike Owoeye",
+    role: "Backend Developer",
+    cohort: "TechsiStars Alumna",
+    quote: "My journey as a Backend Developer started the day I joined the TechsiStars Mentorship Program. I was truly blessed with an incredible mentor whose guidance, experience, and encouragement made all the difference.",
+    image: "/assets/images/team/adenike.jpg",
+    thumbnail: "/assets/images/team/adenike.jpg"
+  },
+   {
+    name: "Fauzia Katali",
+    role: "UX Research Intern",
+    cohort: "TechsiStars Alumna",
+    quote: "From knowing nothing about design to confidently navigating Figma and creating designs, it’s been a truly exciting journey. The mentorship gave me not just technical skills but also the confidence to believe I belong in this space.",
+    image: "/assets/images/team/fauzia.jpg",
+    thumbnail: "/assets/images/team/fauzia.jpg"
   },
   {
-    name: "Chioma O.",
-    role: "UX Researcher at FinTech",
-    cohort: "UX Design Cohort",
-    quote: "I found my voice through Paahibu. The community support helped me navigate the challenges of being a woman in tech.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCRXuExch5G8OozHz2YsgN9XBoUshNxnL8eVCl14EXIV1Z1AA-wbbHTl63h8YfiTMcE6cIkZeBDLMMP4tt04by148ZqGX0qOgXjaiMoV5g1V_iB8J5HfD9St0BHgdk2b5WVxSk_r0yhUpho949euNhMQjQ3InwiwUoqeB5etmFQKKfHYm340PouHQRjhBjLuqARLurXN7d-XLV0gRYQeHNIYVYd2bu_Naw12MKYq29cwuaVLqVp-Edn1CbOM1U8rxk2ycOOcYFkFjk",
-    thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuCRXuExch5G8OozHz2YsgN9XBoUshNxnL8eVCl14EXIV1Z1AA-wbbHTl63h8YfiTMcE6cIkZeBDLMMP4tt04by148ZqGX0qOgXjaiMoV5g1V_iB8J5HfD9St0BHgdk2b5WVxSk_r0yhUpho949euNhMQjQ3InwiwUoqeB5etmFQKKfHYm340PouHQRjhBjLuqARLurXN7d-XLV0gRYQeHNIYVYd2bu_Naw12MKYq29cwuaVLqVp-Edn1CbOM1U8rxk2ycOOcYFkFjk"
+    name: "Julie Radol",
+    role: "Tech Law Consultant",
+    cohort: "TechsiStars Alumna",
+    quote: "The Paahibu Space TechsiStars Mentorship Program truly supports every path. Today, I’m fully practicing Tech Law and deepening my advocacy for safe online spaces, especially for women and girls.",
+    image: "/assets/images/team/julie.jpg",
+    thumbnail: "/assets/images/team/julie.jpg"
   },
   {
-    name: "Zainab A.",
-    role: "Frontend Developer",
-    cohort: "Web Dev Cohort",
-    quote: "The hands-on projects were exactly what I needed. I went from knowing nothing to building full-stack apps in weeks.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBpV-QpspJrSuIThCdEVyr2zERnnr4giMhy7g47Y79hi--EcODsK_xfCy9TgNJgf9fnWIpzeH1oWpJKcWkCoS7tdabnJI8L4hytyvCcR9ARcV-fByUoCz33tWeykfyMNj7tpQe1L-g0bGIypQRGCZ6whfMCH7uXo393CTz5I1BprYjT7sI5wYypTMxu-OjNODQfXvK3_tQ4YKKuIn1Jf6iQpxkDW3P5kx5VHtQmkxuJ9VEeX2ZnZA1qMBXY4sFLJ2lNsVkUnG45AEc",
-    thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuBpV-QpspJrSuIThCdEVyr2zERnnr4giMhy7g47Y79hi--EcODsK_xfCy9TgNJgf9fnWIpzeH1oWpJKcWkCoS7tdabnJI8L4hytyvCcR9ARcV-fByUoCz33tWeykfyMNj7tpQe1L-g0bGIypQRGCZ6whfMCH7uXo393CTz5I1BprYjT7sI5wYypTMxu-OjNODQfXvK3_tQ4YKKuIn1Jf6iQpxkDW3P5kx5VHtQmkxuJ9VEeX2ZnZA1qMBXY4sFLJ2lNsVkUnG45AEc"
-  },
-  {
-    name: "Nneka E.",
-    role: "Product Manager",
-    cohort: "Product Management",
-    quote: "Paahibu taught me that leadership is about service. I'm now mentoring others to follow in my footsteps.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjYva6u7KEle4Mj8LtwO5JCE6REQWu13ytMV4o2uRK8dsjy0c9VPyTC2oXHmzHZStfqY3NBB2TFxsuw3p4GiUGPKadSsMtxZbemzdkXlcQGzMI9n8q3rMWwqxdhLPdt302OByyNg9R31LMYQJiFBt5nSkCkPLWH_rzPkcBqTAvYIwh_fY0w_0YO9qG-4QGlgyVDxVb3keo5wROIXOWOhAYghB7y9oQRMFqmbdgKfJN-iktJLTz8JVpKdeBFxCNkjYL3ZmntdkDWHE",
-    thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjYva6u7KEle4Mj8LtwO5JCE6REQWu13ytMV4o2uRK8dsjy0c9VPyTC2oXHmzHZStfqY3NBB2TFxsuw3p4GiUGPKadSsMtxZbemzdkXlcQGzMI9n8q3rMWwqxdhLPdt302OByyNg9R31LMYQJiFBt5nSkCkPLWH_rzPkcBqTAvYIwh_fY0w_0YO9qG-4QGlgyVDxVb3keo5wROIXOWOhAYghB7y9oQRMFqmbdgKfJN-iktJLTz8JVpKdeBFxCNkjYL3ZmntdkDWHE"
+    name: "Poula Anek",
+    role: "Data Entry Intern",
+    cohort: "TechsiStars Alumna",
+    quote: "The biggest win for me was right after the program, my mentor supported me in landing a 6-month remote data entry contract. I’m now a more confident, tech-savvy advocate who’s ready to drive real change.",
+    image: "/assets/images/team/poula.jpg",
+    thumbnail: "/assets/images/team/poula.jpg"
   }
 ];
 
-export default function CommunityStories() {
+export default function CommunityStories({ stories = defaultStories }) {
+  // Ensure we have at least defaults if empty array passed
+  const displayStories = stories && stories.length > 0 ? stories.map(s => ({
+      ...s,
+      thumbnail: s.thumbnail || s.image_url, 
+      cohort: s.cohort || s.type || "Community Member"
+  })) : defaultStories;
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -52,7 +58,7 @@ export default function CommunityStories() {
       timer = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 100) {
-            setActiveIndex((current) => (current + 1) % stories.length);
+            setActiveIndex((current) => (current + 1) % displayStories.length);
             return 0;
           }
            // Calculate increment based on interval and total duration
@@ -62,7 +68,7 @@ export default function CommunityStories() {
       }, INTERVAL);
     }
     return () => clearInterval(timer);
-  }, [isPaused, activeIndex]);
+  }, [isPaused, activeIndex, displayStories.length]);
   
   // Reset progress when active index changes manually
   const handleManualChange = (index) => {
@@ -70,9 +76,10 @@ export default function CommunityStories() {
     setProgress(0);
   };
   
-  const activeStory = stories[activeIndex];
+  const activeStory = displayStories[activeIndex];
   const timeLeft = Math.ceil((DURATION * (1 - progress / 100)) / 1000);
 
+  if (!activeStory) return null;
 
   return (
     <section className="py-24 bg-background-light dark:bg-background-dark/50 transition-colors">
@@ -97,7 +104,7 @@ export default function CommunityStories() {
                   <div className="size-[120px] rounded-full p-1 bg-gradient-to-br from-primary/30 to-transparent">
                     <div className="w-full h-full rounded-full bg-cover bg-center border-4 border-white dark:border-gray-800 shadow-lg"
                       data-alt={`Portrait of ${activeStory.name}`}
-                      style={{ backgroundImage: `url('${activeStory.image}')` }}>
+                      style={{ backgroundImage: `url('${activeStory.image_url}')` }}>
                     </div>
                   </div>
                 </div>
@@ -125,13 +132,13 @@ export default function CommunityStories() {
             </div>
             <div className="flex lg:hidden justify-between items-center mt-6 px-2">
               <button 
-                onClick={() => handleManualChange((activeIndex - 1 + stories.length) % stories.length)}
+                onClick={() => handleManualChange((activeIndex - 1 + displayStories.length) % displayStories.length)}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors"
                 >
                 <span className="material-symbols-outlined">arrow_back</span>
               </button>
               <div className="flex gap-2">
-                {stories.map((_, idx) => (
+                {displayStories.map((_, idx) => (
                     <button
                         key={idx}
                         onClick={() => handleManualChange(idx)}
@@ -143,7 +150,7 @@ export default function CommunityStories() {
                 ))}
               </div>
               <button 
-                onClick={() => handleManualChange((activeIndex + 1) % stories.length)}
+                onClick={() => handleManualChange((activeIndex + 1) % displayStories.length)}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors"
                >
                 <span className="material-symbols-outlined">arrow_forward</span>
@@ -168,7 +175,7 @@ export default function CommunityStories() {
                 </button>
               </div>
               <div className="flex flex-col gap-1 mt-4">
-                {stories.map((story, index) => (
+                {displayStories.map((story, index) => (
                      <button 
                         key={index}
                         onClick={() => handleManualChange(index)}

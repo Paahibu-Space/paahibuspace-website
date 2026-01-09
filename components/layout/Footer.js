@@ -98,6 +98,17 @@ export default function Footer() {
               <li>
                 <Link
                   className="text-sm leading-6 text-gray-300 hover:text-secondary transition-colors flex items-center gap-2"
+                  href="/blog"
+                >
+                  <span className="material-symbols-outlined text-[16px]">
+                    chevron_right
+                  </span>
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-sm leading-6 text-gray-300 hover:text-secondary transition-colors flex items-center gap-2"
                   href="/involve"
                 >
                   <span className="material-symbols-outlined text-[16px]">

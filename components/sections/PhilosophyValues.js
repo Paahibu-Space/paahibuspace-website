@@ -12,7 +12,7 @@ const values = [
       "What makes Paahibu Space unique is our people-first approach. We go beyond providing digital and entrepreneurial skills — we create an ecosystem of inclusivity, innovation, and support. By combining knowledge, mentorship, and community, we empower women, girls, and youth not only to thrive in today's digital world but to become leaders who shape the future.",
     tags: ["#PeopleFirst", "#Innovation"],
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAPsTDUvJK-XGqjS1Mwd-gUOudbhj5-Y-wV2RNA8fshQzpjFM0oZoZlJnWmasayKC5jA6OIfBhBs5eEpqJzKPhbRCrcbWT4gTpCMTVca5nLtgScuRnwrfbzHnkluSYl-sQLNBQkR8Rdid1T29HWThn-1aC_a5x4y2g1jPw5i9L4_G8NU3EFlSBWwJdXnr3Vg9HlhcMirCb-5W9w5Ftz4ZhJ-UX---UHv6yBg9yO1JzBWQssn2PVNaSG_vwWoF6QMHrieFT-1GWJPww",
+      "/assets/images/team2.png",
     caption: "Community First",
     desc: "Building a stronger future together through shared knowledge.",
   },
@@ -22,7 +22,7 @@ const values = [
     content:
       "We believe that strong relationships are the foundation of success. Our mentors and learners form bonds that extend beyond the classroom, creating a lifetime network of support.",
     image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop",
+      "/assets/images/team-laugh.png",
     caption: "Stronger Together",
     desc: "Connecting minds, creating opportunities.",
   },
@@ -32,7 +32,7 @@ const values = [
     content:
       "Inclusion is at our heart. We create a safe space where everyone belongs, regardless of their background. When you join Paahibu, you join a family.",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
+      "/assets/images/big-family.png",
     caption: "Inclusive Growth",
     desc: "A safe space for everyone to thrive.",
   },
@@ -42,7 +42,7 @@ const values = [
     content:
       "Our commitment to our community is unwavering. We support each member's journey for the long haul, celebrating every milestone along the way.",
     image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop",
+      "/assets/images/commitment.png",
     caption: "Long-term Impact",
     desc: "Supporting you every step of the way.",
   },

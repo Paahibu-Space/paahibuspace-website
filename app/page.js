@@ -7,8 +7,11 @@ import ImpactSection from "@/components/sections/ImpactSection";
 import CommunityStories from "@/components/sections/CommunityStories";
 import PartnersSection from "@/components/sections/PartnersSection";
 import NewsletterSection from "@/components/sections/NewsletterSection";
+import { fetchAPI } from "@/lib/api";
 
-export default function Home() {
+export default async function Home() {
+  const stories = await fetchAPI("/api/v1/stories") || [];
+
   return (
     <main className="">
       <HeroSlider />
@@ -17,7 +20,7 @@ export default function Home() {
       <ProgramsShowcase />
       <FemalePerspective />
       <ImpactSection />
-      <CommunityStories />
+      <CommunityStories stories={stories} />
       <PartnersSection />
       <NewsletterSection />
     </main>

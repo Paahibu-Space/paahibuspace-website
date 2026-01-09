@@ -7,7 +7,7 @@ export default function TeamCTA() {
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80')",
+            "url('/assets/images/women-empowerment.png')",
         }}
       ></div>
       <div className="relative max-w-4xl mx-auto text-center">
