@@ -6,7 +6,7 @@ import AmbassadorStories from "@/components/sections/AmbassadorStories";
 
 export default async function CommunityAmbassadorsProgramPage() {
   const programs = await fetchAPI("/api/v1/programs") || [];
-  const ambassadorsProgram = programs.find(p => p.name.includes("Ambassador")) || { 
+  const ambassadorsProgram = programs.find(p => p.name.includes("Community Ambassador")) || { 
       id: 104, 
       name: "Community Ambassadors Program",
       is_application_open: true 
@@ -24,9 +24,9 @@ export default async function CommunityAmbassadorsProgramPage() {
   const allStories = await fetchAPI("/api/v1/stories") || [];
   // Filter for stories that are about the ambassadors program
   const programStories = allStories.filter(s => 
-    s.type?.includes('Ambassador') || 
-    s.program?.includes('Ambassador') ||
-    s.category === 'Ambassadors'
+    s.type?.includes('Community Ambassador') || 
+    s.program?.includes('Community Ambassador') ||
+    s.category === 'Community Ambassadors'
   );
 
   return (
@@ -39,7 +39,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                  <span className="material-symbols-outlined text-[16px]">chevron_right</span>
                  <Link href="/programs" className="hover:text-secondary transition-colors">Programs</Link>
                  <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-                 <span className="font-semibold text-secondary">Ambassadors</span>
+                 <span className="font-semibold text-secondary">Community Ambassadors</span>
              </div>
          </div>
      </div>
@@ -80,10 +80,10 @@ export default async function CommunityAmbassadorsProgramPage() {
                  <div className="relative">
                      <div className="relative z-10 grid grid-cols-2 gap-4">
                          <div className="relative w-full h-64">
-                             <Image src="/assets/images/programs/ca-hero1.png" className="rounded-2xl shadow-2xl object-cover transform translate-y-8" alt="Ambassador 1" fill sizes="(max-width: 768px) 100vw, 50vw" />
+                             <Image src="/assets/images/programs/ca-hero1.png" className="rounded-2xl shadow-2xl object-cover transform translate-y-8" alt="Community Ambassador 1" fill sizes="(max-width: 768px) 100vw, 50vw" />
                          </div>
                          <div className="relative w-full h-64">
-                             <Image src="/assets/images/programs/ca-hero2.png" className="rounded-2xl shadow-2xl object-cover" alt="Ambassador 2" fill sizes="(max-width: 768px) 100vw, 50vw" />
+                             <Image src="/assets/images/programs/ca-hero2.png" className="rounded-2xl shadow-2xl object-cover" alt="Community Ambassador 2" fill sizes="(max-width: 768px) 100vw, 50vw" />
                          </div>
                      </div>
                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-secondary/10 blur-[100px] rounded-full pointer-events-none"></div>
@@ -98,7 +98,7 @@ export default async function CommunityAmbassadorsProgramPage() {
              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
                  <div>
                      <p className="text-4xl font-black mb-1">50+</p>
-                     <p className="font-bold text-sm uppercase tracking-wide opacity-80">Active Ambassadors</p>
+                     <p className="font-bold text-sm uppercase tracking-wide opacity-80">Active Community Ambassadors</p>
                  </div>
                  <div>
                      <p className="text-4xl font-black mb-1">10</p>
@@ -116,13 +116,13 @@ export default async function CommunityAmbassadorsProgramPage() {
          </div>
      </section>
 
-     {/* What Ambassadors Do */}
+     {/* What Community Ambassadors Do */}
      <section className="py-24 bg-white dark:bg-background-dark">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              <div className="text-center mb-16">
-                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Role of an Ambassador</h2>
+                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Role of a Community Ambassador</h2>
                  <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                     Ambassadors bridge the gap between Paahibu Space and grassroots communities.
+                     Community Ambassadors bridge the gap between Paahibu Space and grassroots communities.
                  </p>
              </div>
              <div className="grid md:grid-cols-2 gap-8">
@@ -151,7 +151,7 @@ export default async function CommunityAmbassadorsProgramPage() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                     <div>
-                        <h2 className="text-[#0b1120] dark:text-white text-3xl sm:text-4xl font-bold">Meet Our Ambassadors</h2>
+                        <h2 className="text-[#0b1120] dark:text-white text-3xl sm:text-4xl font-bold">Meet Our Community Ambassadors</h2>
                         <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">Leading change across Africa.</p>
                     </div>
                     <Link className="text-secondary font-bold flex items-center gap-1 hover:underline" href="/team">
@@ -171,7 +171,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                           </div>
                           <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/90 via-[#0b1120]/40 to-transparent p-6 flex flex-col justify-end">
                               <div className="flex items-center gap-2 mb-2">
-                                  <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">{ambassador.location || 'Ambassador'}</span>
+                                  <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">{ambassador.location || 'Community Ambassador'}</span>
                               </div>
                               <h3 className="text-white text-xl font-bold">{ambassador.name}</h3>
                               <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 line-clamp-2">
@@ -258,7 +258,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                     <div className="pt-4">
                         <ProgramCTA 
                            program={ambassadorsProgram}
-                           labelOpen="Apply to be an Ambassador"
+                           labelOpen="Apply to be a Community Ambassador"
                            labelClosed="Join Waitlist"
                            className="flex w-fit cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-secondary text-[#f8f8fc] text-base font-bold leading-normal tracking-[0.015em] hover:bg-orange-700 transition-colors shadow-lg shadow-orange-500/30"
                         />
