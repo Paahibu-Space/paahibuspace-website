@@ -88,7 +88,7 @@ export default function NewsletterSection() {
                   {message}
                 </p>
               )}
-          </div>
+          </div> 
           <p className="mt-4 text-sm text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
             <span className="material-symbols-outlined text-[16px]">lock</span>
             We respect your privacy. No spam, unsubscribe anytime.
