@@ -21,7 +21,7 @@ export default function GlobalReach() {
             <div className="absolute top-[48%] left-[22%] group cursor-pointer">
               <div className="w-4 h-4 bg-secondary rounded-full relative z-10 shadow-lg border-2 border-white dark:border-gray-800"></div>
               <div className="absolute inset-0 w-4 h-4 bg-secondary rounded-full animate-ping opacity-75"></div>
-              <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-gray-700 p-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none transform scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-600">
+              <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-gray-700 p-3 rounded-lg shadow-xl opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none transform scale-100 lg:scale-95 lg:group-hover:scale-100 border border-gray-100 dark:border-gray-600">
                 <Image
                   className="rounded-full object-cover mb-2 border-2 border-secondary mx-auto"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAZbF5VlnKbopcsRZuxFJdkgKE0pW2CjTaBf1JB8_ScM44mXs_EvkyqGKAUrmgEXqryuyIM_cIvUATOMiv4ztC15xFZc_2wB2bWGoT0uXS4hYRPww7abTGYP4xzimiYx_oARiVeBqYFHJMNffmi_Tan7beMPqVmyRJEEWzpknh-kng6epgStH41FTc_WQCASQTTFByfrke6b0FPiTSzjII0DX3GAurImxaTfeFsh__xUe1D-jSWOw2xpHZQ4lUVnRxx6E8us9VF4s"
@@ -43,7 +43,7 @@ export default function GlobalReach() {
              <div className="absolute top-[52%] right-[22%] group cursor-pointer">
                 <div className="w-4 h-4 bg-secondary rounded-full relative z-10 shadow-lg border-2 border-white dark:border-gray-800"></div>
                 <div className="absolute inset-0 w-4 h-4 bg-secondary rounded-full animate-ping opacity-75 delay-300"></div>
-                <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-gray-700 p-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none transform scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-600">
+                <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-gray-700 p-3 rounded-lg shadow-xl opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none transform scale-100 lg:scale-95 lg:group-hover:scale-100 border border-gray-100 dark:border-gray-600">
                     <Image className="rounded-full object-cover mb-2 border-2 border-secondary mx-auto"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Ev7_sk4bifE-MvoBhkDNXwmWTJhXszgzTW9AoygJoAsF88l-whTkwoHWWa6DJ8eSmju5Ytc5EdF8tzrNXJKilD1B2_tfT7P2Yn-U4RFOYoBf2X3nz2wFN1J1hsoTt7V1zmwzidCiB9oktx-1xVIQUOX8qWJywGgzk9vpv98sfQduwqEjrl_rkGfNaz-WOR8S7o_dhsTUUJkDT-Sjy6_W5Z9YN_YxXbI_oAOb0yj51_BKmZ39a00TWDWJXfdm7v9RFxZhiaYP9Do" 
                         alt="Wanjiku K."

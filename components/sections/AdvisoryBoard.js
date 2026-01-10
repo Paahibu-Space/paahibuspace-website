@@ -30,23 +30,23 @@ export default function AdvisoryBoard({ members = [] }) {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+                className="absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
                 style={{
                   background:
-                    "linear-gradient(to top, rgba(39, 41, 116, 0.9) 0%, rgba(39, 41, 116, 0.6) 50%, transparent 100%)",
+                    "linear-gradient(to top, rgba(39, 41, 116, 0.95) 0%, rgba(39, 41, 116, 0.4) 50%, transparent 100%)",
                 }}
               >
-                <h3 className="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-white text-xl font-bold translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
                   {advisor.name}
                 </h3>
-                <p className="text-secondary font-medium text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                <p className="text-secondary font-medium text-sm translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 delay-75">
                   {advisor.role}
                 </p>
-                <div className="flex gap-3 mt-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
-                  <a className="text-white hover:text-primary" href={advisor.linkedin_url}>
+                <div className="flex gap-3 mt-4 translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 delay-100">
+                  <a className="text-white hover:text-primary transition-colors" href={advisor.linkedin_url || "#"} target="_blank" rel="noopener noreferrer">
                     <span className="material-symbols-outlined text-sm">link</span>
                   </a>
-                  <a className="text-white hover:text-primary" href={advisor.email}>
+                  <a className="text-white hover:text-primary transition-colors" href={`mailto:${advisor.email || ""}`}>
                     <span className="material-symbols-outlined text-sm">mail</span>
                   </a>
                 </div>

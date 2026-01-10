@@ -174,7 +174,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                                   <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">{ambassador.location || 'Community Ambassador'}</span>
                               </div>
                               <h3 className="text-white text-xl font-bold">{ambassador.name}</h3>
-                              <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 line-clamp-2">
+                              <p className="text-gray-200 text-sm mt-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 line-clamp-2">
                                   {ambassador.bio_short || ambassador.role}
                               </p>
                           </div>
