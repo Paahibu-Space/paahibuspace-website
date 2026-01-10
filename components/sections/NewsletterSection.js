@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { LinkedInIcon, XIcon, FacebookIcon, InstagramIcon } from "@/components/ui/Icons";
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -96,27 +97,27 @@ export default function NewsletterSection() {
           <div className="flex flex-col items-center gap-4">
             <span className="text-sm font-semibold text-primary dark:text-blue-200 uppercase tracking-wider text-xs">Join our community</span>
             <div className="flex gap-4">
-              <Link className="group flex flex-col items-center gap-1" href="#">
+              <Link className="group flex flex-col items-center gap-1" href="https://www.linkedin.com/company/questtechnovation/" target="_blank" rel="noopener noreferrer">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#0077b5]">
-                  <span className="material-symbols-outlined">business_center</span>
+                  <LinkedInIcon className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">LinkedIn</span>
               </Link>
-              <Link className="group flex flex-col items-center gap-1" href="#">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#1DA1F2]">
-                  <span className="material-symbols-outlined">campaign</span>
+              <Link className="group flex flex-col items-center gap-1" href="https://twitter.com/paahibuspace" target="_blank" rel="noopener noreferrer">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-black dark:group-hover:text-white">
+                  <XIcon className="w-5 h-5" />
                 </div>
-                <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">Twitter</span>
+                <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">X</span>
               </Link>
-              <Link className="group flex flex-col items-center gap-1" href="#">
+              <Link className="group flex flex-col items-center gap-1" href="https://web.facebook.com/paahibuspace" target="_blank" rel="noopener noreferrer">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#4267B2]">
-                  <span className="material-symbols-outlined">groups</span>
+                  <FacebookIcon className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">Facebook</span>
               </Link>
-              <Link className="group flex flex-col items-center gap-1" href="#">
+              <Link className="group flex flex-col items-center gap-1" href="https://www.instagram.com/paahibuspace?igsh=MWZpbWkyaDliajdrNw==" target="_blank" rel="noopener noreferrer">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#E1306C]">
-                  <span className="material-symbols-outlined">photo_camera</span>
+                  <InstagramIcon className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">Instagram</span>
               </Link>

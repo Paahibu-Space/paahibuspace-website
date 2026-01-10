@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LinkedInIcon } from "@/components/ui/Icons";
 
 export default function LeadershipTeam({ members = [] }) {
   // Use passed members or default to empty.
@@ -11,7 +12,7 @@ export default function LeadershipTeam({ members = [] }) {
           <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4">
             Leadership Team
           </h2>
-          <div className="h-1 w-24 bg-primary mx-auto rounded-full"></div>
+          <div className="h-1 w-24 bg-primary dark:bg-secondary mx-auto rounded-full"></div>
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Our executive team brings decades of experience in technology,
             education, and social entrepreneurship to guide Paahibu Space.
@@ -45,8 +46,8 @@ export default function LeadershipTeam({ members = [] }) {
                   {leader.role}
                 </p>
                 <div className="flex gap-3 mt-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
-                  <a className="text-white hover:text-secondary dark:hover:text-secondary" href={leader.linkedin_url || "#"}>
-                    <span className="material-symbols-outlined text-sm">link</span>
+                  <a className="text-white hover:text-secondary dark:hover:text-secondary" href={leader.linkedin_url || "#"} target="_blank" rel="noopener noreferrer">
+                    <LinkedInIcon className="w-5 h-5" />
                   </a>
                   <a className="text-white hover:text-secondary dark:hover:text-secondary" href={`mailto:${leader.email || ""}`}>
                     <span className="material-symbols-outlined text-sm">mail</span>

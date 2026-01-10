@@ -64,8 +64,7 @@ export default function ProgramsShowcase() {
                             mentorship, access to funding networks, and business strategy workshops.</p>
                         <ul class="space-y-2">
                             <li class="flex items-center gap-3">
-                              <span
-                                    class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                              <span className="material-symbols-outlined text-secondary text-lg">check_circle</span>
                                 <span>Access to seed funding opportunities</span>
                             </li>
                             <li class="flex items-center gap-3"><span

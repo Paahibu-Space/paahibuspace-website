@@ -26,7 +26,7 @@ export default function RootNotFound() {
             </Button>
           </Link>
           <Link href="/impact">
-            <Button variant="outline" size="lg" className="w-full sm:w-auto h-12">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto h-12 dark:shadow-lg dark:bg-white dark:hover:text-white">
               Our Impact
             </Button>
           </Link>

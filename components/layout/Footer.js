@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { XIcon, LinkedInIcon, FacebookIcon, InstagramIcon } from "@/components/ui/Icons";
 
 export default function Footer() {
   return (
@@ -19,40 +20,40 @@ export default function Footer() {
             </p>
             <div className="flex gap-4 pt-2">
               <a
-                aria-label="Twitter"
+                aria-label="X (Twitter)"
                 className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
-                href="#"
+                href="https://twitter.com/paahibuspace"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="material-symbols-outlined group-hover:scale-110 transition-transform">
-                  alternate_email
-                </span>
+                <XIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a
                 aria-label="LinkedIn"
                 className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
-                href="#"
+                href="https://www.linkedin.com/company/questtechnovation/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="material-symbols-outlined group-hover:scale-110 transition-transform">
-                  work
-                </span>
+                <LinkedInIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a
                 aria-label="Facebook"
                 className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
-                href="#"
+                href="https://web.facebook.com/paahibuspace"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="material-symbols-outlined group-hover:scale-110 transition-transform">
-                  thumb_up
-                </span>
+                <FacebookIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a
                 aria-label="Instagram"
                 className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
-                href="#"
+                href="https://www.instagram.com/paahibuspace?igsh=MWZpbWkyaDliajdrNw=="
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="material-symbols-outlined group-hover:scale-110 transition-transform">
-                  photo_camera
-                </span>
+                <InstagramIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
             </div>
           </div>
