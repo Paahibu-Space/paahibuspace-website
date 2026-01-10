@@ -6,12 +6,28 @@ import AmbassadorStories from "@/components/sections/AmbassadorStories";
 
 export default async function CommunityAmbassadorsProgramPage() {
   const programs = await fetchAPI("/api/v1/programs") || [];
-  // Assuming ID 104 or finding by name if available, otherwise fallback
   const ambassadorsProgram = programs.find(p => p.name.includes("Ambassador")) || { 
       id: 104, 
       name: "Community Ambassadors Program",
       is_application_open: true 
   };
+
+  const team = await fetchAPI("/api/v1/team") || [];
+  const getCategory = (member) => {
+    if (typeof member.category === 'object' && member.category !== null) {
+      return member.category.name || "";
+    }
+    return member.category || "";
+  };
+  const ambassadorsMembers = team.filter(m => getCategory(m) === 'Ambassadors');
+
+  const allStories = await fetchAPI("/api/v1/stories") || [];
+  // Filter for stories that are about the ambassadors program
+  const programStories = allStories.filter(s => 
+    s.type?.includes('Ambassador') || 
+    s.program?.includes('Ambassador') ||
+    s.category === 'Ambassadors'
+  );
 
   return (
     <>
@@ -131,80 +147,46 @@ export default async function CommunityAmbassadorsProgramPage() {
      </section>
 
       {/* SECTION 4: MEET OUR AMBASSADORS */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-background-dark/50">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                     <div>
-                        <h2 className="text-[#0b1120] text-3xl sm:text-4xl font-bold">Meet Our Ambassadors</h2>
-                        <p className="text-gray-600 mt-2 text-lg">Leading change across Ghana, Kenya, and Uganda.</p>
+                        <h2 className="text-[#0b1120] dark:text-white text-3xl sm:text-4xl font-bold">Meet Our Ambassadors</h2>
+                        <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">Leading change across Africa.</p>
                     </div>
-                    <a className="text-secondary font-bold flex items-center gap-1 hover:underline" href="#">
+                    <Link className="text-secondary font-bold flex items-center gap-1 hover:underline" href="/team">
                         View all profiles <span className="material-symbols-outlined">arrow_right_alt</span>
-                    </a>
+                    </Link>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {/* Profile 1 */}
-                    <div className="relative group overflow-hidden rounded-xl">
-                        <div className="aspect-[3/4] w-full bg-gray-200 relative">
-                            <Image alt="Abena - Ghana Ambassador"
-                                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPogchzf0DL7Knprn4ko3PGmiEp-0pToKBqCWHcTAb402z6KPNTKcj0jxrbIwEK3853SoI6cvSrYwEIa2qJoM1XF9TcGXIOk3nrlfPGaLbmF31D-2xM_DXAsiqwkx5sAksF6Lsgk__d1qBSz12r-GqHqqPDXioDCCgoy4VyTLcD6jG3DvOLV9GroALWWP_MqDzittHZbc3L0p6pRUqCiWi8crY5AeVxby7KQjTAqiHA_t3FZIoZ1OrOISSid6GnCTlYEFHZWwzg3c" 
-                                fill
-                                sizes="(max-width: 768px) 100vw, 25vw"
-                            />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/90 via-[#0b1120]/40 to-transparent p-6 flex flex-col justify-end">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Ghana</span>
-                            </div>
-                            <h3 className="text-white text-xl font-bold">Abena Osei</h3>
-                            <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                                &quot;Connecting rural women to digital banking has been my proudest achievement.&quot;
-                            </p>
-                        </div>
-                    </div>
-                    {/* Profile 2 */}
-                    <div className="relative group overflow-hidden rounded-xl">
-                        <div className="aspect-[3/4] w-full bg-gray-200 relative">
-                            <Image alt="Wanjiru - Kenya Ambassador"
-                                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdM6GX4VWnpX_qgKYr5N3sm-oCA_4NyxoVIQMiDhvhivQLToZW5FvQLCCHTXN1AH55SwfzVgMCLtHd2GABuNSEW1we3UttU1CrY759YtuutpTJmlqHUeb7enFDAlzenbXQepOFuqgL4xNzGsiEp7gUIsC2ItPYyYH5pH-R6e0lR-vytJDCm90DxakhIz_v8-58HjIKh_e5Qv52z265G26Kdt4HMOQZfMnTdecd2eUwM4LCg61Ktv2ygUIca02nOqBqSl0b-pA8JX4" 
-                                fill
-                                sizes="(max-width: 768px) 100vw, 25vw"
-                            />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/90 via-[#0b1120]/40 to-transparent p-6 flex flex-col justify-end">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Kenya</span>
-                            </div>
-                            <h3 className="text-white text-xl font-bold">Wanjiru Kamau</h3>
-                            <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                                &quot;Seeing young girls code for the first time is why I do this every day.&quot;
-                            </p>
-                        </div>
-                    </div>
-                    {/* Profile 3 */}
-                    <div className="relative group overflow-hidden rounded-xl">
-                        <div className="aspect-[3/4] w-full bg-gray-200 relative">
-                            <Image alt="Grace - Uganda Ambassador"
-                                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDTKitB-AANTmSdNVUu4qKFfF2f1SGkPtelx8QFj99goEjamkmXzrClK5MKs3e37IJTzcyUY2cwywfQNKy1eBxZ-MglhVdSPxK6vmzRxX92ZGrSm-Fe2eZGLKFjhfP0Ff6Su_4RFaxzr9t8KjzqNjwFxO8QllEliflXr6O3AciEI7R8l1X6j3Qcn2xSbuHk6f4kAQ7MyIvrUF1GaVyIBhDskWYeMB4cQgURNw-KkQdCxDAHZtFYyety6QuIDXDDA5GKYd_OnvJZmo" 
-                                fill
-                                sizes="(max-width: 768px) 100vw, 25vw"
-                            />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/90 via-[#0b1120]/40 to-transparent p-6 flex flex-col justify-end">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Uganda</span>
-                            </div>
-                            <h3 className="text-white text-xl font-bold">Grace Nakato</h3>
-                            <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                                &quot;We are building a network of support that transcends borders.&quot;
-                            </p>
-                        </div>
-                    </div>
-                    {/* Profile 4 (Map Graphic Placeholder) */}
-                    <div className="relative group overflow-hidden rounded-xl bg-[#0b1120] flex flex-col items-center justify-center p-6 text-center">
+                    {ambassadorsMembers.length > 0 ? ambassadorsMembers.slice(0, 3).map((ambassador, idx) => (
+                      <div key={idx} className="relative group overflow-hidden rounded-xl">
+                          <div className="aspect-[3/4] w-full bg-gray-200 dark:bg-gray-700 relative">
+                              <Image alt={ambassador.name}
+                                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                  src={ambassador.image_url} 
+                                  fill
+                                  sizes="(max-width: 768px) 100vw, 25vw"
+                              />
+                          </div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/90 via-[#0b1120]/40 to-transparent p-6 flex flex-col justify-end">
+                              <div className="flex items-center gap-2 mb-2">
+                                  <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">{ambassador.location || 'Ambassador'}</span>
+                              </div>
+                              <h3 className="text-white text-xl font-bold">{ambassador.name}</h3>
+                              <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 line-clamp-2">
+                                  {ambassador.bio_short || ambassador.role}
+                              </p>
+                          </div>
+                      </div>
+                    )) : (
+                      <>
+                        <p className="text-gray-500">Loading ambassadors...</p>
+                      </>
+                    )}
+                    
+                    {/* Join the Network Card */}
+                    <div className="relative group overflow-hidden rounded-xl bg-[#0b1120] flex flex-col items-center justify-center p-6 text-center border border-white/10">
                         <div className="absolute inset-0 opacity-10"
                             style={{backgroundImage: "radial-gradient(#fff 1px, transparent 1px)", backgroundSize: "20px 20px"}}>
                         </div>
@@ -213,16 +195,19 @@ export default async function CommunityAmbassadorsProgramPage() {
                         <p className="text-gray-300 text-sm mt-2 z-10 mb-6">
                             Represent your community on the map.
                         </p>
-                        <button className="z-10 bg-white text-[#0b1120] font-bold py-2 px-4 rounded-lg text-sm hover:bg-gray-100">
-                            Join
-                        </button>
+                        <ProgramCTA 
+                            program={ambassadorsProgram}
+                            labelOpen="Apply Now"
+                            labelClosed="Join Waitlist"
+                            className="z-10 bg-white text-[#0b1120] dark:text-secondary font-bold py-2 px-6 rounded-lg text-sm hover:bg-gray-100 transition-colors"
+                        />
                     </div>
                 </div>
             </div>
       </section>
 
       {/* SECTION 5: AMBASSADOR STORIES / IMPACT */}
-      <AmbassadorStories />
+      <AmbassadorStories stories={programStories} />
 
         {/* Benefits / Why Join Section */}
         <div className="w-full flex justify-center py-16 px-4 sm:px-10 lg:px-40">

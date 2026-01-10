@@ -144,8 +144,6 @@ export default function Footer() {
                   location_on
                 </span>
                 <span className="text-sm leading-6 text-gray-300">
-                  Insurance Road
-                  <br />
                   Wa-UWR
                   <br />
                   Ghana

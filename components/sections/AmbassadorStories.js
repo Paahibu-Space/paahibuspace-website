@@ -49,11 +49,34 @@ const stories = [
   }
 ];
 
-export default function AmbassadorStories() {
+export default function AmbassadorStories({ stories: initialStories = [] }) {
+  // Use passed stories or fallback to the static ones defined above if needed, 
+  // but preferably we want the dynamic ones from the API.
+  const displayStories = initialStories.length > 0 ? initialStories : stories;
   const [activeStory, setActiveStory] = useState(0);
 
-  const nextStory = () => setActiveStory((prev) => (prev + 1) % stories.length);
-  const prevStory = () => setActiveStory((prev) => (prev - 1 + stories.length) % stories.length);
+  const nextStory = () => setActiveStory((prev) => (prev + 1) % displayStories.length);
+  const prevStory = () => setActiveStory((prev) => (prev - 1 + displayStories.length) % displayStories.length);
+
+  if (displayStories.length === 0) return null;
+  
+  const currentStory = displayStories[activeStory];
+  
+  // Normalize story data structure for both API and fallback data
+  const normalizedStory = {
+      quote: currentStory.quote || currentStory.story || "",
+      name: currentStory.name || "Ambassador",
+      role: currentStory.role || currentStory.program || currentStory.location || "Community Ambassador",
+      image: currentStory.image_url || currentStory.image || "/assets/images/placeholder-user.png",
+      project: currentStory.project || {
+          title: "Project: Impact Journey",
+          desc: currentStory.story || "A success story from the Community Ambassador network.",
+          stats: [
+              { value: "Active", label: "Impact" },
+              { value: "Local", label: "Leadership" }
+          ]
+      }
+  };
 
   return (
       <section className="py-20 bg-[#0b1120] text-white relative overflow-hidden">
@@ -69,14 +92,14 @@ export default function AmbassadorStories() {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-8 animate-fade-in" key={activeStory}>
                         <h2 className="text-4xl font-extrabold leading-tight min-h-[120px]">
-                            &quot;{stories[activeStory].quote}&quot;
+                            &quot;{normalizedStory.quote}&quot;
                         </h2>
                         <div className="flex items-center gap-4">
-                            <Image alt={stories[activeStory].name} className="rounded-full object-cover border-2 border-secondary"
-                                src={stories[activeStory].image} width={64} height={64} />
+                            <Image alt={normalizedStory.name} className="rounded-full object-cover border-2 border-secondary h-16 w-16"
+                                src={normalizedStory.image} width={64} height={64} />
                             <div>
-                                <p className="font-bold text-lg">{stories[activeStory].name}</p>
-                                <p className="text-gray-400 text-sm">{stories[activeStory].role}</p>
+                                <p className="font-bold text-lg">{normalizedStory.name}</p>
+                                <p className="text-gray-400 text-sm">{normalizedStory.role}</p>
                             </div>
                         </div>
                         <div className="flex gap-4 pt-4">
@@ -94,12 +117,12 @@ export default function AmbassadorStories() {
                             <span className="h-2 w-2 rounded-full bg-green-400"></span>
                             Success Story
                         </div>
-                        <h3 className="text-2xl font-bold mb-4">{stories[activeStory].project.title}</h3>
+                        <h3 className="text-2xl font-bold mb-4">{normalizedStory.project.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed min-h-[80px]">
-                            {stories[activeStory].project.desc}
+                            {normalizedStory.project.desc}
                         </p>
                         <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
-                            {stories[activeStory].project.stats.map((stat, i) => (
+                            {normalizedStory.project.stats.map((stat, i) => (
                                 <div key={i}>
                                     <p className="text-3xl font-bold text-secondary">{stat.value}</p>
                                     <p className="text-sm text-gray-400">{stat.label}</p>

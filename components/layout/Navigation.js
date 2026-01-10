@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 export default function Navigation() {
   const pathname = usePathname();
   const [theme, setTheme] = useState("light");
+  const [openPrograms, setOpenPrograms] = useState([]);
   
   const isActive = (path) => pathname === path;
 
@@ -19,13 +20,25 @@ export default function Navigation() {
         window.matchMedia("(prefers-color-scheme: dark)").matches);
 
     if (isDark) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme("dark");
       document.documentElement.classList.add("dark");
     } else {
       setTheme("light");
       document.documentElement.classList.remove("dark");
     }
+
+    async function getPrograms() {
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/v1/programs`);
+        if (!res.ok) throw new Error("Failed to fetch");
+        const data = await res.json();
+        const programs = data.data || data;
+        setOpenPrograms(programs.filter(p => p.is_application_open));
+      } catch (e) {
+        console.error("Failed to fetch programs for nav", e);
+      }
+    }
+    getPrograms();
   }, []);
 
   const toggleTheme = () => {
@@ -155,17 +168,43 @@ export default function Navigation() {
               </div>
             </div>
             <div className="col-span-4 bg-primary/5 dark:bg-gray-800 rounded-xl p-6 flex flex-col justify-between">
-              <div>
-                <h3 className="text-lg font-bold text-primary dark:text-white mb-2">
-                  Next Cohort
-                </h3>
-                <p className="text-sm text-neutral-gray dark:text-gray-400 mb-4">
-                  Applications are open for the Summer 2024 Web Dev intake.
-                </p>
-              </div>
-              <Link href="/involve" className="w-full text-center rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-900 transition-all cursor-pointer">
-                Apply Now
-              </Link>
+              {openPrograms.length > 0 ? (
+                <>
+                  <div>
+                    <h3 className="text-lg font-bold text-primary dark:text-white mb-2">
+                       Applications Open
+                    </h3>
+                    <div className="space-y-3 mb-4">
+                      {openPrograms.slice(0, 2).map((prog, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <span className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                          <span className="text-sm font-medium text-neutral-dark dark:text-white">{prog.name}</span>
+                        </div>
+                      ))}
+                      {openPrograms.length > 2 && (
+                        <p className="text-xs text-neutral-gray dark:text-gray-400">+{openPrograms.length - 2} more programs accepting applications.</p>
+                      )}
+                    </div>
+                  </div>
+                  <Link href="/programs" className="w-full text-center rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-900 transition-all cursor-pointer">
+                    Apply Now
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <div>
+                    <h3 className="text-lg font-bold text-primary dark:text-white mb-2">
+                      Next Cohort
+                    </h3>
+                    <p className="text-sm text-neutral-gray dark:text-gray-400 mb-4">
+                      Stay tuned! New cohorts are opening soon. Join our waitlist to be the first to know.
+                    </p>
+                  </div>
+                  <Link href="/involve" className="w-full text-center rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-900 transition-all cursor-pointer">
+                    Join Waitlist
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>

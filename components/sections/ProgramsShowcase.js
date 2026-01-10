@@ -62,17 +62,17 @@ export default function ProgramsShowcase() {
             <div className="text-gray-600 dark:text-gray-300 mb-8 space-y-4">
                                      <p>A comprehensive accelerator designed to help women-led startups scale. We provide tailored
                             mentorship, access to funding networks, and business strategy workshops.</p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-3">
+                        <ul className="space-y-2">
+                            <li className="flex items-center gap-3">
                               <span className="material-symbols-outlined text-secondary text-lg">check_circle</span>
                                 <span>Access to seed funding opportunities</span>
                             </li>
-                            <li class="flex items-center gap-3"><span
-                                    class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                            <li className="flex items-center gap-3"><span
+                                    className="material-symbols-outlined text-secondary text-lg">check_circle</span>
                                 <span>1-on-1 Executive Mentorship</span>
                             </li>
-                            <li class="flex items-center gap-3"><span
-                                    class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                            <li className="flex items-center gap-3"><span
+                                    className="material-symbols-outlined text-secondary text-lg">check_circle</span>
                                 <span>Market access strategy</span>
                             </li>
                         </ul>

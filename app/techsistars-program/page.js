@@ -19,6 +19,25 @@ export default async function TechsiStarsProgram() {
       ? new Date(techsistarsProgram.application_start_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
       : "TBA";
 
+  // Dynamic Data Fetching
+  const allTeam = await fetchAPI("/api/v1/team") || [];
+  const allStories = await fetchAPI("/api/v1/stories") || [];
+
+  const getCategory = (member) => {
+    if (typeof member.category === 'object' && member.category !== null) {
+      return member.category.name || "";
+    }
+    return member.category || "";
+  };
+
+  const mentors = allTeam.filter(m => getCategory(m) === 'Mentor');
+  
+  const techsistarsStories = allStories.filter(s => 
+    s.program === 'TechsiStars Mentorship Program' || 
+    s.program?.includes('TechsiStars') ||
+    s.tag?.includes('TechsiStars')
+  );
+
   return (
     <>
         {/* Breadcrumbs */}
@@ -282,70 +301,29 @@ export default async function TechsiStarsProgram() {
                 </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="flex flex-col gap-4">
-                    <div className="aspect-square rounded-lg overflow-hidden bg-gray-200 relative">
-                        <Image alt="Portrait of Sarah K., Software Engineer"
-                            className="object-cover hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQkTogd_J8B_fbNXZ2o_BigwuSxdlZ3FFmxaypAtiO7xQAPt-KNT1LQSHC8DKNJJZ-wAjWkq212SNpITVZy7X8KPDdr5U_2OeU7VtObFgDykZMtF9F60CeEZVYa2T0igwIw1UHWUxwJ-GI5YGq5MIgHsgSRc-nro4XbdfMUAMkmMRAVVvx7C-RFVPg2UczRTIs8YGtOw_CA4B-TsHN1DAkwTQqlj55ONiRscjZZIhziimJ07zNDwMXTbwk9UA-D5oiwnZp4SFbJ0w" 
-                            fill
-                            sizes="(max-width: 640px) 100vw, 25vw"
-                        />
+                {mentors.length > 0 ? mentors.map((mentor, index) => (
+                    <div key={index} className="flex flex-col gap-4 group">
+                        <div className="aspect-square rounded-lg overflow-hidden bg-gray-200 relative">
+                            <Image alt={`Portrait of ${mentor.name}`}
+                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                src={mentor.image_url || mentor.image || "/assets/images/placeholder-user.png"} 
+                                fill
+                                sizes="(max-width: 640px) 100vw, 25vw"
+                            />
+                        </div>
+                        <div>
+                            <h4 className="text-secondary font-bold text-lg">{mentor.name}</h4>
+                            <p className="text-primary dark:text-gray-200 font-medium text-sm mb-2">{mentor.role || mentor.designation}</p>
+                            <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2 italic">
+                                &quot;{mentor.bio_short || mentor.quote || "Dedicated to empowering the next generation of women in tech."}&quot;
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 className="text-secondary font-bold text-lg">Sarah K.</h4>
-                        <p className="text-primary dark:text-gray-200 font-medium text-sm mb-2">Software Engineer at TechCorp</p>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">&quot;I believe in lifting as we climb. Mentorship is
-                            the bridge to opportunity.&quot;</p>
+                )) : (
+                    <div className="col-span-full py-12 text-center bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-dashed border-gray-200 dark:border-gray-700">
+                        <p className="text-gray-500 dark:text-gray-400 font-medium">Mentors are being onboarded. Check back soon!</p>
                     </div>
-                </div>
-                <div className="flex flex-col gap-4">
-                    <div className="aspect-square rounded-lg overflow-hidden bg-gray-200 relative">
-                        <Image alt="Portrait of Amina D., Data Scientist"
-                            className="object-cover hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-barLttpklVc17_IrFNu7Mlw9FiUua0GwNToEPDc0GE9f_KrfKYDqPhh6u1sE_wVRm8kCtFZhIy7mMtFmtIs6910wqnAud-86rV9LM4Ym-1OJ4L-vJAkzJqjLrPAHIdLHfuzg140ofv7UQi9NQUojLeMql_25qcUnzB6iNuB_mTZ_59bnLr2GvRZfIUsZOVfHsFB9MkrlGOyd8d9NliwcSSAevKV7qvAeX0qsNSE0vmWy4dYX0Fj-7nGbxvdOcy0U_2SUHhvNy0Q" 
-                            fill
-                            sizes="(max-width: 640px) 100vw, 25vw"
-                        />
-                    </div>
-                    <div>
-                        <h4 className="text-secondary font-bold text-lg">Amina D.</h4>
-                        <p className="text-primary dark:text-gray-200 font-medium text-sm mb-2">Data Scientist at DataFlow</p>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">&quot;Data tells a story, and I want to help young
-                            women write their own.&quot;</p>
-                    </div>
-                </div>
-                <div className="flex flex-col gap-4">
-                    <div className="aspect-square rounded-lg overflow-hidden bg-gray-200 relative">
-                        <Image alt="Portrait of David M., Startup Founder"
-                            className="object-cover hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmNf0sXuvW68GH5xcNB3UhBlczGWHsVKq2Y9uNgPeFEZx_94Wxyo9OzkCsOXs8y2FjlPKFDbEHU5ed_SV2t5M9wfQnzhwZlv-nRvqcWZ1sVMuGAg0qZYefmSIAMNykPcRDMRxdX0BPEYTu7m_6XQ4HOaz4RoN7y37oQi0-mTsYtl4maAEojxfA03ePvYoiXLLhchVneFDSVwDtgn7VC-jb1ybqWF0MAbnYmv0LrCUi6t8VdMdJLvCVunY7FAPIQzWNkoR2DC4gZXA" 
-                            fill
-                            sizes="(max-width: 640px) 100vw, 25vw"
-                        />
-                    </div>
-                    <div>
-                        <h4 className="text-secondary font-bold text-lg">David M.</h4>
-                        <p className="text-primary dark:text-gray-200 font-medium text-sm mb-2">Founder at AgriTech Solutions</p>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">&quot;Innovation starts with a curious mind. I&apos;m here
-                            to fuel that curiosity.&quot;</p>
-                    </div>
-                </div>
-                <div className="flex flex-col gap-4">
-                    <div className="aspect-square rounded-lg overflow-hidden bg-gray-200 relative">
-                        <Image alt="Portrait of Grace O., Product Manager"
-                            className="object-cover hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-q36ijlZbwR7Wsi_XNFI8u8WkuYe_aCapxpopCg7hP1dHlDutzDYpKcudMwgYR7qMSmWBIojZdmdFgZgBzDG6ZAD3Qtllkj6W-5ybikF1xdYNt9v77cSEKsm0XfsFuQJnizLJl5pDmS9jsgkrtlTVJoU20wHuoPz5IbP0w-n0jGJ8EJbyPyPvHHhsVxbJa9Ws1QpHGLU-tbJIYr4P4MwW6tfCz9_G8TAIRkDbIntuoRIijVS5SWk2zt2LuLKyCctENP65TyUSzAk" 
-                            fill
-                            sizes="(max-width: 640px) 100vw, 25vw"
-                        />
-                    </div>
-                    <div>
-                        <h4 className="text-secondary font-bold text-lg">Grace O.</h4>
-                        <p className="text-primary dark:text-gray-200 font-medium text-sm mb-2">Product Manager at FinServe</p>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">&quot;Building products that solve real problems is my
-                            passion.&quot;</p>
-                    </div>
-                </div>
+                )}
             </div>
             <div className="mt-8 md:hidden text-center">
                 <Link className="inline-flex items-center gap-2 text-primary dark:text-white font-bold hover:underline" href="#">
@@ -361,38 +339,27 @@ export default async function TechsiStarsProgram() {
             <h2 className="text-3xl font-display font-bold text-center text-primary dark:text-white mb-12">Alumnae Spotlight
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white dark:bg-surface-dark p-8 rounded-2xl relative">
-                    <span
-                        className="material-symbols-outlined text-6xl text-gray-200 dark:text-gray-700 absolute top-4 right-4">format_quote</span>
-                    <div className="flex items-center gap-4 mb-6 relative z-10">
-                        <Image alt="Portrait of Adenike"
-                            className="rounded-full object-cover border-2 border-secondary"
-                            src="/assets/images/team/adenike.jpg" width={64} height={64} />
-                        <div>
-                            <h4 className="font-bold text-primary dark:text-white">Adenike Owoeye</h4>
-                            <p className="text-sm text-secondary">Backend Developer</p>
+                {techsistarsStories.length > 0 ? techsistarsStories.map((story, index) => (
+                    <div key={index} className="bg-white dark:bg-surface-dark p-8 rounded-2xl relative shadow-sm border border-gray-100 dark:border-white/5">
+                        <span className="material-symbols-outlined text-6xl text-gray-200 dark:text-gray-700 absolute top-4 right-4">format_quote</span>
+                        <div className="flex items-center gap-4 mb-6 relative z-10">
+                            <Image alt={`Portrait of ${story.name}`}
+                                className="rounded-full object-cover border-2 border-secondary h-16 w-16"
+                                src={story.image_url || story.image || "/assets/images/placeholder-user.png"} width={64} height={64} />
+                            <div>
+                                <h4 className="font-bold text-primary dark:text-white">{story.name}</h4>
+                                <p className="text-sm text-secondary font-medium">{story.role || story.program || "Alumna"}</p>
+                            </div>
                         </div>
+                        <p className="text-gray-600 dark:text-gray-300 italic relative z-10 leading-relaxed">
+                            &quot;{story.quote || story.story || "The TechsiStars Mentorship Program was a turning point in my career. The guidance and community I found here were invaluable."}&quot;
+                        </p>
                     </div>
-                    <p className="text-gray-600 dark:text-gray-300 italic relative z-10">
-                        &quot;My journey as a Backend Developer started the day I joined the TechsiStars Mentorship Program. I was truly blessed with an incredible mentor whose guidance made all the difference. Without her, I wouldn&apos;t be where I am today.&quot;
-                    </p>
-                </div>
-                <div className="bg-white dark:bg-surface-dark p-8 rounded-2xl relative">
-                    <span
-                        className="material-symbols-outlined text-6xl text-gray-200 dark:text-gray-700 absolute top-4 right-4">format_quote</span>
-                    <div className="flex items-center gap-4 mb-6 relative z-10">
-                        <Image alt="Portrait of Fauzia"
-                            className="rounded-full object-cover border-2 border-secondary"
-                            src="/assets/images/team/fauzia.jpg" width={64} height={64} />
-                        <div>
-                            <h4 className="font-bold text-primary dark:text-white">Fauzia Katali Yakubu</h4>
-                            <p className="text-sm text-secondary">UX Research Intern</p>
-                        </div>
+                )) : (
+                    <div className="col-span-full py-12 text-center bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-dashed border-gray-200 dark:border-gray-700">
+                        <p className="text-gray-500 dark:text-gray-400 font-medium">Spotlight stories coming soon!</p>
                     </div>
-                    <p className="text-gray-600 dark:text-gray-300 italic relative z-10">
-                        &quot;From knowing nothing about design to confidently navigating Figma and creating designs, it&apos;s been a truly exciting journey. The mentorship gave me not just technical skills but also the confidence to believe I belong in this space.&quot;
-                    </p>
-                </div>
+                )}
             </div>
         </div>
     </section>
@@ -433,7 +400,7 @@ export default async function TechsiStarsProgram() {
                             </div>
                             <div className="flex justify-between border-b border-purple-500 pb-2">
                                 <span className="opacity-80">Cost:</span>
-                                <span className="font-bold">Scholarship</span>
+                                <span className="font-bold">Free</span>
                             </div>
                         </div>
                         <ProgramCTA 
@@ -471,7 +438,7 @@ export default async function TechsiStarsProgram() {
       {/* Footer CTA */}
       <div className="bg-white dark:bg-background-dark py-12 text-center border-t border-gray-100 dark:border-white/10">
          <p className="text-gray-900 dark:text-white font-bold mb-4">Questions? Reach out to us.</p>
-         <a href="mailto:programs@paahibuspace.org" className="text-primary font-bold hover:underline">programs@techsistars.org</a>
+         <a href="mailto:programs@paahibuspace.org" className="text-primary font-bold hover:underline">programs@paahibuspace.org</a>
       </div>
     </>
   );
