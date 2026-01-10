@@ -1,3 +1,4 @@
+import Link from "next/link";
 import StoriesGrid from "@/components/sections/StoriesGrid";
 import { fetchAPI } from "@/lib/api";
 
@@ -10,7 +11,7 @@ export default async function StoriesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
                 <nav className="flex items-center gap-2 text-sm mb-6">
-                    <a className="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary font-medium transition-colors" href="/">Home</a>
+                    <Link className="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary font-medium transition-colors" href="/">Home</Link>
                     <span className="text-gray-300 dark:text-gray-600">/</span>
                     <span className="text-primary dark:text-white font-semibold">Stories</span>
                 </nav>

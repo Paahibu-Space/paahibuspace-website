@@ -114,7 +114,7 @@ export default function DetailedMission() {
             <h3 className="text-2xl font-bold text-primary mb-3">TRANSFORM</h3>
             <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
               Changing career trajectories and leadership landscapes
-              permanently. We don't just teach code; we build the next
+              permanently. We don&apos;t just teach code; we build the next
               generation of industry leaders.
             </p>
             <div className="bg-white rounded-lg p-4 mt-auto">

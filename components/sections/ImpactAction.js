@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ImpactAction() {
   return (
     <section className="py-20 bg-primary/5 dark:bg-primary/10 relative overflow-hidden">
@@ -39,13 +41,13 @@ export default function ImpactAction() {
            <div className="relative h-[600px] hidden lg:block">
               {/* This represents the visual collage in the HTML - simplified for React */}
               <div className="absolute top-10 right-10 w-64 h-80 rounded-2xl overflow-hidden shadow-xl transform rotate-3 z-10">
-                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBszxGP8MS_FpH6aAgZmyATuUyfYj90t3QlOt9B1ZOXr_-D98J5FhkNctgkjxOOi5IaGTMw8asxw_Uy87mPxN8mL2XXm7xd1D_3l-hp18DhtR8leWLe14hBlF_eg8A7Xzn7Mw5qbJc4-CCzTNmFZmQztgExCOMRXDKhAJwMcsU36I9Sgf2xDYRKfil1h0O2xZknHrObat2BM2Go8X7esXx9bRiMoVNciClj9h8AHbQjw-gkTT-toX4Z63rW9NCif7BgzOxGl51j-1g" alt="Impact 1" className="w-full h-full object-cover" />
+                 <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBszxGP8MS_FpH6aAgZmyATuUyfYj90t3QlOt9B1ZOXr_-D98J5FhkNctgkjxOOi5IaGTMw8asxw_Uy87mPxN8mL2XXm7xd1D_3l-hp18DhtR8leWLe14hBlF_eg8A7Xzn7Mw5qbJc4-CCzTNmFZmQztgExCOMRXDKhAJwMcsU36I9Sgf2xDYRKfil1h0O2xZknHrObat2BM2Go8X7esXx9bRiMoVNciClj9h8AHbQjw-gkTT-toX4Z63rW9NCif7BgzOxGl51j-1g" alt="Impact 1" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <div className="absolute top-40 left-10 w-60 h-72 rounded-2xl overflow-hidden shadow-xl transform -rotate-6 z-20 border-4 border-white">
-                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0vQ0d3yIMhKOFKo7UKC-Iemj_h9AitpeMlV6Ke611PgNy5Pu5V3bBuFa5BhUVaNiyRvRCFnCqQ4j1SG9wVcpIWcXNIQG3aHroYNe-6vgmjHSDsoONjHNeWEx4xXJA9C_BPTDkiVU8QwS7srZGELpzrCX_gs7LtZVaO5y77u0ojFQSe1NGG23ye5jW-prUqp0y5yzpC6CZzKlwICBNbsmjR9iAzFIbM9Jj4lMlKT0xb1wPN5vEb0RC3IqRdokdf9chRQkZCO8O6Uk" alt="Impact 2" className="w-full h-full object-cover" />
+                 <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0vQ0d3yIMhKOFKo7UKC-Iemj_h9AitpeMlV6Ke611PgNy5Pu5V3bBuFa5BhUVaNiyRvRCFnCqQ4j1SG9wVcpIWcXNIQG3aHroYNe-6vgmjHSDsoONjHNeWEx4xXJA9C_BPTDkiVU8QwS7srZGELpzrCX_gs7LtZVaO5y77u0ojFQSe1NGG23ye5jW-prUqp0y5yzpC6CZzKlwICBNbsmjR9iAzFIbM9Jj4lMlKT0xb1wPN5vEb0RC3IqRdokdf9chRQkZCO8O6Uk" alt="Impact 2" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <div className="absolute bottom-20 right-20 w-56 h-56 rounded-full overflow-hidden shadow-2xl border-4 border-secondary z-30">
-                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5mEUW-VmYPrKXvjgQhRU2dP3BCKPAVRLZcEmA_IJtPTF-UbVV3uObXq1PDkVeZjQAmFNvtAauUTcPnFQ8ik-KQ7vO_4S96Sh5w6CeOIo3NQ5hQULGkwPwE-9NV0xoQETsIpueTeFYHrALl3cnVgkri8UiMKXvtVogtcAKiPpG5I3l10hg4NW5W0BuC4apjfwEIj3n8gIc0OaeJ5cYfbJgIp3h7yQVszB_IiiLRsvGYam0RMrJili__Er54LiQU_hkCE9X6eViO0I" alt="Impact 3" className="w-full h-full object-cover" />
+                  <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5mEUW-VmYPrKXvjgQhRU2dP3BCKPAVRLZcEmA_IJtPTF-UbVV3uObXq1PDkVeZjQAmFNvtAauUTcPnFQ8ik-KQ7vO_4S96Sh5w6CeOIo3NQ5hQULGkwPwE-9NV0xoQETsIpueTeFYHrALl3cnVgkri8UiMKXvtVogtcAKiPpG5I3l10hg4NW5W0BuC4apjfwEIj3n8gIc0OaeJ5cYfbJgIp3h7yQVszB_IiiLRsvGYam0RMrJili__Er54LiQU_hkCE9X6eViO0I" alt="Impact 3" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
            </div>
         </div>

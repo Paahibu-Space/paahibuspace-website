@@ -45,7 +45,7 @@ export default async function StoryPage({ params }) {
                 <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
                   Empowering the Future:{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-                    {story.name}'s Story
+                    {story.name}&apos;s Story
                   </span>
                 </h1>
                 <p className="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-[540px]">
@@ -67,11 +67,13 @@ export default async function StoryPage({ params }) {
               <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-[500px] aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                   <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60 z-10"></div>
-                  <div
-                    className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                    data-alt={`${story.name} profile`}
-                    style={{ backgroundImage: `url("${story.image}")` }}
-                  ></div>
+                  <Image
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    alt={`${story.name} profile`}
+                    src={story.image}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 500px"
+                  />
                   {/* Floating Card */}
                   <div className="absolute bottom-6 left-6 right-6 z-20 bg-gray-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-lg">
                     <div className="flex items-center gap-3">
@@ -106,7 +108,7 @@ export default async function StoryPage({ params }) {
               format_quote
             </span>
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white italic">
-              "{story.quote}"
+              &quot;{story.quote}&quot;
             </h3>
             <div className="flex flex-col items-center gap-1">
               <p className="text-secondary font-bold text-lg">{story.name}</p>
@@ -181,7 +183,7 @@ export default async function StoryPage({ params }) {
                 Milestones of Impact
               </h2>
               <p className="text-gray-400">
-                Tracking {story.name.split(' ')[0]}'s journey
+                Tracking {story.name.split(' ')[0]}&apos;s journey
               </p>
             </div>
             <div className="relative">
@@ -214,17 +216,16 @@ export default async function StoryPage({ params }) {
       {/* Call to Action Section */}
       <div className="w-full bg-primary relative overflow-hidden">
         {/* Decorative Patterns */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDv0jaIERxQkrEW7_r8T5XWODPN2V6Ly5nu7_t9m_2s1evuyUUmYPfPlsqG_TBgYn9gzmUSl67HnAnpsEgy3y5BWmFwO28DBLLcmM_UHIp57gZE5C50PVU1mftUC7urChVHk65WYs_g-2ZDc9Uo-Ud-um0x5Bu3Ngy1rBL4zBnqknBZC5X4ml_mx2DMTMf8qI7QVcVVuDTSuunO7t_oXIpadwlV0VNiyTugG8g02JlcmljiKaWYC3yH8vx3sbjMbqn8UimByJGJ5WmM")',
-          }}
-        ></div>
+        <Image
+          className="object-cover opacity-10"
+          alt="African pattern background"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv0jaIERxQkrEW7_r8T5XWODPN2V6Ly5nu7_t9m_2s1evuyUUmYPfPlsqG_TBgYn9gzmUSl67HnAnpsEgy3y5BWmFwO28DBLLcmM_UHIp57gZE5C50PVU1mftUC7urChVHk65WYs_g-2ZDc9Uo-Ud-um0x5Bu3Ngy1rBL4zBnqknBZC5X4ml_mx2DMTMf8qI7QVcVVuDTSuunO7t_oXIpadwlV0VNiyTugG8g02JlcmljiKaWYC3yH8vx3sbjMbqn8UimByJGJ5WmM"
+          fill
+        />
         <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-40 flex justify-center py-20 relative z-10">
           <div className="max-w-[800px] text-center flex flex-col items-center gap-8">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-              Help Us Create More Stories Like {story.name.split(' ')[0]}'s
+              Help Us Create More Stories Like {story.name.split(' ')[0]}&apos;s
             </h2>
             <p className="text-blue-100 text-lg md:text-xl max-w-[600px]">
               Your support provides the resources, mentorship, and safe spaces

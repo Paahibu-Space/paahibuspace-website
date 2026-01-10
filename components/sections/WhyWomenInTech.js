@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhyWomenInTech() {
   return (
     <section className="py-20 bg-background-light dark:bg-background-dark relative overflow-hidden transition-colors">
@@ -12,10 +14,12 @@ export default function WhyWomenInTech() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           <div className="lg:col-span-5 flex flex-col h-full">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full min-h-[500px] group">
-              <img
+              <Image
                 alt="Diverse women collaborating in a technology workspace"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUQSfCS19mU8bnukcpA9zRHUxkRYBvRVOK4S3wsCFlPVFIdt6_55_81_hdxE9G1ixAqyk9vo6pIxvleY_fb1eUBEBOv5LQG0i7g55Jr4CoFh4fJaI9Z2GUMcYXnHhGK8Sa6QqlDntFomnxsvJFOCnEUZtfvEOSecocvOzN47B-h7MU4_7sYqESl8UBe35uqKV9UfG6qAjF5fhGEwt3ryZSMHLgdwZaccafXMbI7Z3DVYpiJGpYb94lT7AqMvTdCX3kUAs0OGf4vkU"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/90 to-primary/40"></div>
               <div className="relative h-full flex flex-col justify-end p-8 md:p-10 text-white">
@@ -54,7 +58,7 @@ export default function WhyWomenInTech() {
           </div>
           <div className="lg:col-span-7 flex flex-col justify-center gap-6">
             <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
-              We believe that diversity isn't just a metric to be met—it's the
+              We believe that diversity isn&apos;t just a metric to be met—it&apos;s the
               engine of progress. When women lead in technology, the entire
               ecosystem evolves.
             </p>

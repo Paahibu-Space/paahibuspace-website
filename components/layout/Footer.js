@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
           {/* Column 1: Brand & About */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-<img src="/logo.png" alt="Paahibu Space Logo" className="h-12 w-auto object-contain bg-white rounded-full p-1" />
+              <Image src="/logo.png" alt="Paahibu Space Logo" width={48} height={48} className="h-12 w-auto object-contain bg-white rounded-full p-1" />
               <span className="text-xl font-bold tracking-wide">Paahibu Space</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">

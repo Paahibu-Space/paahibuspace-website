@@ -79,10 +79,10 @@ export default function WaitlistModal({ isOpen, onClose, programId, programName 
                       <span className="material-symbols-outlined text-3xl">check_circle</span>
                     </div>
                     <Dialog.Title as="h3" className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      You're on the list!
+                      You&apos;re on the list!
                     </Dialog.Title>
                     <p className="text-gray-500 dark:text-gray-400">
-                      We've received your details for <strong>{programName}</strong>. We'll be in touch as soon as spots open up.
+                      We&apos;ve received your details for <strong>{programName}</strong>. We&apos;ll be in touch as soon as spots open up.
                     </p>
                   </div>
                 ) : (

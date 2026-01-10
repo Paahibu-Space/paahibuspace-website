@@ -13,11 +13,13 @@ export default function Navigation() {
 
   useEffect(() => {
     // Check local storage or system preference
-    if (
+    const isDark =
       localStorage.getItem("theme") === "dark" ||
       (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+    if (isDark) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme("dark");
       document.documentElement.classList.add("dark");
     } else {

@@ -1,6 +1,7 @@
 import PageHero from "@/components/sections/PageHero";
 import PhilosophyValues from "@/components/sections/PhilosophyValues";
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 
 export default function PhilosophyPage() {
   return (
@@ -9,11 +10,13 @@ export default function PhilosophyPage() {
          <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/assets/images/bg/philosophy-bg.png')" }}></div>
          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div className="relative order-2 md:order-1 hidden md:block">
-                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
-                    <img 
+                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 relative">
+                    <Image 
                       alt="Women in tech collaboration" 
-                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
+                      className="object-cover transform hover:scale-105 transition-transform duration-700" 
                       src="/assets/images/conn-emp.png" 
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                  </div>
                  <div className="absolute -bottom-6 -right-6 bg-secondary p-4 rounded-xl shadow-lg hidden lg:block">
@@ -25,7 +28,7 @@ export default function PhilosophyPage() {
                     Hey Sis, You Belong in Tech Too
                  </h1>
                  <p className="text-blue-100 text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
-                    At Paahibu Space, we're breaking barriers and creating opportunities for women and girls to thrive in technology, innovation, and entrepreneurship. This is your space to learn, grow, and lead.
+                    At Paahibu Space, we&apos;re breaking barriers and creating opportunities for women and girls to thrive in technology, innovation, and entrepreneurship. This is your space to learn, grow, and lead.
                  </p>
                  <Button variant="white-outline" size="lg">Learn More</Button>
             </div>

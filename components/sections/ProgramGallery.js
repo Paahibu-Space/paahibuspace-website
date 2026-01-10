@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ProgramGallery({ images }) {
   if (!images || images.length < 4) return null;
 
@@ -8,10 +10,12 @@ export default function ProgramGallery({ images }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
           {/* Large Item */}
           <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl">
-            <img 
+            <Image 
               alt={images[0].alt}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
               src={images[0].src} 
+              fill
+              sizes="(max-width: 768px) 100vw, 66vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
@@ -23,10 +27,12 @@ export default function ProgramGallery({ images }) {
           {/* Small Items */}
           {images.slice(1).map((img, index) => (
              <div key={index} className={`relative group overflow-hidden rounded-xl ${index === 2 ? 'md:col-span-1 md:row-span-1' : ''}`}>
-                <img 
+                <Image 
                   alt={img.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                   src={img.src} 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
                   <h3 className="text-white text-sm font-bold">{img.title}</h3>

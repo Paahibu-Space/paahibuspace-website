@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import ProgramCTA, { isApplicationAccessible } from "@/components/ui/ProgramCTA";
@@ -50,8 +51,8 @@ export default function ProgramsShowcase() {
         {/* Featured Program: GROW */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden mb-12 flex flex-col lg:flex-row">
           <div className="lg:w-2/5 h-64 lg:h-auto relative">
-            <img alt="Professional women in a meeting" className="w-full h-full object-cover"
-              src="https://updates.paahibuspace.org/assets/frontend/images/grow-network.webp" />
+            <Image alt="Professional women in a meeting" className="object-cover"
+              src="https://updates.paahibuspace.org/assets/frontend/images/grow-network.webp" fill sizes="(max-width: 1024px) 100vw, 40vw" />
             <div className="absolute inset-0 bg-primary/10"></div>
           </div>
           <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
@@ -59,8 +60,23 @@ export default function ProgramsShowcase() {
             <h3 className="font-display font-bold text-3xl text-primary dark:text-white mb-2">{growProgram.name}</h3>
             <p className="text-gray-500 dark:text-gray-400 mb-6 font-medium">Growing Real Opportunities for Women</p>
             <div className="text-gray-600 dark:text-gray-300 mb-8 space-y-4">
-              <p>A comprehensive accelerator designed to help women-led startups scale.</p>
-               {/* List items... */}
+                                     <p>A comprehensive accelerator designed to help women-led startups scale. We provide tailored
+                            mentorship, access to funding networks, and business strategy workshops.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-3">
+                              <span
+                                    class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                                <span>Access to seed funding opportunities</span>
+                            </li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                                <span>1-on-1 Executive Mentorship</span>
+                            </li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                                <span>Market access strategy</span>
+                            </li>
+                        </ul>
             </div>
             <div className="flex gap-4">
               <ProgramCTA 

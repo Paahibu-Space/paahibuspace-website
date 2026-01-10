@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const values = [
@@ -78,10 +78,12 @@ export default function PhilosophyValues() {
           {/* Image Section */}
           <div className="lg:col-span-5 relative group">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-              <img
+              <Image
                 src={activeValue.image}
                 alt={activeValue.caption}
-                className="w-full h-full object-cover transition-opacity duration-500"
+                className="object-cover transition-opacity duration-500"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full text-white">

@@ -1,5 +1,7 @@
 import Button from "@/components/ui/Button";
 
+import Image from "next/image";
+
 export default function CommunityAmbassadors({ members = [] }) {
   const ambassadors = members;
 
@@ -17,9 +19,9 @@ export default function CommunityAmbassadors({ members = [] }) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {ambassadors.map((ambassador, index) => (
                 <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition text-center border border-gray-100 dark:border-gray-700">
-                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary dark:border-primary/50">
-                        <img alt={ambassador.name} className="w-full h-full object-cover"
-                            src={ambassador.image_url} />
+                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary dark:border-primary/50 relative">
+                        <Image alt={ambassador.name} className="object-cover"
+                            src={ambassador.image_url} fill sizes="96px" />
                     </div>
                     <h3 className="font-bold text-primary dark:text-white">{ambassador.name}</h3>
                     <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{ambassador.role}</p>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AdvisoryBoard({ members = [] }) {
   const advisors = members;
 
@@ -20,10 +22,12 @@ export default function AdvisoryBoard({ members = [] }) {
               key={index}
               className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-200 dark:bg-gray-700"
             >
-              <img
+              <Image
                 alt={advisor.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
                 src={advisor.image_url}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"

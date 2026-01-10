@@ -32,7 +32,7 @@ export default function ApplySteps({ steps }) {
               Applications are Open!
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Don't miss the chance to be part of the next cohort. Space is
+              Don&apos;t miss the chance to be part of the next cohort. Space is
               limited to ensured quality mentorship for everyone.
             </p>
             <div className="space-y-4">

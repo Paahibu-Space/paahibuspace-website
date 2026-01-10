@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 
 export default function GlobalReach() {
   return (
@@ -8,10 +9,12 @@ export default function GlobalReach() {
         {/* Map Visualization Side */}
         <div className="relative order-2 lg:order-1 h-[500px] w-full bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-inner flex items-center justify-center transition-colors duration-300">
           <div className="relative w-full h-full max-w-md mx-auto">
-            <img
+            <Image
                 src="/images/africa_map_outline.png"
                 alt="Map of Africa"
-                className="w-full h-full object-contain opacity-40 dark:opacity-30 hue-rotate-180 dark:hue-rotate-0 pointer-events-none"
+                className="object-contain opacity-40 dark:opacity-30 hue-rotate-180 dark:hue-rotate-0 pointer-events-none"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
             />
             
             {/* Map Pin 1 */}
@@ -19,10 +22,12 @@ export default function GlobalReach() {
               <div className="w-4 h-4 bg-secondary rounded-full relative z-10 shadow-lg border-2 border-white dark:border-gray-800"></div>
               <div className="absolute inset-0 w-4 h-4 bg-secondary rounded-full animate-ping opacity-75"></div>
               <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-gray-700 p-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none transform scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-600">
-                <img
-                  className="w-12 h-12 rounded-full object-cover mb-2 border-2 border-secondary mx-auto"
+                <Image
+                  className="rounded-full object-cover mb-2 border-2 border-secondary mx-auto"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAZbF5VlnKbopcsRZuxFJdkgKE0pW2CjTaBf1JB8_ScM44mXs_EvkyqGKAUrmgEXqryuyIM_cIvUATOMiv4ztC15xFZc_2wB2bWGoT0uXS4hYRPww7abTGYP4xzimiYx_oARiVeBqYFHJMNffmi_Tan7beMPqVmyRJEEWzpknh-kng6epgStH41FTc_WQCASQTTFByfrke6b0FPiTSzjII0DX3GAurImxaTfeFsh__xUe1D-jSWOw2xpHZQ4lUVnRxx6E8us9VF4s"
                   alt="Efya A."
+                  width={48}
+                  height={48}
                 />
                 <p className="text-xs font-bold text-center text-primary dark:text-white">
                   Efya A.
@@ -39,9 +44,12 @@ export default function GlobalReach() {
                 <div className="w-4 h-4 bg-secondary rounded-full relative z-10 shadow-lg border-2 border-white dark:border-gray-800"></div>
                 <div className="absolute inset-0 w-4 h-4 bg-secondary rounded-full animate-ping opacity-75 delay-300"></div>
                 <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-gray-700 p-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none transform scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-600">
-                    <img className="w-12 h-12 rounded-full object-cover mb-2 border-2 border-secondary mx-auto"
+                    <Image className="rounded-full object-cover mb-2 border-2 border-secondary mx-auto"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Ev7_sk4bifE-MvoBhkDNXwmWTJhXszgzTW9AoygJoAsF88l-whTkwoHWWa6DJ8eSmju5Ytc5EdF8tzrNXJKilD1B2_tfT7P2Yn-U4RFOYoBf2X3nz2wFN1J1hsoTt7V1zmwzidCiB9oktx-1xVIQUOX8qWJywGgzk9vpv98sfQduwqEjrl_rkGfNaz-WOR8S7o_dhsTUUJkDT-Sjy6_W5Z9YN_YxXbI_oAOb0yj51_BKmZ39a00TWDWJXfdm7v9RFxZhiaYP9Do" 
-                        alt="Wanjiku K."/>
+                        alt="Wanjiku K."
+                        width={48}
+                        height={48}
+                    />
                     <p className="text-xs font-bold text-center text-primary dark:text-white">Wanjiku K.</p>
                     <p className="text-[10px] text-center text-gray-500 dark:text-gray-300 uppercase tracking-wide">Nairobi, Kenya</p>
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 bg-white dark:bg-gray-700 rotate-45 border-r border-b border-gray-100 dark:border-gray-600"></div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ImpactSpotlight({ 
   title, 
@@ -14,14 +15,18 @@ export default function ImpactSpotlight({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <img 
+            <Image 
               alt={personName} 
-              className="w-full h-auto object-cover" 
+              className="object-cover" 
               src={image} 
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
             />
             <div className="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/10">
               <p className="text-secondary font-bold text-xs uppercase mb-1">Impact Spotlight</p>
-              <p className="text-white font-medium">"{quote}"</p>
+              <p className="text-white font-medium">&quot;{quote}&quot;</p>
             </div>
           </div>
           <div>
@@ -41,7 +46,7 @@ export default function ImpactSpotlight({
                </p>
             )}
             <Link href="/stories" className="inline-flex items-center gap-2 text-secondary font-bold hover:gap-3 transition-all">
-              Read more stories like {personName}'s
+              Read more stories like {personName}&apos;s
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
           </div>

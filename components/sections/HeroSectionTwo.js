@@ -17,7 +17,7 @@ export default function HeroSectionTwo() {
           </h1>
           <h2 className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-normal leading-relaxed max-w-xl">
             Empowering African women with the skills, mentorship, and community needed to thrive in the global
-            technology ecosystem. We're building the future, one line of code at a time.
+            technology ecosystem. We&apos;re building the future, one line of code at a time.
           </h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 py-4 border-y border-gray-100 dark:border-gray-800">

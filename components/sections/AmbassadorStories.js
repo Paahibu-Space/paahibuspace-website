@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useState } from 'react';
 
 const stories = [
@@ -67,11 +69,11 @@ export default function AmbassadorStories() {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-8 animate-fade-in" key={activeStory}>
                         <h2 className="text-4xl font-extrabold leading-tight min-h-[120px]">
-                            "{stories[activeStory].quote}"
+                            &quot;{stories[activeStory].quote}&quot;
                         </h2>
                         <div className="flex items-center gap-4">
-                            <img alt={stories[activeStory].name} className="h-16 w-16 rounded-full object-cover border-2 border-secondary"
-                                src={stories[activeStory].image} />
+                            <Image alt={stories[activeStory].name} className="rounded-full object-cover border-2 border-secondary"
+                                src={stories[activeStory].image} width={64} height={64} />
                             <div>
                                 <p className="font-bold text-lg">{stories[activeStory].name}</p>
                                 <p className="text-gray-400 text-sm">{stories[activeStory].role}</p>

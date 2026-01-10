@@ -5,7 +5,7 @@ export default function PhilosophySection() {
         <div className="mb-16 md:text-center max-w-3xl mx-auto">
           <h2 className="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Our Philosophy</h2>
           <h3 className="text-3xl font-black text-neutral-dark dark:text-white sm:text-4xl">Holistic Growth Pillars</h3>
-          <p className="mt-4 text-lg text-neutral-gray dark:text-gray-400">We believe that technical skills alone aren't enough. Our approach nurtures the whole person through three core pillars.</p>
+          <p className="mt-4 text-lg text-neutral-gray dark:text-gray-400">We believe that technical skills alone aren&apos;t enough. Our approach nurtures the whole person through three core pillars.</p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="group relative rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">

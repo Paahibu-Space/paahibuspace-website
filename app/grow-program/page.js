@@ -1,9 +1,11 @@
 import PageHero from "@/components/sections/PageHero";
 import Testimonials from "@/components/sections/Testimonials";
-import ProgramOverview from "@/components/sections/ProgramOverview";
-import Button from "@/components/ui/Button";
-import { fetchAPI } from "@/lib/api";
+import Link from "next/link";
 import ProgramCTA from "@/components/ui/ProgramCTA";
+import Button from "@/components/ui/Button";
+import Image from "next/image";
+import { fetchAPI } from "@/lib/api";
+
 
 export default async function GrowProgramPage() {
   // Fetch programs and find GROW
@@ -20,9 +22,9 @@ export default async function GrowProgramPage() {
       <div className="w-full bg-background-light dark:bg-background-dark border-b border-[#f4ede7]/50 dark:border-white/10">
         <div className="max-w-7xl mx-auto px-5 md:px-10 py-4">
             <div className="flex flex-wrap items-center gap-2 text-sm">
-                <a className="text-navy/60 dark:text-gray-400 hover:text-primary font-medium" href="/">Home</a>
+                <Link className="text-navy/60 dark:text-gray-400 hover:text-primary font-medium" href="/">Home</Link>
                 <span className="material-symbols-outlined text-navy/40 dark:text-gray-600 text-[16px]">chevron_right</span>
-                <a className="text-navy/60 dark:text-gray-400 hover:text-primary font-medium" href="/#programs">Programs</a>
+                <Link className="text-navy/60 dark:text-gray-400 hover:text-primary font-medium" href="/#programs">Programs</Link>
                 <span className="material-symbols-outlined text-navy/40 dark:text-gray-600 text-[16px]">chevron_right</span>
                 <span className="text-primary font-bold">GROW</span>
             </div>
@@ -83,13 +85,13 @@ export default async function GrowProgramPage() {
                     </span>
                     <blockquote className="relative z-10">
                         <p className="text-xl md:text-2xl font-medium text-navy dark:text-white italic leading-relaxed">
-                            "When women support each other, incredible things happen. GROW isn't just a program; it's a
-                            movement redefining the future of African tech."
+                            &quot;When women support each other, incredible things happen. GROW isn&apos;t just a program; it&apos;s a
+                            movement redefining the future of African tech.&quot;
                         </p>
                         <footer className="mt-6 flex items-center gap-4">
                             <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
-                                <img alt="Sarah M." className="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8lsGQQ4HHJvX1MDQBkb_qWrJOSBtT3xqsuyVIl0ZU188uxes7UrJyLbPETJg-HwuWgcbA_HTTgwM_T9JxciRDzbJ8Nc-31VDOsFldmSnuyL6srvLt867p007c_gDsjjjgT7UuapV_pHUkmLY1Hl30E2YVKXiMTPKzSGRyMcm1uRRVLHT0zKX3AY9Fe1Oy6zevQ9WGfh58_RTo1b0ZbcaU1cZQv2rDh24grcym1sEOr2Sym-oPC8yXp3Mrx3UJeSEhlDU6P_UN2_c" />
+                                <Image alt="Sarah M." className="object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8lsGQQ4HHJvX1MDQBkb_qWrJOSBtT3xqsuyVIl0ZU188uxes7UrJyLbPETJg-HwuWgcbA_HTTgwM_T9JxciRDzbJ8Nc-31VDOsFldmSnuyL6srvLt867p007c_gDsjjjgT7UuapV_pHUkmLY1Hl30E2YVKXiMTPKzSGRyMcm1uRRVLHT0zKX3AY9Fe1Oy6zevQ9WGfh58_RTo1b0ZbcaU1cZQv2rDh24grcym1sEOr2Sym-oPC8yXp3Mrx3UJeSEhlDU6P_UN2_c" width={48} height={48} />
                             </div>
                             <div>
                                 <cite className="not-italic font-bold text-navy dark:text-white block">Sarah M.</cite>
@@ -158,9 +160,9 @@ export default async function GrowProgramPage() {
                         Joining GROW means gaining access to an ecosystem designed for your success. We provide the
                         tools, you bring the ambition.
                     </p>
-                    <div className="hidden lg:block rounded-2xl overflow-hidden h-[400px]">
-                        <img alt="Member Benefits" className="w-full h-full object-cover"
-                            src="/assets/images/programs/member-benefit.png" />
+                    <div className="hidden lg:block rounded-2xl overflow-hidden h-[400px] relative">
+                        <Image alt="Member Benefits" className="object-cover"
+                            src="/assets/images/programs/member-benefit.png" fill sizes="(max-width: 1024px) 100vw, 42vw" />
                     </div>
                 </div>
                 <div className="lg:col-span-7 flex flex-col justify-center">
@@ -262,16 +264,16 @@ export default async function GrowProgramPage() {
                     <span
                         className="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">format_quote</span>
                     <div className="flex items-center gap-4 mb-6">
-                        <img alt="Amina K." className="w-14 h-14 rounded-full object-cover border-2 border-primary"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHU5x5r74aRsO-M90yUoArKZDOlyRqcK8WZZ-JB1kgAhzB7ixi5Ry6ywv30_QQPQ970tM9ZB-xdUAdre8Bz4T_OQRE-EJjqehIpeXkglCOTUizJyw_qLrB-UzpT7luvMKS6_I8GpzjxKDsoY8JkfXJn3Wj_zhRPFa7_JgaMD3SoHaVDydoG72i68AT875B6EavFNXXEAEBMhg6BmWu2Bvtih-ktUmGAL-viItERjsQo_lBAdnNOjBSX9l9G-MCPuYXekQKs8FtCbA" />
+                        <Image alt="Amina K." className="rounded-full object-cover border-2 border-primary"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHU5x5r74aRsO-M90yUoArKZDOlyRqcK8WZZ-JB1kgAhzB7ixi5Ry6ywv30_QQPQ970tM9ZB-xdUAdre8Bz4T_OQRE-EJjqehIpeXkglCOTUizJyw_qLrB-UzpT7luvMKS6_I8GpzjxKDsoY8JkfXJn3Wj_zhRPFa7_JgaMD3SoHaVDydoG72i68AT875B6EavFNXXEAEBMhg6BmWu2Bvtih-ktUmGAL-viItERjsQo_lBAdnNOjBSX9l9G-MCPuYXekQKs8FtCbA" width={56} height={56} />
                         <div>
                             <div className="font-bold text-navy dark:text-white">Amina K.</div>
                             <div className="text-xs text-primary font-bold uppercase tracking-wide">Tech Founder</div>
                         </div>
                     </div>
                     <p className="text-navy/70 dark:text-gray-300 leading-relaxed text-sm">
-                        "The mentorship I received helped me pivot my startup during a critical time. The community here
-                        is unmatched—truly sisters in tech."
+                        &quot;The mentorship I received helped me pivot my startup during a critical time. The community here
+                        is unmatched—truly sisters in tech.&quot;
                     </p>
                 </div>
                 {/* Testimonial 2 */}
@@ -280,16 +282,16 @@ export default async function GrowProgramPage() {
                     <span
                         className="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">format_quote</span>
                     <div className="flex items-center gap-4 mb-6">
-                        <img alt="Chioma O." className="w-14 h-14 rounded-full object-cover border-2 border-primary"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgSfLhkS24XlmdkGHqXsyT6gwD4oJpQLSSY4QztPQppCSIQmRSd3eylvnUA0EWlOzzH-0nknexjtwrLS6wH73oIXLDhH_zJeBeZKsBGM-oWcg2WxKQdNzFzdi6HJKJ9wTCoIlyyK7HjHO6F-XdlarsB_dC9G5OZFyNIUfF5MlCeBrXqe2iP7GUj0Gvk7IPw9GrR5pqFUB-RPo36HWEdFMwfMTb_2jz6Obe9F6UDnzXoVBXdDAde0vH_M2yLYSRfivhbIjuAVpcMSg" />
+                        <Image alt="Chioma O." className="rounded-full object-cover border-2 border-primary"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgSfLhkS24XlmdkGHqXsyT6gwD4oJpQLSSY4QztPQppCSIQmRSd3eylvnUA0EWlOzzH-0nknexjtwrLS6wH73oIXLDhH_zJeBeZKsBGM-oWcg2WxKQdNzFzdi6HJKJ9wTCoIlyyK7HjHO6F-XdlarsB_dC9G5OZFyNIUfF5MlCeBrXqe2iP7GUj0Gvk7IPw9GrR5pqFUB-RPo36HWEdFMwfMTb_2jz6Obe9F6UDnzXoVBXdDAde0vH_M2yLYSRfivhbIjuAVpcMSg" width={56} height={56} />
                         <div>
                             <div className="font-bold text-navy dark:text-white">Chioma O.</div>
                             <div className="text-xs text-primary font-bold uppercase tracking-wide">Freelance Designer</div>
                         </div>
                     </div>
                     <p className="text-navy/70 dark:text-gray-300 leading-relaxed text-sm">
-                        "I found my first major international client through a GROW networking event. This program gave
-                        me the confidence to charge what I'm worth."
+                        &quot;I found my first major international client through a GROW networking event. This program gave
+                        me the confidence to charge what I&apos;m worth.&quot;
                     </p>
                 </div>
                 {/* Testimonial 3 */}
@@ -297,16 +299,16 @@ export default async function GrowProgramPage() {
                     <span
                         className="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">format_quote</span>
                     <div className="flex items-center gap-4 mb-6">
-                        <img alt="Zainab A." className="w-14 h-14 rounded-full object-cover border-2 border-primary"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_w_MMQ48gJ3q3rNx2zN3W3J_YKZZfS1XlCUJH-wIFM-5rQUbPM2Wg1GojKgOMRT-lKGQTfdQZbWq4R96EPSTpP1McI_UTw97nQelRJwG79q-xaaIx17weXl_9QoXNU2QOgXlDP7-uwppDO_SQgvL8KSSgdaNJpPST3tRe929luj49IICYz7iV0hLQDYMJQZxCn6ITblugcY2HuhmjUTJVN_VSmhYqyq-Qq22_V3AJNO5CSl6LLPYVi3KS9YqsCjougr7-Rycb4Q" />
+                        <Image alt="Zainab A." className="rounded-full object-cover border-2 border-primary"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_w_MMQ48gJ3q3rNx2zN3W3J_YKZZfS1XlCUJH-wIFM-5rQUbPM2Wg1GojKgOMRT-lKGQTfdQZbWq4R96EPSTpP1McI_UTw97nQelRJwG79q-xaaIx17weXl_9QoXNU2QOgXlDP7-uwppDO_SQgvL8KSSgdaNJpPST3tRe929luj49IICYz7iV0hLQDYMJQZxCn6ITblugcY2HuhmjUTJVN_VSmhYqyq-Qq22_V3AJNO5CSl6LLPYVi3KS9YqsCjougr7-Rycb4Q" width={56} height={56} />
                         <div>
                             <div className="font-bold text-navy dark:text-white">Zainab A.</div>
                             <div className="text-xs text-primary font-bold uppercase tracking-wide">Policy Analyst</div>
                         </div>
                     </div>
                     <p className="text-navy/70 dark:text-gray-300 leading-relaxed text-sm">
-                        "Advocating for digital rights is tough, but doing it with the backing of the GROW network makes
-                        our voice so much stronger in policy circles."
+                        &quot;Advocating for digital rights is tough, but doing it with the backing of the GROW network makes
+                        our voice so much stronger in policy circles.&quot;
                     </p>
                 </div>
             </div>

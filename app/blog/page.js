@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { fetchAPI } from "@/lib/api";
 import SidebarNewsletter from "@/components/ui/SidebarNewsletter";
+import Image from "next/image";
 
 export default async function BlogListingPage() {
   const blogPosts = await fetchAPI("/api/v1/blog") || [];
@@ -51,11 +52,11 @@ export default async function BlogListingPage() {
                   className="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1f202e] shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-[#2b2c40]"
                 >
                   <div className="relative aspect-video overflow-hidden">
-                    <div
-                      className="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-                      style={{backgroundImage: `url("${post.featured_image_url || '/assets/images/blog-placeholder.jpg'}")`}}
-                      aria-label={post.title}
-                    ></div>
+                    <Image src={post.featured_image_url || '/assets/images/blog-placeholder.jpg'} 
+                        alt={post.title} 
+                        className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                        fill 
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                   </div>
                   <div className="flex flex-1 flex-col p-5">
                     <h3 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white group-hover:text-secondary transition-colors">
@@ -109,17 +110,17 @@ export default async function BlogListingPage() {
                   { id: "03", title: "Women in Tech Gala", views: "1.2k views" }
                 ].map((item, idx) => (
                   <React.Fragment key={idx}>
-                    <a className="group flex gap-3 items-start" href="#">
-                      <span className="mt-1 text-2xl font-black text-gray-200 dark:text-[#2b2c40] group-hover:text-primary transition-colors">
-                        {item.id}
-                      </span>
+                  <div className="group flex gap-3 items-start cursor-pointer">
+                    <span className="mt-1 text-2xl font-black text-gray-200 dark:text-[#2b2c40] group-hover:text-primary transition-colors">
+                      {item.id}
+                    </span>
                       <div>
                         <h4 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
                           {item.title}
                         </h4>
                         <span className="text-xs text-gray-500">{item.views}</span>
                       </div>
-                    </a>
+                  </div>
                     {idx < 2 && <div className="h-px bg-gray-100 dark:bg-[#2b2c40]"></div>}
                   </React.Fragment>
                 ))}

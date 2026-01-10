@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { fetchAPI } from "@/lib/api";
+import Image from "next/image";
 
 // Client Component Wrapper for scroll progress? 
 // Actually, let's keep it simple Server Component for now and maybe add a client wrapper if needed for interaction.
@@ -45,11 +46,7 @@ export default async function BlogDetailPage({ params }) {
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent z-10"></div>
             <div className="absolute inset-0 bg-primary/30 mix-blend-multiply z-10"></div>
-            <div 
-                className="w-full h-full bg-cover bg-center"
-                style={{backgroundImage: `url("${post.image}")`}}
-                aria-label={post.title}
-            ></div>
+            <Image src={post.image} alt={post.title} fill className="object-cover" sizes="100vw" priority />
           </div>
           {/* Hero Content */}
           <div className="relative z-20 max-w-4xl mx-auto px-4 w-full text-center">
@@ -61,10 +58,9 @@ export default async function BlogDetailPage({ params }) {
             </h1>
             <div className="flex items-center justify-center gap-6 text-sm text-gray-300">
               <div className="flex items-center gap-2">
-                <div 
-                    className="w-8 h-8 rounded-full border border-white/20 bg-cover bg-center"
-                    style={{backgroundImage: `url("${post.authorImage}")`}}
-                ></div>
+                <div className="relative w-8 h-8 rounded-full border border-white/20 overflow-hidden">
+                    <Image src={post.authorImage} alt={post.author} fill className="object-cover" sizes="32px" />
+                </div>
                 <span className="font-medium text-white">{post.author}</span>
               </div>
               <span className="w-1 h-1 rounded-full bg-gray-500"></span>
@@ -111,19 +107,18 @@ export default async function BlogDetailPage({ params }) {
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-12">
                 {["WomenInTech", "Education", "AfricaRising", "Coding"].map(tag => (
-                    <a key={tag} className="px-3 py-1 bg-surface-dark border border-white/10 rounded-lg text-sm text-gray-400 hover:text-white hover:border-accent transition-colors" href="#">
+                    <div key={tag} className="px-3 py-1 bg-surface-dark border border-white/10 rounded-lg text-sm text-gray-400 hover:text-white hover:border-accent transition-colors cursor-pointer">
                         #{tag}
-                    </a>
+                    </div>
                 ))}
               </div>
               <hr className="border-white/10 mb-12" />
 
               {/* Author Bio Card */}
               <div className="bg-surface-dark border border-white/5 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <div 
-                    className="w-24 h-24 rounded-full border-2 border-primary bg-cover bg-center shrink-0"
-                    style={{backgroundImage: `url("${post.authorImage}")`}}
-                ></div>
+              <div className="relative w-24 h-24 rounded-full border-2 border-primary overflow-hidden shrink-0">
+                  <Image src={post.authorImage} alt={post.author} fill className="object-cover" sizes="96px" />
+              </div>
                 <div className="text-center sm:text-left flex-1">
                   <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:items-start mb-2">
                     <h4 className="text-xl font-display font-bold text-white">{post.author}</h4>
@@ -157,10 +152,10 @@ export default async function BlogDetailPage({ params }) {
               {relatedPosts.map((rPost, idx) => (
                   <Link key={idx} href={`/blog/${rPost.slug}`} className="group flex flex-col gap-4">
                     <div className="aspect-[4/3] rounded-xl overflow-hidden relative">
-                      <div 
-                        className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                        style={{backgroundImage: `url("${rPost.image}")`}}
-                      ></div>
+                      <Image 
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        src={rPost.image} alt={rPost.title} fill sizes="(max-width: 768px) 100vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                     </div>
                     <div className="flex flex-col gap-2">

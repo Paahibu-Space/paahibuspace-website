@@ -55,7 +55,7 @@ export default async function ImpactPage() {
               </h1>
               <p className="text-gray-100 text-lg md:text-xl max-w-2xl font-normal leading-relaxed text-shadow">
                 From rural villages to global tech hubs, meet the women and youth reshaping
-                Africa's digital landscape through resilience, innovation, and code.
+                Africa&apos;s digital landscape through resilience, innovation, and code.
               </p>
               <button className="mt-6 flex items-center justify-center rounded-full h-14 px-10 bg-primary hover:bg-white hover:text-primary transition-all text-white text-base font-bold shadow-lg ring-4 ring-primary/20">
                 Read Latest Story

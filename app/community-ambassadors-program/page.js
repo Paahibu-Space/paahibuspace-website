@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
 import ProgramCTA from "@/components/ui/ProgramCTA";
 import AmbassadorStories from "@/components/sections/AmbassadorStories";
@@ -45,7 +46,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                      </h1>
                      <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                          Our Community Ambassadors are the heartbeat of Paahibu Space. They are local leaders who
-                         drive digital adoption and advocate for women's digital rights in their own communities.
+                         drive digital adoption and advocate for women&apos;s digital rights in their own communities.
                      </p>
                      <div className="flex flex-wrap gap-4">
                          <ProgramCTA 
@@ -62,8 +63,12 @@ export default async function CommunityAmbassadorsProgramPage() {
                  </div>
                  <div className="relative">
                      <div className="relative z-10 grid grid-cols-2 gap-4">
-                         <img src="/assets/images/programs/ca-hero1.png" className="rounded-2xl shadow-2xl w-full h-64 object-cover transform translate-y-8" alt="Ambassador 1" />
-                         <img src="/assets/images/programs/ca-hero2.png" className="rounded-2xl shadow-2xl w-full h-64 object-cover" alt="Ambassador 2" />
+                         <div className="relative w-full h-64">
+                             <Image src="/assets/images/programs/ca-hero1.png" className="rounded-2xl shadow-2xl object-cover transform translate-y-8" alt="Ambassador 1" fill sizes="(max-width: 768px) 100vw, 50vw" />
+                         </div>
+                         <div className="relative w-full h-64">
+                             <Image src="/assets/images/programs/ca-hero2.png" className="rounded-2xl shadow-2xl object-cover" alt="Ambassador 2" fill sizes="(max-width: 768px) 100vw, 50vw" />
+                         </div>
                      </div>
                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-secondary/10 blur-[100px] rounded-full pointer-events-none"></div>
                  </div>
@@ -109,7 +114,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                      { title: "Digital Training", desc: "Organize and facilitate local digital literacy workshops using our provided curriculum.", icon: "school" },
                      { title: "Community Outreach", desc: "Identify women who need support and onboard them into our programs (WiDEI, WiDiB).", icon: "groups" },
                      { title: "Feedback Loop", desc: "Collect data and stories from the ground to help us improve our interventions.", icon: "rate_review" },
-                     { title: "Advocacy", desc: "Represent Paahibu Space at local forums and advocate for women's digital inclusion.", icon: "campaign" }
+                     { title: "Advocacy", desc: "Represent Paahibu Space at local forums and advocate for women&apos;s digital inclusion.", icon: "campaign" }
                  ].map((role, i) => (
                      <div key={i} className="flex gap-6 p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-white/5 hover:border-secondary/30 transition-colors group">
                          <div className="w-16 h-16 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-secondary shadow-sm shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors">
@@ -140,10 +145,13 @@ export default async function CommunityAmbassadorsProgramPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {/* Profile 1 */}
                     <div className="relative group overflow-hidden rounded-xl">
-                        <div className="aspect-[3/4] w-full bg-gray-200">
-                            <img alt="Abena - Ghana Ambassador"
-                                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPogchzf0DL7Knprn4ko3PGmiEp-0pToKBqCWHcTAb402z6KPNTKcj0jxrbIwEK3853SoI6cvSrYwEIa2qJoM1XF9TcGXIOk3nrlfPGaLbmF31D-2xM_DXAsiqwkx5sAksF6Lsgk__d1qBSz12r-GqHqqPDXioDCCgoy4VyTLcD6jG3DvOLV9GroALWWP_MqDzittHZbc3L0p6pRUqCiWi8crY5AeVxby7KQjTAqiHA_t3FZIoZ1OrOISSid6GnCTlYEFHZWwzg3c" />
+                        <div className="aspect-[3/4] w-full bg-gray-200 relative">
+                            <Image alt="Abena - Ghana Ambassador"
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPogchzf0DL7Knprn4ko3PGmiEp-0pToKBqCWHcTAb402z6KPNTKcj0jxrbIwEK3853SoI6cvSrYwEIa2qJoM1XF9TcGXIOk3nrlfPGaLbmF31D-2xM_DXAsiqwkx5sAksF6Lsgk__d1qBSz12r-GqHqqPDXioDCCgoy4VyTLcD6jG3DvOLV9GroALWWP_MqDzittHZbc3L0p6pRUqCiWi8crY5AeVxby7KQjTAqiHA_t3FZIoZ1OrOISSid6GnCTlYEFHZWwzg3c" 
+                                fill
+                                sizes="(max-width: 768px) 100vw, 25vw"
+                            />
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/90 via-[#0b1120]/40 to-transparent p-6 flex flex-col justify-end">
                             <div className="flex items-center gap-2 mb-2">
@@ -151,16 +159,19 @@ export default async function CommunityAmbassadorsProgramPage() {
                             </div>
                             <h3 className="text-white text-xl font-bold">Abena Osei</h3>
                             <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                                "Connecting rural women to digital banking has been my proudest achievement."
+                                &quot;Connecting rural women to digital banking has been my proudest achievement.&quot;
                             </p>
                         </div>
                     </div>
                     {/* Profile 2 */}
                     <div className="relative group overflow-hidden rounded-xl">
-                        <div className="aspect-[3/4] w-full bg-gray-200">
-                            <img alt="Wanjiru - Kenya Ambassador"
-                                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdM6GX4VWnpX_qgKYr5N3sm-oCA_4NyxoVIQMiDhvhivQLToZW5FvQLCCHTXN1AH55SwfzVgMCLtHd2GABuNSEW1we3UttU1CrY759YtuutpTJmlqHUeb7enFDAlzenbXQepOFuqgL4xNzGsiEp7gUIsC2ItPYyYH5pH-R6e0lR-vytJDCm90DxakhIz_v8-58HjIKh_e5Qv52z265G26Kdt4HMOQZfMnTdecd2eUwM4LCg61Ktv2ygUIca02nOqBqSl0b-pA8JX4" />
+                        <div className="aspect-[3/4] w-full bg-gray-200 relative">
+                            <Image alt="Wanjiru - Kenya Ambassador"
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdM6GX4VWnpX_qgKYr5N3sm-oCA_4NyxoVIQMiDhvhivQLToZW5FvQLCCHTXN1AH55SwfzVgMCLtHd2GABuNSEW1we3UttU1CrY759YtuutpTJmlqHUeb7enFDAlzenbXQepOFuqgL4xNzGsiEp7gUIsC2ItPYyYH5pH-R6e0lR-vytJDCm90DxakhIz_v8-58HjIKh_e5Qv52z265G26Kdt4HMOQZfMnTdecd2eUwM4LCg61Ktv2ygUIca02nOqBqSl0b-pA8JX4" 
+                                fill
+                                sizes="(max-width: 768px) 100vw, 25vw"
+                            />
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/90 via-[#0b1120]/40 to-transparent p-6 flex flex-col justify-end">
                             <div className="flex items-center gap-2 mb-2">
@@ -168,16 +179,19 @@ export default async function CommunityAmbassadorsProgramPage() {
                             </div>
                             <h3 className="text-white text-xl font-bold">Wanjiru Kamau</h3>
                             <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                                "Seeing young girls code for the first time is why I do this every day."
+                                &quot;Seeing young girls code for the first time is why I do this every day.&quot;
                             </p>
                         </div>
                     </div>
                     {/* Profile 3 */}
                     <div className="relative group overflow-hidden rounded-xl">
-                        <div className="aspect-[3/4] w-full bg-gray-200">
-                            <img alt="Grace - Uganda Ambassador"
-                                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDTKitB-AANTmSdNVUu4qKFfF2f1SGkPtelx8QFj99goEjamkmXzrClK5MKs3e37IJTzcyUY2cwywfQNKy1eBxZ-MglhVdSPxK6vmzRxX92ZGrSm-Fe2eZGLKFjhfP0Ff6Su_4RFaxzr9t8KjzqNjwFxO8QllEliflXr6O3AciEI7R8l1X6j3Qcn2xSbuHk6f4kAQ7MyIvrUF1GaVyIBhDskWYeMB4cQgURNw-KkQdCxDAHZtFYyety6QuIDXDDA5GKYd_OnvJZmo" />
+                        <div className="aspect-[3/4] w-full bg-gray-200 relative">
+                            <Image alt="Grace - Uganda Ambassador"
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDTKitB-AANTmSdNVUu4qKFfF2f1SGkPtelx8QFj99goEjamkmXzrClK5MKs3e37IJTzcyUY2cwywfQNKy1eBxZ-MglhVdSPxK6vmzRxX92ZGrSm-Fe2eZGLKFjhfP0Ff6Su_4RFaxzr9t8KjzqNjwFxO8QllEliflXr6O3AciEI7R8l1X6j3Qcn2xSbuHk6f4kAQ7MyIvrUF1GaVyIBhDskWYeMB4cQgURNw-KkQdCxDAHZtFYyety6QuIDXDDA5GKYd_OnvJZmo" 
+                                fill
+                                sizes="(max-width: 768px) 100vw, 25vw"
+                            />
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/90 via-[#0b1120]/40 to-transparent p-6 flex flex-col justify-end">
                             <div className="flex items-center gap-2 mb-2">
@@ -185,7 +199,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                             </div>
                             <h3 className="text-white text-xl font-bold">Grace Nakato</h3>
                             <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                                "We are building a network of support that transcends borders."
+                                &quot;We are building a network of support that transcends borders.&quot;
                             </p>
                         </div>
                     </div>
@@ -216,7 +230,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                 <div className="flex-1 space-y-8">
                     <div>
                         <h2 className="text-[#0d0e1b] dark:text-white text-[32px] font-bold leading-tight mb-4">Why Join the Movement?</h2>
-                        <p className="text-slate-600 dark:text-slate-400 text-lg">Beyond making an impact, you'll grow your career and network.</p>
+                        <p className="text-slate-600 dark:text-slate-400 text-lg">Beyond making an impact, you&apos;ll grow your career and network.</p>
                     </div>
                     <div className="space-y-4">
                         <div className="flex gap-4 items-start">
@@ -267,11 +281,15 @@ export default async function CommunityAmbassadorsProgramPage() {
                 </div>
                 <div className="flex-1 w-full md:h-auto min-h-[400px]">
                     <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-                        <div className="absolute inset-0 bg-cover bg-center"
-                            style={{backgroundImage: 'url("/assets/images/join-movement.png")'}}>
-                        </div>
+                        <Image 
+                            src="/assets/images/join-movement.png"
+                            alt="Join Movement"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/80 to-transparent flex items-end p-8">
-                            <p className="text-white font-bold text-xl">"Paahibu gave us the tools to build our own future."</p>
+                            <p className="text-white font-bold text-xl">&quot;Paahibu gave us the tools to build our own future.&quot;</p>
                         </div>
                     </div>
                 </div>

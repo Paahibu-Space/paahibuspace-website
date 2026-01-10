@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/layout/Navigation";
 import MobileMenu from "@/components/layout/MobileMenu";
@@ -11,14 +12,19 @@ export default function Header() {
 
   useEffect(() => {
     // Check local storage or system preference on mount
-    if (
+    const isDark =
       localStorage.getItem("theme") === "dark" ||
       (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+    if (isDark) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme("dark");
+      document.documentElement.classList.add("dark");
     } else {
-      setTheme("light");
+        // Ensure strictly sync
+        setTheme("light");
+        document.documentElement.classList.remove("dark");
     }
   }, []);
 
@@ -40,7 +46,9 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <span className="sr-only">Paahibu Space</span>
-<img src="/logo.png" alt="Paahibu Space Logo" className="h-10 w-auto object-contain" />
+            <div className="relative h-10 w-auto aspect-[3/1]">
+                 <Image src="/logo.png" alt="Paahibu Space Logo" fill className="object-contain" sizes="(max-width: 768px) 100vw, 200px" priority />
+            </div>
             <span className="font-bold text-xl tracking-tight text-primary dark:text-white">Paahibu Space</span>
           </Link>
         </div>

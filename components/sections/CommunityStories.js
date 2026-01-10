@@ -16,7 +16,7 @@ const defaultStories = [
     name: "Fauzia Katali",
     role: "UX Research Intern",
     cohort: "TechsiStars Alumna",
-    quote: "From knowing nothing about design to confidently navigating Figma and creating designs, it’s been a truly exciting journey. The mentorship gave me not just technical skills but also the confidence to believe I belong in this space.",
+    quote: "From knowing nothing about design to confidently navigating Figma and creating designs, it&apos;s been a truly exciting journey. The mentorship gave me not just technical skills but also the confidence to believe I belong in this space.",
     image: "/assets/images/team/fauzia.jpg",
     thumbnail: "/assets/images/team/fauzia.jpg"
   },
@@ -24,7 +24,7 @@ const defaultStories = [
     name: "Julie Radol",
     role: "Tech Law Consultant",
     cohort: "TechsiStars Alumna",
-    quote: "The Paahibu Space TechsiStars Mentorship Program truly supports every path. Today, I’m fully practicing Tech Law and deepening my advocacy for safe online spaces, especially for women and girls.",
+    quote: "The Paahibu Space TechsiStars Mentorship Program truly supports every path. Today, I&apos;m fully practicing Tech Law and deepening my advocacy for safe online spaces, especially for women and girls.",
     image: "/assets/images/team/julie.jpg",
     thumbnail: "/assets/images/team/julie.jpg"
   },
@@ -32,7 +32,7 @@ const defaultStories = [
     name: "Poula Anek",
     role: "Data Entry Intern",
     cohort: "TechsiStars Alumna",
-    quote: "The biggest win for me was right after the program, my mentor supported me in landing a 6-month remote data entry contract. I’m now a more confident, tech-savvy advocate who’s ready to drive real change.",
+    quote: "The biggest win for me was right after the program, my mentor supported me in landing a 6-month remote data entry contract. I&apos;m now a more confident, tech-savvy advocate who&apos;s ready to drive real change.",
     image: "/assets/images/team/poula.jpg",
     thumbnail: "/assets/images/team/poula.jpg"
   }
@@ -112,7 +112,7 @@ export default function CommunityStories({ stories = defaultStories }) {
                   <div className="mb-6">
                     <span className="material-symbols-outlined text-4xl text-primary dark:text-white mb-4 block md:hidden">format_quote</span>
                     <blockquote className="text-xl md:text-2xl font-display italic text-gray-800 dark:text-gray-100 leading-relaxed">
-                      "{activeStory.quote}"
+                      &quot;{activeStory.quote}&quot;
                     </blockquote>
                   </div>
                   <div>

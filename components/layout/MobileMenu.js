@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
@@ -11,19 +12,23 @@ export default function MobileMenu({ open, setOpen }) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    setMounted(true);
     // Initialize theme
-    if (
+    const isDark =
       localStorage.getItem("theme") === "dark" ||
       (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+    if (isDark) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme("dark");
       document.documentElement.classList.add("dark");
     } else {
       setTheme("light");
       document.documentElement.classList.remove("dark");
     }
+
+    // Set mounted after theme init to avoid hydration mismatch and suppress sync setState warning
+    setMounted(true);
   }, []);
 
   const toggleTheme = () => {
@@ -65,7 +70,9 @@ export default function MobileMenu({ open, setOpen }) {
       )}>
         <div className="flex items-center justify-between">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setOpen(false)}>
-            <img src="/logo.png" alt="Paahibu Space Logo" className="h-8 w-auto object-contain" />
+            <div className="relative h-8 w-auto aspect-[3/1]">
+                <Image src="/logo.png" alt="Paahibu Space Logo" fill className="object-contain" />
+            </div>
              <span className="font-bold text-lg text-primary dark:text-white">Paahibu Space</span>
           </Link>
           <div className="flex items-center gap-4">

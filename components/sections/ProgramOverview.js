@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 
@@ -36,10 +37,14 @@ export default function ProgramOverview({ title, description, image, features })
           </div>
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
+              <Image
                 src={image}
                 alt={title}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
+                width={0}
+                height={0}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
             {/* Decorative elements */}

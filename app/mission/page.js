@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MissionPage() {
   return (
@@ -31,17 +32,17 @@ export default function MissionPage() {
               </div>
             </div>
             <div className="relative order-1 lg:order-2">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-gray-800 relative group">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-gray-800 group">
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
-                <div
-                  className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                  data-alt="Group of diverse women working together on laptops in a modern office setting"
-                  style={{
-                    backgroundImage:
-                      'url("/assets/images/programs/widib.webp")',
-                  }}
-                ></div>
+                <Image 
+                  src="/assets/images/programs/widib.webp" 
+                  alt="Group of diverse women working together on laptops"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
             </div>
@@ -152,7 +153,7 @@ export default function MissionPage() {
                 TRANSFORM
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow">
-                Changing career trajectories and leadership landscapes permanently. We don't just teach
+                Changing career trajectories and leadership landscapes permanently. We don&apos;t just teach
                 code; we build the next generation of industry leaders.
               </p>
               <div className="bg-white dark:bg-[#251d29] rounded-lg p-4 mt-auto">
@@ -208,11 +209,13 @@ export default function MissionPage() {
       <section className="w-full bg-[#faf9fb] dark:bg-[#1a141e] pb-24">
         <div className="container mx-auto px-6 max-w-[1080px] flex flex-col gap-20">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
-            <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
-              <img
+            <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md relative">
+              <Image
                 alt="Two women colleagues discussing work on a laptop"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="/assets/images/collab-impact.png"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
@@ -234,11 +237,13 @@ export default function MissionPage() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 group">
-            <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
-              <img
+            <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md relative">
+              <Image
                 alt="Group of diverse friends laughing together outdoors"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="/assets/images/longterm-sus.png"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
@@ -260,11 +265,13 @@ export default function MissionPage() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
-            <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
-              <img
+            <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md relative">
+              <Image
                 alt="Confident woman leading a presentation in an office"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="/assets/images/leadership.png"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
@@ -287,6 +294,7 @@ export default function MissionPage() {
           </div>
         </div>
       </section>
+
     </>
   );
 }

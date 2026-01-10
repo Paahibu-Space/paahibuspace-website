@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Testimonials({ testimonials }) {
   return (
     <section className="py-20 bg-background-light dark:bg-background-dark">
@@ -15,10 +17,12 @@ export default function Testimonials({ testimonials }) {
                 format_quote
               </span>
               <div className="flex items-center gap-4 mb-6 relative z-10">
-                <img
+                <Image
                   alt={testimonial.author}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-secondary"
+                  className="rounded-full object-cover border-2 border-secondary"
                   src={testimonial.image}
+                  width={64}
+                  height={64}
                 />
                 <div>
                   <h4 className="font-bold text-primary dark:text-white">
@@ -28,7 +32,7 @@ export default function Testimonials({ testimonials }) {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-300 italic relative z-10">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </p>
             </div>
           ))}

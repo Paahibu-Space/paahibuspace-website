@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
 import ProgramCTA from "@/components/ui/ProgramCTA";
 
@@ -62,10 +63,10 @@ export default async function WideiProgramPage() {
                      </div>
                  </div>
                  <p className="text-white/80 text-sm leading-relaxed">
-                     "Since joining WiDEI, I’ve acquired new customers and
+                     &quot;Since joining WiDEI, I’ve acquired new customers and
 significantly improved my business branding,
 marketing, and operations. Thanks to Paahibu
-Space and the WiDiB Initiative"
+Space and the WiDiB Initiative&quot;
                  </p>
                  <div className="mt-4 flex items-center gap-2">
                      <div className="w-8 h-8 rounded-full bg-gray-300 bg-cover bg-center" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBraoJmlypejhJl3cB4iOoCKR8sSYP7t3PxD8PQEZbDdQPbQ8reiW7zDPIsAhzwva56eLhaZ3XIRqkc8ECZlCW9URiSAO-2cI_Sy_LAOn_apCDeIo8SSjdepb-DPW-Cpc3WiTDEVwqorQ6bUj9gI9dcGm2rs6F1kEHuZ2XKSnXmtTMge2jkShOTYkNwLfEd3ZP6tfVn3fUb2sFgsQKP6xm_BdvFQocRFdqak1Uxr6HgT4jOybviowx8T0JOK1Tn5yquJ-jYelPLLys-')"}}></div>
@@ -121,9 +122,9 @@ Space and the WiDiB Initiative"
                      <h2 className="text-primary font-bold uppercase tracking-wider text-sm mb-2 dark:text-white">Our Methodology</h2>
                      <h3 className="text-3xl md:text-4xl font-bold text-neutral-dark dark:text-white">Tradition Meets Tech</h3>
                  </div>
-                 <p className="max-w-md text-gray-600 dark:text-gray-400 text-sm md:text-base text-right md:text-left">
-                     We don't just teach code; we integrate digital tools into the daily fabric of market life.
-                 </p>
+                  <p className="max-w-md text-gray-600 dark:text-gray-400 text-sm md:text-base text-right md:text-left">
+                      We don&apos;t just teach code; we integrate digital tools into the daily fabric of market life.
+                  </p>
              </div>
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                  {[
@@ -137,7 +138,7 @@ Space and the WiDiB Initiative"
                          title: "WhatsApp Shops",
                          desc: "Converting the most popular messaging app into a powerful storefront. Catalogues, quick replies, and status updates.",
                          icon: "chat",
-                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCh6devtBIVCmwOR-RHmNW761e3OQKY-XlHJEorZnyg8uvlsbUtnt1qg0vUP499xutF0wQnn2VX9PfmBFhOnupK_TI4a44Vo_cibse2fiodKJV_HUpIEuzT6Je_MfqrZ5jtIIp387UD_2OdHlFuduFVQRMZ2LhavRwU_U7lx8vwD5SQfxAMTzhkhJ-x8H0LY-kzvr_oNypec1ncqs4KYSRYrVnBN5hpVKx3Nm3XBxM8Aol9ECzJu20QhQuP8Rfonl7Q6fw6-wBCnkT5"
+                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCh6devtBIVCmwOR-RHmNW761e3OQKY-XlHJEorZnyg8uvlsbUtnt1qg0vUP499xutF0wQnn2VX9PfmBFhOnupK_TI4a44Vo_cibse2fiodHJV_HUpIEuzT6Je_MfqrZ5jtIIp387UD_2OdHlFuduFVQRMZ2LhavRwU_U7lx8vwD5SQfxAMTzhkhJ-x8H0LY-kzvr_oNypec1ncqs4KYSRYrVnBN5hpVKx3Nm3XBxM8Aol9ECzJu20QhQuP8Rfonl7Q6fw6-wBCnkT5"
                      },
                      {
                          title: "Trade Incubation",
@@ -209,7 +210,7 @@ Space and the WiDiB Initiative"
                      <div className="md:w-1/2 flex md:justify-end">
                          <div className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 md:text-right w-full md:w-auto md:max-w-md">
                              <h4 className="text-xl font-bold text-primary dark:text-white mb-2">Sustainable Growth</h4>
-                             <p className="text-gray-600 dark:text-gray-300 text-sm">Long-term mentorship and access to a network of women entrepreneurs ensuring businesses don't just survive, but thrive online.</p>
+                              <p className="text-gray-600 dark:text-gray-300 text-sm">Long-term mentorship and access to a network of women entrepreneurs ensuring businesses don&apos;t just survive, but thrive online.</p>
                          </div>
                      </div>
                      <div className="absolute left-8 md:left-1/2 -ml-4 w-8 h-8 rounded-full bg-primary border-4 border-white dark:border-background-dark flex items-center justify-center z-10">
@@ -228,13 +229,15 @@ Space and the WiDiB Initiative"
                  <div className="flex flex-col lg:flex-row gap-12 items-center">
                      <div className="w-full lg:w-1/2 relative">
                          <div className="absolute inset-0 bg-primary/20 rounded-2xl transform translate-x-4 translate-y-4"></div>
-                         <img src="/images/stories/vivian_ackon.png" 
-                             alt="Vivian Ackon" className="relative rounded-2xl shadow-xl w-full object-cover h-[400px]" />
-                         <div className="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                             <p className="text-secondary font-bold text-xs uppercase mb-1">Impact Spotlight</p>
-                             <p className="text-white font-medium">"The training helped me to create a business plan that guides our operations."</p>
-                             <p className="text-gray-300 text-xs mt-1">- Vivian Ackon, CEO Divine Apparel</p>
+                         <div className="relative rounded-2xl shadow-xl w-full h-[400px] overflow-hidden">
+                             <Image src="/images/stories/vivian_ackon.png" 
+                                 alt="Vivian Ackon" className="object-cover" fill sizes="(max-width: 1024px) 100vw, 50vw" />
                          </div>
+                         <div className="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                              <p className="text-secondary font-bold text-xs uppercase mb-1">Impact Spotlight</p>
+                              <p className="text-white font-medium">&quot;The training helped me to create a business plan that guides our operations.&quot;</p>
+                              <p className="text-gray-300 text-xs mt-1">- Vivian Ackon, CEO Divine Apparel</p>
+                          </div>
                      </div>
                      <div className="w-full lg:w-1/2">
                          <div className="flex items-center gap-2 mb-4">
@@ -244,21 +247,21 @@ Space and the WiDiB Initiative"
                          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-neutral-dark dark:text-white leading-tight">
                              From Concept to Branded Reality
                          </h2>
-                         <div className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed space-y-4">
-                             <p>
-                                 "Divine Apparel specializes in quality men's wears. It was borne during my participation in the WiDiB & WiDEI programs. The training helped me to create a business plan that guides our operations."
-                             </p>
-                             <p>
-                                 "With Paahibu Space’s support, we branded, including a new logo, and gained digital marketing, storytelling, branding and customer engagement skills which have helped transformed how we connect with clients."
-                             </p>
-                             <p>
-                                 "We’ve since enhanced our online presence and now offer personalized engravings on items like belts, watches, and wallets, adding a special touch for our customers."
-                             </p>
-                         </div>
-                         <a className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all dark:text-secondary" href="/stories">
-                             Read more stories
-                             <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                         </a>
+                          <div className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed space-y-4">
+                              <p>
+                                  &quot;Divine Apparel specializes in quality men&apos;s wears. It was borne during my participation in the WiDiB & WiDEI programs. The training helped me to create a business plan that guides our operations.&quot;
+                              </p>
+                              <p>
+                                  &quot;With Paahibu Space&apos;s support, we branded, including a new logo, and gained digital marketing, storytelling, branding and customer engagement skills which have helped transformed how we connect with clients.&quot;
+                              </p>
+                              <p>
+                                  &quot;We&apos;ve since enhanced our online presence and now offer personalized engravings on items like belts, watches, and wallets, adding a special touch for our customers.&quot;
+                              </p>
+                          </div>
+                          <Link className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all dark:text-secondary" href="/stories">
+                              Read more stories
+                              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                          </Link>
                      </div>
                  </div>
              </div>
@@ -272,8 +275,8 @@ Space and the WiDiB Initiative"
              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
                  {/* Large Item */}
                  <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl">
-                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="/assets/images/programs/widei-action1.png" alt="Training" />
+                     <Image className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                         src="/assets/images/programs/widei-action1.png" alt="Training" fill sizes="(max-width: 768px) 100vw, 66vw" />
                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
                      <div className="absolute bottom-0 left-0 p-6">
                          <span className="bg-primary text-[#0d1b12] text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Training</span>
@@ -282,24 +285,24 @@ Space and the WiDiB Initiative"
                  </div>
                  {/* Small Item */}
                  <div className="relative group overflow-hidden rounded-xl">
-                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="/assets/images/programs/widei-action3.png" alt="Mobile tools" />
+                     <Image className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                         src="/assets/images/programs/widei-action3.png" alt="Mobile tools" fill sizes="(max-width: 768px) 100vw, 33vw" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
                          <h3 className="text-white text-sm font-bold">Mobile Money Tools</h3>
                      </div>
                  </div>
                  {/* Small Item */}
                  <div className="relative group overflow-hidden rounded-xl">
-                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="/assets/images/programs/widei-action2.png" alt="Empowerment" />
+                     <Image className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                         src="/assets/images/programs/widei-action2.png" alt="Empowerment" fill sizes="(max-width: 768px) 100vw, 33vw" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
                          <h3 className="text-white text-sm font-bold">Empowerment</h3>
                      </div>
                  </div>
                  {/* Wide Item */}
                  <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-xl">
-                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="/assets/images/programs/widei-action4.png" />
+                     <Image className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                         src="/assets/images/programs/widei-action4.png" alt="Peer Mentorship" fill sizes="(max-width: 768px) 100vw, 33vw" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
                          <h3 className="text-white text-sm font-bold">Peer Mentorship</h3>
                      </div>

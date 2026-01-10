@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function RegionalImpact() {
@@ -43,11 +44,15 @@ export default function RegionalImpact() {
         </div>
         <div className="md:w-1/2 relative">
           <div className="bg-white p-4 rounded-3xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
-            <img
-              alt="Students collaborating on digital projects in Ghana"
-              className="rounded-xl w-full h-80 object-cover"
-              src="/assets/images/programs/women-trained.png"
-            />
+            <div className="relative h-80 w-full">
+              <Image
+                alt="Students collaborating on digital projects in Ghana"
+                className="rounded-xl object-cover"
+                src="/assets/images/programs/women-trained.png"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
             <div className="absolute -bottom-6 -left-6 bg-secondary text-white p-6 rounded-xl shadow-lg max-w-xs">
               <p className="font-bold text-2xl">500+</p>
               <p className="text-sm opacity-90">

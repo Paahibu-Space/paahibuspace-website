@@ -1,5 +1,6 @@
 import PageHero from "@/components/sections/PageHero";
 import { fetchAPI } from "@/lib/api";
+import Image from "next/image";
 
 export default async function PartnersPage() {
   const partners = await fetchAPI("/api/v1/partners") || [];
@@ -31,12 +32,14 @@ export default async function PartnersPage() {
                 href={partner.website || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow aspect-[3/2]"
+                className="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow aspect-[3/2] relative"
               >
-                <img
+                <Image
                   src={partner.src || partner.logo}
                   alt={partner.name}
-                  className="max-h-16 w-auto object-contain dark:brightness-0 dark:invert transition-all opacity-80 hover:opacity-100"
+                  className="object-contain dark:brightness-0 dark:invert transition-all opacity-80 hover:opacity-100"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </a>
             ))}

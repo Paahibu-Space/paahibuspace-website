@@ -44,7 +44,7 @@ export default function ProgramBenefits({ title, description, benefits, image, c
             >
             </div>
              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
-                <p className="text-white font-bold text-xl">"Paahibu gave us the tools to build our own future."</p>
+                <p className="text-white font-bold text-xl">&quot;Paahibu gave us the tools to build our own future.&quot;</p>
             </div>
           </div>
         </div>

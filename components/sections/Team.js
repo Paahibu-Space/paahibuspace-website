@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Team() {
   return (
@@ -28,10 +29,12 @@ export default function Team() {
           {/* Team Member 1 */}
           <div className="group relative flex flex-col gap-3">
             <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200">
-              <img
+              <Image
                 alt="Portrait of Amina, Founder & CEO"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaACuKg1cCK31onWda7Em-vYmqI22sjqlPAIbr5ajHEC7AyoKRStTRca5pVfmqIz541Wa7xU6nHC6ejJbsfFqZhyoHkgeqg82HJaGgALdGYBZwKncRDOTkfNKoAAf4QxJbb5eAi7BMkmXChRZ7ectyB5dX4m7sztlrNoXsKSln6yaXFmefuakQr4YtfI4KFFIkv5ZGQaERK5T_tWwP4rYkH1n_Fz18LG1QB3QIul7KD6Zj-ZbX1sNYiq-3AW8HvKFw7vb54QhwAwzP"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
             </div>
             <div>
@@ -44,10 +47,12 @@ export default function Team() {
           {/* Team Member 2 */}
           <div className="group relative flex flex-col gap-3">
             <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200">
-              <img
+              <Image
                 alt="Portrait of Sarah, Program Director"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAavQQyebqiRwNcZR35QCRZBIM-tpxUVWAFdj7aSZt8m-0a6PlFfu7GmaGfvtDjpJlr5kSuyo3rXG0sS5CIm6MB6XOfC9fwU6oXeF4yxY7funieKFcRzQJesxS9odoSHzlw2UET05AN0b91_-Q_ny87ou8_5TatRzz6cAnH2R9UEn_8D2uddOsKqHoqOGWUUiE_OzMEOL5eeLXyFClTPcpAQyxXy71SKAqNyqkRxd8JcPsBqTDCMc8may3BOyFnNhG6j1rkk8mZA5za"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
             </div>
             <div>
@@ -62,10 +67,12 @@ export default function Team() {
           {/* Team Member 3 */}
           <div className="group relative flex flex-col gap-3">
             <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200">
-              <img
+              <Image
                 alt="Portrait of Kwame, Tech Lead"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcsa-PzFsKcSMfsedW2Vy6PWmuoq3C9Ubmk_a-WNMm4bVYsIWkV6UwHU9mYSaoKZT-8KdcuVerfX-6R1sXWMCIEW9oH3Br33kC2j5SqNYquznUR2moZYz6GAaAs5GrJBaIhaGl8iFKJPnQQ4SSmwi6k1PNrXJLVXT9yNiPh6t5-fPDc1oOZ-3NbU1KVF7LAwO_3HddufcPypzH_QDZZryG6kqExI6rjZ8eT0VavYQtGFSrkrKnkLzy4R74HlhVjtkI03JcWlObdYPN"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
             </div>
             <div>
@@ -80,10 +87,12 @@ export default function Team() {
           {/* Team Member 4 */}
           <div className="group relative flex flex-col gap-3">
             <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200">
-              <img
+              <Image
                 alt="Portrait of Zola, Community Manager"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPFP2i39FciFUOj6fjTRbjvjD-R_kY6O_kJfxcvXrA7sxiEizFgioPeHu0nhFWH_azSIVKbRl0muBid65DoAjwUSms2I42cpk31_2TnpF9fYjEYWigt4SPAH_uPx5HgTzEhCotHeSB1bGRslBAaSGW_1lqYuUVxAKuu-qWGTLSx-2n5qex35VCC9GWu0DWFUBcJi4Zl-zN1iyTiE0-Re0kz7zG216OU3Dkhygx2rPWRprCHFlyeLUwuHiA5zjZ7sGHPAG5d7rPX9H"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
             </div>
             <div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function MentorsGrid({ mentors }) {
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
@@ -30,11 +32,13 @@ export default function MentorsGrid({ mentors }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {mentors.map((mentor, index) => (
             <div key={index} className="flex flex-col gap-4">
-              <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
-                <img
+              <div className="aspect-square rounded-lg overflow-hidden bg-gray-200 relative">
+                <Image
                   alt={mentor.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
                   src={mentor.image}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>
               <div>
@@ -45,7 +49,7 @@ export default function MentorsGrid({ mentors }) {
                   {mentor.role}
                 </p>
                 <p className="text-gray-500 text-sm line-clamp-2">
-                  "{mentor.quote}"
+                  &quot;{mentor.quote}&quot;
                 </p>
               </div>
             </div>

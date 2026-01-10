@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function ProgramGains({ title, description, image, points }) {
   return (
     <section className="py-20 bg-primary dark:bg-gray-900 text-white relative overflow-hidden">
@@ -10,10 +11,14 @@ export default function ProgramGains({ title, description, image, points }) {
               {title}
             </h2>
             <p className="text-blue-100 text-lg mb-8">{description}</p>
-            <img
+            <Image
               alt="Program benefits"
-              className="rounded-xl shadow-2xl border border-white/10 w-full"
+              className="rounded-xl shadow-2xl border border-white/10 w-full h-auto"
               src={image}
+              width={0}
+              height={0}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
           <div className="lg:w-1/2">

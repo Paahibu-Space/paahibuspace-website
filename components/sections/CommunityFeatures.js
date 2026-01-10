@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CommunityFeatures() {
   return (
     <>
@@ -18,10 +20,12 @@ export default function CommunityFeatures() {
           {/* Feature 1 */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
             <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
-              <img
+              <Image
                 alt="Two women colleagues discussing work on a laptop"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7DckuQvtfBkrRePEC3mzwmaCR3bfXhiIWlgvxGp2kRxRh6srXH3aTRvQ_UfY_VZjp09mW6eotu0CDEF1xrby-wkTqD0ZYp76jLLWzsN6ayPKKN340lsF9SCzpkFbz0eXqLxo7ffLszk0--9xK8tZApGwypJnScsf81GTgeCJ-gjx25yMGSxn6sRHllYU-BVrwQ8VvzbWQ4BLj-mdWl0eqfiXmR7eBHrdQHUhcXGjL4VEBpTC-sTwhBS3vVd6J0uk3x9MHfzwu-wQ"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="w-full md:w-1/2 p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
@@ -51,10 +55,12 @@ export default function CommunityFeatures() {
           {/* Feature 2 */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 group">
             <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
-              <img
+              <Image
                 alt="Group of diverse friends laughing together outdoors"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_hC0uiCbx57H_IVbqO7xWx5IfEzUYDrgPqLRKBdc-ERCkZl5l2n2kzex_YDyoRLWhU0eya0m-q8UQZKePH3jC7VHX3DcwrO0XxHYTsUD5Z0HA4YRUrVG6fzvXCbq0nJxCb1hNWbu5bipjOGu1vH145mNYZcKbbuyjapk9axvLuRB7cWSlG1JAFsw0Xgav8afgAowaEprxe0llw91YSC51UKFsxHEWqa4WXksljQkPTinTHkyU5elbkpQ5U0ItdAejJNH5Uxxjm4k"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="w-full md:w-1/2 p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
@@ -84,10 +90,12 @@ export default function CommunityFeatures() {
           {/* Feature 3 */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
             <div className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
-              <img
+              <Image
                 alt="Confident woman leading a presentation in an office"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCghx274muUBcaIf5e6HRoWO6VsbVGhkA_91iQQ3LIxYRK5sYRoP37aZuS9pwxSYFOITZvHjqOjpYUb-gnwtX4k-BV9WhlmZ3X7ymr7ZcPcqXbC56wPZiJdJW3DpIbNAo5Emaxtl0R2qt311id-6UUyXqNQQDYIrf1nSDETHdx4V4l-Sdq6oYqlDm_BNznZs7IXVrskOR-uvrDayirT2yg-rE1OoxQaOV5-lVTmVgZnMxFmwWepJCeB78xRkVyactJ81djwJql5HU4"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="w-full md:w-1/2 p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">

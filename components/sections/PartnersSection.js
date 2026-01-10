@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
 
 export default async function PartnersSection() {
@@ -20,11 +21,13 @@ export default async function PartnersSection() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12 p-4 mb-16 items-center justify-items-center">
               {partners && partners.length > 0 ? partners.map((partner, index) => (
-                <div key={index} className="group flex items-center justify-center w-full h-[80px] p-2 dark:bg-white/5 dark:rounded-lg transition-all duration-300">
-                  <img 
+                <div key={index} className="group flex items-center justify-center w-full h-[80px] p-2 dark:bg-white/5 dark:rounded-lg transition-all duration-300 relative">
+                  <Image 
                     alt={`${partner.name} Partner Logo`} 
-                    className="h-[40px] md:h-[50px] w-auto object-contain dark:brightness-0 dark:invert"
+                    className="object-contain dark:brightness-0 dark:invert"
                     src={partner.logo_url} 
+                    fill
+                    sizes="20vw"
                   />
                 </div>
               )) : (

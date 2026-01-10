@@ -17,7 +17,7 @@ export default async function ImpactSection() {
           <div>
             <h2 className="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Our Impact</h2>
             <h3 className="text-3xl font-black text-white sm:text-4xl mb-6">Changing the Face of Tech</h3>
-            <p className="text-white/80 text-lg mb-10 max-w-md">Since our inception, we've been dedicated to creating tangible change in the tech ecosystem across Africa.</p>
+            <p className="text-white/80 text-lg mb-10 max-w-md">Since our inception, we&apos;ve been dedicated to creating tangible change in the tech ecosystem across Africa.</p>
             <div className="grid grid-cols-2 gap-8">
               {stats.slice(0, 4).map((stat, idx) => (
                   <div key={idx}>
@@ -39,7 +39,7 @@ export default async function ImpactSection() {
               </div>
             </div>
             <p className="text-neutral-dark dark:text-gray-100 text-lg italic leading-relaxed mb-6">
-              "The biggest win for me was right after the program, my mentor supported me in landing a 6-month remote data entry contract, something I never thought I could achieve before. I’m now a more confident, tech-savvy advocate who’s ready to drive real change."
+              &quot;The biggest win for me was right after the program, my mentor supported me in landing a 6-month remote data entry contract, something I never thought I could achieve before. I&apos;m now a more confident, tech-savvy advocate who&apos;s ready to drive real change.&quot;
             </p>
             <div className="flex items-center text-secondary">
               <span className="material-symbols-outlined filled text-lg">star</span>

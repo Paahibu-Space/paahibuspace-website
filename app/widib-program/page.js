@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { fetchAPI } from "@/lib/api";
 import ProgramCTA from "@/components/ui/ProgramCTA";
+import Image from "next/image";
 
 export default async function WidibProgramPage() {
   const programs = await fetchAPI("/api/v1/programs") || [];
@@ -36,8 +37,8 @@ export default async function WidibProgramPage() {
      {/* Hero Section */}
      <section className="relative bg-primary dark:bg-primary/5 overflow-hidden pt-20 pb-32 lg:pt-32 lg:pb-48">
          <div className="absolute inset-0">
-             <img src="/assets/images/programs/widib.webp" 
-                 alt="Women Business Owners" className="w-full h-full object-cover opacity-20" />
+             <Image src="/assets/images/programs/widib.webp" 
+                 alt="Women Business Owners" className="object-cover opacity-20" fill priority />
              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/80"></div>
          </div>
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -139,7 +140,7 @@ export default async function WidibProgramPage() {
                         </div>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 italic mb-4 leading-relaxed">
-                        "The training completely transformed how I run my business. I learned to manage operations efficiently using digital tools and even started designing my own business flyers, saving costs I used to spend on hiring designers. Sheady Enterprise is now thriving."
+                        &quot;The training completely transformed how I run my business. I learned to manage operations efficiently using digital tools and even started designing my own business flyers, saving costs I used to spend on hiring designers. Sheady Enterprise is now thriving.&quot;
                     </p>
                 </div>
                 {/* Vivian */}
@@ -152,7 +153,7 @@ export default async function WidibProgramPage() {
                         </div>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 italic mb-4 leading-relaxed">
-                        "With Paahibu Space’s support, we branded, including a new logo, and gained digital marketing, storytelling, and customer engagement skills which have helped transformed how we connect with clients. We’ve since enhanced our online presence."
+                        &quot;With Paahibu Space&rsquo;s support, we branded, including a new logo, and gained digital marketing, storytelling, and customer engagement skills which have helped transformed how we connect with clients. We&rsquo;ve since enhanced our online presence.&quot;
                     </p>
                 </div>
             </div>
@@ -308,9 +309,9 @@ export default async function WidibProgramPage() {
                             <span className="material-symbols-outlined text-[18px]">favorite</span>
                             <span className="text-xs font-bold uppercase tracking-wider">Community First</span>
                         </div>
-                        <h2 className="text-3xl sm:text-5xl font-black mb-6 leading-tight">More Than Just a Course, It's a <span className="text-secondary/80">Sisterhood</span>.</h2>
+                        <h2 className="text-3xl sm:text-5xl font-black mb-6 leading-tight">More Than Just a Course, It&apos;s a <span className="text-secondary/80">Sisterhood</span>.</h2>
                         <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-                            We believe that entrepreneurship can be lonely, but it doesn't have to be. Our program
+                            We believe that entrepreneurship can be lonely, but it doesn&apos;t have to be. Our program
                             includes dedicated well-being sessions, peer support circles, and mental health resources to
                             ensure you thrive personally as your business grows.
                         </p>
@@ -331,11 +332,15 @@ export default async function WidibProgramPage() {
                     </div>
                     <div className="lg:w-1/2 w-full">
                         <div className="grid grid-cols-2 gap-4">
-                            <img alt="Two women having a conversation and laughing"
-                                className="rounded-2xl w-full h-64 object-cover transform translate-y-8 shadow-xl"
-                                src="/assets/images/programs/widib-goals.webp" />
-                            <img alt="Group of women cheering" className="rounded-2xl w-full h-64 object-cover shadow-xl"
-                                src="/assets/images/programs/widib-why.webp" />
+                            <div className="relative w-full h-64">
+                                <Image alt="Two women having a conversation and laughing"
+                                    className="rounded-2xl shadow-xl object-cover transform translate-y-8"
+                                    src="/assets/images/programs/widib-goals.webp" fill sizes="(max-width: 768px) 100vw, 50vw" />
+                            </div>
+                            <div className="relative w-full h-64">
+                                <Image alt="Group of women cheering" className="rounded-2xl shadow-xl object-cover"
+                                    src="/assets/images/programs/widib-why.webp" fill sizes="(max-width: 768px) 100vw, 50vw" />
+                            </div>
                         </div>
                     </div>
                 </div>
