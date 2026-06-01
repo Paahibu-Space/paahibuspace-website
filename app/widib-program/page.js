@@ -173,22 +173,22 @@ export default async function WidibProgramPage() {
              <div className="grid md:grid-cols-3 gap-8">
                  {[
                      {
-                         title: "Social Media Marketing",
-                         desc: "Master Instagram and TikTok algorithms. Learn how to create content that converts viewers into buyers without paying for ads.",
+                         title: "Digital Skills & Business Growth",
+                         desc: "From content creation and branding to e-commerce and automation, WiDiB arms participants with hands-on digital skills built for the real world. Whether you're selling a product, offering a service, or building a brand you'll leave with practical tools and strategies to grow your business visibly and sustainably.",
                          icon: "campaign",
                          bg: "bg-blue-50 dark:bg-blue-900/20",
                          text: "text-blue-600"
                      },
                      {
-                         title: "Financial Literacy",
-                         desc: "Separate your business money from personal money. Learn basic bookkeeping, pricing strategies, and profit margin calculation.",
+                         title: "Coaching & Community Support",
+                         desc: "You don't have to figure it all out alone. WiDiB connects you with personalized coaching from experienced women entrepreneurs and digital experts, plus a circle of peers who genuinely understand the juggle. This is a space where your story is seen, your pace is respected and your progress is celebrated.",
                          icon: "payments",
                          bg: "bg-green-50 dark:bg-green-900/20",
                          text: "text-green-600"
                      },
                      {
-                         title: "Content Creation",
-                         desc: "You don't need a fancy camera. Learn to shoot, edit, and post professional product photos using just your smartphone.",
+                         title: "Well-being & Sustainable Growth",
+                         desc: "Growth should not cost your peace. WiDiB is intentionally designed to support the whole woman not just the business owner. We weave well-being, grace and self-awareness into every week, because the most sustainable businesses are built by women who are not running on empty.",
                          icon: "photo_camera",
                          bg: "bg-purple-50 dark:bg-purple-900/20",
                          text: "text-purple-600"
