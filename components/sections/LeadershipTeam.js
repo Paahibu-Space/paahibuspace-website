@@ -23,7 +23,7 @@ export default function LeadershipTeam({ members = [] }) {
           {leaders.length > 0 ? leaders.map((leader, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-200 dark:bg-gray-700"
+              className="group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-200 dark:bg-gray-700"
             >
               <Image
                 alt={leader.name}

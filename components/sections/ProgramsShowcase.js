@@ -65,7 +65,7 @@ export default function ProgramsShowcase() {
         </div>
 
         {/* Featured Program: GROW */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden mb-12 flex flex-col lg:flex-row">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden mb-12 flex flex-col lg:flex-row">
           <div className="lg:w-2/5 h-64 lg:h-auto relative">
             <Image
               alt="Professional women in a meeting"
@@ -213,7 +213,7 @@ STEM and entrepreneurship."
                 return (
                   <div
                     key={program.id}
-                    className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-sm border border-gray-200 dark:border-gray-700 transition-all hover:shadow-md"
+                    className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 transition-all hover:-translate-y-1"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-6">
@@ -245,7 +245,7 @@ STEM and entrepreneurship."
                       program={program}
                       labelOpen="Apply Now"
                       labelClosed="Notify Me"
-                      className="w-full bg-secondary hover:bg-orange-600 text-white shadow-sm"
+                      className="w-full bg-secondary hover:bg-orange-600 text-white"
                     />
                   </div>
                 );
@@ -263,7 +263,7 @@ function ProgramCard({ program, title, sub, desc, icon, link }) {
   const open = isApplicationAccessible(program);
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg hover:border-secondary hover:scale-[1.02] transition-all duration-300 flex flex-col h-full">
+    <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full">
       <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 rounded-lg flex items-center justify-center text-secondary mb-6">
         <span className="material-symbols-outlined text-3xl">{icon}</span>
       </div>

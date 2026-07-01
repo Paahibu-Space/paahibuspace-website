@@ -53,7 +53,7 @@ export default function HeroSlider() {
                 </p>
                 <div className="flex flex-wrap items-center gap-4 pt-4">
                   <Link href="/programs"
-                    className="rounded-full bg-primary px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-primary/25 hover:bg-blue-900 hover:-translate-y-0.5 transition-all">
+                    className="rounded-full bg-primary px-8 py-3.5 text-base font-bold text-white hover:bg-blue-900 hover:-translate-y-0.5 transition-all">
                     Explore Programs
                   </Link>
                   <button
@@ -65,13 +65,13 @@ export default function HeroSlider() {
                 </div>
               </div>
               <div className="relative lg:h-full w-full flex items-center justify-center">
-                <div className="relative w-full aspect-[4/3] lg:aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div className="relative w-full aspect-[4/3] lg:aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 rotate-2 hover:rotate-0 transition-transform duration-500">
                   <div className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: "url('/assets/images/hero/hiqmat-in-action.webp')" }}>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60">
                   </div>
-                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-4 rounded-xl shadow-lg border border-white/20">
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-4 rounded-2xl">
                     <div className="flex items-center gap-4">
                       <div className="bg-accent/10 p-2 rounded-full text-accent">
                         <span className="material-symbols-outlined filled">code</span>
@@ -126,7 +126,7 @@ export default function HeroSlider() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Link href="/programs"
-                    className="flex items-center justify-center h-12 px-8 rounded-lg bg-primary hover:bg-blue-900 text-white font-bold transition-all shadow-md hover:shadow-lg group">
+                    className="flex items-center justify-center h-12 px-8 rounded-lg bg-primary hover:bg-blue-900 text-white font-bold transition-all group">
                     <span>Explore Our Programs</span>
                     <span className="material-symbols-outlined ml-2 text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </Link>
@@ -141,11 +141,11 @@ export default function HeroSlider() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-100/50 to-pink-100/50 dark:from-blue-900/20 dark:to-pink-900/20 rounded-full blur-3xl -z-10">
                 </div>
                 <div className="relative w-full h-full max-w-md mx-auto">
-                  <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-2xl shadow-xl transform rotate-3 scale-95 opacity-60 z-0">
+                  <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-2xl transform rotate-3 scale-95 opacity-60 z-0">
                   </div>
-                  <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-2xl shadow-xl transform -rotate-2 scale-95 opacity-80 z-10">
+                  <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-2xl transform -rotate-2 scale-95 opacity-80 z-10">
                   </div>
-                  <div className="absolute inset-0 z-20 overflow-hidden rounded-2xl shadow-2xl bg-gray-200 dark:bg-gray-800 group">
+                  <div className="absolute inset-0 z-20 overflow-hidden rounded-2xl bg-gray-200 dark:bg-gray-800 group">
                     <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                       style={{ backgroundImage: "url('https://updates.paahibuspace.org/assets/frontend/images/female-in-tech.png')" }}>
                     </div>
@@ -161,7 +161,7 @@ export default function HeroSlider() {
                       </div>
                     </div>
                   </div>
-                  <div className="absolute -bottom-6 -left-6 z-30 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
+                  <div className="absolute -bottom-6 -left-6 z-30 bg-white dark:bg-gray-800 p-4 rounded-2xl flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
                     <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                       <span className="material-symbols-outlined">code</span>
                     </div>
@@ -179,14 +179,14 @@ export default function HeroSlider() {
        {/* Slider Controls */}
        <button 
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary dark:text-white shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-all z-40 hidden md:flex"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all z-40 hidden md:flex"
       >
         <span className="material-symbols-outlined">chevron_left</span>
       </button>
 
       <button 
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary dark:text-white shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-all z-40 hidden md:flex"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all z-40 hidden md:flex"
       >
         <span className="material-symbols-outlined">chevron_right</span>
       </button>
@@ -210,7 +210,7 @@ export default function HeroSlider() {
       {/* Video Modal - Placed outside the slider transform container */}
       {isVideoOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-          <div className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl aspect-video">
+          <div className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden aspect-video">
             <button 
               onClick={() => setIsVideoOpen(false)}
               className="absolute top-4 right-4 text-white hover:text-gray-300 z-10 bg-black/50 rounded-full p-2 transition-colors"

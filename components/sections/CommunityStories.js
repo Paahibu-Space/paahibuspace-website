@@ -95,14 +95,14 @@ export default function CommunityStories({ stories = defaultStories }) {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-8 flex flex-col">
-            <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-gray-800 overflow-hidden group">
+            <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 overflow-hidden group">
               <div className="absolute top-8 left-8 md:top-12 md:left-12 opacity-10 pointer-events-none">
                 <span className="material-symbols-outlined text-[120px] md:text-[180px] text-primary dark:text-gray-600 leading-none">format_quote</span>
               </div>
               <div className="relative z-10 flex flex-col md:flex-row gap-8 md:gap-10 items-center md:items-start text-center md:text-left transition-opacity duration-500 ease-in-out">
                 <div className="shrink-0">
                   <div className="size-[120px] rounded-full p-1 bg-gradient-to-br from-primary/30 to-transparent">
-                    <div className="w-full h-full rounded-full bg-cover bg-center border-4 border-white dark:border-gray-800 shadow-lg"
+                    <div className="w-full h-full rounded-full bg-cover bg-center border-4 border-white dark:border-gray-800"
                       data-alt={`Portrait of ${activeStory.name}`}
                       style={{ backgroundImage: `url('${activeStory.image_url}')` }}>
                     </div>
@@ -159,7 +159,7 @@ export default function CommunityStories({ stories = defaultStories }) {
           </div>
           <div className="hidden lg:flex lg:col-span-4 flex-col h-full">
             <div 
-                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm p-4"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-4"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >

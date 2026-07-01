@@ -13,7 +13,7 @@ export default function WhyWomenInTech() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           <div className="lg:col-span-5 flex flex-col h-full">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full min-h-[500px] group">
+            <div className="relative rounded-2xl overflow-hidden h-full min-h-[500px] group">
               <Image
                 alt="Diverse women collaborating in a technology workspace"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -62,7 +62,7 @@ export default function WhyWomenInTech() {
               engine of progress. When women lead in technology, the entire
               ecosystem evolves.
             </p>
-            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-[6px] border-secondary dark:border-secondary flex flex-col sm:flex-row gap-6 items-start">
+            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
               <div className="flex-shrink-0 bg-orange-50 dark:bg-orange-500/20 w-16 h-16 rounded-full flex items-center justify-center text-secondary">
                 <span className="material-symbols-outlined text-4xl">
                   lightbulb
@@ -79,7 +79,7 @@ export default function WhyWomenInTech() {
                 </p>
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-[6px] border-secondary dark:border-secondary flex flex-col sm:flex-row gap-6 items-start">
+            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
               <div className="flex-shrink-0 bg-orange-50 dark:bg-orange-500/20 w-16 h-16 rounded-full flex items-center justify-center text-secondary">
                 <span className="material-symbols-outlined text-4xl">
                   diversity_3
@@ -96,7 +96,7 @@ export default function WhyWomenInTech() {
                 </p>
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-[6px] border-secondary dark:border-secondary flex flex-col sm:flex-row gap-6 items-start">
+            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
               <div className="flex-shrink-0 bg-orange-50 dark:bg-orange-500/20 w-16 h-16 rounded-full flex items-center justify-center text-secondary">
                 <span className="material-symbols-outlined text-4xl">
                   rocket_launch

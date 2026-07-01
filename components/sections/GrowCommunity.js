@@ -23,7 +23,7 @@ export default function GrowCommunity() {
           and leadership development. Join us in creating lasting change for African women in tech.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <button className="flex items-center justify-center h-12 px-8 bg-white dark:bg-secondary text-primary dark:text-white text-base font-bold rounded-lg hover:bg-gray-100 dark:hover:bg-orange-600 transition-colors shadow-lg cursor-pointer">
+          <button className="flex items-center justify-center h-12 px-8 bg-white dark:bg-secondary text-primary dark:text-white text-base font-bold rounded-lg hover:bg-gray-100 dark:hover:bg-orange-600 transition-colors cursor-pointer">
             Partner With Us
           </button>
           <button className="flex items-center justify-center h-12 px-8 bg-transparent border-2 border-white/30 text-white text-base font-bold rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
