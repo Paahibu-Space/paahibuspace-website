@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 export default function ProgramsCTA() {
   return (
-    <section className="py-20 bg-primary text-white text-center relative overflow-hidden">
+    <section className="py-20 bg-primary dark:bg-background-dark text-white text-center relative overflow-hidden">
       <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-secondary rounded-full opacity-20 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-purple-500 rounded-full opacity-20 pointer-events-none"></div>
       <div className="max-w-4xl mx-auto px-4 relative z-10">

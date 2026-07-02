@@ -23,8 +23,8 @@ export default function Mission() {
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               We equip businesses and nonprofits with the competencies to leverage technology,
-              while educating, empowering, and shaping 5 million African women and girls in
-              STEAM, innovation, and leadership to achieve their fullest potential.
+              while educating and empowering African women and girls in STEAM, innovation,
+              and leadership — with a vision to reach millions more across the continent.
             </p>
           </div>
           {/* Card 2 */}

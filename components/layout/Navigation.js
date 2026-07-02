@@ -9,6 +9,8 @@ export default function Navigation() {
   const pathname = usePathname();
   const [theme, setTheme] = useState("light");
   const [openPrograms, setOpenPrograms] = useState([]);
+  const [programsMenuOpen, setProgramsMenuOpen] = useState(false);
+  const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
   
   const isActive = (path) => pathname === path;
 
@@ -41,6 +43,18 @@ export default function Navigation() {
     getPrograms();
   }, []);
 
+  useEffect(() => {
+    // Close mega menus on Escape for keyboard users
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setProgramsMenuOpen(false);
+        setAboutMenuOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
@@ -66,14 +80,22 @@ export default function Navigation() {
       </Link>
       {/* Programs Mega Menu */}
       <div className="group relative">
-        <button className={cn(
+        <button
+          type="button"
+          aria-expanded={programsMenuOpen}
+          aria-haspopup="true"
+          onClick={() => setProgramsMenuOpen((prev) => !prev)}
+          className={cn(
           "flex items-center gap-1 text-sm font-medium transition-colors py-6 hover:text-secondary",
            isActive("/programs") || isActive("/techsistars-program") || isActive("/grow-program") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
         )}>
           Programs
           <span className="material-symbols-outlined text-lg">expand_more</span>
         </button>
-        <div className="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-screen max-w-4xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-6 z-50">
+        <div className={cn(
+          "mega-menu absolute left-1/2 -translate-x-1/2 top-full w-screen max-w-4xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 focus-within:opacity-100 focus-within:visible focus-within:translate-y-0 transition-all duration-200 ease-out bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-6 z-50",
+          programsMenuOpen && "opacity-100 visible translate-y-0"
+        )}>
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-8 grid grid-cols-2 gap-6">
               <div>
@@ -84,9 +106,9 @@ export default function Navigation() {
                   href="/techsistars-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
-                  <div className="bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 p-2 rounded-lg group-hover/item:bg-purple-600 group-hover/item:text-white transition-colors">
+                  {/* <div className="bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 p-2 rounded-lg group-hover/item:bg-purple-600 group-hover/item:text-white transition-colors">
                     <span className="material-symbols-outlined">school</span>
-                  </div>
+                  </div> */}
                   <div>
                     <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-purple-600 dark:group-hover/item:text-white transition-colors">
                       TechsiStars
@@ -100,9 +122,9 @@ export default function Navigation() {
                   href="/widei-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
-                  <div className="bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 p-2 rounded-lg group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
+                  {/* <div className="bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 p-2 rounded-lg group-hover/item:bg-green-600 group-hover/item:text-white transition-colors">
                     <span className="material-symbols-outlined">public</span>
-                  </div>
+                  </div> */}
                   <div>
                     <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-green-600 dark:group-hover/item:text-white transition-colors">
                       WiDEI
@@ -121,9 +143,9 @@ export default function Navigation() {
                   href="/grow-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
-                  <div className="bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 p-2 rounded-lg group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                  {/* <div className="bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 p-2 rounded-lg group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                     <span className="material-symbols-outlined">rocket_launch</span>
-                  </div>
+                  </div> */}
                   <div>
                     <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-primary dark:group-hover/item:text-white transition-colors">
                       GROW Incubator
@@ -137,9 +159,9 @@ export default function Navigation() {
                   href="/widib-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
-                  <div className="bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400 p-2 rounded-lg group-hover/item:bg-yellow-600 group-hover/item:text-white transition-colors">
+                  {/* <div className="bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400 p-2 rounded-lg group-hover/item:bg-yellow-600 group-hover/item:text-white transition-colors">
                     <span className="material-symbols-outlined">storefront</span>
-                  </div>
+                  </div> */}
                   <div>
                     <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-yellow-600 dark:group-hover/item:text-white transition-colors">
                       WiDiB
@@ -153,9 +175,9 @@ export default function Navigation() {
                   href="/community-ambassadors-program"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
                 >
-                  <div className="bg-orange-50 dark:bg-orange-900/20 text-secondary dark:text-orange-400 p-2 rounded-lg group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
+                  {/* <div className="bg-orange-50 dark:bg-orange-900/20 text-secondary dark:text-orange-400 p-2 rounded-lg group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
                     <span className="material-symbols-outlined">campaign</span>
-                  </div>
+                  </div> */}
                   <div>
                     <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-secondary dark:group-hover/item:text-white transition-colors">
                       Ambassadors
@@ -211,14 +233,22 @@ export default function Navigation() {
       </div>
       {/* About Mega Menu */}
       <div className="group relative">
-        <button className={cn(
+        <button
+          type="button"
+          aria-expanded={aboutMenuOpen}
+          aria-haspopup="true"
+          onClick={() => setAboutMenuOpen((prev) => !prev)}
+          className={cn(
           "flex items-center gap-1 text-sm font-medium transition-colors py-6 hover:text-secondary",
            isActive("/about") || isActive("/mission") || isActive("/team") || isActive("/philosophy") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
         )}>
           About
           <span className="material-symbols-outlined text-lg">expand_more</span>
         </button>
-        <div className="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 p-2 z-50">
+        <div className={cn(
+          "mega-menu absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 focus-within:opacity-100 focus-within:visible focus-within:translate-y-0 transition-all duration-200 ease-out bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 p-2 z-50",
+          aboutMenuOpen && "opacity-100 visible translate-y-0"
+        )}>
           <Link
             href="/about"
             className="block px-4 py-2 text-sm text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary rounded-lg"

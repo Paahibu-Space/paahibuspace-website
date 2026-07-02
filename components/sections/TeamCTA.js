@@ -2,9 +2,10 @@ import Button from "@/components/ui/Button";
 
 export default function TeamCTA() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-primary text-white relative overflow-hidden">
+    <section className="py-24 px-6 md:px-12 bg-primary dark:bg-background-dark text-white relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
+        aria-hidden="true"
         style={{
           backgroundImage:
             "url('/assets/images/women-empowerment.png')",

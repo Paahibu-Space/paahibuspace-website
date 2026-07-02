@@ -34,10 +34,10 @@ export default function HeroSlider() {
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {/* Slide 1 - From HeroSectionOne.js */}
-        <section className="w-full shrink-0 flex items-center pt-12 pb-20 lg:pt-24 lg:pb-32 relative">
+        <section className="w-full shrink-0 flex items-center pt-12 pb-20 lg:pt-24 lg:pb-32 relative" aria-hidden={currentSlide !== 0}>
           <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-              <div className="flex flex-col gap-6 max-w-2xl">
+              <div className="flex flex-col gap-6 max-w-2xl animate-fade-up">
                 <div className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 dark:bg-primary/20 px-3 py-1 text-xs font-semibold text-primary dark:text-blue-300">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -45,19 +45,27 @@ export default function HeroSlider() {
                   </span>
                   Accepting New Cohort Applications
                 </div>
-                <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
-                  Hey sis, you belong in tech too.
-                </h1>
+                {currentSlide === 0 ? (
+                  <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
+                    Hey sis, you belong in tech too.
+                  </h1>
+                ) : (
+                  <h2 className="text-5xl font-black leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
+                    Hey sis, you belong in tech too.
+                  </h2>
+                )}
                 <p className="text-lg leading-relaxed text-neutral-gray dark:text-gray-300 max-w-lg">
                   Empowering African women and youth through technology and entrepreneurship. We are bridging the gender gap by providing safe spaces, education, and mentorship.
                 </p>
                 <div className="flex flex-wrap items-center gap-4 pt-4">
                   <Link href="/programs"
+                    tabIndex={currentSlide !== 0 ? -1 : undefined}
                     className="rounded-full bg-primary px-8 py-3.5 text-base font-bold text-white hover:bg-blue-900 hover:-translate-y-0.5 transition-all">
-                    Explore Programs
+                    See Our Programs
                   </Link>
                   <button
                     onClick={() => setIsVideoOpen(true)}
+                    tabIndex={currentSlide !== 0 ? -1 : undefined}
                     className="flex items-center gap-2 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-3.5 text-base font-semibold text-neutral-dark dark:text-white hover:border-primary/30 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
                     <span className="material-symbols-outlined text-accent filled">play_circle</span>
                     Watch Our Story
@@ -67,6 +75,8 @@ export default function HeroSlider() {
               <div className="relative lg:h-full w-full flex items-center justify-center">
                 <div className="relative w-full aspect-[4/3] lg:aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 rotate-2 hover:rotate-0 transition-transform duration-500">
                   <div className="absolute inset-0 bg-cover bg-center"
+                    role="img"
+                    aria-label="Hiqmat leading a hands-on tech training session"
                     style={{ backgroundImage: "url('/assets/images/hero/hiqmat-in-action.webp')" }}>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60">
@@ -93,7 +103,7 @@ export default function HeroSlider() {
 
 
         {/* Slide 2 - From HeroSectionTwo.js */}
-        <section className="w-full shrink-0 flex items-center py-8 lg:py-16 relative">
+        <section className="w-full shrink-0 flex items-center py-8 lg:py-16 relative" aria-hidden={currentSlide !== 1}>
              <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 lg:gap-8 items-center">
               <div className="w-full lg:w-3/5 flex flex-col gap-8 lg:pr-12 z-10">
                 <div className="flex flex-col gap-4">
@@ -101,14 +111,21 @@ export default function HeroSlider() {
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                     New Cohort Open
                   </span>
-                  <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
-                    Hey Sis,<br />
-                    You Belong in Tech Too
-                  </h1>
-                  <h2 className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-normal leading-relaxed max-w-xl">
+                  {currentSlide === 1 ? (
+                    <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
+                      Hey Sis,<br />
+                      You Belong in Tech Too
+                    </h1>
+                  ) : (
+                    <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
+                      Hey Sis,<br />
+                      You Belong in Tech Too
+                    </h2>
+                  )}
+                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-normal leading-relaxed max-w-xl">
                     Empowering African women with the skills, mentorship, and community needed to thrive in the global
                     technology ecosystem. We&apos;re building the future, one line of code at a time.
-                  </h2>
+                  </p>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 py-4 border-y border-gray-100 dark:border-gray-800">
                   <div className="flex flex-col gap-1">
@@ -126,11 +143,13 @@ export default function HeroSlider() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Link href="/programs"
+                    tabIndex={currentSlide !== 1 ? -1 : undefined}
                     className="flex items-center justify-center h-12 px-8 rounded-lg bg-primary hover:bg-blue-900 text-white font-bold transition-all group">
-                    <span>Explore Our Programs</span>
+                    <span>Join the New Cohort</span>
                     <span className="material-symbols-outlined ml-2 text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </Link>
                   <Link href="/stories"
+                    tabIndex={currentSlide !== 1 ? -1 : undefined}
                     className="flex items-center justify-center h-12 px-8 rounded-lg border-2 border-primary dark:border-blue-400 hover:bg-primary hover:text-white text-primary dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-900/30 font-bold transition-all bg-transparent">
                     <span>Read Impact Stories</span>
                     <span className="material-symbols-outlined ml-2 text-lg">favorite</span>
@@ -147,6 +166,8 @@ export default function HeroSlider() {
                   </div>
                   <div className="absolute inset-0 z-20 overflow-hidden rounded-2xl bg-gray-200 dark:bg-gray-800 group">
                     <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                      role="img"
+                      aria-label="Community members at a Creatives Meetup in Wa, Upper West Region, Ghana"
                       style={{ backgroundImage: "url('https://updates.paahibuspace.org/assets/frontend/images/female-in-tech.png')" }}>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -177,31 +198,39 @@ export default function HeroSlider() {
       </div>
 
        {/* Slider Controls */}
-       <button 
+       <button
         onClick={prevSlide}
+        aria-label="Previous slide"
         className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all z-40 hidden md:flex"
       >
-        <span className="material-symbols-outlined">chevron_left</span>
+        <span className="material-symbols-outlined" aria-hidden="true">chevron_left</span>
       </button>
 
-      <button 
+      <button
         onClick={nextSlide}
+        aria-label="Next slide"
         className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all z-40 hidden md:flex"
       >
-        <span className="material-symbols-outlined">chevron_right</span>
+        <span className="material-symbols-outlined" aria-hidden="true">chevron_right</span>
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-40">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1 z-40">
         {[...Array(totalSlides)].map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrentSlide(i)}
-            className={cn(
-              "w-2.5 h-2.5 rounded-full transition-all",
-              currentSlide === i ? "bg-primary w-8" : "bg-gray-300 dark:bg-gray-600 hover:bg-primary/50"
-            )}
-          />
+            aria-label={`Go to slide ${i + 1}`}
+            aria-current={currentSlide === i ? "true" : undefined}
+            className="w-9 h-9 flex items-center justify-center"
+          >
+            <span
+              className={cn(
+                "block h-2.5 rounded-full transition-all",
+                currentSlide === i ? "bg-primary w-8" : "bg-gray-300 dark:bg-gray-600 hover:bg-primary/50 w-2.5"
+              )}
+            />
+          </button>
         ))}
       </div>
 
@@ -211,11 +240,12 @@ export default function HeroSlider() {
       {isVideoOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
           <div className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden aspect-video">
-            <button 
+            <button
               onClick={() => setIsVideoOpen(false)}
+              aria-label="Close video"
               className="absolute top-4 right-4 text-white hover:text-gray-300 z-10 bg-black/50 rounded-full p-2 transition-colors"
             >
-              <span className="material-symbols-outlined text-2xl">close</span>
+              <span className="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
             </button>
             <iframe 
               width="100%" 

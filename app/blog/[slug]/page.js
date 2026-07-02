@@ -23,8 +23,32 @@ export async function generateStaticParams() {
    }
 }
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const post = await fetchAPI(`/api/v1/blog/${slug}`);
+
+  if (!post || post.error) {
+    return { title: "Post Not Found" };
+  }
+
+  const title = post.title || "Blog Post";
+  const description = post.excerpt || post.summary || "Read the latest from the Paahibu Space blog.";
+  const image = post.featured_image_url || post.image;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      images: image ? [{ url: image }] : undefined,
+    },
+  };
+}
+
 export default async function BlogDetailPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const post = await fetchAPI(`/api/v1/blog/${slug}`);
 
   if (!post || post.error) {

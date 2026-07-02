@@ -3,6 +3,11 @@ import ProgramsGrid from "@/components/sections/ProgramsGrid";
 import RegionalImpact from "@/components/sections/RegionalImpact";
 import ProgramsCTA from "@/components/sections/ProgramsCTA";
 
+export const metadata = {
+  title: "Our Programs",
+  description: "Explore Paahibu Space's programs — TechsiStars, WiDEI, GROW, WiDiB, and the Community Ambassadors Program — designed to break barriers for women and girls in tech.",
+};
+
 export default function ProgramsPage() {
   return (
     <>

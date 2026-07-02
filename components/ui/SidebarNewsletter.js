@@ -57,7 +57,8 @@ export default function SidebarNewsletter() {
       </p>
       <form className="flex flex-col gap-3" onSubmit={handleSubscribe}>
         <input
-          className="w-full rounded-lg bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder-blue-200 focus:bg-white/20 focus:border-white/50 focus:outline-none focus:ring-0 disabled:opacity-50"
+          aria-label="Email address"
+          className="w-full rounded-lg bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder-blue-200 focus:bg-white/20 focus:border-white/50 focus:outline-none focus:ring-2 focus:ring-secondary disabled:opacity-50"
           placeholder="Your email address"
           type="email"
           required

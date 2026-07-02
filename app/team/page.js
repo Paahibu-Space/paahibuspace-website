@@ -6,6 +6,11 @@ import CommunityAmbassadors from "@/components/sections/CommunityAmbassadors";
 import TeamCTA from "@/components/sections/TeamCTA";
 import { fetchAPI } from "@/lib/api";
 
+export const metadata = {
+  title: "Our Team",
+  description: "Meet the leadership team, advisory board, and community ambassadors driving Paahibu Space's mission across Africa.",
+};
+
 export default async function TeamPage() {
   const team = await fetchAPI("/api/v1/team") || [];
   

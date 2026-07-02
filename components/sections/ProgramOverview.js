@@ -8,7 +8,7 @@ export default function ProgramOverview({ title, description, image, features })
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
+            <span className="text-secondary-dark dark:text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
               Overview
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-dark dark:text-white mb-6">

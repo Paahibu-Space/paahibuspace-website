@@ -46,10 +46,20 @@ export default function LeadershipTeam({ members = [] }) {
                   {leader.role}
                 </p>
                 <div className="flex gap-3 mt-4 translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 delay-100">
-                  <a className="text-white hover:text-secondary dark:hover:text-secondary" href={leader.linkedin_url || "#"} target="_blank" rel="noopener noreferrer">
+                  <a
+                    className="text-white hover:text-secondary dark:hover:text-secondary"
+                    href={leader.linkedin_url || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${leader.name}'s LinkedIn profile`}
+                  >
                     <LinkedInIcon className="w-5 h-5" />
                   </a>
-                  <a className="text-white hover:text-secondary dark:hover:text-secondary" href={`mailto:${leader.email || ""}`}>
+                  <a
+                    className="text-white hover:text-secondary dark:hover:text-secondary"
+                    href={`mailto:${leader.email || ""}`}
+                    aria-label={`Email ${leader.name}`}
+                  >
                     <span className="material-symbols-outlined text-sm">mail</span>
                   </a>
                 </div>

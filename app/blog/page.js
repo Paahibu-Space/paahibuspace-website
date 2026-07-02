@@ -4,6 +4,11 @@ import { fetchAPI } from "@/lib/api";
 import SidebarNewsletter from "@/components/ui/SidebarNewsletter";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Blog",
+  description: "Insights, updates, and stories on women in tech, digital skills, and entrepreneurship from the Paahibu Space team.",
+};
+
 export default async function BlogListingPage() {
   const blogPosts = await fetchAPI("/api/v1/blog") || [];
   

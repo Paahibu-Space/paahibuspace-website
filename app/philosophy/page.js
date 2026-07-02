@@ -3,6 +3,11 @@ import PhilosophyValues from "@/components/sections/PhilosophyValues";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Our Philosophy",
+  description: "The values and beliefs that guide Paahibu Space as we build pathways for African women and girls into technology, entrepreneurship, and leadership.",
+};
+
 export default function PhilosophyPage() {
   return (
     <>

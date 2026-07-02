@@ -1,16 +1,17 @@
+import Image from "next/image";
+
 export default function Story() {
   return (
     <section className="w-full px-4 py-16 md:px-20 lg:px-40 bg-white dark:bg-background-dark">
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-12 items-center">
         <div className="w-full md:w-1/2 aspect-[4/3] rounded-2xl overflow-hidden relative">
-          <div
-            className="w-full h-full bg-cover bg-center"
-            data-alt="Close up of a young African woman smiling while coding"
-            style={{
-              backgroundImage:
-                'url("/assets/images/youthled.png")',
-            }}
-          ></div>
+          <Image
+            alt="Close up of a young African woman smiling while coding"
+            src="/assets/images/youthled.png"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
           <div className="absolute bottom-4 right-4 bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-2xl backdrop-blur-sm">
             <span className="text-primary dark:text-secondary text-xs font-bold tracking-widest uppercase">
               Our Roots

@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Get Involved",
+  description: "Join the Paahibu Space community as a mentor, volunteer, partner, or ambassador and help expand access to tech opportunities for African women.",
+};
+
 export default function InvolvePage() {
   return (
     <>

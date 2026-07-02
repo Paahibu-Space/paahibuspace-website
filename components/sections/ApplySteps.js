@@ -6,13 +6,19 @@ export default function ApplySteps({ steps }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-display font-bold text-primary dark:text-white mb-8">
+            <h2 className="text-3xl font-display font-bold text-primary dark:text-white mb-8 animate-fade-up">
               How to Apply
             </h2>
-            <div className="space-y-8">
+            <div className="relative">
               {steps.map((step, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                <div key={index} className="relative flex gap-4 pb-8 last:pb-0 animate-fade-up">
+                  {index < steps.length - 1 && (
+                    <span
+                      className="absolute left-4 top-8 -ml-px h-[calc(100%-2rem)] w-0.5 bg-primary/20 dark:bg-primary/30"
+                      aria-hidden="true"
+                    ></span>
+                  )}
+                  <div className="relative flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">
                     {index + 1}
                   </div>
                   <div>
@@ -37,11 +43,11 @@ export default function ApplySteps({ steps }) {
             </p>
             <div className="space-y-4">
               <div className="flex justify-between items-center text-sm">
-                <span className="text-gray-500">Application Deadline:</span>
+                <span className="text-gray-500 dark:text-gray-400">Application Deadline:</span>
                 <span className="font-bold text-secondary">Aug 30, 2024</span>
               </div>
               <div className="flex justify-between items-center text-sm">
-                 <span className="text-gray-500">Program Start:</span>
+                 <span className="text-gray-500 dark:text-gray-400">Program Start:</span>
                  <span className="font-bold text-secondary">Sept 15, 2024</span>
               </div>
             </div>
@@ -52,7 +58,7 @@ export default function ApplySteps({ steps }) {
                 Apply Now
             </Button>
             <p className="text-xs text-center text-gray-400 mt-4">
-                Have questions? <a href="#" className="text-primary hover:underline">Contact admissions</a>
+                Have questions about eligibility or the process? <a href="#" className="text-primary dark:text-blue-400 hover:underline">Talk to our admissions team</a>
             </p>
           </div>
         </div>

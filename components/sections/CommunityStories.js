@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const defaultStories = [
@@ -42,9 +43,10 @@ export default function CommunityStories({ stories = defaultStories }) {
   // Ensure we have at least defaults if empty array passed
   const displayStories = stories && stories.length > 0 ? stories.map(s => ({
       ...s,
-      thumbnail: s.thumbnail || s.image_url, 
+      image_url: s.image_url || s.image,
+      thumbnail: s.thumbnail || s.image_url || s.image,
       cohort: s.cohort || s.type || "Community Member"
-  })) : defaultStories;
+  })) : defaultStories.map(s => ({ ...s, image_url: s.image }));
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -84,11 +86,11 @@ export default function CommunityStories({ stories = defaultStories }) {
   return (
     <section className="py-24 bg-background-light dark:bg-background-dark/50 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="mb-10 lg:mb-16">
+        <div className="mb-10 lg:mb-16 animate-fade-up">
           <span className="text-primary dark:text-gray-200 font-bold text-sm tracking-widest uppercase mb-2 block">Community Stories</span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-gray-900 dark:text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-gray-900 dark:text-white leading-tight">
             Voices of Paahibu
-          </h1>
+          </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
             Real stories from African women in technology who are redefining their careers and shaping the future.
           </p>
@@ -102,9 +104,14 @@ export default function CommunityStories({ stories = defaultStories }) {
               <div className="relative z-10 flex flex-col md:flex-row gap-8 md:gap-10 items-center md:items-start text-center md:text-left transition-opacity duration-500 ease-in-out">
                 <div className="shrink-0">
                   <div className="size-[120px] rounded-full p-1 bg-gradient-to-br from-primary/30 to-transparent">
-                    <div className="w-full h-full rounded-full bg-cover bg-center border-4 border-white dark:border-gray-800"
-                      data-alt={`Portrait of ${activeStory.name}`}
-                      style={{ backgroundImage: `url('${activeStory.image_url}')` }}>
+                    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800">
+                      <Image
+                        src={activeStory.image_url}
+                        alt={`Portrait of ${activeStory.name}`}
+                        fill
+                        className="object-cover"
+                        sizes="120px"
+                      />
                     </div>
                   </div>
                 </div>
@@ -131,29 +138,37 @@ export default function CommunityStories({ stories = defaultStories }) {
               </div>
             </div>
             <div className="flex lg:hidden justify-between items-center mt-6 px-2">
-              <button 
+              <button
                 onClick={() => handleManualChange((activeIndex - 1 + displayStories.length) % displayStories.length)}
+                aria-label="Previous story"
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors"
                 >
-                <span className="material-symbols-outlined">arrow_back</span>
+                <span className="material-symbols-outlined" aria-hidden="true">arrow_back</span>
               </button>
-              <div className="flex gap-2">
+              <div className="flex gap-1">
                 {displayStories.map((_, idx) => (
                     <button
                         key={idx}
                         onClick={() => handleManualChange(idx)}
-                        className={cn(
-                        "w-2 h-2 rounded-full transition-colors",
-                         activeIndex === idx ? "bg-primary dark:bg-white" : "bg-gray-300 dark:bg-gray-700"
-                        )}
-                    />
+                        aria-label={`Go to story ${idx + 1}`}
+                        aria-current={activeIndex === idx ? "true" : undefined}
+                        className="w-8 h-8 flex items-center justify-center"
+                    >
+                      <span
+                          className={cn(
+                          "block w-2 h-2 rounded-full transition-colors",
+                           activeIndex === idx ? "bg-primary dark:bg-white" : "bg-gray-300 dark:bg-gray-700"
+                          )}
+                      />
+                    </button>
                 ))}
               </div>
-              <button 
+              <button
                 onClick={() => handleManualChange((activeIndex + 1) % displayStories.length)}
+                aria-label="Next story"
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors"
                >
-                <span className="material-symbols-outlined">arrow_forward</span>
+                <span className="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
               </button>
             </div>
           </div>
@@ -165,11 +180,12 @@ export default function CommunityStories({ stories = defaultStories }) {
             >
               <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
                 <h3 className="font-heading font-bold text-gray-900 dark:text-white">More Stories</h3>
-                <button 
+                <button
                     onClick={() => setIsPaused(!isPaused)}
+                    aria-label={isPaused ? "Resume autoplay" : "Pause autoplay"}
                     className="flex gap-1 hover:text-primary dark:hover:text-white transition-colors"
                 >
-                  <span className="material-symbols-outlined text-gray-400 dark:text-gray-500 text-sm">
+                  <span className="material-symbols-outlined text-gray-400 dark:text-gray-500 text-sm" aria-hidden="true">
                       {isPaused ? 'play_circle' : 'pause_circle'}
                   </span>
                 </button>

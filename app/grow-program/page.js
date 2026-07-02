@@ -6,6 +6,11 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
 
+export const metadata = {
+  title: "GROW Incubator Program",
+  description: "The GROW Incubator equips aspiring African women founders with the mentorship, funding pathways, and business skills to launch and scale their ventures.",
+};
+
 export default async function GrowProgramPage() {
   // Fetch programs and find GROW
   const programs = (await fetchAPI("/api/v1/programs")) || [];
@@ -93,10 +98,10 @@ export default async function GrowProgramPage() {
                 creativity and collaboration for women in Ghana.
               </p>
               <p className="text-navy/70 dark:text-gray-300 text-lg leading-relaxed">
-                It also addresses systemic barriers to women's economic
+                It also addresses systemic barriers to women&apos;s economic
                 participation through research, advocacy on gender-responsive
                 policies and participating in national and global policy
-                discussions, campaigns on women's empowerment and safety.
+                discussions, campaigns on women&apos;s empowerment and safety.
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-sm border border-navy/5 dark:border-white/10 relative">
@@ -182,7 +187,7 @@ export default async function GrowProgramPage() {
                 Equipping women with the tools, skills and support they need to
                 thrive personally and in business. From workshops and mentorship
                 to business support resources, GROW nurtures creativity,
-                confidence and capability at every stage of a woman's
+                confidence and capability at every stage of a woman&apos;s
                 professional journey.
               </p>
             </div>
@@ -200,7 +205,7 @@ export default async function GrowProgramPage() {
                 Challenging the systemic barriers that hold women back from full
                 economic participation. Through research, campaigns and active
                 engagement in national and global policy discussions, GROW
-                champions gender-responsive policies and amplifies women's
+                champions gender-responsive policies and amplifies women&apos;s
                 voices where decisions are made.
               </p>
             </div>

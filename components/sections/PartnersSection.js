@@ -11,9 +11,9 @@ export default async function PartnersSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col items-center text-center max-w-[800px] mx-auto mb-10">
               <h2 className="text-primary dark:text-indigo-400 text-sm font-bold uppercase tracking-wider mb-3">Our Network</h2>
-              <h1 className="text-[#161019] dark:text-white text-3xl md:text-4xl font-extrabold leading-tight tracking-[-0.015em] px-4 pb-4">
+              <h2 className="text-[#161019] dark:text-white text-3xl md:text-4xl font-extrabold leading-tight tracking-[-0.015em] px-4 pb-4">
                 Trusted By Leading Organizations
-              </h1>
+              </h2>
               <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed max-w-[600px]">
                 Together with our partners, we are redefining the future of technology for women across Africa through education, mentorship, and opportunity.
               </p>

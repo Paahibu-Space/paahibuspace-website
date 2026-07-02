@@ -16,8 +16,32 @@ export async function generateStaticParams() {
    }
 }
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const story = await fetchAPI(`/api/v1/stories/${slug}`);
+
+  if (!story || story.error) {
+    return { title: "Story Not Found" };
+  }
+
+  const title = story.title || story.name || "Story";
+  const description = story.excerpt || story.summary || "Read this story from the Paahibu Space community.";
+  const image = story.image || story.image_url;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      images: image ? [{ url: image }] : undefined,
+    },
+  };
+}
+
 export default async function StoryPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const story = await fetchAPI(`/api/v1/stories/${slug}`);
 
   if (!story || story.error) {

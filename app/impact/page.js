@@ -3,6 +3,11 @@ import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
 import StoriesGrid from "@/components/sections/StoriesGrid";
 
+export const metadata = {
+  title: "Our Impact",
+  description: "See the measurable impact Paahibu Space has made — women and girls trained, MSMEs supported, and communities reached across Africa.",
+};
+
 export default async function ImpactPage() {
   // Fetch stories and reports in parallel
   const [spotlights, reports] = await Promise.all([

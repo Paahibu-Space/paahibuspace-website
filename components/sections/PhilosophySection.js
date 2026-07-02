@@ -2,7 +2,7 @@ export default function PhilosophySection() {
   return (
     <section className="py-24 bg-background-light dark:bg-background-dark/50 transition-colors" id="philosophy">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-16 md:text-center max-w-3xl mx-auto">
+        <div className="mb-16 md:text-center max-w-3xl mx-auto animate-fade-up">
           <h2 className="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Our Philosophy</h2>
           <h3 className="text-3xl font-black text-neutral-dark dark:text-white sm:text-4xl">Holistic Growth Pillars</h3>
           <p className="mt-4 text-lg text-neutral-gray dark:text-gray-400">We believe that technical skills alone aren&apos;t enough. Our approach nurtures the whole person through three core pillars.</p>

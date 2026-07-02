@@ -3,6 +3,11 @@ import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
 import ProgramCTA from "@/components/ui/ProgramCTA";
 
+export const metadata = {
+  title: "WiDEI Program",
+  description: "WiDEI (Women in Digital Equity & Inclusion) bridges the digital gap for women and girls, building access, literacy, and confidence in technology.",
+};
+
 export default async function WideiProgramPage() {
   const programs = await fetchAPI("/api/v1/programs") || [];
   const wideiProgram = programs.find(p => p.name.includes("WiDEI")) || { 
