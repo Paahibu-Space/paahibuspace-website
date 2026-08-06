@@ -87,7 +87,7 @@ export default function Navigation() {
           onClick={() => setProgramsMenuOpen((prev) => !prev)}
           className={cn(
           "flex items-center gap-1 text-sm font-medium transition-colors py-6 hover:text-secondary",
-           isActive("/programs") || isActive("/techsistars-program") || isActive("/grow-program") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
+           isActive("/programs") || isActive("/techsistars-program") || isActive("/grow-program") || isActive("/widei-program") || isActive("/widib-program") || isActive("/community-ambassadors-program") || isActive("/digital-walansi-program") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
         )}>
           Programs
           <span className="material-symbols-outlined text-lg">expand_more</span>
@@ -131,6 +131,19 @@ export default function Navigation() {
                     </div>
                     <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
                       Bridging the Digital Gap
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/digital-walansi-program"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group/item"
+                >
+                  <div>
+                    <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-secondary dark:group-hover/item:text-white transition-colors">
+                      Digital Walansi
+                    </div>
+                    <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
+                      Digital Safety & Media Literacy
                     </div>
                   </div>
                 </Link>

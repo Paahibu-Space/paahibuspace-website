@@ -97,7 +97,7 @@ export default function CommunityStories({ stories = defaultStories }) {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-8 flex flex-col">
-            <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 overflow-hidden group">
+            <div className="relative border border-gray-200 dark:bg-gray-800 dark:border-gray-800 p-8 md:p-12 overflow-hidden group">
               <div className="absolute top-8 left-8 md:top-12 md:left-12 opacity-10 pointer-events-none">
                 <span className="material-symbols-outlined text-[120px] md:text-[180px] text-primary dark:text-gray-600 leading-none">format_quote</span>
               </div>
@@ -174,7 +174,7 @@ export default function CommunityStories({ stories = defaultStories }) {
           </div>
           <div className="hidden lg:flex lg:col-span-4 flex-col h-full">
             <div 
-                className="bg-white dark:bg-gray-800 rounded-2xl p-4"
+                className="border border-gray-200 dark:border-gray-800 p-4"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >

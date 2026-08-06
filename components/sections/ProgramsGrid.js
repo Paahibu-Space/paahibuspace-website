@@ -44,6 +44,16 @@ const programs = [
     color: "blue-500",
     link: "/community-ambassadors-program",
   },
+  {
+    title: "Digital Walansi",
+    description:
+      "Training young women as Digital Walansi Fellows to carry digital safety, media literacy, and civic rights education into schools and communities across the Upper West Region.",
+    icon: "shield_person",
+    color: "red-500",
+    location: "Upper West Region",
+    timing: "3-Month Deployment",
+    link: "/digital-walansi-program",
+  },
 ];
 
 export default function ProgramsGrid() {

@@ -28,7 +28,7 @@ export default async function ImpactSection() {
               ))}
             </div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 transition-colors">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 transition-colors">
             <div className="flex items-center gap-4 mb-6">
               <div className="relative h-16 w-16 rounded-full overflow-hidden border-2 border-primary/10 dark:border-white/10">
                 <Image

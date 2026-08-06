@@ -48,8 +48,17 @@ export default function ProgramsShowcase() {
     p.name.includes("Skills2Work"),
   ) || { id: 102, name: "Skills2Work", is_application_open: false };
 
+  const digitalWalansiProgram = programs.find(
+    (p) => p.slug === "digital-walansi" || p.name.includes("Digital Walansi"),
+  ) || {
+    id: 103,
+    name: "Digital Walansi",
+    slug: "digital-walansi",
+    is_application_open: false,
+  };
+
   return (
-    <section className="py-20 lg:py-28 bg-[#f9f9fb] dark:bg-background-dark/50 transition-colors">
+    <section className="lg:py-28 bg-[#f9f9fb] dark:bg-background-dark/50 transition-colors">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <span className="text-secondary font-bold tracking-wider uppercase text-sm">
@@ -65,7 +74,7 @@ export default function ProgramsShowcase() {
         </div>
 
         {/* Featured Program: GROW */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden mb-12 flex flex-col lg:flex-row">
+        <div className="dark:bg-gray-800 rounded-2xl overflow-hidden mb-12 flex flex-col lg:flex-row">
           <div className="lg:w-2/5 h-64 lg:h-auto relative">
             <Image
               alt="Professional women in a meeting"
@@ -77,9 +86,6 @@ export default function ProgramsShowcase() {
             <div className="absolute inset-0 bg-primary/10"></div>
           </div>
           <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-            <div className="bg-secondary/10 dark:bg-secondary/20 text-secondary font-bold text-xs px-3 py-1 rounded-full w-fit mb-4">
-              Featured Program
-            </div>
             <h3 className="font-display font-bold text-3xl text-primary dark:text-white mb-2">
               {growProgram.name}
             </h3>
@@ -95,21 +101,15 @@ export default function ProgramsShowcase() {
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-secondary text-lg">
-                    check_circle
-                  </span>
+
                   <span>Build a digital support network for women.</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-secondary text-lg">
-                    check_circle
-                  </span>
+
                   <span>Turn everyday spaces into learning hubs.</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-secondary text-lg">
-                    check_circle
-                  </span>
+
                   <span>Create safe spaces for discussion and connection.</span>
                 </li>
               </ul>
@@ -130,6 +130,70 @@ export default function ProgramsShowcase() {
               />
               <Link
                 href="/grow-program"
+                className="border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary px-6 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Program: Digital Walansi */}
+        <div className="dark:bg-gray-800 rounded-2xl overflow-hidden mb-12 flex flex-col lg:flex-row-reverse py-20">
+          <div className="lg:w-2/5 h-64 lg:h-auto relative">
+            <Image
+              alt="Digital Walansi Fellow leading a community session in northern Ghana"
+              className="object-cover"
+              src="/assets/images/commitment.png"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+            <div className="absolute inset-0 bg-primary/10"></div>
+          </div>
+          <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
+            <h3 className="font-display font-bold text-3xl text-primary dark:text-white mb-2">
+              {digitalWalansiProgram.name}
+            </h3>
+            <p className="text-gray-500 dark:text-gray-400 mb-6 font-medium">
+              Digital Safety & Media Literacy, Upper West Region
+            </p>
+            <div className="text-gray-600 dark:text-gray-300 mb-8 space-y-4">
+              <p>
+                Training young women as Digital Walansi Fellows to carry digital
+                safety, media literacy, and civic rights education into schools
+                and communities across the Upper West Region of Ghana.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-3">
+
+                  <span>30 Fellows trained and deployed to 5 partner schools.</span>
+                </li>
+                <li className="flex items-center gap-3">
+
+                  <span>Student-led Digital Walansi Clubs and safety Corners.</span>
+                </li>
+                <li className="flex items-center gap-3">
+
+                  <span>2,000+ girls and young women reached.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="flex gap-4">
+              <ProgramCTA
+                program={digitalWalansiProgram}
+                labelOpen="Apply Now"
+                labelClosed={
+                  <>
+                    Join Waitlist{" "}
+                    <span className="material-symbols-outlined text-sm ml-2">
+                      notifications
+                    </span>
+                  </>
+                }
+                className="bg-secondary hover:bg-orange-600 text-white px-6 py-3"
+              />
+              <Link
+                href="/digital-walansi-program"
                 className="border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary px-6 py-3 rounded-lg font-semibold transition-colors"
               >
                 Learn More
@@ -213,7 +277,7 @@ STEM and entrepreneurship."
                 return (
                   <div
                     key={program.id}
-                    className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 transition-all hover:-translate-y-1"
+                    className="group flex flex-col justify-between overflow-hidden border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 transition-all hover:-translate-y-1"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-6">
@@ -234,9 +298,6 @@ STEM and entrepreneurship."
                           "Join our comprehensive program designed to empower the next generation of tech leaders."}
                       </p>
                       <div className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-8">
-                        <span className="material-symbols-outlined text-secondary text-lg">
-                          calendar_today
-                        </span>
                         Starts: {startDate}
                       </div>
                     </div>
@@ -263,8 +324,8 @@ function ProgramCard({ program, title, sub, desc, icon, link }) {
   const open = isApplicationAccessible(program);
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl hover:scale-[1.02] transition-all duration-300 flex flex-col h-full">
-      <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 rounded-lg flex items-center justify-center text-secondary mb-6">
+    <div className="border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 hover:scale-[1.02] transition-all duration-300 flex flex-col h-full">
+      <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-primary mb-6">
         <span className="material-symbols-outlined text-3xl">{icon}</span>
       </div>
       <div className="flex items-center justify-between mb-3">

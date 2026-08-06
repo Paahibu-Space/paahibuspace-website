@@ -116,7 +116,7 @@ export default function PhilosophyValues() {
               <div
                 key={index}
                 className={cn(
-                  "bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300",
+                  "bg-white dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300",
                   activeIndex === index ? "shadow-md ring-1 ring-primary/20" : "hover:shadow-md"
                 )}
               >

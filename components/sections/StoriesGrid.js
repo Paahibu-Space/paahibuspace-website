@@ -53,7 +53,7 @@ export default function StoriesGrid({ initialStories = [] }) {
             return (
               <article
                 key={index}
-                className="group flex flex-col bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden  hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="relative aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
                   <div className="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors z-10"></div>

@@ -6,10 +6,7 @@ export default function HeroSectionTwo() {
     <section className="hero-slider-2 flex flex-col lg:flex-row max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-16 gap-12 lg:gap-8 items-center overflow-hidden">
       <div className="w-full lg:w-3/5 flex flex-col gap-8 lg:pr-12 z-10">
         <div className="flex flex-col gap-4">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 text-xs font-bold uppercase tracking-wider w-fit">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            New Cohort Open
-          </span>
+
           <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
             Hey Sis,<br />
             <span className="text-primary dark:text-blue-400">You Belong in Tech Too</span>

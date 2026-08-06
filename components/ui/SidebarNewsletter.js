@@ -47,7 +47,7 @@ export default function SidebarNewsletter() {
   };
 
   return (
-    <div className="rounded-xl bg-primary p-6 text-white shadow-lg">
+    <div className="bg-primary p-6 text-white shadow-lg">
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
         <span className="material-symbols-outlined text-2xl">mail</span>
       </div>

@@ -8,22 +8,22 @@ export default function PhilosophySection() {
           <p className="mt-4 text-lg text-neutral-gray dark:text-gray-400">We believe that technical skills alone aren&apos;t enough. Our approach nurtures the whole person through three core pillars.</p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="group relative rounded-2xl bg-white dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
-            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 group-hover:bg-green-600 group-hover:text-white transition-colors">
+          <div className="group relative border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
+            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
               <span className="material-symbols-outlined" style={{ fontSize: '32px' }}>favorite</span>
             </div>
             <h4 className="mb-3 text-xl font-bold text-neutral-dark dark:text-white">Safe Space</h4>
             <p className="text-neutral-gray dark:text-gray-400 leading-relaxed">Creating psychological safety where failing is part of learning and questions are always encouraged.</p>
           </div>
-          <div className="group relative rounded-2xl bg-white dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
+          <div className="group relative border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
             <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
               <span className="material-symbols-outlined" style={{ fontSize: '32px' }}>terminal</span>
             </div>
             <h4 className="mb-3 text-xl font-bold text-neutral-dark dark:text-white">Skill Building</h4>
             <p className="text-neutral-gray dark:text-gray-400 leading-relaxed">Practical, hands-on technical training in coding, design, and data science tailored for market needs.</p>
           </div>
-          <div className="group relative rounded-2xl bg-white dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
-            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 dark:bg-orange-900/20 text-secondary dark:text-orange-400 group-hover:bg-secondary group-hover:text-white transition-colors">
+          <div className="group relative border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
+            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
               <span className="material-symbols-outlined" style={{ fontSize: '32px' }}>groups</span>
             </div>
             <h4 className="mb-3 text-xl font-bold text-neutral-dark dark:text-white">Community First</h4>

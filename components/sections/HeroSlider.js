@@ -38,13 +38,7 @@ export default function HeroSlider() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8 items-center">
               <div className="flex flex-col gap-6 max-w-2xl animate-fade-up">
-                <div className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 dark:bg-primary/20 px-3 py-1 text-xs font-semibold text-primary dark:text-blue-300">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                  </span>
-                  Accepting New Cohort Applications
-                </div>
+   
                 {currentSlide === 0 ? (
                   <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
                     Hey sis, you belong in tech too.
@@ -81,17 +75,7 @@ export default function HeroSlider() {
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60">
                   </div>
-                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-4 rounded-2xl">
-                    <div className="flex items-center gap-4">
-                      <div className="bg-accent/10 p-2 rounded-full text-accent">
-                        <span className="material-symbols-outlined filled">code</span>
-                      </div>
-                      <div>
-                        <p className="text-xs text-neutral-gray font-medium uppercase tracking-wider">Featured Program</p>
-                        <p className="text-sm font-bold text-primary">GROW in Action</p>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
                 <div className="absolute -top-12 -right-12 h-64 w-64 rounded-full bg-accent/10 blur-3xl -z-10"></div>
                 <div className="absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-primary/10 blur-3xl -z-10"></div>
@@ -107,10 +91,7 @@ export default function HeroSlider() {
              <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 lg:gap-8 items-center">
               <div className="w-full lg:w-3/5 flex flex-col gap-8 lg:pr-12 z-10">
                 <div className="flex flex-col gap-4">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 text-xs font-bold uppercase tracking-wider w-fit">
-                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                    New Cohort Open
-                  </span>
+
                   {currentSlide === 1 ? (
                     <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
                       Hey Sis,<br />
@@ -151,8 +132,7 @@ export default function HeroSlider() {
                   <Link href="/stories"
                     tabIndex={currentSlide !== 1 ? -1 : undefined}
                     className="flex items-center justify-center h-12 px-8 rounded-lg border-2 border-primary dark:border-blue-400 hover:bg-primary hover:text-white text-primary dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-900/30 font-bold transition-all bg-transparent">
-                    <span>Read Impact Stories</span>
-                    <span className="material-symbols-outlined ml-2 text-lg">favorite</span>
+                    <span>Impact Stories</span>
                   </Link>
                 </div>
               </div>
@@ -171,25 +151,7 @@ export default function HeroSlider() {
                       style={{ backgroundImage: "url('https://updates.paahibuspace.org/assets/frontend/images/female-in-tech.png')" }}>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 p-6 sm:p-8 text-white w-full">
-                      <div className="flex gap-2 mb-2">
-                        <span className="px-2 py-1 text-xs font-bold bg-white/20 backdrop-blur-md rounded text-white border border-white/10">Creatives Meetup</span>
-                      </div>
-                      <p className="text-xl sm:text-2xl font-bold font-heading leading-tight mb-2">Building the Future Together</p>
-                      <div className="flex items-center gap-2 text-sm text-gray-200">
-                        <span className="material-symbols-outlined text-base">location_on</span>
-                        <span>Wa, UWR-Ghana</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-6 -left-6 z-30 bg-white dark:bg-gray-800 p-4 rounded-2xl flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
-                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
-                      <span className="material-symbols-outlined">code</span>
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Creatives Meetup</p>
-                      <p className="text-sm font-bold text-neutral-dark dark:text-white">Active Now</p>
-                    </div>
+
                   </div>
                 </div>
               </div>

@@ -134,6 +134,9 @@ export default function MobileMenu({ open, setOpen }) {
                                 <Link href="/widei-program" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
                                   WiDEI
                                 </Link>
+                                <Link href="/digital-walansi-program" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                                  Digital Walansi
+                                </Link>
                                 <Link href="/grow-program" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
                                   GROW Program
                                 </Link>

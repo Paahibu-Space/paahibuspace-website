@@ -51,7 +51,7 @@ export default function PhilosophyPage() {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
             {/* Digital Skills & Entrepreneurship */}
-            <div className="bg-orange-50 dark:bg-orange-900/20 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-orange-100 dark:border-orange-900/30 shadow-sm hover:shadow-md">
+            <div className="bg-orange-50 dark:bg-orange-900/20 p-8 hover:-translate-y-2 transition-transform duration-300 border border-orange-100 dark:border-orange-900/30">
               <div className="w-14 h-14 mb-6 text-primary flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
                 <span className="material-symbols-outlined text-3xl">computer</span>
               </div>
@@ -64,7 +64,7 @@ export default function PhilosophyPage() {
             </div>
 
             {/* Policy & Advocacy */}
-            <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-green-100 dark:border-green-900/30 shadow-sm hover:shadow-md">
+            <div className="bg-green-50 dark:bg-green-900/20 p-8 hover:-translate-y-2 transition-transform duration-300 border border-green-100 dark:border-green-900/30">
               <div className="w-14 h-14 mb-6 text-green-600 dark:text-green-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
                 <span className="material-symbols-outlined text-3xl">campaign</span>
               </div>
@@ -77,7 +77,7 @@ export default function PhilosophyPage() {
             </div>
 
             {/* Community & Network Building */}
-            <div className="bg-red-50 dark:bg-red-900/20 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-red-100 dark:border-red-900/30 shadow-sm hover:shadow-md">
+            <div className="bg-red-50 dark:bg-red-900/20 p-8 hover:-translate-y-2 transition-transform duration-300 border border-red-100 dark:border-red-900/30">
               <div className="w-14 h-14 mb-6 text-red-500 dark:text-red-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
                 <span className="material-symbols-outlined text-3xl">groups</span>
               </div>
@@ -90,7 +90,7 @@ export default function PhilosophyPage() {
             </div>
 
             {/* Mentorship & Leadership */}
-            <div className="bg-pink-50 dark:bg-pink-900/20 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-pink-100 dark:border-pink-900/30 shadow-sm hover:shadow-md">
+            <div className="bg-pink-50 dark:bg-pink-900/20 p-8 hover:-translate-y-2 transition-transform duration-300 border border-pink-100 dark:border-pink-900/30">
               <div className="w-14 h-14 mb-6 text-pink-500 dark:text-pink-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
                 <span className="material-symbols-outlined text-3xl">volunteer_activism</span>
               </div>

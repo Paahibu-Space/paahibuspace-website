@@ -62,9 +62,7 @@ export default async function ImpactPage() {
                 From rural villages to global tech hubs, meet the women and youth reshaping
                 Africa&apos;s digital landscape through resilience, innovation, and code.
               </p>
-              <button className="mt-6 flex items-center justify-center rounded-full h-14 px-10 bg-primary hover:bg-white hover:text-primary transition-all text-white text-base font-bold shadow-lg ring-4 ring-primary/20">
-                Read Latest Story
-              </button>
+              
             </div>
           </div>
         </div>
@@ -76,7 +74,7 @@ export default async function ImpactPage() {
       {/* Featured Project */}
       <section className="w-full py-20 dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col lg:flex-row">
+          <div className="bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col lg:flex-row">
             <div className="lg:w-1/2 relative min-h-[300px] lg:min-h-full">
               <div
                 className="absolute inset-0 bg-cover bg-center"
@@ -88,14 +86,6 @@ export default async function ImpactPage() {
               <div className="absolute inset-0 bg-primary/80 mix-blend-multiply opacity-60" />
             </div>
             <div className="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-6">
-                <span className="material-symbols-outlined text-primary text-xl dark:text-white">
-                  verified
-                </span>
-                <span className="text-sm font-bold uppercase tracking-wider text-primary dark:text-white">
-                  Featured Initiative
-                </span>
-              </div>
               <h3 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-6 leading-tight">
                 GROW Program
               </h3>
@@ -159,7 +149,7 @@ export default async function ImpactPage() {
                       href={report.file_url || "#"} 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-4 p-5 border border-gray-100 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 hover:border-primary/50 transition-all cursor-pointer group shadow-sm"
+                      className="flex items-center gap-4 p-5 border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 transition-all cursor-pointer group"
                     >
                       <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg text-red-500 dark:text-red-400">
                         <span className="material-symbols-outlined">description</span>
@@ -268,40 +258,32 @@ async function ImpactStatsSection() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
              {/* Card 1 */}
-            <div className="flex flex-col gap-4 rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/40 hover:shadow-md transition-all">
-              <div className="p-3 bg-primary/10 dark:bg-primary/20 w-fit rounded-xl text-primary">
-                <span className="material-symbols-outlined text-3xl">school</span>
-              </div>
+            <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 transition-all">
+
               <div>
                 <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[0]?.value || "500+"}</p>
                 <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[0]?.label || "Girls Trained"}</p>
               </div>
             </div>
              {/* Card 2 */}
-            <div className="flex flex-col gap-4 rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/40 hover:shadow-md transition-all">
-              <div className="p-3 bg-blue-50 dark:bg-blue-900/20 w-fit rounded-xl text-blue-600 dark:text-blue-400">
-                <span className="material-symbols-outlined text-3xl">rocket_launch</span>
-              </div>
+            <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 transition-all">
+
               <div>
                 <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[1]?.value || "30+"}</p>
                 <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[1]?.label || "Projects Launched"}</p>
               </div>
             </div>
              {/* Card 3 */}
-            <div className="flex flex-col gap-4 rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/40 hover:shadow-md transition-all">
-               <div className="p-3 bg-green-50 dark:bg-green-900/20 w-fit rounded-xl text-green-600 dark:text-green-400">
-                <span className="material-symbols-outlined text-3xl">workspace_premium</span>
-              </div>
+            <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 transition-all">
+            
               <div>
                 <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[2]?.value || "450+"}</p>
                 <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[2]?.label || "Certificates Awarded"}</p>
               </div>
             </div>
              {/* Card 4 */}
-            <div className="flex flex-col gap-4 rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/40 hover:shadow-md transition-all">
-              <div className="p-3 bg-purple-50 dark:bg-purple-900/20 w-fit rounded-xl text-purple-600 dark:text-purple-400">
-                <span className="material-symbols-outlined text-3xl">public</span>
-              </div>
+            <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 transition-all">
+
               <div>
                 <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[3]?.value || "12"}</p>
                 <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[3]?.label || "Communities Reached"}</p>
