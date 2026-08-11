@@ -32,6 +32,11 @@ const nextConfig = {
         pathname: '/**',
       },
       {
+        protocol: 'https',
+        hostname: 'api.paahibuspace.org',
+        pathname: '/**',
+      },
+      {
         protocol: 'http',
         hostname: '127.0.0.1',
         pathname: '/**',
