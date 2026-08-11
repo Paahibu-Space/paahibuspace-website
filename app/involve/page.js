@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Get Involved",
+  description: "Join the Paahibu Space community as a mentor, volunteer, partner, or ambassador and help expand access to tech opportunities for African women.",
+};
+
 export default function InvolvePage() {
   return (
     <>
@@ -14,14 +19,7 @@ export default function InvolvePage() {
                 Join the Paahibu Space community to access mentorship, resources,
                 and career growth opportunities tailored for you.
               </h2>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-base font-bold shadow-md hover:bg-primary/90 transition-all">
-                  Get Involved
-                </button>
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-[#eee9f1] dark:bg-gray-800 text-[#161019] dark:text-white text-base font-bold hover:bg-[#e0dbe5] dark:hover:bg-gray-700 transition-all">
-                  Learn More
-                </button>
-              </div>
+        
             </div>
             <div className="w-full lg:w-1/2 flex justify-center">
               <div
@@ -111,7 +109,7 @@ export default function InvolvePage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-2/3">
-              <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 rounded-xl border border-[#eee9f1] dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border border-[#eee9f1] dark:border-gray-700">
                 <div className="size-12 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-white">
                   <span className="material-symbols-outlined text-[24px]">
                     school
@@ -125,7 +123,7 @@ export default function InvolvePage() {
                   keep you ahead of the curve.
                 </p>
               </div>
-              <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 rounded-xl border border-[#eee9f1] dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border border-[#eee9f1] dark:border-gray-700">
                 <div className="size-12 rounded-lg bg-accent/10 dark:bg-accent/20 flex items-center justify-center text-accent">
                   <span className="material-symbols-outlined text-[24px]">
                     diversity_3
@@ -139,7 +137,7 @@ export default function InvolvePage() {
                   recruiters, and potential partners.
                 </p>
               </div>
-              <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 rounded-xl border border-[#eee9f1] dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border border-[#eee9f1] dark:border-gray-700">
                 <div className="size-12 rounded-lg bg-yellow-500/10 dark:bg-yellow-500/20 flex items-center justify-center text-yellow-600 dark:text-yellow-400">
                   <span className="material-symbols-outlined text-[24px]">
                     lightbulb
@@ -153,7 +151,7 @@ export default function InvolvePage() {
                   your portfolio.
                 </p>
               </div>
-              <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 rounded-xl border border-[#eee9f1] dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border border-[#eee9f1] dark:border-gray-700">
                 <div className="size-12 rounded-lg bg-pink-500/10 dark:bg-pink-500/20 flex items-center justify-center text-pink-600 dark:text-pink-400">
                   <span className="material-symbols-outlined text-[24px]">
                     volunteer_activism

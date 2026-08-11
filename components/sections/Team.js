@@ -3,20 +3,20 @@ import Image from "next/image";
 
 export default function Team() {
   return (
-    <section className="w-full px-4 py-20 bg-background-light">
+    <section className="w-full px-4 py-20 bg-background-light dark:bg-background-dark">
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-[600px]">
-            <h2 className="text-neutral-dark text-3xl font-bold mb-4">
+            <h2 className="text-neutral-dark dark:text-white text-3xl font-bold mb-4">
               Meet the Team
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-gray-300">
               The passionate individuals working tirelessly to make our vision a
               reality.
             </p>
           </div>
           <Link
-            className="text-primary font-bold hover:underline flex items-center gap-1"
+            className="text-primary dark:text-white font-bold hover:underline flex items-center gap-1"
             href="/team"
           >
             View all members{" "}
@@ -28,7 +28,7 @@ export default function Team() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {/* Team Member 1 */}
           <div className="group relative flex flex-col gap-3">
-            <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200">
+            <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
               <Image
                 alt="Portrait of Amina, Founder & CEO"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -38,15 +38,15 @@ export default function Team() {
               />
             </div>
             <div>
-              <h3 className="text-neutral-dark text-lg font-bold">
+              <h3 className="text-neutral-dark dark:text-white text-lg font-bold">
                 Amina Diop
               </h3>
-              <p className="text-primary text-sm font-medium">Founder & CEO</p>
+              <p className="text-primary dark:text-secondary text-sm font-medium">Founder & CEO</p>
             </div>
           </div>
           {/* Team Member 2 */}
           <div className="group relative flex flex-col gap-3">
-            <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200">
+            <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
               <Image
                 alt="Portrait of Sarah, Program Director"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -56,17 +56,17 @@ export default function Team() {
               />
             </div>
             <div>
-              <h3 className="text-neutral-dark text-lg font-bold">
+              <h3 className="text-neutral-dark dark:text-white text-lg font-bold">
                 Sarah Okafor
               </h3>
-              <p className="text-primary text-sm font-medium">
+              <p className="text-primary dark:text-secondary text-sm font-medium">
                 Program Director
               </p>
             </div>
           </div>
           {/* Team Member 3 */}
           <div className="group relative flex flex-col gap-3">
-            <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200">
+            <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
               <Image
                 alt="Portrait of Kwame, Tech Lead"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -76,17 +76,17 @@ export default function Team() {
               />
             </div>
             <div>
-              <h3 className="text-neutral-dark text-lg font-bold">
+              <h3 className="text-neutral-dark dark:text-white text-lg font-bold">
                 Kwame Mensah
               </h3>
-              <p className="text-primary text-sm font-medium">
+              <p className="text-primary dark:text-secondary text-sm font-medium">
                 Head of Technology
               </p>
             </div>
           </div>
           {/* Team Member 4 */}
           <div className="group relative flex flex-col gap-3">
-            <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200">
+            <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
               <Image
                 alt="Portrait of Zola, Community Manager"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -96,10 +96,10 @@ export default function Team() {
               />
             </div>
             <div>
-              <h3 className="text-neutral-dark text-lg font-bold">
+              <h3 className="text-neutral-dark dark:text-white text-lg font-bold">
                 Zola Abebe
               </h3>
-              <p className="text-primary text-sm font-medium">
+              <p className="text-primary dark:text-secondary text-sm font-medium">
                 Community Manager
               </p>
             </div>

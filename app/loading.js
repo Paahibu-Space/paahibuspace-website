@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function RootLoading() {
   return (
     <div className="flex-grow flex flex-col items-center justify-center min-h-[60vh]">
@@ -8,7 +10,7 @@ export default function RootLoading() {
         <div className="absolute inset-2 rounded-full border-l-4 border-r-4 border-primary animate-spin-slow"></div>
         {/* Logo or icon in the center */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <img src="/logo.png" alt="Paahibu Space" className="w-12 h-12 object-contain" />
+          <Image src="/logo.png" alt="Paahibu Space" width={48} height={48} className="w-12 h-12 object-contain" />
         </div>
       </div>
     </div>

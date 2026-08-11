@@ -3,6 +3,11 @@ import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
 import ProgramCTA from "@/components/ui/ProgramCTA";
 
+export const metadata = {
+  title: "TechsiStars Mentorship Program",
+  description: "TechsiStars pairs young women with technical mentors to build real digital skills, portfolios, and confidence for careers in technology.",
+};
+
 export default async function TechsiStarsProgram() {
   const programs = await fetchAPI("/api/v1/programs") || [];
   const techsistarsProgram = programs.find(p => p.name.includes("TechsiStars")) || { 
@@ -59,7 +64,6 @@ export default async function TechsiStarsProgram() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                 <div className="max-w-2xl">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-secondary/80 text-primary-700 dark:text-primary-300 border border-purple-200 dark:border-purple-800 mb-6">
-                        <span className="material-symbols-outlined text-[18px]">verified</span>
                         <span className="text-xs font-bold uppercase tracking-wider">Aspiring Women in Tech</span>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white leading-[1.1] mb-6 tracking-tight">
@@ -83,10 +87,6 @@ export default async function TechsiStarsProgram() {
                         <Image src="/assets/images/programs/techsistars2.webp" 
                              alt="Women in Tech" className="object-cover" fill sizes="(max-width: 1024px) 100vw, 50vw" />
                         <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent"></div>
-                        <div className="absolute bottom-8 left-8 text-white">
-                            <p className="font-bold text-lg">Batch 3 Graduation</p>
-                            <p className="text-primary-200 text-sm">Nairobi, Kenya</p>
-                        </div>
                     </div>
                     {/* Decorative Elements */}
                     <div className="absolute top-0 right-[20%] w-24 h-24 bg-yellow-400 rounded-full blur-2xl opacity-60 animate-pulse"></div>
@@ -110,7 +110,6 @@ export default async function TechsiStarsProgram() {
                     <div className="grid gap-6">
                         <div className="bg-purple-50 dark:bg-purple-900/10 p-6 rounded-xl border border-purple-100 dark:border-purple-500/20">
                             <h3 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-primary">block</span>
                                 Limited Access to Mentorship
                             </h3>
                             <p className="text-sm text-gray-600 dark:text-gray-400">Many young women lack role models who look like them
@@ -118,7 +117,6 @@ export default async function TechsiStarsProgram() {
                         </div>
                         <div className="bg-purple-50 dark:bg-purple-900/10 p-6 rounded-xl border border-purple-100 dark:border-purple-500/20">
                             <h3 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-primary">psychology_alt</span>
                                 The &quot;Skills Gap&quot; Myth
                             </h3>
                             <p className="text-sm text-gray-600 dark:text-gray-400">It&apos;s often not a lack of ability, but a lack of

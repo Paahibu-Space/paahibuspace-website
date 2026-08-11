@@ -19,7 +19,7 @@ export default function ProgramRoadmap({ steps }) {
                   {step.title}
                 </h3>
                 {step.tag && (
-                  <span className="text-sm font-semibold text-secondary uppercase tracking-wider">
+                  <span className="text-sm font-semibold text-secondary-dark dark:text-secondary uppercase tracking-wider">
                     {step.tag}
                   </span>
                 )}

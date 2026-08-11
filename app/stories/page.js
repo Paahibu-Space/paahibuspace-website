@@ -2,6 +2,11 @@ import Link from "next/link";
 import StoriesGrid from "@/components/sections/StoriesGrid";
 import { fetchAPI } from "@/lib/api";
 
+export const metadata = {
+  title: "Stories",
+  description: "Real stories from the women and girls whose lives have been transformed through Paahibu Space's mentorship, training, and community programs.",
+};
+
 export default async function StoriesPage() {
   const stories = await fetchAPI("/api/v1/stories") || [];
 

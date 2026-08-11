@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Our Mission",
+  description: "We are a youth-led, women-centered non-profit committed to bridging the gender gap in digital access, economic empowerment, and leadership across Africa.",
+};
+
 export default function MissionPage() {
   return (
     <>
@@ -84,21 +89,12 @@ export default function MissionPage() {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>TechSistars Program</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>Women in Digital Business (WiDiB)</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>Digital Literacy & Safety</span>
                   </li>
                 </ul>
@@ -123,21 +119,12 @@ export default function MissionPage() {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>Women in Code & Hardware</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>Entrepreneurship Incubators</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>Green Tech Solutions</span>
                   </li>
                 </ul>
@@ -162,21 +149,12 @@ export default function MissionPage() {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>Community Ambassadors</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>Policy Advocacy</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">
-                      check_circle
-                    </span>
                     <span>Leadership & Mentorship</span>
                   </li>
                 </ul>
@@ -219,9 +197,6 @@ export default function MissionPage() {
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
-                <span className="material-symbols-outlined">handshake</span>
-              </div>
               <h3 className="text-2xl font-bold text-[#161019] dark:text-white">
                 Collaborative Impact
               </h3>
@@ -247,9 +222,6 @@ export default function MissionPage() {
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
-                <span className="material-symbols-outlined">diversity_1</span>
-              </div>
               <h3 className="text-2xl font-bold text-[#161019] dark:text-white">
                 Long-Term Sustainability
               </h3>
@@ -275,9 +247,6 @@ export default function MissionPage() {
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
-                <span className="material-symbols-outlined">stars</span>
-              </div>
               <h3 className="text-2xl font-bold text-[#161019] dark:text-white">
                 Governance & Leadership
               </h3>

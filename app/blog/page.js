@@ -4,6 +4,11 @@ import { fetchAPI } from "@/lib/api";
 import SidebarNewsletter from "@/components/ui/SidebarNewsletter";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Blog",
+  description: "Insights, updates, and stories on women in tech, digital skills, and entrepreneurship from the Paahibu Space team.",
+};
+
 export default async function BlogListingPage() {
   const blogPosts = await fetchAPI("/api/v1/blog") || [];
   
@@ -49,7 +54,7 @@ export default async function BlogListingPage() {
               {blogPosts.map((post, index) => (
                 <article
                   key={post.id || index}
-                  className="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1f202e] shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-[#2b2c40]"
+                  className="group flex flex-col dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden  hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="relative aspect-video overflow-hidden">
                     <Image src={post.featured_image_url || '/assets/images/blog-placeholder.jpg'} 
@@ -80,14 +85,14 @@ export default async function BlogListingPage() {
             
             {/* Pagination UI - Visual only for now */}
             <div className="flex items-center justify-center gap-2 mt-4">
-              <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-white dark:bg-[#2b2c40] text-gray-500 hover:bg-gray-100 dark:hover:bg-[#363852]">
+              <button className="flex h-10 w-10 items-center justify-center bg-white dark:bg-[#2b2c40] text-gray-500 hover:bg-gray-100 dark:hover:bg-[#363852]">
                 <span className="material-symbols-outlined text-sm">chevron_left</span>
               </button>
-              <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
-              <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-white dark:bg-[#2b2c40] text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-[#363852] transition-colors">2</button>
-              <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-white dark:bg-[#2b2c40] text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-[#363852] transition-colors">3</button>
+              <button className="flex h-10 w-10 items-center justify-center bg-primary text-white font-bold">1</button>
+              <button className="flex h-10 w-10 items-center justify-center bg-white dark:bg-[#2b2c40] text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-[#363852] transition-colors">2</button>
+              <button className="flex h-10 w-10 items-center justify-center bg-white dark:bg-[#2b2c40] text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-[#363852] transition-colors">3</button>
               <span className="text-gray-400 px-1">...</span>
-              <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-white dark:bg-[#2b2c40] text-gray-500 hover:bg-gray-100 dark:hover:bg-[#363852]">
+              <button className="flex h-10 w-10 items-center justify-center bg-white dark:bg-[#2b2c40] text-gray-500 hover:bg-gray-100 dark:hover:bg-[#363852]">
                 <span className="material-symbols-outlined text-sm">chevron_right</span>
               </button>
             </div>
@@ -98,7 +103,7 @@ export default async function BlogListingPage() {
              {/* Newsletter */}
             <SidebarNewsletter />
             {/* Trending Topics - Mock */}
-            <div className="rounded-xl bg-white dark:bg-[#1f202e] p-6 shadow-sm border border-gray-100 dark:border-[#2b2c40]">
+            <div className="bg-white dark:bg-[#1f202e] p-6 border border-gray-100 dark:border-[#2b2c40]">
               <h3 className="mb-4 text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-xl">trending_up</span>
                 Trending Now

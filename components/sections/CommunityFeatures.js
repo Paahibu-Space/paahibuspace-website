@@ -3,19 +3,19 @@ import Image from "next/image";
 export default function CommunityFeatures() {
   return (
     <>
-      <section className="w-full bg-[#faf9fb] py-10">
+      <section className="w-full bg-[#faf9fb] dark:bg-background-dark py-10">
         <div className="container mx-auto px-6 max-w-[960px] text-center">
-          <h2 className="text-neutral-dark text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-4">
+          <h2 className="text-neutral-dark dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-4 animate-fade-up">
             Why Join Hands With Us?
           </h2>
-          <p className="text-[#555] text-lg max-w-2xl mx-auto">
+          <p className="text-[#555] dark:text-gray-300 text-lg max-w-2xl mx-auto">
             We are more than just a network. We are a movement designed to
             uplift, connect, and propel you forward.
           </p>
         </div>
       </section>
 
-      <section className="w-full bg-[#faf9fb] pb-24">
+      <section className="w-full bg-[#faf9fb] dark:bg-background-dark pb-24">
         <div className="container mx-auto px-6 max-w-[1080px] flex flex-col gap-20">
           {/* Feature 1 */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
@@ -29,19 +29,19 @@ export default function CommunityFeatures() {
               />
             </div>
             <div className="w-full md:w-1/2 p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+              <div className="size-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-blue-400 mb-2">
                 <span className="material-symbols-outlined">handshake</span>
               </div>
-              <h3 className="text-2xl font-bold text-neutral-dark">
+              <h3 className="text-2xl font-bold text-neutral-dark dark:text-white">
                 Building Relationships
               </h3>
-              <p className="text-[#555] leading-relaxed">
+              <p className="text-[#555] dark:text-gray-300 leading-relaxed">
                 We focus on mentorship and deep peer-to-peer connections rather
                 than just transactional networking. Here, you find partners,
                 collaborators, and friends—not just contacts in a database.
               </p>
               <a
-                className="mt-2 text-primary font-bold text-sm hover:underline flex items-center gap-1"
+                className="mt-2 text-primary dark:text-blue-400 font-bold text-sm hover:underline flex items-center gap-1"
                 href="#"
               >
                 Learn about Mentorship{" "}
@@ -64,19 +64,19 @@ export default function CommunityFeatures() {
               />
             </div>
             <div className="w-full md:w-1/2 p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+              <div className="size-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-blue-400 mb-2">
                 <span className="material-symbols-outlined">diversity_1</span>
               </div>
-              <h3 className="text-2xl font-bold text-neutral-dark">
+              <h3 className="text-2xl font-bold text-neutral-dark dark:text-white">
                 One Big Family
               </h3>
-              <p className="text-[#555] leading-relaxed">
+              <p className="text-[#555] dark:text-gray-300 leading-relaxed">
                 Experience a supportive, non-competitive atmosphere where
                 everyone wins. We believe in lifting each other up as we climb,
                 creating a safe space to share challenges and celebrate wins.
               </p>
               <a
-                className="mt-2 text-primary font-bold text-sm hover:underline flex items-center gap-1"
+                className="mt-2 text-primary dark:text-blue-400 font-bold text-sm hover:underline flex items-center gap-1"
                 href="#"
               >
                 Join the Family{" "}
@@ -99,19 +99,19 @@ export default function CommunityFeatures() {
               />
             </div>
             <div className="w-full md:w-1/2 p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+              <div className="size-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-blue-400 mb-2">
                 <span className="material-symbols-outlined">stars</span>
               </div>
-              <h3 className="text-2xl font-bold text-neutral-dark">
+              <h3 className="text-2xl font-bold text-neutral-dark dark:text-white">
                 Standing Out
               </h3>
-              <p className="text-[#555] leading-relaxed">
+              <p className="text-[#555] dark:text-gray-300 leading-relaxed">
                 Our ecosystem provides visibility and career acceleration unique
                 to the market. We help you showcase your skills to the world
                 through exclusive events, features, and partner opportunities.
               </p>
               <a
-                className="mt-2 text-primary font-bold text-sm hover:underline flex items-center gap-1"
+                className="mt-2 text-primary dark:text-blue-400 font-bold text-sm hover:underline flex items-center gap-1"
                 href="#"
               >
                 See Success Stories{" "}

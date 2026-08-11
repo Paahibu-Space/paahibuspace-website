@@ -4,6 +4,11 @@ import { fetchAPI } from "@/lib/api";
 import ProgramCTA from "@/components/ui/ProgramCTA";
 import AmbassadorStories from "@/components/sections/AmbassadorStories";
 
+export const metadata = {
+  title: "Community Ambassadors Program",
+  description: "Become a Paahibu Space Community Ambassador and lead digital empowerment initiatives for women and girls in your own community.",
+};
+
 export default async function CommunityAmbassadorsProgramPage() {
   const programs = await fetchAPI("/api/v1/programs") || [];
   const ambassadorsProgram = programs.find(p => p.name.includes("Community Ambassador")) || { 
@@ -54,7 +59,6 @@ export default async function CommunityAmbassadorsProgramPage() {
              <div className="grid lg:grid-cols-2 gap-12 items-center">
                  <div>
                      <div className="inline-flex items-center gap-2 bg-orange-900/30 border border-orange-500/30 rounded-full px-4 py-1 text-orange-400 font-bold text-sm tracking-wide uppercase mb-6">
-                         <span className="material-symbols-outlined text-sm">public</span>
                          Community Leadership
                      </div>
                      <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">

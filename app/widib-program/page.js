@@ -3,6 +3,11 @@ import { fetchAPI } from "@/lib/api";
 import ProgramCTA from "@/components/ui/ProgramCTA";
 import Image from "next/image";
 
+export const metadata = {
+  title: "WiDiB Program",
+  description: "WiDiB (Women in Digital Business) helps women entrepreneurs digitize and transform their businesses, unlocking new markets and revenue.",
+};
+
 export default async function WidibProgramPage() {
   const programs = await fetchAPI("/api/v1/programs") || [];
   const widibProgram = programs.find(p => p.name.includes("WiDiB")) || { 
@@ -39,11 +44,10 @@ export default async function WidibProgramPage() {
          <div className="absolute inset-0">
              <Image src="/assets/images/programs/widib.webp" 
                  alt="Women Business Owners" className="object-cover opacity-20" fill priority />
-             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/80"></div>
+             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/40 "></div>
          </div>
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
              <div className="inline-flex items-center gap-2 bg-blue-500/30 backdrop-blur-sm border border-blue-400/30 rounded-full px-4 py-1 text-blue-100 font-bold text-sm tracking-wide uppercase mb-6">
-                 <span className="material-symbols-outlined text-sm">rocket_launch</span>
                  For Early-Stage Entrepreneurs
              </div>
              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
@@ -60,9 +64,6 @@ export default async function WidibProgramPage() {
                     labelClosed="Join the Waitlist"
                     className="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 shadow-xl"
                  />
-                 <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
-                     Download Syllabus
-                 </button>
              </div>
          </div>
      </section>
@@ -175,29 +176,24 @@ export default async function WidibProgramPage() {
                      {
                          title: "Digital Skills & Business Growth",
                          desc: "From content creation and branding to e-commerce and automation, WiDiB arms participants with hands-on digital skills built for the real world. Whether you're selling a product, offering a service, or building a brand you'll leave with practical tools and strategies to grow your business visibly and sustainably.",
-                         icon: "campaign",
                          bg: "bg-blue-50 dark:bg-blue-900/20",
                          text: "text-blue-600"
                      },
                      {
                          title: "Coaching & Community Support",
                          desc: "You don't have to figure it all out alone. WiDiB connects you with personalized coaching from experienced women entrepreneurs and digital experts, plus a circle of peers who genuinely understand the juggle. This is a space where your story is seen, your pace is respected and your progress is celebrated.",
-                         icon: "payments",
                          bg: "bg-green-50 dark:bg-green-900/20",
                          text: "text-green-600"
                      },
                      {
                          title: "Well-being & Sustainable Growth",
                          desc: "Growth should not cost your peace. WiDiB is intentionally designed to support the whole woman not just the business owner. We weave well-being, grace and self-awareness into every week, because the most sustainable businesses are built by women who are not running on empty.",
-                         icon: "photo_camera",
                          bg: "bg-purple-50 dark:bg-purple-900/20",
                          text: "text-purple-600"
                      }
                  ].map((item, i) => (
-                     <div key={i} className="p-8 rounded-2xl border border-gray-100 dark:border-white/10 hover:shadow-xl transition-shadow group bg-white dark:bg-gray-800">
-                         <div className={`w-14 h-14 rounded-xl ${item.bg} ${item.text} flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition-transform`}>
-                             <span className="material-symbols-outlined">{item.icon}</span>
-                         </div>
+                     <div key={i} className="p-8 rounded-2xl border border-gray-100 dark:border-white/10 transition-shadow group bg-white dark:bg-gray-800">
+      
                          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{item.title}</h3>
                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{item.desc}</p>
                      </div>

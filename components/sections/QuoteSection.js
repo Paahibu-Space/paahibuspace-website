@@ -4,7 +4,7 @@ export default function QuoteSection() {
       <div className="mx-auto max-w-4xl px-6">
         <span className="material-symbols-outlined text-secondary mb-4" style={{ fontSize: '48px' }}>format_quote</span>
         <h2 className="text-2xl font-medium leading-relaxed md:text-3xl lg:text-4xl">
-          &quot;On a mission to equip businesses and nonprofits with the competencies to leverage technology, shaping 5 million African women and girls in STEAM, innovation, and leadership.&quot;
+          &quot;On a mission to equip businesses and nonprofits with the competencies to leverage technology — with a vision to reach millions of African women and girls in STEAM, innovation, and leadership.&quot;
         </h2>
       </div>
     </section>

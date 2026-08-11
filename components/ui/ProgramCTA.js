@@ -62,10 +62,11 @@ export default function ProgramCTA({ program, variant = "primary", className = "
   return (
     <>
       {isOpen ? (
-        <a 
-            href={program.application_link || "#"} 
-            target="_blank" 
+        <a
+            href={program.application_link || "#"}
+            target="_blank"
             rel="noreferrer"
+            aria-label={program.name ? `${labelOpen} for ${program.name}` : labelOpen}
             className={`${baseClasses} ${activeClasses} ${className}`}
         >
           {labelOpen}
@@ -73,6 +74,7 @@ export default function ProgramCTA({ program, variant = "primary", className = "
       ) : (
         <button
             onClick={handleClick}
+            aria-label={program.name ? `${labelClosed} for ${program.name}` : labelClosed}
             className={`${baseClasses} ${activeClasses} ${className}`}
         >
           {labelClosed}

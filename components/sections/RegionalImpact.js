@@ -7,7 +7,7 @@ export default function RegionalImpact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <span className="text-secondary font-bold tracking-widest uppercase text-sm">
+            <span className="text-secondary-dark dark:text-secondary font-bold tracking-widest uppercase text-sm">
               Where We Work
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-dark dark:text-white mt-2 mb-6 leading-tight">

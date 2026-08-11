@@ -76,7 +76,7 @@ export default function WaitlistModal({ isOpen, onClose, programId, programName 
                 {status === 'success' ? (
                   <div className="text-center py-8">
                     <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="material-symbols-outlined text-3xl">check_circle</span>
+                      <span className="material-symbols-outlined text-3xl" aria-hidden="true">check_circle</span>
                     </div>
                     <Dialog.Title as="h3" className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       You&apos;re on the list!
@@ -96,8 +96,8 @@ export default function WaitlistModal({ isOpen, onClose, programId, programName 
                           Applications for <strong>{programName}</strong> are currently closed. Sign up to be notified when they reopen.
                         </p>
                       </div>
-                      <button onClick={onClose} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
-                        <span className="material-symbols-outlined">close</span>
+                      <button onClick={onClose} aria-label="Close dialog" className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+                        <span className="material-symbols-outlined" aria-hidden="true">close</span>
                       </button>
                     </div>
 

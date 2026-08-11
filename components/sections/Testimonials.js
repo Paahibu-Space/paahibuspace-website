@@ -28,7 +28,7 @@ export default function Testimonials({ testimonials }) {
                   <h4 className="font-bold text-primary dark:text-white">
                     {testimonial.author}
                   </h4>
-                  <p className="text-sm text-secondary">{testimonial.role}</p>
+                  <p className="text-sm text-secondary-dark dark:text-secondary">{testimonial.role}</p>
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-300 italic relative z-10">

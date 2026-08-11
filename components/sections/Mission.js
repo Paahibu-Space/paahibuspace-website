@@ -12,7 +12,7 @@ export default function Mission() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 */}
-          <div className="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex flex-col gap-4 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
             <div className="size-12 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-purple-300 mb-2">
               <span className="material-symbols-outlined text-3xl">
                 track_changes
@@ -23,13 +23,13 @@ export default function Mission() {
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               We equip businesses and nonprofits with the competencies to leverage technology,
-              while educating, empowering, and shaping 5 million African women and girls in
-              STEAM, innovation, and leadership to achieve their fullest potential.
+              while educating and empowering African women and girls in STEAM, innovation,
+              and leadership — with a vision to reach millions more across the continent.
             </p>
           </div>
           {/* Card 2 */}
-          <div className="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 p-8 shadow-sm hover:shadow-md transition-shadow">
-             <div className="size-12 rounded-full bg-orange-100 dark:bg-orange-500/20 flex items-center justify-center text-secondary mb-2">
+          <div className="flex flex-col gap-4 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
+             <div className="size-12 rounded-full bg-primary/10 dark:bg-orange-500/20 flex items-center justify-center text-secondary mb-2">
               <span className="material-symbols-outlined text-3xl">visibility</span>
             </div>
             <h3 className="text-neutral-dark dark:text-white text-xl font-bold">
@@ -42,8 +42,8 @@ export default function Mission() {
             </p>
           </div>
           {/* Card 3 */}
-          <div className="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 p-8 shadow-sm hover:shadow-md transition-shadow">
-             <div className="size-12 rounded-full bg-green-100 dark:bg-green-500/20 flex items-center justify-center text-green-600 dark:text-green-400 mb-2">
+          <div className="flex flex-col gap-4 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 transition-all hover:-translate-y-1">
+             <div className="size-12 rounded-full bg-primary/10 dark:bg-green-500/20 flex items-center justify-center text-green-600 dark:text-green-400 mb-2">
               <span className="material-symbols-outlined text-3xl">
                 lightbulb
               </span>

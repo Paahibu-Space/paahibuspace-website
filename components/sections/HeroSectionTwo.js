@@ -1,16 +1,12 @@
-"use client";
-
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSectionTwo() {
   return (
     <section className="hero-slider-2 flex flex-col lg:flex-row max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-16 gap-12 lg:gap-8 items-center overflow-hidden">
       <div className="w-full lg:w-3/5 flex flex-col gap-8 lg:pr-12 z-10">
         <div className="flex flex-col gap-4">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 text-xs font-bold uppercase tracking-wider w-fit">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            New Cohort Open
-          </span>
+
           <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
             Hey Sis,<br />
             <span className="text-primary dark:text-blue-400">You Belong in Tech Too</span>
@@ -56,10 +52,13 @@ export default function HeroSectionTwo() {
           <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-2xl shadow-xl transform -rotate-2 scale-95 opacity-80 z-10">
           </div>
           <div className="absolute inset-0 z-20 overflow-hidden rounded-2xl shadow-2xl bg-gray-200 dark:bg-gray-800 group">
-            <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              data-alt="African woman smiling confidently in a modern tech office environment holding a tablet"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMasD0an8yjMTCkUfdGhSXODn84RCXXCPyPfUpxpRhx_aMqPUHtlY-lvMnZIAR9HiiW7bO_4-6ID8PhvAoIb-5ofFJYHMKqj1rScYxWrRt1KQrN-5magg0zueMTD9okG58_j6jxrQGQbzXgTRGSGizEdRCOquIXJrmUgu4gLJPa3v7slQR7qsZ7cujdU9DyZkChWVeB-xhy_nkC6tyJFkxjbi_jMVGJSsPRVAPGUn_1V3TXl8ZKD35aOjP9Iwhe7e0fmOKTkA5l74')" }}>
-            </div>
+            <Image
+              alt="African woman smiling confidently in a modern tech office environment holding a tablet"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMasD0an8yjMTCkUfdGhSXODn84RCXXCPyPfUpxpRhx_aMqPUHtlY-lvMnZIAR9HiiW7bO_4-6ID8PhvAoIb-5ofFJYHMKqj1rScYxWrRt1KQrN-5magg0zueMTD9okG58_j6jxrQGQbzXgTRGSGizEdRCOquIXJrmUgu4gLJPa3v7slQR7qsZ7cujdU9DyZkChWVeB-xhy_nkC6tyJFkxjbi_jMVGJSsPRVAPGUn_1V3TXl8ZKD35aOjP9Iwhe7e0fmOKTkA5l74"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6 sm:p-8 text-white w-full">
               <div className="flex gap-2 mb-2">
@@ -72,7 +71,9 @@ export default function HeroSectionTwo() {
               </div>
             </div>
             <div className="absolute top-1/2 -right-4 translate-x-0 sm:translate-x-1/2 -translate-y-1/2 z-30 hidden sm:flex flex-col gap-2">
-              <button className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center text-primary hover:bg-gray-50 transition-colors">
+              <button
+                aria-label="View next impact photo"
+                className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center text-primary dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
                 <span className="material-symbols-outlined">arrow_forward_ios</span>
               </button>
             </div>

@@ -85,7 +85,6 @@ export default function AmbassadorStories({ stories: initialStories = [] }) {
             <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-96 w-96 rounded-full bg-secondary/10 blur-3xl"></div>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex items-center gap-2 mb-8 text-secondary font-bold uppercase tracking-wider text-sm">
-                    <span className="material-symbols-outlined text-lg">star</span>
                     Impact Stories
                 </div>
                 
@@ -103,20 +102,17 @@ export default function AmbassadorStories({ stories: initialStories = [] }) {
                             </div>
                         </div>
                         <div className="flex gap-4 pt-4">
-                            <button onClick={prevStory} className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
-                                <span className="material-symbols-outlined">arrow_back</span>
+                            <button onClick={prevStory} aria-label="Show previous ambassador story" className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <span className="material-symbols-outlined" aria-hidden="true">arrow_back</span>
                             </button>
-                            <button onClick={nextStory} className="h-10 w-10 rounded-full bg-secondary border border-secondary flex items-center justify-center hover:bg-orange-600 transition-colors">
-                                <span className="material-symbols-outlined text-[#0b1120]">arrow_forward</span>
+                            <button onClick={nextStory} aria-label="Show next ambassador story" className="h-10 w-10 rounded-full bg-secondary border border-secondary flex items-center justify-center hover:bg-orange-600 transition-colors">
+                                <span className="material-symbols-outlined text-[#0b1120]" aria-hidden="true">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                      {/* Mini Case Study Card */}
                      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm animate-fade-in" key={`card-${activeStory}`}>
-                        <div className="mb-4 inline-flex items-center gap-2 rounded bg-green-500/20 px-3 py-1 text-xs font-medium text-green-300">
-                            <span className="h-2 w-2 rounded-full bg-green-400"></span>
-                            Success Story
-                        </div>
+
                         <h3 className="text-2xl font-bold mb-4">{normalizedStory.project.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed min-h-[80px]">
                             {normalizedStory.project.desc}

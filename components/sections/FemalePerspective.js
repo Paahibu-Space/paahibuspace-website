@@ -8,7 +8,7 @@ export default function FemalePerspective() {
         </div>
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Stats Panel */}
-          <div className="lg:w-1/2 bg-[#E9D5FF] dark:bg-purple-900/40 rounded-xl p-8 lg:p-12 transition-colors">
+          <div className="lg:w-1/2 bg-[#E9D5FF] dark:bg-purple-900/40 p-8 lg:p-12 transition-colors">
             <div className="grid grid-cols-2 gap-8 h-full">
               <div className="flex flex-col justify-center">
                 <span className="font-display font-bold text-4xl lg:text-[48px] text-primary dark:text-purple-100 mb-1">37%</span>
@@ -31,27 +31,21 @@ export default function FemalePerspective() {
           {/* Impact Areas */}
           <div className="lg:w-1/2 flex flex-col gap-6 justify-center">
             <div className="flex gap-4 items-start p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              <div className="w-12 h-12 shrink-0 bg-orange-50 dark:bg-orange-900/20 rounded-full flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined">lightbulb</span>
-              </div>
+
               <div>
                 <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-2">Increased Innovation</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">Diverse teams bring diverse perspectives, leading to more innovative solutions for everyone.</p>
               </div>
             </div>
             <div className="flex gap-4 items-start p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              <div className="w-12 h-12 shrink-0 bg-orange-50 dark:bg-orange-900/20 rounded-full flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined">leaderboard</span>
-              </div>
+
               <div>
                 <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-2">Effective Leadership</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">Women leaders often foster more inclusive, collaborative, and sustainable work environments.</p>
               </div>
             </div>
             <div className="flex gap-4 items-start p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              <div className="w-12 h-12 shrink-0 bg-orange-50 dark:bg-orange-900/20 rounded-full flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined">trending_up</span>
-              </div>
+
               <div>
                 <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-2">Entrepreneurship Growth</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">Supporting female founders boosts local economies and creates job opportunities.</p>

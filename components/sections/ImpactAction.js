@@ -9,7 +9,7 @@ export default function ImpactAction() {
               <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
                 Impact in Action
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-neutral-dark dark:text-white mb-6">
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-neutral-dark dark:text-white mb-6 animate-fade-up">
                  Empowering Rural Economies
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
@@ -27,12 +27,12 @@ export default function ImpactAction() {
                   </p>
                   <div className="grid grid-cols-2 gap-4 border-t border-gray-100 dark:border-gray-700 pt-6">
                       <div>
-                          <p className="text-3xl font-bold text-primary">500+</p>
-                          <p className="text-sm text-gray-500">Women Trained</p>
+                          <p className="text-3xl font-bold text-primary dark:text-blue-400">500+</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">Women Trained</p>
                       </div>
                       <div>
-                          <p className="text-3xl font-bold text-primary">30%</p>
-                          <p className="text-sm text-gray-500">Income Increase</p>
+                          <p className="text-3xl font-bold text-primary dark:text-blue-400">30%</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">Income Increase</p>
                       </div>
                   </div>
               </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function ProgramBenefits({ title, description, benefits, image, ctaText = "Apply Now" }) {
@@ -38,11 +39,13 @@ export default function ProgramBenefits({ title, description, benefits, image, c
         </div>
         <div className="flex-1 w-full md:h-auto min-h-[400px]">
           <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('${image}')` }}
-            >
-            </div>
+            <Image
+              alt={title ? `Participants of ${title}` : "Paahibu Space program participants"}
+              src={image}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
                 <p className="text-white font-bold text-xl">&quot;Paahibu gave us the tools to build our own future.&quot;</p>
             </div>

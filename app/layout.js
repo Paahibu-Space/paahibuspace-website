@@ -10,13 +10,44 @@ const lexend = Lexend({
   display: "swap",
 });
 
+const siteUrl = "https://paahibuspace.org";
+const defaultTitle = "Paahibu Space - Empowering African Women in Tech";
+const defaultDescription =
+  "Breaking barriers and building futures through technology, mentorship, and entrepreneurship for African women and girls.";
+
 export const metadata = {
-  title: "Paahibu Space - Empowering African Women in Tech",
-  description: "Breaking barriers and building futures through technology, mentorship, and entrepreneurship.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: defaultTitle,
+    template: "%s | Paahibu Space",
+  },
+  description: defaultDescription,
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
     apple: "/logo.png",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Paahibu Space",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Paahibu Space",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@paahibuspace",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: ["/logo.png"],
   },
 };
 

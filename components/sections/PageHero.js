@@ -10,7 +10,7 @@ export default function PageHero({
   return (
     <section className={clsx("w-full relative", className)}>
       <div
-        className="flex min-h-[500px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 relative"
+        className="flex min-h-[500px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 relative bg-primary dark:bg-background-dark"
         style={{
           backgroundImage: backgroundImage
             ? `linear-gradient(rgba(38, 41, 115, 0.7) 0%, rgba(20, 20, 30, 0.8) 100%), url("${backgroundImage}")`
@@ -22,7 +22,7 @@ export default function PageHero({
             {title}
           </div>
           {description && (
-            <p className="text-gray-200 text-lg font-normal leading-relaxed md:text-xl max-w-[600px] mx-auto text-shadow-sm">
+            <p className="text-gray-200 dark:text-gray-300 text-lg font-normal leading-relaxed md:text-xl max-w-[600px] mx-auto text-shadow-sm">
               {description}
             </p>
           )}

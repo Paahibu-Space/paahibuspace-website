@@ -20,7 +20,7 @@ export default function AdvisoryBoard({ members = [] }) {
           {advisors.map((advisor, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-200 dark:bg-gray-700"
+              className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-200 dark:bg-gray-700 animate-fade-up"
             >
               <Image
                 alt={advisor.name}
@@ -43,11 +43,21 @@ export default function AdvisoryBoard({ members = [] }) {
                   {advisor.role}
                 </p>
                 <div className="flex gap-3 mt-4 translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 delay-100">
-                  <a className="text-white hover:text-primary transition-colors" href={advisor.linkedin_url || "#"} target="_blank" rel="noopener noreferrer">
-                    <span className="material-symbols-outlined text-sm">link</span>
+                  <a
+                    className="text-white hover:text-primary transition-colors"
+                    href={advisor.linkedin_url || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${advisor.name}'s LinkedIn profile`}
+                  >
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">link</span>
                   </a>
-                  <a className="text-white hover:text-primary transition-colors" href={`mailto:${advisor.email || ""}`}>
-                    <span className="material-symbols-outlined text-sm">mail</span>
+                  <a
+                    className="text-white hover:text-primary transition-colors"
+                    href={`mailto:${advisor.email || ""}`}
+                    aria-label={`Email ${advisor.name}`}
+                  >
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">mail</span>
                   </a>
                 </div>
               </div>

@@ -2,6 +2,11 @@ import PageHero from "@/components/sections/PageHero";
 import { fetchAPI } from "@/lib/api";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Partners & Donors",
+  description: "Meet the organizations, donors, and institutions partnering with Paahibu Space to expand digital opportunity for African women and girls.",
+};
+
 export default async function PartnersPage() {
   const partners = await fetchAPI("/api/v1/partners") || [];
 
