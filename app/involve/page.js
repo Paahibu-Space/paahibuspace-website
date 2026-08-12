@@ -27,7 +27,7 @@ export default function InvolvePage() {
                 data-alt="Group of diverse women working together on laptops in a modern office"
                 style={{
                   backgroundImage:
-                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUizkvBL88qvx2-SVMlaw9vP608baCzBii3T7ktEDATdunD9-F8GusvbJPIWkmGarAWeshkm1UbkTjAHIAAU2v2iCPtWzLhoPoqAH_GMY5e8kqXMFUOYv6R755d_325vAr2luZWn3YoDBUnANldcihdwfwOOgFCvRGUAtOIGvpzAO8mol0Apw_5oKupGoN8tk77b0IZj2RtHcxeFj1_c34RxQeHaceAom3uXIQekEYrNlt84AEQelSTXvl-9kfrW8y0e5cPeOXuN0")',
+                    'url("/assets/images/empower-wint.webp")',
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply"></div>
@@ -81,7 +81,7 @@ export default function InvolvePage() {
           </div>
           <div className="flex flex-col gap-4 max-w-md">
             <h2 className="text-white font-display font-bold text-3xl lg:text-4xl tracking-tight">
-              Join GROW Program
+              Join the Community
             </h2>
             <p className="text-white/90 font-display text-lg leading-relaxed">
               Join a community dedicated to your professional growth. Access

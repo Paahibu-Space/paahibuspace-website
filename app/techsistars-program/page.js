@@ -163,7 +163,7 @@ export default async function TechsiStarsProgram() {
                     { title: "Career Exposure", icon: "work", desc: "Internship placements and CV review sessions." },
                     { title: "Community Building", icon: "forum", desc: "A safe space for peer learning and support." }
                 ].map((item, i) => (
-                    <div key={i} className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-purple-100 dark:border-purple-500/10">
+                    <div key={i} className="bg-white dark:bg-gray-800 p-8 group border border-purple-100 dark:border-purple-500/10">
                         <div className="w-12 h-12 bg-purple-100 dark:bg-secondary/80 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
                             <span className="material-symbols-outlined">{item.icon}</span>
                         </div>

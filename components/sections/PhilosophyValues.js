@@ -12,7 +12,7 @@ const values = [
       "What makes Paahibu Space unique is our people-first approach. We go beyond providing digital and entrepreneurial skills — we create an ecosystem of inclusivity, innovation, and support. By combining knowledge, mentorship, and community, we empower women, girls, and youth not only to thrive in today's digital world but to become leaders who shape the future.",
     tags: ["#PeopleFirst", "#Innovation"],
     image:
-      "/assets/images/team2.png",
+      "/assets/images/why-we-stand-out.webp",
     caption: "Community First",
     desc: "Building a stronger future together through shared knowledge.",
   },
@@ -22,7 +22,7 @@ const values = [
     content:
       "We believe that strong relationships are the foundation of success. Our mentors and learners form bonds that extend beyond the classroom, creating a lifetime network of support.",
     image:
-      "/assets/images/team-laugh.png",
+      "/assets/images/building-relationships.webp",
     caption: "Stronger Together",
     desc: "Connecting minds, creating opportunities.",
   },
