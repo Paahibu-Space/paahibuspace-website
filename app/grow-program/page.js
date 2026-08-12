@@ -5,6 +5,7 @@ import ProgramCTA from "@/components/ui/ProgramCTA";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
+import GrowStoriesSlider from "@/components/sections/GrowStoriesSlider";
 
 export const metadata = {
   title: "GROW Incubator Program",
@@ -52,7 +53,7 @@ export default async function GrowProgramPage() {
       <section
         className="relative w-full min-h-[600px] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0, 25, 76, 0.9) 0%, rgba(0, 25, 76, 0.4) 100%), url("/assets/images/programs/grow-team.webp")`,
+          backgroundImage: `linear-gradient(to right, rgba(0, 25, 76, 0.9) 0%, rgba(0, 25, 76, 0.4) 100%), url("/assets/images/programs/grow-project-hero.png")`,
         }}
       >
         <div className="max-w-7xl w-full mx-auto px-5 md:px-10 py-20">
@@ -83,59 +84,183 @@ export default async function GrowProgramPage() {
       {/* Program Overview */}
       <section className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl font-bold leading-tight">
+              Empowering Women, Building Networks
+            </h2>
+            <div className="w-16 h-1 bg-primary rounded-full"></div>
+            <p className="text-navy/70 dark:text-gray-300 text-lg leading-relaxed">
+              The GROW Program is a flagship initiative focused on creating a
+              safe and empowering community and network for women
+              entrepreneurs, freelancers, founders and young professionals.
+              GROW provides personal and professional development, business
+              support, and networking opportunities, fostering a culture of
+              creativity and collaboration for women in Ghana.
+            </p>
+            <p className="text-navy/70 dark:text-gray-300 text-lg leading-relaxed">
+              It also addresses systemic barriers to women&apos;s economic
+              participation through research, advocacy on gender-responsive
+              policies and participating in national and global policy
+              discussions, campaigns on women&apos;s empowerment and safety.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Project Activities */}
+      <section
+        className="relative py-24 bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0, 25, 76, 0.9) 0%, rgba(0, 25, 76, 0.75) 100%), url("/assets/images/team-laugh.png")`,
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl font-bold leading-tight">
-                Empowering Women, Building Networks
-              </h2>
-              <div className="w-16 h-1 bg-primary rounded-full"></div>
-              <p className="text-navy/70 dark:text-gray-300 text-lg leading-relaxed">
-                The GROW Program is a flagship initiative focused on creating a
-                safe and empowering community and network for women
-                entrepreneurs, freelancers, founders and young professionals.
-                GROW provides personal and professional development, business
-                support, and networking opportunities, fostering a culture of
-                creativity and collaboration for women in Ghana.
-              </p>
-              <p className="text-navy/70 dark:text-gray-300 text-lg leading-relaxed">
-                It also addresses systemic barriers to women&apos;s economic
-                participation through research, advocacy on gender-responsive
-                policies and participating in national and global policy
-                discussions, campaigns on women&apos;s empowerment and safety.
-              </p>
+            <h2 className="text-white font-display text-4xl md:text-6xl font-black leading-tight">
+              Key Project
+              <br />
+              Activities
+            </h2>
+            <div className="space-y-10">
+              {/* Item 01 */}
+              <div className="relative flex items-center">
+                <div className="z-10 flex-shrink-0 w-16 h-16 rounded-full bg-secondary border-4 border-white flex items-center justify-center text-white font-black text-xl -mr-8">
+                  01
+                </div>
+                <div className="flex-1 bg-sky-50 pl-12 pr-6 py-5 flex flex-col md:flex-row md:items-start gap-2 md:gap-6">
+                  <h3 className="font-bold text-navy text-lg md:w-44 flex-shrink-0">
+                    Nhanga Sessions
+                  </h3>
+                  <p className="text-navy/80 text-sm leading-relaxed">
+                    Provided a safe space for intergenerational dialogues,
+                    peer mentorship & policy dialogues.
+                  </p>
+                </div>
+              </div>
+              {/* Item 02 */}
+              <div className="relative flex items-center">
+                <div className="z-10 flex-shrink-0 w-16 h-16 rounded-full bg-secondary border-4 border-white flex items-center justify-center text-white font-black text-xl -mr-8">
+                  02
+                </div>
+                <div className="flex-1 bg-navy pl-12 pr-6 py-5 flex flex-col md:flex-row md:items-start gap-2 md:gap-6">
+                  <h3 className="font-bold text-white text-lg md:w-44 flex-shrink-0">
+                    Digital & Business Skills Training
+                  </h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    Provided context-relevant and income-first skills with
+                    immediate impact on digital literacy & safety, investment
+                    readiness & businesss management skills.
+                  </p>
+                </div>
+              </div>
+              {/* Item 03 */}
+              <div className="relative flex items-center">
+                <div className="z-10 flex-shrink-0 w-16 h-16 rounded-full bg-secondary border-4 border-white flex items-center justify-center text-white font-black text-xl -mr-8">
+                  03
+                </div>
+                <div className="flex-1 bg-sky-50 pl-12 pr-6 py-5 flex flex-col md:flex-row md:items-start gap-2 md:gap-6">
+                  <h3 className="font-bold text-navy text-lg md:w-44 flex-shrink-0">
+                    Policy Literacy & Development
+                  </h3>
+                  <p className="text-navy/80 text-sm leading-relaxed">
+                    Developing a knowledge management toolkit, a policy
+                    brief, sustaining the impact of the voice and agency of
+                    GROW Network members.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-sm border border-navy/5 dark:border-white/10 relative">
-              <span className="absolute top-8 left-8 text-primary/20 transform -translate-x-2 -translate-y-2">
-                <span className="material-symbols-outlined text-[80px]">
-                  format_quote
-                </span>
-              </span>
-              <blockquote className="relative z-10">
-                <p className="text-xl md:text-2xl font-medium text-navy dark:text-white italic leading-relaxed">
-                  &quot;When women support each other, incredible things happen.
-                  GROW isn&apos;t just a program; it&apos;s a movement
-                  redefining the future of African tech.&quot;
+          </div>
+        </div>
+      </section>
+
+      {/* Outcomes */}
+      <section
+        className="relative py-24 bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0, 25, 76, 0.9) 0%, rgba(0, 25, 76, 0.75) 100%), url("/assets/images/team-laugh.png")`,
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-5 md:px-10">
+          <h2 className="text-white font-display text-4xl md:text-6xl font-black text-center tracking-wide mb-16">
+            GROW OUTCOMES
+          </h2>
+
+          <div className="grid md:grid-cols-[1fr_auto_1fr] gap-x-10 gap-y-14 items-center">
+            {/* Left column */}
+            <div className="space-y-14 order-1">
+              <div>
+                <h3 className="text-white font-bold text-xl mb-3">
+                  Increased Digital Literacy
+                </h3>
+                <p className="text-white/80 leading-relaxed">
+                  Over 100 women entrepreneurs have learnt how to turn their
+                  smartphones into business tools, reframing digital literacy
+                  as economic empowerment, not just technical know-how.
                 </p>
-                <footer className="mt-6 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
-                    <Image
-                      alt="Sarah M."
-                      className="object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8lsGQQ4HHJvX1MDQBkb_qWrJOSBtT3xqsuyVIl0ZU188uxes7UrJyLbPETJg-HwuWgcbA_HTTgwM_T9JxciRDzbJ8Nc-31VDOsFldmSnuyL6srvLt867p007c_gDsjjjgT7UuapV_pHUkmLY1Hl30E2YVKXiMTPKzSGRyMcm1uRRVLHT0zKX3AY9Fe1Oy6zevQ9WGfh58_RTo1b0ZbcaU1cZQv2rDh24grcym1sEOr2Sym-oPC8yXp3Mrx3UJeSEhlDU6P_UN2_c"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div>
-                    <cite className="not-italic font-bold text-navy dark:text-white block">
-                      Sarah M.
-                    </cite>
-                    <span className="text-sm text-primary font-medium">
-                      Program Director
-                    </span>
-                  </div>
-                </footer>
-              </blockquote>
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-xl mb-3">
+                  Nhanga Became Structured
+                </h3>
+                <p className="text-white/80 leading-relaxed">
+                  The GROW Network became the first structured space in
+                  Northern Ghana where informal women entrepreneurs and young
+                  professionals co-lead.
+                </p>
+              </div>
+            </div>
+
+            {/* Hexagon icon cluster */}
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 mx-auto order-3 md:order-2">
+              {[
+                { icon: "deployed_code", top: "8%", left: "50%" },
+                { icon: "request_quote", top: "40%", left: "24%" },
+                { icon: "computer", top: "40%", left: "76%" },
+                { icon: "campaign", top: "76%", left: "10%" },
+                { icon: "diversity_1", top: "80%", left: "50%" },
+                { icon: "person_pin_circle", top: "76%", left: "90%" },
+              ].map(({ icon, top, left }) => (
+                <div
+                  key={icon}
+                  className="absolute w-20 h-20 sm:w-24 sm:h-24 bg-secondary flex items-center justify-center text-white -translate-x-1/2 -translate-y-1/2"
+                  style={{
+                    top,
+                    left,
+                    clipPath:
+                      "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
+                  }}
+                >
+                  <span className="material-symbols-outlined text-3xl sm:text-4xl">
+                    {icon}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Right column */}
+            <div className="space-y-14 order-2 md:order-3">
+              <div>
+                <h3 className="text-white font-bold text-xl mb-3">
+                  Policy Influence & Agency Reclaimed
+                </h3>
+                <p className="text-white/80 leading-relaxed">
+                  Women entrepreneurs co-designed insights for a policy brief
+                  on informal sector and ATVET women&apos;s needs, creating a
+                  feedback loop between lived experiences and policy
+                  frameworks.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-xl mb-3">
+                  Trust Rebuilt & Community Ownership
+                </h3>
+                <p className="text-white/80 leading-relaxed">
+                  GROW restored trust, with 97.1% of women expressing desire
+                  to be part of the network long-term, through peer
+                  leadership, open communication and regular feedback loops.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -153,11 +278,14 @@ export default async function GrowProgramPage() {
               sustainable growth.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="group p-8 rounded-2xl bg-background-light dark:bg-gray-800 border border-navy/5 dark:border-white/10 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/5">
-              <div className="w-14 h-14 rounded-xl bg-secondary/5 dark:bg-white/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span className="material-symbols-outlined text-3xl">
+          <div className="relative grid md:grid-cols-3 gap-14 md:gap-8">
+            {/* Connecting line (desktop only) */}
+            <div className="hidden md:block absolute top-8 left-[16.6667%] right-[16.6667%] h-0.5 bg-primary/15 dark:bg-white/10"></div>
+
+            {/* Pillar 1 */}
+            <div className="relative flex flex-col items-center text-center md:items-start md:text-left">
+              <div className="relative z-10 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-6 ring-8 ring-white dark:ring-black/20">
+                <span className="material-symbols-outlined text-2xl">
                   groups
                 </span>
               </div>
@@ -173,10 +301,10 @@ export default async function GrowProgramPage() {
                 across Ghana.
               </p>
             </div>
-            {/* Card 2 */}
-            <div className="group p-8 rounded-2xl bg-background-light dark:bg-gray-800 border border-navy/5 dark:border-white/10 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/5">
-              <div className="w-14 h-14 rounded-xl bg-secondary/5 dark:bg-white/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span className="material-symbols-outlined text-3xl">
+            {/* Pillar 2 */}
+            <div className="relative flex flex-col items-center text-center md:items-start md:text-left">
+              <div className="relative z-10 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-6 ring-8 ring-white dark:ring-black/20">
+                <span className="material-symbols-outlined text-2xl">
                   trending_up
                 </span>
               </div>
@@ -191,10 +319,10 @@ export default async function GrowProgramPage() {
                 professional journey.
               </p>
             </div>
-            {/* Card 3 */}
-            <div className="group p-8 rounded-2xl bg-background-light dark:bg-gray-800 border border-navy/5 dark:border-white/10 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/5">
-              <div className="w-14 h-14 rounded-xl bg-secondary/5 dark:bg-white/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span className="material-symbols-outlined text-3xl">
+            {/* Pillar 3 */}
+            <div className="relative flex flex-col items-center text-center md:items-start md:text-left">
+              <div className="relative z-10 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-6 ring-8 ring-white dark:ring-black/20">
+                <span className="material-symbols-outlined text-2xl">
                   campaign
                 </span>
               </div>
@@ -293,55 +421,83 @@ export default async function GrowProgramPage() {
         </div>
       </section>
 
-      <div className="py-20 bg-primary text-white relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-          <div className="absolute -top-[100px] -left-[100px] w-[400px] h-[400px] bg-primary rounded-full blur-[100px]"></div>
-          <div className="absolute top-[20%] right-[10%] w-[200px] h-[200px] bg-blue-400 rounded-full blur-[80px]"></div>
-        </div>
+      <div className="py-20 bg-white dark:bg-background-dark relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-white font-heading text-3xl md:text-4xl font-bold">
-              Our Impact So Far
-            </h2>
-            <p className="text-white/70 mt-4 max-w-2xl mx-auto">
-              Measuring the change we bring to the ecosystem through data and
-              stories.
-            </p>
+          <div className="flex items-start justify-between mb-16">
+            <div className="relative inline-block">
+              <h2 className="inline-block border-2 border-dashed border-navy/60 dark:border-white/40 text-navy dark:text-white font-display text-3xl md:text-5xl font-black px-10 py-4">
+                Evidence Found
+              </h2>
+              <div className="absolute left-0 bottom-0 translate-y-1/2 w-24 h-3 bg-secondary"></div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
-            <div className="p-6">
-              <div className="text-5xl md:text-6xl font-black text-white mb-2">
-                500+
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Stat 1 */}
+            <div className="border-2 border-dashed border-navy/40 dark:border-white/30 p-8">
+              <div className="text-5xl md:text-6xl font-black text-navy dark:text-white mb-3">
+                95.7%
               </div>
-              <div className="text-xl font-medium text-white">
-                Active Members
-              </div>
-              <p className="text-white/60 text-sm mt-2">
-                Across 12 different regions
-              </p>
+              <div className="w-12 h-1 bg-secondary mb-4"></div>
+              <h3 className="text-lg font-bold text-navy dark:text-white mb-3">
+                Smart Phone Ownership
+              </h3>
+              <ul className="text-navy/70 dark:text-gray-300 text-sm leading-relaxed space-y-2 list-disc list-outside pl-4">
+                <li>
+                  95.7% surveyed owned smart phones, yet 70% do not know how
+                  to use them beyond basic calls & messaging.
+                </li>
+                <li>
+                  High data costs and digital platforms priced in foreign
+                  currencies were cited as major barriers to digital
+                  adoption.
+                </li>
+              </ul>
             </div>
-            <div className="p-6">
-              <div className="text-5xl md:text-6xl font-black text-white mb-2">
-                85%
+            {/* Stat 2 */}
+            <div className="border-2 border-dashed border-navy/40 dark:border-white/30 p-8">
+              <div className="text-5xl md:text-6xl font-black text-navy dark:text-white mb-3">
+                87%
               </div>
-              <div className="text-xl font-medium text-white">
-                Business Growth
-              </div>
-              <p className="text-white/60 text-sm mt-2">
-                Reported by participants within 1 year
-              </p>
+              <div className="w-12 h-1 bg-secondary mb-4"></div>
+              <h3 className="text-lg font-bold text-navy dark:text-white mb-3">
+                Business Growth Aspirations
+              </h3>
+              <ul className="text-navy/70 dark:text-gray-300 text-sm leading-relaxed space-y-2 list-disc list-outside pl-4">
+                <li>
+                  87% of women entrepreneurs in GROW operate unregistered
+                  businesses. 67% expressed interest in business
+                  formalization.
+                </li>
+                <li>
+                  There is strong demand for eco-friendly packaging solutions
+                  and business starter kits that are affordable and
+                  accessible.
+                </li>
+              </ul>
             </div>
-            <div className="p-6">
-              <div className="text-5xl md:text-6xl font-black text-white mb-2">
-                20+
+            {/* Stat 3 */}
+            <div className="border-2 border-dashed border-navy/40 dark:border-white/30 p-8">
+              <div className="text-5xl md:text-6xl font-black text-navy dark:text-white mb-3">
+                97.1%
               </div>
-              <div className="text-xl font-medium text-white">
-                Policy Engagements
-              </div>
-              <p className="text-white/60 text-sm mt-2">
-                Advocating for digital inclusion
-              </p>
+              <div className="w-12 h-1 bg-secondary mb-4"></div>
+              <h3 className="text-lg font-bold text-navy dark:text-white mb-3">
+                Network Demand
+              </h3>
+              <ul className="text-navy/70 dark:text-gray-300 text-sm leading-relaxed space-y-2 list-disc list-outside pl-4">
+                <li>
+                  A majority, representing 97.1%, want to be part of a
+                  women&apos;s group or network that combines business growth
+                  support with personal connection, solidarity, and
+                  trust-building.
+                </li>
+                <li>
+                  Community-building activities, practical &
+                  culturally-relevant training and follow-ups, are what will
+                  strengthen the network.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -350,94 +506,9 @@ export default async function GrowProgramPage() {
       <section className="py-20 bg-white dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl font-bold text-center mb-16">
-            Voices of GROW
+            Stories from GROW
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="bg-background-light dark:bg-gray-800 p-8 rounded-2xl relative">
-              <span className="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">
-                format_quote
-              </span>
-              <div className="flex items-center gap-4 mb-6">
-                <Image
-                  alt="Amina K."
-                  className="rounded-full object-cover border-2 border-primary"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHU5x5r74aRsO-M90yUoArKZDOlyRqcK8WZZ-JB1kgAhzB7ixi5Ry6ywv30_QQPQ970tM9ZB-xdUAdre8Bz4T_OQRE-EJjqehIpeXkglCOTUizJyw_qLrB-UzpT7luvMKS6_I8GpzjxKDsoY8JkfXJn3Wj_zhRPFa7_JgaMD3SoHaVDydoG72i68AT875B6EavFNXXEAEBMhg6BmWu2Bvtih-ktUmGAL-viItERjsQo_lBAdnNOjBSX9l9G-MCPuYXekQKs8FtCbA"
-                  width={56}
-                  height={56}
-                />
-                <div>
-                  <div className="font-bold text-navy dark:text-white">
-                    Amina K.
-                  </div>
-                  <div className="text-xs text-primary font-bold uppercase tracking-wide">
-                    Tech Founder
-                  </div>
-                </div>
-              </div>
-              <p className="text-navy/70 dark:text-gray-300 leading-relaxed text-sm">
-                &quot;The mentorship I received helped me pivot my startup
-                during a critical time. The community here is unmatched—truly
-                sisters in tech.&quot;
-              </p>
-            </div>
-            {/* Testimonial 2 */}
-            <div className="bg-background-light dark:bg-gray-800 p-8 rounded-2xl relative shadow-lg shadow-navy/5 transform md:-translate-y-4 border border-primary/20">
-              <span className="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">
-                format_quote
-              </span>
-              <div className="flex items-center gap-4 mb-6">
-                <Image
-                  alt="Chioma O."
-                  className="rounded-full object-cover border-2 border-primary"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgSfLhkS24XlmdkGHqXsyT6gwD4oJpQLSSY4QztPQppCSIQmRSd3eylvnUA0EWlOzzH-0nknexjtwrLS6wH73oIXLDhH_zJeBeZKsBGM-oWcg2WxKQdNzFzdi6HJKJ9wTCoIlyyK7HjHO6F-XdlarsB_dC9G5OZFyNIUfF5MlCeBrXqe2iP7GUj0Gvk7IPw9GrR5pqFUB-RPo36HWEdFMwfMTb_2jz6Obe9F6UDnzXoVBXdDAde0vH_M2yLYSRfivhbIjuAVpcMSg"
-                  width={56}
-                  height={56}
-                />
-                <div>
-                  <div className="font-bold text-navy dark:text-white">
-                    Chioma O.
-                  </div>
-                  <div className="text-xs text-primary font-bold uppercase tracking-wide">
-                    Freelance Designer
-                  </div>
-                </div>
-              </div>
-              <p className="text-navy/70 dark:text-gray-300 leading-relaxed text-sm">
-                &quot;I found my first major international client through a GROW
-                networking event. This program gave me the confidence to charge
-                what I&apos;m worth.&quot;
-              </p>
-            </div>
-            {/* Testimonial 3 */}
-            <div className="bg-background-light dark:bg-gray-800 p-8 rounded-2xl relative">
-              <span className="material-symbols-outlined text-primary text-4xl absolute top-6 right-6 opacity-30">
-                format_quote
-              </span>
-              <div className="flex items-center gap-4 mb-6">
-                <Image
-                  alt="Zainab A."
-                  className="rounded-full object-cover border-2 border-primary"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_w_MMQ48gJ3q3rNx2zN3W3J_YKZZfS1XlCUJH-wIFM-5rQUbPM2Wg1GojKgOMRT-lKGQTfdQZbWq4R96EPSTpP1McI_UTw97nQelRJwG79q-xaaIx17weXl_9QoXNU2QOgXlDP7-uwppDO_SQgvL8KSSgdaNJpPST3tRe929luj49IICYz7iV0hLQDYMJQZxCn6ITblugcY2HuhmjUTJVN_VSmhYqyq-Qq22_V3AJNO5CSl6LLPYVi3KS9YqsCjougr7-Rycb4Q"
-                  width={56}
-                  height={56}
-                />
-                <div>
-                  <div className="font-bold text-navy dark:text-white">
-                    Zainab A.
-                  </div>
-                  <div className="text-xs text-primary font-bold uppercase tracking-wide">
-                    Policy Analyst
-                  </div>
-                </div>
-              </div>
-              <p className="text-navy/70 dark:text-gray-300 leading-relaxed text-sm">
-                &quot;Advocating for digital rights is tough, but doing it with
-                the backing of the GROW network makes our voice so much stronger
-                in policy circles.&quot;
-              </p>
-            </div>
-          </div>
+          <GrowStoriesSlider />
         </div>
       </section>
 

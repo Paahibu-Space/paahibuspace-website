@@ -211,7 +211,7 @@ export default async function CommunityAmbassadorsProgramPage() {
       </section>
 
       {/* SECTION 5: AMBASSADOR STORIES / IMPACT */}
-      <AmbassadorStories stories={programStories} />
+      {/* <AmbassadorStories stories={programStories} /> */}
 
         {/* Benefits / Why Join Section */}
         <div className="w-full flex justify-center py-16 px-4 sm:px-10 lg:px-40">

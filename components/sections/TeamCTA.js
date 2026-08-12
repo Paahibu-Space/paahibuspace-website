@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 export default function TeamCTA() {
@@ -20,8 +21,9 @@ export default function TeamCTA() {
           or volunteer as mentors. Help us shape the future of African tech.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="secondary" size="lg" className="rounded-full h-auto py-4 text-lg">View Open Positions</Button>
-          <Button variant="white-outline" size="lg" className="rounded-full h-auto py-4 text-lg">Contact Us</Button>
+          <Link href="/involve">
+            <Button variant="secondary" size="lg" className="rounded-full h-auto py-4 text-lg">View Open Positions</Button>
+          </Link>
         </div>
       </div>
     </section>

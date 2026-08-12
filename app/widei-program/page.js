@@ -33,7 +33,7 @@ export default async function WideiProgramPage() {
 
      {/* Hero Section */}
      <header className="relative w-full min-h-[600px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
-         style={{backgroundImage: 'linear-gradient(to right, rgba(16, 34, 22, 0.85) 0%, rgba(16, 34, 22, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCn4Br8YOkzYhaMOEC6q8h2Ordjvn9ZERZ-Yv9y-aShetxLo8M4_affGun19w8q-qt7tPtIWBvbVZxLMsecKw9HRa6PZimE3jZmJHUzRVF29C8ZvgxL7PhpECG6RpLBc1m7F7kgKcTebzHXCUZw7ssXXZIL3jxFVq3U_dl0WkAs-x57AL9h2ndFi6DrEW7nNzK_LpylFLz3i7apDoUrSKNmjZ14Fcmpepqy4ARyB1wEHDHPGIy8bFvtsKzGl2MpHPA6CXu6JO_UlD-f")'}}>
+         style={{backgroundImage: 'linear-gradient(to right, rgba(22, 51, 80, 0.85) 0%, rgba(16, 34, 27, 0.4) 100%), url("/assets/images/programs/widei/widei-hero-img.webp")'}}>
          <div className="max-w-7xl w-full px-4 md:px-10 py-20 flex flex-col md:flex-row items-center gap-10">
              <div className="flex-1 flex flex-col gap-6 text-center md:text-left">
                  <div className="inline-flex items-center justify-center md:justify-start gap-2 text-secondary font-bold tracking-wide uppercase text-xs">
@@ -83,7 +83,7 @@ Space and the WiDiB Initiative&quot;
 
      {/* Mission & Stats Section */}
      <section className="py-16 md:py-24 px-4 md:px-10 bg-background-light dark:bg-background-dark">
-         <div className="max-w-4xl mx-auto text-center mb-12">
+         <div className="max-w-4xl mx-auto text-center mb-16">
              <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-neutral-dark dark:text-white">Digitizing the Informal Sector</h2>
              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                  We focus on women-led businesses in rural and underrepresented communities. By equipping them with
@@ -91,30 +91,19 @@ Space and the WiDiB Initiative&quot;
                  future and preserve cultural heritage through modern channels.
              </p>
          </div>
-         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-             {/* Stat 1 */}
-             <div className="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md dark:shadow-md transition-all text-center">
-                 <div className="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-dark:bg-primary group-hover:text-white group-dark:text-white transition-colors">
-                     <span className="material-symbols-outlined text-3xl">school</span>
-                 </div>
-                 <p className="text-4xl font-black text-neutral-dark dark:text-white mb-2">500+</p>
-                 <p className="text-gray-500 dark:text-gray-400 font-medium">Women Trained</p>
-             </div>
-             {/* Stat 2 */}
-             <div className="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-all text-center">
-                 <div className="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-dark:bg-primary group-hover:text-white group-dark:text-white transition-colors">
-                     <span className="material-symbols-outlined text-3xl">public</span>
-                 </div>
-                 <p className="text-4xl font-black text-neutral-dark dark:text-white mb-2">30</p>
-                 <p className="text-gray-500 dark:text-gray-400 font-medium">Communities Reached</p>
-             </div>
-             {/* Stat 3 */}
-             <div className="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-all text-center">
-                 <div className="mb-4 inline-flex p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-dark:bg-primary group-hover:text-white group-dark:text-white transition-colors">
-                     <span className="material-symbols-outlined text-3xl">trending_up</span>
-                 </div>
-                 <p className="text-4xl font-black text-neutral-dark dark:text-white mb-2">40%</p>
-                 <p className="text-gray-500 dark:text-gray-400 font-medium">Avg. Business Growth</p>
+         <div className="max-w-5xl mx-auto rounded-3xl bg-primary text-white overflow-hidden shadow-xl shadow-primary/10">
+             <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/15">
+                 {[
+                     { icon: "school", value: "500+", label: "Women Trained" },
+                     { icon: "public", value: "30", label: "Communities Reached" },
+                     { icon: "trending_up", value: "40%", label: "Avg. Business Growth" },
+                 ].map((stat) => (
+                     <div key={stat.label} className="flex flex-col items-center text-center gap-3 p-10">
+ 
+                         <p className="text-4xl md:text-5xl font-black">{stat.value}</p>
+                         <p className="text-white/70 font-medium text-sm uppercase tracking-wide">{stat.label}</p>
+                     </div>
+                 ))}
              </div>
          </div>
      </section>
@@ -137,39 +126,41 @@ Space and the WiDiB Initiative&quot;
                          title: "Market Clinics",
                          desc: "On-site workshops right in the heart of local markets, minimizing disruption to daily trade while maximizing attendance.",
                          icon: "groups",
-                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDJw5ISheLw-aR26Jh8B3lrrKTrUeUIlg3ji-U7V_4MA5P9-3To4Uh2nOinZUyM1LXVFVlYZ7TOnofwu1huirXKyExsJsTL5Zc8ldPjedrv9GdKPgQvqUX-_POqW1RIPaRDWA-Xe6uVJ0-1LrMRbyxC_jApcwC19uH9B8Xd1dFpiKn9JjjfZyMPQpHeqaJhdYk47-2PvvHOB0oDAbA-6ncsyteoPgzIk5S73VxIupEAsdQA-B430E6xBl0-Q9V1DboEXld5cLXqwX9y"
                      },
                      {
                          title: "WhatsApp Shops",
                          desc: "Converting the most popular messaging app into a powerful storefront. Catalogues, quick replies, and status updates.",
                          icon: "chat",
-                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCh6devtBIVCmwOR-RHmNW761e3OQKY-XlHJEorZnyg8uvlsbUtnt1qg0vUP499xutF0wQnn2VX9PfmBFhOnupK_TI4a44Vo_cibse2fiodHJV_HUpIEuzT6Je_MfqrZ5jtIIp387UD_2OdHlFuduFVQRMZ2LhavRwU_U7lx8vwD5SQfxAMTzhkhJ-x8H0LY-kzvr_oNypec1ncqs4KYSRYrVnBN5hpVKx3Nm3XBxM8Aol9ECzJu20QhQuP8Rfonl7Q6fw6-wBCnkT5"
                      },
                      {
                          title: "Trade Incubation",
                          desc: "Specialized digital inventory tracking for artisans. Preserving traditional crafts by accessing global digital markets.",
                          icon: "inventory_2",
-                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBErKZtXs74uxckFhhSYnP6JFc0-I4MMZJVda_4sFf5A-WgBOgjCHSA9rLeb4taVf-7UbWMGwzWiYG7rcB1HI64IMrHMd0zSCoM_vudlofys16Al44qf8a5-gJwB0YP-H13t7t_IBdqAzCb6mrmZXflFj3McfvQ1ZZoe-0msrlHaZtNspUS8RCdz0CEtEB_7pWHVlUL0pv120N4zua693qvs2yfYFhMAfMkHy5ep2A9Nlf51ULDm1r2B7GnpZZsm9qPWYdEXFa0C6uM"
                      },
                      {
                          title: "Local Context",
                          desc: "Breaking down complex digital concepts using local dialects and culturally resonant analogies for true understanding.",
                          icon: "translate",
-                         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKGfNt1DIMfI3f8FF6rXBeZfVYzROzmu8x1GZJM_ryAWAOVEm3ZPFbe2nIPQZkZ0DPyJSglrhfe1SRqpb7OSkjSis8zFfzVUWxZm5vq4_dlN8kvBNgeKYwHJAkg-2wr9i76x0uyKKGTQtIymTgjMB0uVybGfNTbk3YapJck27wVoHYIEF-H5ftmkXGSv-SsVpxgC1gBoDrXZIgjh8pWN5CTbXRXgwR7mOECFo-bUHSLYm3QM-PKbjVOAZ2vRRmxOxHW5KJCAz3_-BX"
                      }
-                 ].map((item, i) => (
-                     <div key={i} className="bg-background-light dark:bg-white/5 rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10">
-                         <div className="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                             style={{backgroundImage: `url('${item.img}')`}}></div>
-                         <div className="p-6">
-                             <div className="w-10 h-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shadow-sm -mt-12 relative z-10 mb-4 text-primary">
-                                 <span className="material-symbols-outlined">{item.icon}</span>
-                             </div>
-                             <h4 className="text-xl font-bold mb-2 text-neutral-dark dark:text-white">{item.title}</h4>
-                             <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
+                 ].map((item, i) => {
+                     const dark = i % 2 === 1;
+                     return (
+                         <div
+                             key={item.title}
+                             className={`rounded-2xl p-8 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 ${
+                                 dark
+                                     ? "bg-primary text-white shadow-lg shadow-primary/20"
+                                     : "bg-background-light dark:bg-white/5 border border-gray-100 dark:border-white/10 text-neutral-dark dark:text-white hover:shadow-lg"
+                             }`}
+                         >
+
+                             <h4 className="text-xl font-bold">{item.title}</h4>
+                             <p className={`text-sm leading-relaxed ${dark ? "text-white/80" : "text-gray-600 dark:text-gray-400"}`}>
+                                 {item.desc}
+                             </p>
                          </div>
-                     </div>
-                 ))}
+                     );
+                 })}
              </div>
          </div>
      </section>
