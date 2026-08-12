@@ -71,7 +71,7 @@ export default function HeroSlider() {
                   <div className="absolute inset-0 bg-cover bg-center"
                     role="img"
                     aria-label="Hiqmat leading a hands-on tech training session"
-                    style={{ backgroundImage: "url('/assets/images/hero/hiqmat-in-action.webp')" }}>
+                    style={{ backgroundImage: "url('/assets/images/hero/grow-hero2.webp')" }}>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60">
                   </div>
@@ -148,7 +148,7 @@ export default function HeroSlider() {
                     <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                       role="img"
                       aria-label="Community members at a Creatives Meetup in Wa, Upper West Region, Ghana"
-                      style={{ backgroundImage: "url('https://updates.paahibuspace.org/assets/frontend/images/female-in-tech.png')" }}>
+                      style={{ backgroundImage: "url('/assets/images/hero/hiqmat-in-action.webp')" }}>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
