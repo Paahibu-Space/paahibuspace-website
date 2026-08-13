@@ -56,7 +56,7 @@ export default function NewsletterSection() {
             Join the Movement
           </h2>
           <p className="mb-8 max-w-2xl text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-            Empowering African women in technology. Get the latest opportunities, mentorship updates, and tech news delivered directly to your inbox.
+            Increasing the agency of African women in technology. Get the latest opportunities, mentorship updates, and tech news delivered directly to your inbox.
           </p>
           <div className="w-full max-w-lg">
             <form className="flex flex-col gap-3 sm:flex-row sm:items-stretch" onSubmit={handleSubscribe}>

@@ -261,16 +261,16 @@ async function ImpactStatsSection() {
             <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 transition-all">
 
               <div>
-                <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[0]?.value || "500+"}</p>
-                <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[0]?.label || "Girls Trained"}</p>
+                <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[0]?.value || "10,000+"}</p>
+                <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[0]?.label || "Girls and Women trained"}</p>
               </div>
             </div>
              {/* Card 2 */}
             <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 transition-all">
 
               <div>
-                <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[1]?.value || "30+"}</p>
-                <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[1]?.label || "Projects Launched"}</p>
+                <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[1]?.value || "9+"}</p>
+                <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[1]?.label || "Projects Implemented"}</p>
               </div>
             </div>
              {/* Card 3 */}
@@ -278,14 +278,14 @@ async function ImpactStatsSection() {
             
               <div>
                 <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[2]?.value || "450+"}</p>
-                <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[2]?.label || "Certificates Awarded"}</p>
+                <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[2]?.label || "Jobs Created"}</p>
               </div>
             </div>
              {/* Card 4 */}
             <div className="flex flex-col gap-4 p-6 bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 transition-all">
 
               <div>
-                <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[3]?.value || "12"}</p>
+                <p className="text-4xl font-black text-primary dark:text-white tracking-tight">{stats[3]?.value || "62+"}</p>
                 <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{stats[3]?.label || "Communities Reached"}</p>
               </div>
             </div>

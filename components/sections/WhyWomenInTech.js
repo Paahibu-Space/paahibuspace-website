@@ -17,7 +17,7 @@ export default function WhyWomenInTech() {
               <Image
                 alt="Diverse women collaborating in a technology workspace"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUQSfCS19mU8bnukcpA9zRHUxkRYBvRVOK4S3wsCFlPVFIdt6_55_81_hdxE9G1ixAqyk9vo6pIxvleY_fb1eUBEBOv5LQG0i7g55Jr4CoFh4fJaI9Z2GUMcYXnHhGK8Sa6QqlDntFomnxsvJFOCnEUZtfvEOSecocvOzN47B-h7MU4_7sYqESl8UBe35uqKV9UfG6qAjF5fhGEwt3ryZSMHLgdwZaccafXMbI7Z3DVYpiJGpYb94lT7AqMvTdCX3kUAs0OGf4vkU"
+                src="/assets/images/conn-emp.png"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
               />

@@ -11,9 +11,25 @@ export const metadata = {
   description: "Meet the leadership team, advisory board, and community ambassadors driving Paahibu Space's mission across Africa.",
 };
 
+// Maps a team category name to the (differently styled) section component used to render it.
+const CATEGORY_SECTIONS = {
+  'Leadership': LeadershipTeam,
+  'Advisory Board': AdvisoryBoard,
+  'Ambassadors': CommunityAmbassadors,
+  'Global Reach': GlobalReach,
+};
+
+// Fallback order used if the categories API is unavailable.
+const DEFAULT_CATEGORY_ORDER = ['Leadership', 'Advisory Board', 'Ambassadors', 'Global Reach'];
+
 export default async function TeamPage() {
-  const team = await fetchAPI("/api/v1/team") || [];
-  
+  const [team, categories] = await Promise.all([
+    fetchAPI("/api/v1/team"),
+    fetchAPI("/api/v1/team/categories"),
+  ]);
+
+  const members = team || [];
+
   // Helper to safely get the category name whether it's a string or an object (API usually returns relation object)
   const getCategory = (member) => {
     if (typeof member.category === 'object' && member.category !== null) {
@@ -22,10 +38,21 @@ export default async function TeamPage() {
     return member.category || "";
   };
 
-  const leadership = team.filter(m => getCategory(m) === 'Leadership');
-  const advisory = team.filter(m => getCategory(m) === 'Advisory Board');
-  const ambassadors = team.filter(m => getCategory(m) === 'Ambassadors');
-  const globalReach = team.filter(m => getCategory(m) === 'Global Reach');
+  // Order sections by the category's admin-configured `order`, falling back to the default order
+  // for any category name that isn't returned by the API (e.g. the API is unreachable).
+  const orderedCategoryNames = categories && categories.length > 0
+    ? [...categories]
+        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+        .map((c) => c.name)
+    : DEFAULT_CATEGORY_ORDER;
+
+  const sections = orderedCategoryNames
+    .filter((name) => CATEGORY_SECTIONS[name])
+    .map((name) => ({
+      name,
+      Component: CATEGORY_SECTIONS[name],
+      members: members.filter((m) => getCategory(m) === name),
+    }));
 
   return (
     <>
@@ -44,11 +71,10 @@ export default async function TeamPage() {
         backgroundImage="/assets/images/bg/team-with-grow.webp"
         className="bg-secondary"
       />
-      {/* Pass filtered members to respective components */}
-      <LeadershipTeam members={leadership} />
-      <AdvisoryBoard members={advisory} />
-      <CommunityAmbassadors members={ambassadors} />
-      <GlobalReach members={globalReach} />
+      {/* Sections are rendered in the order configured for each category in the admin CMS */}
+      {sections.map(({ name, Component, members }) => (
+        <Component key={name} members={members} />
+      ))}
       <TeamCTA />
     </>
   );

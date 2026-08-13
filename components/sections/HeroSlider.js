@@ -49,7 +49,7 @@ export default function HeroSlider() {
                   </h2>
                 )}
                 <p className="text-lg leading-relaxed text-neutral-gray dark:text-gray-300 max-w-lg">
-                  Empowering African women and youth through technology and entrepreneurship. We are bridging the gender gap by providing safe spaces, education, and mentorship.
+                  Increasing the agency of African women and youth through technology and entrepreneurship. We are bridging the gender gap by providing safe spaces, education, and mentorship.
                 </p>
                 <div className="flex flex-wrap items-center gap-4 pt-4">
                   <Link href="/programs"
@@ -104,7 +104,7 @@ export default function HeroSlider() {
                     </h2>
                   )}
                   <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-normal leading-relaxed max-w-xl">
-                    Empowering African women with the skills, mentorship, and community needed to thrive in the global
+                    Increasing the agency of the next generation of African women with the skills, mentorship, and community needed to thrive in the global
                     technology ecosystem. We&apos;re building the future, one line of code at a time.
                   </p>
                 </div>

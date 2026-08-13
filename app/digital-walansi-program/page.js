@@ -8,36 +8,60 @@ import PartnersTabs from "./components/PartnersTabs";
 export const metadata = {
   title: "Digital Walansi",
   description:
-    "The Digital Walansi Project trains young women as Digital Walansi Fellows, carrying digital safety, media literacy, and civic rights education into schools and communities across the Upper West Region of Ghana.",
+    "Digital Walansi is a youth-led digital education and safety programme equipping young women, secondary-school students, and teachers in underserved communities to participate safely, critically, and productively in an increasingly AI-driven digital world.",
 };
 
 const stats = [
   { value: "30", label: "Digital Walansi Fellows" },
-  { value: "5", label: "Partner Schools" },
-  { value: "2,000+", label: "Girls & Young Women Reached" },
-  { value: "3 months", label: "School Deployment Period" },
+  { value: "4", label: "Core Training Areas" },
+  { value: "3", label: "Kontonbile Platform Functions" },
+  { value: "Ghana", label: "Selected Regions Deployment" },
+];
+
+const kontonbileFunctions = [
+  {
+    icon: "school",
+    title: "Learning",
+    body: "Students and teachers explore AI-supported learning, ask questions, access educational information, and verify information. The platform is designed to build critical engagement with information and AI-generated content, and to encourage responsible AI use, privacy, and critical thinking.",
+    img: "/assets/images/programs/walansi/walansi_learning.webp",
+    imgAlt: "A Digital Walansi Fellow and a student reviewing AI, deepfakes, and verification training material together",
+  },
+  {
+    icon: "shield",
+    title: "Safety & Anonymous Reporting",
+    body: "Students can anonymously report concerns relating to TFGBV and other digital-safety experiences. This creates an additional pathway for young people who may not feel comfortable immediately disclosing an experience face-to-face, while connecting serious concerns to appropriate safeguarding and referral processes.",
+    img: "/assets/images/programs/walansi/walansi_anonymous.webp",
+    imgAlt: "Students holding signs advocating for online safety and digital rights",
+  },
+  {
+    icon: "forum",
+    title: "Ask Me Anything & Professional Support",
+    body: "Students can privately seek information or raise questions around mental wellbeing, identity, relationships, health, and safety. Where appropriate, they are connected to a network of vetted professional volunteers — psychologists, healthcare professionals, and lawyers — for specialised human support and referrals. AI does not replace professional care; it helps make trusted information and pathways to human support more accessible.",
+    img: "/assets/images/programs/walansi/ask_me_anything.png",
+    imgAlt: "Walansi Kontonbile's Ask Me Anything interface, connecting a student to a vetted professional volunteer",
+  },
 ];
 
 const principles = [
   {
-    title: "Community-first by design",
-    body: "Fellows are recruited from the communities they serve. They speak the languages, know the people, and carry the cultural knowledge that external facilitators cannot replicate.",
+    title: "Youth-led by design",
+    body: "Thirty young women are trained as Digital Walansi Fellows and deployed into the secondary schools where they facilitate learning directly with students and teachers, carrying the programme forward from within the school community.",
   },
   {
-    title: "Evidence-based",
-    body: "The 87% and 79% figures that shaped the programme's design are primary data generated from Paahibu Space's own community research in the Upper West Region.",
+    title: "Learning, safety, and support — together",
+    body: "Walansi Kontonbile brings together three functions usually treated separately in education technology: AI-supported learning, anonymous digital-safety reporting, and access to trusted professional support, in a single responsible platform.",
   },
   {
-    title: "Harm and aspiration together",
-    body: "The programme addresses digital exclusion and TFGBV alongside girls' aspirations for civic participation, storytelling, and professional growth.",
+    title: "AI that supports, not replaces",
+    body: "Where a student needs specialised human care, Kontonbile connects them to vetted professional volunteers. AI helps make trusted information and pathways to human support more accessible — it does not stand in for that care.",
   },
   {
-    title: "Built to outlast the programme",
-    body: "The Club Constitution, the Corner infrastructure, Teacher Focal Point orientation, and end-of-programme continuity review are all designed to persist after the funded cycle ends.",
+    title: "Co-developed, not delivered",
+    body: "Walansi Kontonbile is co-developed with the young people and schools expected to use it, and the Digital Walansi Clubs it supports provide sustained spaces for peer learning, digital leadership, and responsible technology use.",
   },
   {
-    title: "Rooted in northern Ghana",
-    body: "The programme is delivered in the Upper West Region — consistently underserved by digital safety programming concentrated in Accra and the south — and led by an organisation and founder from that region.",
+    title: "Evidence-generating",
+    body: "The programme generates evidence on how young people are using AI and digital technologies in Ghanaian secondary schools — the opportunities and risks they encounter, the support they need, and how responsible AI can be integrated into education responsibly.",
   },
 ];
 
@@ -84,8 +108,8 @@ export default async function DigitalWalansiProgram() {
       <section className="relative overflow-hidden bg-primary">
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/women-empowerment.png"
-            alt="Digital Walansi Fellow leading a community session in northern Ghana"
+            src="/assets/images/inclusive-growth.webp"
+            alt="Young women and secondary-school students engaging with digital learning"
             fill
             priority
             className="object-cover mix-blend-luminosity"
@@ -94,7 +118,7 @@ export default async function DigitalWalansiProgram() {
           <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/85 to-primary" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 lg:pt-28 lg:pb-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  lg:pt-28 lg:pb-20">
 
           <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mb-6">
             Digital <span className="text-secondary">Walansi</span>
@@ -102,15 +126,14 @@ export default async function DigitalWalansiProgram() {
 
           <div className="max-w-2xl mb-10">
             <p className="text-base md:text-lg text-white/70 leading-relaxed">
-              <span className="text-secondary font-semibold">Walansi</span> — a Waali word meaning{" "}
-              <em>&quot;voice with a message&quot;</em> or <em>&quot;having an opinion,&quot;</em> spoken in the
-              communities of northern Ghana where this programme is rooted. A Digital Walansi Fellow is a young
-              woman trained to carry that voice — on digital safety, media literacy, and civic rights — into the
-              schools and communities she already belongs to.
+              A youth-led digital education and safety programme that equips young women, secondary-school
+              students, and teachers in underserved communities to participate safely, critically, and
+              productively in an <span className="text-secondary font-semibold">increasingly AI-driven</span>{" "}
+              digital world.
             </p>
           </div>
 
-          <div className="mb-12">
+          <div className="">
             <ProgramCTA
               program={program}
               labelOpen="Apply Now"
@@ -119,14 +142,6 @@ export default async function DigitalWalansiProgram() {
             />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
-            {stats.map((s) => (
-              <div key={s.label} className="bg-black/20 backdrop-blur-sm px-6 py-5">
-                <div className="text-3xl md:text-4xl font-black text-white mb-1">{s.value}</div>
-                <div className="text-xs text-white/50 tracking-wider uppercase font-bold">{s.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -144,80 +159,154 @@ export default async function DigitalWalansiProgram() {
 
               <div className="space-y-6 mb-8">
                 <div className="border-l-2 border-secondary pl-6">
-                  <div className="text-5xl font-black text-secondary mb-2">87%</div>
+                  <p className="text-lg font-bold text-secondary mb-2">
+                    Young people want to participate
+                  </p>
                   <p className="text-white/70 text-sm leading-relaxed">
-                    of girls surveyed want to be active in digital spaces — to learn, share stories, and engage in
-                    civic life.
+                    Students and teachers in underserved communities want to learn, explore, and engage safely,
+                    critically, and productively in an increasingly AI-driven digital world.
                   </p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-6">
-                  <div className="text-5xl font-black text-white mb-2">79%</div>
+                  <p className="text-lg font-bold text-white mb-2">
+                    Underserved communities lack the tools to do so safely
+                  </p>
                   <p className="text-white/70 text-sm leading-relaxed">
-                    say fear of harassment, abuse, and technology-facilitated gender-based violence prevents them
-                    from doing so.
+                    Limited digital skills, AI literacy, and media and information literacy leave students exposed
+                    to Technology-Facilitated Gender-Based Violence (TFGBV) and other digital-safety risks, with
+                    few trusted pathways to support.
                   </p>
                 </div>
               </div>
 
               <p className="text-xs tracking-widest uppercase text-white/40 italic">
-                — from Paahibu Space&apos;s community research, Upper West Region
+                — the gap Digital Walansi is designed to close
               </p>
             </div>
 
             <div className="space-y-6">
-              <div className="p-8 bg-white/5 border border-white/10 rounded-xl">
+              <div className="p-8 bg-white/5 border border-white/10">
                 <span className="material-symbols-outlined text-3xl text-secondary mb-4 block">format_quote</span>
                 <p className="text-white/80 leading-relaxed text-base">
-                  Technology-facilitated gender-based violence is rising rapidly across Ghana and West Africa —
-                  from non-consensual sharing of images and digital financial abuse, to coordinated harassment
-                  that silences women in civic and public life.
+                  Technology-Facilitated Gender-Based Violence and other digital-safety harms are a real risk for
+                  young people navigating an increasingly AI-driven digital world — particularly in underserved
+                  communities with limited access to digital safety education and trusted reporting pathways.
                 </p>
               </div>
               <p className="text-white/60 leading-relaxed text-sm">
-                In the Upper West Region, these harms are compounded by limited access to reporting services,
-                deeply internalized cultural norms, and a significant gap in community-level digital safety
-                programming designed specifically for girls in this context.
+                In these communities, the gap is compounded by limited AI literacy, few trusted adults equipped to
+                guide safe technology use, and a lack of platforms designed specifically for young people to learn,
+                report concerns, and access support.
               </p>
               <p className="text-white/80 leading-relaxed text-sm">
-                The Digital Walansi responds to both the harm and the aspiration. It does not frame girls
-                primarily as victims of digital exclusion. It frames them as young people with voices, skills, and
-                stories who deserve the safety infrastructure, the knowledge, and the platforms to participate in
-                digital public life on their own terms.
+                Digital Walansi responds to both the aspiration and the risk. It does not frame young people
+                primarily as vulnerable to digital harm. It equips them — and the teachers and Fellows around
+                them — with the skills, the platform, and the trusted pathways to participate in the digital world
+                safely, critically, and productively.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Programme Components */}
+      {/* Fellows: training & deployment */}
       <section className="py-20 md:py-28 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 mb-16 items-end">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             <div>
               <span className="text-xs tracking-[0.25em] uppercase text-secondary font-bold block mb-4">
-                Programme Components
+                Training & Deployment
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight">
-                Pillars of The <span className="text-secondary">Community-led</span> Model
+              <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight mb-6">
+                Thirty Fellows, carrying skills into <span className="text-secondary">schools</span>
               </h2>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                The programme trains 30 young women as Digital Walansi Fellows in digital skills and safety, AI
+                literacy, Media and Information Literacy (MIL), and the prevention of and response to
+                Technology-Facilitated Gender-Based Violence (TFGBV).
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Fellows are deployed to secondary schools across selected regions in Ghana, where they facilitate
+                learning with students and teachers, and support Digital Walansi Clubs that provide sustained
+                spaces for peer learning, digital leadership, and responsible technology use.
+              </p>
             </div>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              The programme is designed around a foundational conviction that the most effective intervention in
-              girls&apos; digital lives is one led by young women who belong to the same communities, speak the same
-              languages, and carry the same cultural knowledge as the girls they are working with.
-            </p>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/assets/images/programs/walansi/walansi_teach.webp"
+                alt="A Digital Walansi Fellow facilitating a workshop with secondary-school students"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
           </div>
 
           <ComponentsAccordion />
         </div>
       </section>
 
-      {/* Pull quote break */}
+      {/* Walansi Kontonbile Platform */}
+      <section className="py-20 md:py-28 bg-white dark:bg-surface-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+            <div>
+              <span className="text-xs tracking-[0.25em] uppercase text-secondary font-bold block mb-4">
+                The Technology Component
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight mb-6">
+                Walansi <span className="text-secondary">Kontonbile</span>
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                At the centre of the programme&apos;s technology component is Walansi Kontonbile, a responsible AI
+                learning and student-support platform developed with participating schools and Digital Walansi
+                Clubs. <em>Kontonbile</em> means artificial intelligence in the the Waale local language.
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Walansi Kontonbile brings together three functions that are usually treated separately in
+                education technology: learning, digital safety, and access to trusted support.
+              </p>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/assets/images/empower-wint.webp"
+                alt="Digital Walansi Fellows and students exploring Walansi Kontonbile together on a phone"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-px bg-gray-200 dark:bg-white/10">
+            {kontonbileFunctions.map((f) => (
+              <div key={f.title} className="bg-white dark:bg-surface-dark p-8">
+
+                <h3 className="text-lg font-bold text-primary dark:text-white mb-3">{f.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">{f.body}</p>
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src={f.img}
+                    alt={f.imgAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Co-development pull quote */}
       <section className="relative py-24 md:py-32 bg-primary overflow-hidden">
         <div className="absolute inset-0 opacity-40">
           <Image
             src="/assets/images/collab-impact.png"
-            alt="Workshop session with students in northern Ghana"
+            alt="Students and schools co-developing the Walansi Kontonbile platform"
             fill
             className="object-cover"
             sizes="100vw"
@@ -227,8 +316,9 @@ export default async function DigitalWalansiProgram() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl">
             <p className="text-3xl md:text-4xl font-black text-white leading-snug">
-              &quot;The most effective intervention is one led by women who{" "}
-              <span className="text-secondary">already belong</span> to the community.&quot;
+              Walansi Kontonbile is{" "}
+              <span className="text-secondary">co-developed</span> with the young people and schools expected to
+              use it.
             </p>
             <p className="mt-4 text-xs tracking-widest uppercase text-white/50 font-bold">
               — Digital Walansi Programme Principle
@@ -237,7 +327,39 @@ export default async function DigitalWalansiProgram() {
         </div>
       </section>
 
-      {/* Distinguishes / Principles */}
+      {/* Evidence & Research */}
+      <section className="py-20 md:py-28 bg-background-light dark:bg-background-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-xs tracking-[0.25em] uppercase text-secondary font-bold block mb-4">
+                Evidence & Research
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight mb-6">
+                Learning as we <span className="text-secondary">go</span>
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Digital Walansi generates evidence on how young people are using AI and digital technologies in
+                Ghanaian secondary schools — the opportunities and risks they encounter, the support they need,
+                and how responsible AI can be integrated into education while protecting young people&apos;s
+                rights, safety, and wellbeing.
+              </p>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/assets/images/programs/walansi/research.webp"
+                alt="Facilitators reviewing Digital Walansi programme findings together"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Principles */}
       <section className="py-20 md:py-28 bg-white dark:bg-surface-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
@@ -250,7 +372,7 @@ export default async function DigitalWalansiProgram() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 dark:bg-white/10">
-            {principles.map((p, i) => (
+            {principles.map((p) => (
               <div
                 key={p.title}
                 className="bg-white dark:bg-surface-dark p-8 hover:bg-background-light dark:hover:bg-white/5 transition-colors group"
@@ -263,8 +385,8 @@ export default async function DigitalWalansiProgram() {
             ))}
             <div className="relative overflow-hidden bg-primary min-h-[280px]">
               <Image
-                src="/assets/images/youthled.png"
-                alt="Young women leading digital safety sessions in their own communities"
+                src="/assets/images/programs/walansi/principles.webp"
+                alt="Young women leading digital safety and AI literacy sessions in their own communities"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -284,19 +406,18 @@ export default async function DigitalWalansiProgram() {
                 The Fellows
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight">
-                Cohor 1 <span className="text-secondary">Walansi Fellows</span>
+                Cohort 1 <span className="text-secondary">Walansi Fellows</span>
               </h2>
             </div>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              Each fellow is a young woman from the Upper West Region, recruited from the communities she serves.
-              She carries the language, the relationships, and the cultural knowledge that makes this programme
-              work.
+              Thirty young women trained in digital skills and safety, AI literacy, MIL, and TFGBV prevention and
+              response — now deployed to secondary schools to facilitate learning with students and teachers.
             </p>
           </div>
 
           {fellows.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-gray-200 dark:bg-white/10 mb-12">
-              {fellows.map((f, i) => (
+              {fellows.map((f) => (
                 <div key={f.id} className="bg-white dark:bg-surface-dark group relative overflow-hidden">
                   <div className="relative h-64 bg-primary overflow-hidden">
                     {f.image_url ? (
@@ -361,7 +482,8 @@ export default async function DigitalWalansiProgram() {
             <p className="text-white/60 leading-relaxed">
               Organisations that engage with the programme — whether as facilitators, development session
               contributors, community partners, or co-funders — gain access to a set of resources, relationships,
-              and opportunities rooted in the Upper West Region.
+              and opportunities, and to the evidence the programme generates on how young people are using AI and
+              digital technologies in Ghanaian secondary schools.
             </p>
           </div>
 

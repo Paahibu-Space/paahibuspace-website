@@ -5,36 +5,36 @@ import Image from "next/image";
 
 const partnerBenefits = [
   {
-    title: "Direct access to grassroots data",
-    body: "Real-time insights from Digital Reflection Boxes in five partner schools, community-level data on TFGBV, and youth perspectives from underserved school communities.",
+    title: "Direct access to grassroots evidence",
+    body: "Evidence on how young people are using AI and digital technologies in Ghanaian secondary schools, the opportunities and risks they encounter, and the support they need.",
   },
   {
     title: "A tested, localised MIL model",
-    body: "The Digital Walansi MIL and TFGBV Toolkit — a community-validated model for media and information literacy programming that works beyond urban audiences.",
+    body: "The Digital Walansi training model for digital safety, AI literacy, and media and information literacy — designed for underserved school communities.",
   },
   {
     title: "Gender and youth lens for digital rights",
-    body: "A structured, evidence-based model for engaging girls experiencing online harm and building their agency as digital citizens.",
+    body: "A structured, evidence-based model for engaging young people experiencing online harm and TFGBV, and building their agency as digital citizens.",
   },
   {
     title: "Field-based testing of tools",
-    body: "Pilot ideas, test communication strategies, and explore integration with the Walansi Kontonbile chatbot through Digital Walansi Clubs and school workshops.",
+    body: "Pilot ideas, test communication strategies, and explore integration with the Walansi Kontonbile platform through Digital Walansi Clubs and school workshops.",
   },
   {
     title: "Co-creation of knowledge products",
-    body: "Jointly produce policy briefs on digital safety for girls in Ghana, case studies, and research outputs for national and regional platforms.",
+    body: "Jointly produce policy briefs on responsible AI and digital safety in education, case studies, and research outputs for national and regional platforms.",
   },
   {
     title: "Structured school-based access",
-    body: "Access to five senior high schools, Teacher Focal Points, and the wider network of community actors engaged through the Digital Walansi deployment.",
+    body: "Access to partner secondary schools, teachers, and the wider network of community actors engaged through the Digital Walansi deployment.",
   },
   {
     title: "Visibility and co-branding",
     body: "Named in all programme documentation, donor reports, social media, and on every Digital Walansi Fellow certificate at graduation.",
   },
   {
-    title: "Reach into northern Ghana",
-    body: "Documented evidence of reach into the Upper West Region — a geography consistently underserved and increasingly prioritised by international funders.",
+    title: "Reach into underserved communities",
+    body: "Documented evidence of reach into underserved regions of Ghana — geographies consistently underserved by digital safety and AI literacy programming.",
   },
 ];
 
