@@ -36,7 +36,7 @@ const kontonbileFunctions = [
   {
     icon: "forum",
     title: "Ask Me Anything & Professional Support",
-    body: "Students can privately seek information or raise questions around mental wellbeing, identity, relationships, health, and safety. Where appropriate, they are connected to a network of vetted professional volunteers — psychologists, healthcare professionals, and lawyers — for specialised human support and referrals. AI does not replace professional care; it helps make trusted information and pathways to human support more accessible.",
+    body: "Students can privately seek information or raise questions around mental wellbeing, identity, relationships, health, and safety. Where appropriate, they are connected to a network of vetted professional volunteers, psychologists, healthcare professionals, and lawyers for specialised human support and referrals.",
     img: "/assets/images/programs/walansi/ask_me_anything.png",
     imgAlt: "Walansi Kontonbile's Ask Me Anything interface, connecting a student to a vetted professional volunteer",
   },
