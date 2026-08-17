@@ -297,7 +297,7 @@ export default async function Skills2WorkProgram() {
                   className="border-t border-white/10 py-3.5 flex justify-between items-baseline"
                 >
                   <span className="text-base text-white/55">{item.label}</span>
-                  <span className="font-display text-lg tracking-tight">{item.value}</span>
+                  <span className="text-lg tracking-tight">{item.value}</span>
                 </div>
               ))}
               <div className="border-t border-white/10 pt-6 mt-2">
@@ -337,7 +337,7 @@ export default async function Skills2WorkProgram() {
                   <span className="flex items-center justify-center leading-none w-9 h-9 rounded-full bg-primary text-white text-sm font-bold mb-6">
                     {i + 1}
                   </span>
-                  <h3 className="font-display text-xl font-bold leading-[1.2] tracking-tight text-primary dark:text-white mb-3">
+                  <h3 className="text-xl font-bold leading-[1.2] tracking-tight text-primary dark:text-white mb-3">
                     {step.phase}
                   </h3>
                   <p className="text-base leading-[1.65] text-gray-500 dark:text-gray-400">
@@ -468,7 +468,7 @@ export default async function Skills2WorkProgram() {
                     <p className="text-xs font-bold tracking-[0.14em] uppercase mb-2 text-secondary">
                       {track.number}
                     </p>
-                    <h3 className="font-display text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-primary dark:text-white">
+                    <h3 className="text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-primary dark:text-white">
                       {track.name}
                     </h3>
                     <p className="text-base text-gray-500 dark:text-gray-400 mt-1.5">{track.tagline}</p>
@@ -577,7 +577,7 @@ export default async function Skills2WorkProgram() {
                   i < 3 ? "border-b border-gray-200 dark:border-white/10" : ""
                 }`}
               >
-                <h3 className="font-display text-lg font-bold text-primary dark:text-white mb-2.5 leading-tight">
+                <h3 className="text-lg font-bold text-primary dark:text-white mb-2.5 leading-tight">
                   {area.title}
                 </h3>
                 <p className="text-base leading-[1.65] text-gray-500 dark:text-gray-400">{area.body}</p>
@@ -669,7 +669,7 @@ export default async function Skills2WorkProgram() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-5">
               After the Programme
             </p>
-            <h3 className="font-display text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-primary dark:text-white mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-primary dark:text-white mb-4">
               Skills2Work Community
             </h3>
             <p className="text-base leading-[1.7] text-gray-600 dark:text-gray-300 mb-4">
@@ -686,7 +686,7 @@ export default async function Skills2WorkProgram() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-white/50 mb-5">
               Next Stage
             </p>
-            <h3 className="font-display text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-white mb-2">
+            <h3 className="text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-white mb-2">
               Skills2Work Advanced
             </h3>
             <p className="text-base font-semibold text-secondary mb-4">

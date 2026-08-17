@@ -199,7 +199,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">
               Office Hours
             </h3>
-            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+            <div>
               <div className="flex items-center gap-3 mb-2">
                 <span className="material-symbols-outlined text-secondary">
                   schedule

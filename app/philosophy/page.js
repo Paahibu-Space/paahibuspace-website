@@ -55,7 +55,7 @@ export default function PhilosophyPage() {
               <div className="w-14 h-14 mb-6 text-primary flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
                 <span className="material-symbols-outlined text-3xl">computer</span>
               </div>
-              <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
+              <h3 className="font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
                 Digital Skills & Entrepreneurship
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -68,7 +68,7 @@ export default function PhilosophyPage() {
               <div className="w-14 h-14 mb-6 text-green-600 dark:text-green-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
                 <span className="material-symbols-outlined text-3xl">campaign</span>
               </div>
-              <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
+              <h3 className="font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
                 Policy & Advocacy
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -81,7 +81,7 @@ export default function PhilosophyPage() {
               <div className="w-14 h-14 mb-6 text-red-500 dark:text-red-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
                 <span className="material-symbols-outlined text-3xl">groups</span>
               </div>
-              <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
+              <h3 className="font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
                 Community & Network Building
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -94,7 +94,7 @@ export default function PhilosophyPage() {
               <div className="w-14 h-14 mb-6 text-pink-500 dark:text-pink-400 flex items-center justify-center bg-white dark:bg-white/10 rounded-xl shadow-sm">
                 <span className="material-symbols-outlined text-3xl">volunteer_activism</span>
               </div>
-              <h3 className="font-display font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
+              <h3 className="font-bold text-xl text-primary dark:text-white mb-3 leading-tight">
                 Mentorship & Leadership
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">

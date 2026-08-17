@@ -292,7 +292,7 @@ export default function OurWorkPage() {
                 className="flex justify-between items-baseline pb-4 border-b border-gray-200 dark:border-white/10"
               >
                 <span className="text-sm text-gray-500 dark:text-gray-400">{item.label}</span>
-                <span className="font-display text-lg text-primary dark:text-white tracking-tight">
+                <span className="text-lg text-primary dark:text-white tracking-tight">
                   {item.value}
                 </span>
               </div>

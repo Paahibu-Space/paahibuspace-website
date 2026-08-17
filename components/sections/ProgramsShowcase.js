@@ -128,7 +128,7 @@ export default function ProgramsShowcase() {
               >
                 <div className="relative flex-1 flex items-center justify-center overflow-y-auto bg-primary px-6 sm:px-12 lg:px-20 py-16">
                   <div className="max-w-2xl text-center lg:text-left">
-                    <h3 className="font-display font-bold text-3xl lg:text-5xl text-white mb-4">
+                    <h3 className="font-bold text-3xl lg:text-5xl text-white mb-4">
                       {pillar.title}
                     </h3>
                     <p className="text-white/90 font-medium text-lg lg:text-xl mb-6 leading-relaxed">

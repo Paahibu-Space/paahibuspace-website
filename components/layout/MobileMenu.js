@@ -153,6 +153,15 @@ export default function MobileMenu({ open, setOpen }) {
                                 <Link href="/community-ambassadors-program" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
                                   Community Ambassadors
                                 </Link>
+                                <Link href="/ndiara" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                                  Ndiara
+                                </Link>
+                                <Link href="/skills2work-program" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                                  Skills2Work
+                                </Link>
+                                <Link href="/our-work#baabuh-enterprise-fund" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                                  Baabuh Enterprise Fund
+                                </Link>
                               </div>
                             )}
                           </div>
@@ -196,7 +205,7 @@ export default function MobileMenu({ open, setOpen }) {
                           </Link>
                         </div>
                         <div className="space-y-1 py-6">
-                          <p className="-mx-3 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                          <p className="-mx-3 px-3 text-sm font-semibold uppercase tracking-wider text-gray-400">
                             More
                           </p>
                           <Link href="/partners" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">

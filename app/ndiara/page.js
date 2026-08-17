@@ -91,7 +91,7 @@ export default function NdiaraPage() {
               <h1 className="font-display text-6xl md:text-9xl font-bold leading-[0.95] tracking-tight text-primary dark:text-white mb-6">
                 Ndiara
               </h1>
-              <p className="font-display italic font-light text-xl md:text-2xl leading-[1.4] text-gray-500 dark:text-gray-400 max-w-lg">
+              <p className="italic font-light text-xl md:text-2xl leading-[1.4] text-gray-500 dark:text-gray-400 max-w-lg">
                 Built for the Way African Women Do Business
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function NdiaraPage() {
                 key={pillar.word}
                 className="border-r border-b border-gray-200 dark:border-white/10 p-7 pb-12"
               >
-                <h3 className="font-display text-4xl font-bold tracking-tight mb-5 leading-none text-primary dark:text-white">
+                <h3 className="text-4xl font-bold tracking-tight mb-5 leading-none text-primary dark:text-white">
                   {pillar.word}
                 </h3>
                 <p className="text-base leading-[1.7] text-gray-600 dark:text-gray-300">
@@ -231,7 +231,7 @@ export default function NdiaraPage() {
                 className="bg-white/5 border border-white/10 rounded-lg px-7 py-6 flex gap-5 items-start"
               >
                 <div>
-                  <h3 className="font-display text-xl font-bold text-white mb-2 tracking-tight">
+                  <h3 className="text-xl font-bold text-white mb-2 tracking-tight">
                     {item.heading}
                   </h3>
                   <p className="text-base leading-[1.65] text-white/65">{item.body}</p>
@@ -273,7 +273,7 @@ export default function NdiaraPage() {
                   i < 2 ? "border-b md:border-b-0 md:border-r border-gray-200 dark:border-white/10" : ""
                 }`}
               >
-                <h3 className="font-display text-xl font-bold leading-[1.2] tracking-tight text-primary dark:text-white mb-4">
+                <h3 className="text-xl font-bold leading-[1.2] tracking-tight text-primary dark:text-white mb-4">
                   {item.audience}
                 </h3>
                 <p className="text-base leading-[1.7] text-gray-500 dark:text-gray-400 mb-6 flex-1">

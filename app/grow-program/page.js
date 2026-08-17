@@ -183,7 +183,7 @@ export default async function GrowProgramPage() {
       >
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <h2 className="text-white font-display text-4xl md:text-6xl font-black text-center tracking-wide mb-16">
-            GROW OUTCOMES
+            GROW Outcomes
           </h2>
 
           <div className="grid md:grid-cols-[1fr_auto_1fr] gap-x-10 gap-y-14 items-center">
@@ -529,13 +529,6 @@ export default async function GrowProgramPage() {
               labelOpen="Join GROW"
               labelClosed="Join Waitlist"
             />
-            <Button
-              variant="outline"
-              size="lg"
-              className="hover:bg-primary hover:text-white border-primary text-primary dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-primary"
-            >
-              Learn More About Impact
-            </Button>
           </div>
         </div>
       </section>

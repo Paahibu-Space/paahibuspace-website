@@ -203,7 +203,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                             program={ambassadorsProgram}
                             labelOpen="Apply Now"
                             labelClosed="Join Waitlist"
-                            className="z-10 bg-white text-[#0b1120] dark:text-secondary font-bold py-2 px-6 rounded-lg text-sm hover:bg-gray-100 transition-colors"
+                            className="z-10 bg-white text-[#0d0e1b] dark:text-secondary font-bold py-2 px-6 rounded-lg text-sm hover:bg-gray-100 transition-colors"
                         />
                     </div>
                 </div>

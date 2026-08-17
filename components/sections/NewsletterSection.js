@@ -66,7 +66,7 @@ export default function NewsletterSection() {
                 </div>
                 <input 
                   aria-label="Email address"
-                  className="block w-full rounded-lg border-0 bg-white dark:bg-zinc-700 py-3.5 pl-10 pr-4 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:ring-inset shadow-sm sm:text-sm sm:leading-6"
+                  className="block w-full rounded-lg border-0 bg-white dark:bg-zinc-700 py-3.5 pl-10 pr-4 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset shadow-sm sm:text-sm sm:leading-6"
                   placeholder="Enter your email address" 
                   required
                   type="email" 

@@ -10,7 +10,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Contact Us"
-        description="We'd love to hear from you."
+        description="Have an opportunity, question or idea you would like to discuss? We would love to hear from you. Please reach out to us using the contact information below."
       />
       <section className="py-20 px-6 md:px-12 bg-white dark:bg-background-dark">
         <div className="max-w-3xl mx-auto text-center space-y-6">

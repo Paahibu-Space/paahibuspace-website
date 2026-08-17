@@ -185,12 +185,12 @@ export default async function ImpactPage() {
             communities, and empower the next generation of women tech leaders.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="h-14 px-10 bg-primary hover:bg-white hover:text-primary transition-all rounded-full font-bold text-white shadow-lg text-lg">
-              Donate Now
-            </button>
-            <button className="h-14 px-10 bg-transparent border-2 border-gray-500 hover:border-white hover:bg-white/10 transition-all rounded-full font-bold text-white text-lg">
+            <Link
+              href="/involve"
+              className="h-14 px-10 bg-primary hover:bg-white hover:text-primary transition-all rounded-full font-bold text-white shadow-lg text-lg flex items-center justify-center"
+            >
               Join the Movement
-            </button>
+            </Link>
           </div>
         </div>
       </section>

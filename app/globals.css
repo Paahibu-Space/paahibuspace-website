@@ -4,8 +4,8 @@
 
 @theme {
   /* Typography */
-  --font-display: var(--font-lexend);
-  --font-sans: var(--font-lexend);
+  --font-display: var(--font-teko);
+  --font-sans: var(--font-ubuntu);
 
   /* Brand Colors */
   --color-primary: #00194C;
@@ -53,6 +53,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Main headings use the display font (Teko Regular); everything else stays Ubuntu */
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
   }
 
   /* Manual dark mode overrides if needed for specific variables */
