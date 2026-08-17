@@ -27,7 +27,7 @@ export default async function AboutPage() {
     <>
       <PageHero
         title={
-          <h1 className="text-4xl font-black leading-tight tracking-[-0.033em] md:text-6xl">
+          <h1 className="text-4xl leading-tight tracking-[-0.033em] md:text-6xl">
             Increasing the Agency of the Next Generation of <br className="hidden md:block"/> African Women in Tech
           </h1>
         }

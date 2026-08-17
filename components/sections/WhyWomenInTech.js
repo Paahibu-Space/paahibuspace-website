@@ -7,7 +7,7 @@ export default function WhyWomenInTech() {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-100 dark:bg-orange-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/2 translate-y-1/2"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-12 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-3">
+          <h2 className="text-3xl md:text-4xl text-primary dark:text-white mb-3">
             Why Female Perspectives in Technology Matter
           </h2>
           <p className="text-lg md:text-xl font-semibold text-secondary">
@@ -61,7 +61,7 @@ export default function WhyWomenInTech() {
           </div>
           <div className="lg:col-span-7 flex flex-col justify-center gap-6">
             <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
+              <h3 className="text-xl text-primary dark:text-white mb-2">
                 More Than Users
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -69,7 +69,7 @@ export default function WhyWomenInTech() {
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
+              <h3 className="text-xl text-primary dark:text-white mb-2">
                 Barriers That Remain
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -77,7 +77,7 @@ export default function WhyWomenInTech() {
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
+              <h3 className="text-xl text-primary dark:text-white mb-2">
                 Our Approach
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">

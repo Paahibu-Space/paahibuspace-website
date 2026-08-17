@@ -20,7 +20,7 @@ export default function Hero() {
           }}
         ></div>
         <div className="flex flex-col gap-4 text-center max-w-[800px] z-10 animate-fade-up">
-          <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-6xl">
+          <h1 className="text-white text-4xl leading-tight tracking-[-0.033em] md:text-6xl">
             Empowering the Next Generation of African Women in Tech
           </h1>
           <p className="text-gray-200 dark:text-gray-300 text-lg font-normal leading-relaxed md:text-xl max-w-[600px] mx-auto">

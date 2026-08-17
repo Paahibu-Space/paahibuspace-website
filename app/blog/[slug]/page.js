@@ -77,7 +77,7 @@ export default async function BlogDetailPage({ params }) {
             <span className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent border border-accent/30 text-xs font-bold uppercase tracking-wider mb-6">
               {post.category || "General"}
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-white leading-tight mb-8">
               {post.title}
             </h1>
             <div className="flex items-center justify-center gap-6 text-sm text-gray-300">
@@ -145,7 +145,7 @@ export default async function BlogDetailPage({ params }) {
               </div>
                 <div className="text-center sm:text-left flex-1">
                   <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:items-start mb-2">
-                    <h4 className="text-xl font-bold text-white">{post.author}</h4>
+                    <h4 className="text-xl text-white">{post.author}</h4>
                     <button className="mt-2 sm:mt-0 px-4 py-1.5 rounded-full border border-white/20 text-xs font-medium text-white hover:bg-white hover:text-background-dark transition-colors">
                         Follow
                     </button>
@@ -166,7 +166,7 @@ export default async function BlogDetailPage({ params }) {
         <section className="bg-surface-dark py-16 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-10">
-              <h2 className="text-2xl font-display font-bold text-white">More from the Blog</h2>
+              <h2 className="text-2xl font-display text-white">More from the Blog</h2>
               <Link href="/blog" className="text-accent hover:text-orange-400 text-sm font-medium flex items-center gap-1 group">
                 View all posts
                 <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -184,7 +184,7 @@ export default async function BlogDetailPage({ params }) {
                     </div>
                     <div className="flex flex-col gap-2">
                       <span className="text-accent text-xs font-bold uppercase tracking-wider">{rPost.tag}</span>
-                      <h3 className="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">
+                      <h3 className="text-lg text-white group-hover:text-accent transition-colors leading-snug">
                         {rPost.title}
                       </h3>
                       <p className="text-gray-400 text-sm line-clamp-2">{rPost.preview}</p>
@@ -202,7 +202,7 @@ export default async function BlogDetailPage({ params }) {
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
           <div className="relative max-w-4xl mx-auto text-center bg-[#292673] border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
             <span className="material-symbols-outlined text-accent text-5xl mb-4">mail</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">Stay in the Loop</h2>
+            <h2 className="text-3xl md:text-4xl font-display text-white mb-4">Stay in the Loop</h2>
             <p className="text-gray-300 mb-8 max-w-lg mx-auto">Get the latest updates on our programs, success stories, and upcoming workshops directly to your inbox.</p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input

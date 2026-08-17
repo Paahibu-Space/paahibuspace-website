@@ -50,7 +50,7 @@ export default async function WidibProgramPage() {
              <div className="inline-flex items-center gap-2 bg-blue-500/30 backdrop-blur-sm border border-blue-400/30 rounded-full px-4 py-1 text-blue-100 font-bold text-sm tracking-wide uppercase mb-6">
                  For Early-Stage Entrepreneurs
              </div>
-             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+             <h1 className="text-5xl md:text-7xl text-white mb-6 leading-tight">
                  Level Up Your <span className="text-blue-200">Side Hustle</span>
              </h1>
              <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mb-10 leading-relaxed font-light">
@@ -100,7 +100,7 @@ export default async function WidibProgramPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
                 <div className="text-section lg:w-1/2">
-                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+                    <h2 className="text-4xl text-gray-900 dark:text-white mb-6 leading-tight">
                         Patricia Naah Story:<br />
                         <span className="text-secondary">Project Management for Female Entrepreneurs</span>
                     </h2>
@@ -129,14 +129,14 @@ export default async function WidibProgramPage() {
       {/* MSME Spotlight */}
       <section className="py-20 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">MSME Spotlight</h2>
+            <h2 className="text-3xl text-center text-gray-900 dark:text-white mb-12">MSME Spotlight</h2>
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Sherifa */}
                 <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl shadow-blue-500/5 border border-blue-100 dark:border-gray-700 relative hover:-translate-y-1 transition-transform duration-300">
                     <div className="flex items-center gap-4 mb-6">
                         <div className="h-16 w-16 rounded-full bg-cover bg-center border-2 border-blue-500" style={{backgroundImage: "url('/assets/images/team/sherifa.jpg')"}}></div>
                         <div>
-                            <h4 className="font-bold text-gray-900 dark:text-white text-lg">Sherifa Fuseini</h4>
+                            <h4 className="text-gray-900 dark:text-white text-lg">Sherifa Fuseini</h4>
                             <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">CEO, Sheady Enterprise</p>
                         </div>
                     </div>
@@ -149,7 +149,7 @@ export default async function WidibProgramPage() {
                     <div className="flex items-center gap-4 mb-6">
                          <div className="h-16 w-16 rounded-full bg-cover bg-center border-2 border-purple-500" style={{backgroundImage: "url('/assets/images/team/vivian.jpg')"}}></div>
                         <div>
-                            <h4 className="font-bold text-gray-900 dark:text-white text-lg">Vivian Ackon</h4>
+                            <h4 className="text-gray-900 dark:text-white text-lg">Vivian Ackon</h4>
                             <p className="text-sm text-purple-600 dark:text-purple-400 font-medium">CEO, Divine Apparel</p>
                         </div>
                     </div>
@@ -165,7 +165,7 @@ export default async function WidibProgramPage() {
      <section className="py-24 bg-white dark:bg-background-dark">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              <div className="text-center mb-16">
-                 <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Why WiDiB?</h2>
+                 <h2 className="text-4xl text-gray-900 dark:text-white mb-4">Why WiDiB?</h2>
                  <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
                      We strip away the theory and focus on what actually makes money online.
                      Designed for busy women managing homes and jobs.
@@ -194,7 +194,7 @@ export default async function WidibProgramPage() {
                  ].map((item, i) => (
                      <div key={i} className="p-8 rounded-2xl border border-gray-100 dark:border-white/10 transition-shadow group bg-white dark:bg-gray-800">
       
-                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{item.title}</h3>
+                         <h3 className="text-xl text-gray-900 dark:text-white mb-4">{item.title}</h3>
                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{item.desc}</p>
                      </div>
                  ))}
@@ -207,7 +207,7 @@ export default async function WidibProgramPage() {
             <div className="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <span className="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">The Curriculum</span>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-neutral-dark dark:text-white">5 Weeks to Transformation</h2>
+                    <h2 className="text-3xl sm:text-4xl text-neutral-dark dark:text-white">5 Weeks to Transformation</h2>
                 </div>
                 <div className="relative">
                     {/* Vertical Line */}
@@ -216,7 +216,7 @@ export default async function WidibProgramPage() {
                         {/* Week 1 */}
                         <div className="flex flex-col md:flex-row gap-8 items-start group">
                             <div className="md:w-1/2 md:text-right md:pr-12 pl-16 md:pl-0 order-2 md:order-1">
-                                <h3 className="text-xl font-bold text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
+                                <h3 className="text-xl text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
                                     Digital Foundations &amp; Branding</h3>
                                 <p className="text-gray-600 dark:text-gray-400 mt-2">Setting up your digital presence
                                     and defining your unique brand voice.</p>
@@ -237,7 +237,7 @@ export default async function WidibProgramPage() {
                                 <span className="text-xs font-bold text-neutral-dark dark:text-white">W2</span>
                             </div>
                             <div className="md:w-1/2 md:pl-12 pl-16 order-3 md:order-2">
-                                <h3 className="text-xl font-bold text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
+                                <h3 className="text-xl text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
                                     Content Creation &amp; Social Media</h3>
                                 <p className="text-gray-600 dark:text-gray-400 mt-2">Hands-on workshops for Reels,
                                     TikTok, and copywriting that converts.</p>
@@ -246,7 +246,7 @@ export default async function WidibProgramPage() {
                         {/* Week 3 */}
                         <div className="flex flex-col md:flex-row gap-8 items-start group">
                             <div className="md:w-1/2 md:text-right md:pr-12 pl-16 md:pl-0 order-2 md:order-1">
-                                <h3 className="text-xl font-bold text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
+                                <h3 className="text-xl text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
                                     E-commerce &amp; Sales Tools</h3>
                                 <p className="text-gray-600 dark:text-gray-400 mt-2">Setting up shops, payment
                                     gateways, and managing customer relationships.</p>
@@ -267,7 +267,7 @@ export default async function WidibProgramPage() {
                                 <span className="text-xs font-bold text-neutral-dark dark:text-white">W4</span>
                             </div>
                             <div className="md:w-1/2 md:pl-12 pl-16 order-3 md:order-2">
-                                <h3 className="text-xl font-bold text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
+                                <h3 className="text-xl text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
                                     Business Finance &amp; Strategy</h3>
                                 <p className="text-gray-600 dark:text-gray-400 mt-2">Pricing models, bookkeeping
                                     basics, and sustainable growth planning.</p>
@@ -276,7 +276,7 @@ export default async function WidibProgramPage() {
                         {/* Week 5 */}
                         <div className="flex flex-col md:flex-row gap-8 items-start group">
                             <div className="md:w-1/2 md:text-right md:pr-12 pl-16 md:pl-0 order-2 md:order-1">
-                                <h3 className="text-xl font-bold text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
+                                <h3 className="text-xl text-neutral-dark dark:text-white group-hover:text-primary transition-colors">
                                     Pitching &amp; Launch Day</h3>
                                 <p className="text-gray-600 dark:text-gray-400 mt-2">Final presentations, feedback
                                     sessions, and graduation ceremony.</p>
@@ -305,7 +305,7 @@ export default async function WidibProgramPage() {
                             <span className="material-symbols-outlined text-[18px]">favorite</span>
                             <span className="text-xs font-bold uppercase tracking-wider">Community First</span>
                         </div>
-                        <h2 className="text-3xl sm:text-5xl font-black mb-6 leading-tight">More Than Just a Course, It&apos;s a <span className="text-secondary/80">Sisterhood</span>.</h2>
+                        <h2 className="text-3xl sm:text-5xl mb-6 leading-tight">More Than Just a Course, It&apos;s a <span className="text-secondary/80">Sisterhood</span>.</h2>
                         <p className="text-blue-100 text-lg mb-8 leading-relaxed">
                             We believe that entrepreneurship can be lonely, but it doesn&apos;t have to be. Our program
                             includes dedicated well-being sessions, peer support circles, and mental health resources to
@@ -350,7 +350,7 @@ export default async function WidibProgramPage() {
            background: "linear-gradient(135deg, #1e215d 0%, #262973 100%)",
          }}>
           <div className="max-w-3xl mx-auto px-4">
-              <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
+              <h2 className="text-4xl mb-6">Ready to Grow Your Business?</h2>
               <p className="text-xl text-blue-100 mb-10">
                   Join 200+ women who have transformed their side hustles into thriving brands.
               </p>

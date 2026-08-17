@@ -15,7 +15,7 @@ export default function GrowCommunity() {
       <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full translate-x-1/3 -translate-y-1/3" aria-hidden="true"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full -translate-x-1/3 translate-y-1/3" aria-hidden="true"></div>
       <div className="max-w-[1000px] mx-auto relative z-10 flex flex-col items-center text-center gap-8 animate-fade-up">
-        <h2 className="text-white text-4xl md:text-5xl font-black leading-tight max-w-[800px]">
+        <h2 className="text-white text-4xl md:text-5xl leading-tight max-w-[800px]">
           Building a Sustainable Future
         </h2>
         <p className="text-blue-100 dark:text-gray-300 text-lg md:text-xl max-w-[700px]">

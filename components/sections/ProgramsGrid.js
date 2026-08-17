@@ -64,7 +64,7 @@ export default function ProgramsGrid() {
           <span className="text-secondary-dark dark:text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">
             Our Impact
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-dark dark:text-white mb-6">
+          <h2 className="text-3xl md:text-4xl text-neutral-dark dark:text-white mb-6">
             Pathways to Opportunity
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
@@ -85,7 +85,7 @@ export default function ProgramsGrid() {
                 >
                   <span className={`material-symbols-outlined text-3xl`} style={{ color: program.color === 'accent' ? '#f6871f' : '' }}>{program.icon}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-neutral-dark dark:text-white mb-3">
+                <h3 className="text-2xl text-neutral-dark dark:text-white mb-3">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">

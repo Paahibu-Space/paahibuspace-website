@@ -29,7 +29,7 @@ export default function CareersPage() {
     <>
       <PageHero
         title={
-          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+          <h1 className="text-4xl md:text-6xl leading-tight tracking-[-0.033em]">
             Build Meaningful Work With Us
           </h1>
         }
@@ -43,7 +43,7 @@ export default function CareersPage() {
             {opportunityTypes.map((type) => (
               <div key={type.title} className="flex flex-col gap-3">
 
-                <h3 className="text-lg font-bold text-neutral-dark dark:text-white">
+                <h3 className="text-lg text-neutral-dark dark:text-white">
                   {type.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">

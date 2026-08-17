@@ -8,7 +8,7 @@ export default function AdvisoryBoard({ members = [] }) {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div className="mb-6 md:mb-0">
-                <h2 className="text-3xl font-bold text-secondary dark:text-white">Advisory Board</h2>
+                <h2 className="text-3xl text-secondary dark:text-white">Advisory Board</h2>
                 <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-lg">
                     Providing strategic guidance and industry insights to ensure our programs remain relevant and
                     impactful.
@@ -36,7 +36,7 @@ export default function AdvisoryBoard({ members = [] }) {
                     "linear-gradient(to top, rgba(39, 41, 116, 0.95) 0%, rgba(39, 41, 116, 0.4) 50%, transparent 100%)",
                 }}
               >
-                <h3 className="text-white text-xl font-bold translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-white text-xl translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
                   {advisor.name}
                 </h3>
                 <p className="text-secondary font-medium text-sm translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 delay-75">

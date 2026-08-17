@@ -34,7 +34,7 @@ export default function OurWorkPage() {
       <section className="bg-white dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 md:pt-20 md:pb-20">
 
-          <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-primary dark:text-white max-w-3xl mb-10">
+          <h1 className="font-display text-5xl md:text-7xl leading-[1.05] tracking-tight text-primary dark:text-white max-w-3xl mb-10">
             Turning Community Priorities Into Action
           </h1>
           <div className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-3xl">
@@ -56,7 +56,7 @@ export default function OurWorkPage() {
           <span className="text-xs font-bold tracking-[0.14em] uppercase text-gray-500 dark:text-gray-400 block mb-4">
             Evidence & Advocacy
           </span>
-          <h2 className="font-display text-2xl md:text-3xl font-bold leading-snug tracking-tight text-primary dark:text-white max-w-2xl mb-5">
+          <h2 className="font-display text-2xl md:text-3xl leading-snug tracking-tight text-primary dark:text-white max-w-2xl mb-5">
             Using community evidence to strengthen advocacy and connect women, girls and young people to
             leadership and decision-making spaces.
           </h2>
@@ -101,7 +101,7 @@ export default function OurWorkPage() {
             />
           </div>
           <div className="bg-white dark:bg-surface-dark px-6 py-14 md:px-16 md:py-16 flex flex-col justify-center">
-            <h2 className="font-display text-4xl md:text-5xl font-bold leading-[1.08] tracking-tight text-primary dark:text-white mb-6">
+            <h2 className="font-display text-4xl md:text-5xl leading-[1.08] tracking-tight text-primary dark:text-white mb-6">
               Digital Walansi
             </h2>
             <p className="text-base leading-[1.75] text-gray-600 dark:text-gray-300 mb-4 max-w-md">
@@ -148,7 +148,7 @@ export default function OurWorkPage() {
               <p className="text-xs font-bold tracking-[0.16em] uppercase text-secondary mb-5">
                 Digital Business Platform for Women Entrepreneurs
               </p>
-              <h2 className="font-display text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight text-primary dark:text-white mb-6">
+              <h2 className="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight text-primary dark:text-white mb-6">
                 Ndiara
               </h2>
               <p className="text-base leading-[1.75] text-gray-600 dark:text-gray-300 mb-4 max-w-lg">
@@ -190,7 +190,7 @@ export default function OurWorkPage() {
               <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-5">
                 Expanding Access to Capital and Enterprise Support
               </p>
-              <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white">
+              <h2 className="font-display text-3xl md:text-5xl leading-[1.1] tracking-tight text-primary dark:text-white">
                 Baabuh Enterprise Fund
               </h2>
             </div>
@@ -226,7 +226,7 @@ export default function OurWorkPage() {
           <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-5">
             Baabuh Enterprise Fund
           </p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white mb-10 max-w-2xl">
+          <h2 className="font-display text-3xl md:text-5xl leading-[1.1] tracking-tight text-primary dark:text-white mb-10 max-w-2xl">
             Capital and Support for Women Building Businesses
           </h2>
           <div className="grid md:grid-cols-2 gap-10 md:gap-16">
@@ -268,7 +268,7 @@ export default function OurWorkPage() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-secondary mb-5">
               Freelance Accelerator
             </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white mb-5">
+            <h2 className="font-display text-3xl md:text-5xl leading-[1.1] tracking-tight text-primary dark:text-white mb-5">
               Skills2Work
             </h2>
             <p className="text-base leading-[1.75] text-gray-600 dark:text-gray-300 mb-7">

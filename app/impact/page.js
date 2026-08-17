@@ -44,7 +44,7 @@ export default async function ImpactPage() {
       {/* Hero Section */}
       <PageHero
         title={
-          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+          <h1 className="text-4xl md:text-6xl leading-tight tracking-[-0.033em]">
             Transforming African Futures <br className="hidden md:block" />
             Through Technology
           </h1>
@@ -75,7 +75,7 @@ export default async function ImpactPage() {
       <section className="w-full py-16 dark:bg-[#0f111a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="text-primary dark:text-white text-3xl md:text-4xl font-bold">
+            <h2 className="text-primary dark:text-white text-3xl md:text-4xl">
               Inspiring Journeys
             </h2>
             <Link
@@ -95,7 +95,7 @@ export default async function ImpactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/3">
-              <h2 className="text-primary dark:text-white text-3xl font-bold leading-tight mb-4">
+              <h2 className="text-primary dark:text-white text-3xl leading-tight mb-4">
                 Annual Impact Reports
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg mb-10">
@@ -177,7 +177,7 @@ export default async function ImpactPage() {
       {/* CTA Footer Section */}
       <section className="bg-[#0b0c15] text-white py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl mb-6 tracking-tight">
             Be Part of the Next Story
           </h2>
           <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -212,7 +212,7 @@ async function ImpactStatsSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-primary dark:text-white">
+              <h2 className="text-3xl text-primary dark:text-white">
                 Our Reach in Numbers
               </h2>
               <p className="text-gray-500 dark:text-gray-400 mt-2 text-lg">

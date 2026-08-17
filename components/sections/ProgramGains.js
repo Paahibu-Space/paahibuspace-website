@@ -7,7 +7,7 @@ export default function ProgramGains({ title, description, image, points }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="lg:flex lg:gap-16 items-center">
           <div className="lg:w-1/2 mb-12 lg:mb-0">
-            <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6">
+            <h2 className="text-3xl lg:text-5xl font-display mb-6">
               {title}
             </h2>
             <p className="text-blue-100 text-lg mb-8">{description}</p>
@@ -34,7 +34,7 @@ export default function ProgramGains({ title, description, image, points }) {
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl mb-1">{point.title}</h4>
+                    <h4 className="text-xl mb-1">{point.title}</h4>
                     <p className="text-blue-100 text-sm">
                       {point.description}
                     </p>

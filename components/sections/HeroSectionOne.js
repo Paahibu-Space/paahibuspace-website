@@ -14,7 +14,7 @@ export default function HeroSectionOne() {
               </span>
               Accepting New Cohort Applications
             </div>
-            <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
+            <h1 className="text-5xl leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
               Hey sis, you belong in <span className="text-primary dark:text-blue-400">tech</span> too.
             </h1>
             <p className="text-lg leading-relaxed text-neutral-gray dark:text-gray-300 max-w-lg">

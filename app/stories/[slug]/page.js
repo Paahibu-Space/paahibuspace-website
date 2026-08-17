@@ -66,7 +66,7 @@ export default async function StoryPage({ params }) {
                   </span>
                   <span className="text-gray-400 text-sm">5 min read</span>
                 </div>
-                <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
+                <h1 className="text-white text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
                   Empowering the Future:{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
                     {story.name}&apos;s Story
@@ -131,7 +131,7 @@ export default async function StoryPage({ params }) {
             <span className="material-symbols-outlined text-6xl text-secondary opacity-80">
               format_quote
             </span>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white italic">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl leading-tight text-white italic">
               &quot;{story.quote}&quot;
             </h3>
             <div className="flex flex-col items-center gap-1">
@@ -148,10 +148,10 @@ export default async function StoryPage({ params }) {
             {/* Text Content */}
             <div className="grid lg:grid-cols-12 gap-10">
               <div className="lg:col-span-5 flex flex-col gap-6">
-                <h2 className="text-secondary text-sm font-bold tracking-wider uppercase">
+                <h2 className="text-secondary text-sm tracking-wider uppercase">
                   {story.fullStory?.spark || "The Story"}
                 </h2>
-                <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                <h3 className="text-3xl md:text-4xl text-white leading-tight">
                   {story.fullStory?.heading || story.program}
                 </h3>
                 {story.fullStory?.text ? (
@@ -171,7 +171,7 @@ export default async function StoryPage({ params }) {
                         <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors mb-4">
                             <span className="material-symbols-outlined">{feature.icon}</span>
                         </div>
-                        <h4 className="text-white text-lg font-bold mb-2">{feature.title}</h4>
+                        <h4 className="text-white text-lg mb-2">{feature.title}</h4>
                         <p className="text-gray-400 text-sm leading-relaxed">{feature.text}</p>
                     </div>
                  )) : (
@@ -180,14 +180,14 @@ export default async function StoryPage({ params }) {
                             <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors mb-4">
                                 <span className="material-symbols-outlined">verified</span>
                             </div>
-                            <h4 className="text-white text-lg font-bold mb-2">Impact</h4>
+                            <h4 className="text-white text-lg mb-2">Impact</h4>
                             <p className="text-gray-400 text-sm leading-relaxed">Making a tangible difference in the community through dedication and skill.</p>
                         </div>
                         <div className="bg-white/5 p-6 rounded-xl border border-white/5 hover:border-secondary/50 transition-colors group">
                             <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-colors mb-4">
                                 <span className="material-symbols-outlined">rocket_launch</span>
                             </div>
-                            <h4 className="text-white text-lg font-bold mb-2">Innovation</h4>
+                            <h4 className="text-white text-lg mb-2">Innovation</h4>
                             <p className="text-gray-400 text-sm leading-relaxed">Leveraging technology to solve local problems and create new opportunities.</p>
                         </div>
                      </>
@@ -203,7 +203,7 @@ export default async function StoryPage({ params }) {
         <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-40 flex justify-center">
           <div className="max-w-[960px] w-full flex flex-col gap-12">
             <div className="text-center mb-4">
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-3xl text-white mb-4">
                 Milestones of Impact
               </h2>
               <p className="text-gray-400">
@@ -223,7 +223,7 @@ export default async function StoryPage({ params }) {
                     </div>
                     <div className="flex-1 bg-background-dark p-6 rounded-lg border border-white/5 hover:border-secondary/30 transition-all">
                         <div className="flex justify-between items-start mb-2">
-                            <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                            <h3 className="text-lg text-white">{item.title}</h3>
                             <span className="text-secondary text-sm font-bold bg-secondary/10 px-2 py-1 rounded">
                                 {item.year}
                             </span>
@@ -248,7 +248,7 @@ export default async function StoryPage({ params }) {
         />
         <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-40 flex justify-center py-20 relative z-10">
           <div className="max-w-[800px] text-center flex flex-col items-center gap-8">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
+            <h2 className="text-3xl md:text-5xl text-white leading-tight">
               Help Us Create More Stories Like {story.name.split(' ')[0]}&apos;s
             </h2>
             <p className="text-blue-100 text-lg md:text-xl max-w-[600px]">

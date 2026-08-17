@@ -56,7 +56,7 @@ export default async function TeamPage() {
     <>
       <PageHero
         title={
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 font-display">
+          <h1 className="text-4xl md:text-6xl mb-6 font-display">
             The People Behind Paahibu Space
           </h1>
         }

@@ -6,7 +6,7 @@ export default function DetailedMission() {
           <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">
             Our Purpose
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-dark dark:text-white mb-4 animate-fade-up">
+          <h2 className="text-3xl md:text-4xl text-neutral-dark dark:text-white mb-4 animate-fade-up">
             Our Mission
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -25,7 +25,7 @@ export default function DetailedMission() {
                 door_open
               </span>
             </div>
-            <h3 className="text-2xl font-bold text-primary dark:text-blue-400 mb-3">ACCESS</h3>
+            <h3 className="text-2xl text-primary dark:text-blue-400 mb-3">ACCESS</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed flex-grow">
               Bridging the digital divide by providing essential resources to
               those who need them most. We ensure no talent is left behind due
@@ -68,7 +68,7 @@ export default function DetailedMission() {
                 lightbulb
               </span>
             </div>
-            <h3 className="text-2xl font-bold text-primary dark:text-blue-400 mb-3">INNOVATE</h3>
+            <h3 className="text-2xl text-primary dark:text-blue-400 mb-3">INNOVATE</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed flex-grow">
               Fostering creativity and technical excellence through hands-on
               experimentation. We create safe spaces for bold ideas and
@@ -111,7 +111,7 @@ export default function DetailedMission() {
                 trending_up
               </span>
             </div>
-            <h3 className="text-2xl font-bold text-primary dark:text-blue-400 mb-3">TRANSFORM</h3>
+            <h3 className="text-2xl text-primary dark:text-blue-400 mb-3">TRANSFORM</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed flex-grow">
               Changing career trajectories and leadership landscapes
               permanently. We don&apos;t just teach code; we build the next

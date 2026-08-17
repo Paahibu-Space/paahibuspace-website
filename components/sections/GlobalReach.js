@@ -72,7 +72,7 @@ export default function GlobalReach() {
           <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
             Our Reach
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-6">
+          <h2 className="text-3xl md:text-4xl text-primary dark:text-white mb-6">
             Community Ambassadors
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">

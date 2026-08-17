@@ -23,7 +23,7 @@ export default function Story() {
             <span className="text-primary dark:text-secondary font-bold tracking-wider text-sm uppercase">
               Who We Are
             </span>
-            <h2 className="text-neutral-dark dark:text-white text-3xl md:text-4xl font-black leading-tight mt-2">
+            <h2 className="text-neutral-dark dark:text-white text-3xl md:text-4xl leading-tight mt-2">
               Youth-Led, Women-Centered
             </h2>
           </div>

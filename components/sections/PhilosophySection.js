@@ -42,8 +42,8 @@ export default function PhilosophySection() {
     <section className="bg-background-light dark:bg-background-dark/50 transition-colors" id="philosophy">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-12">
         <div className="md:text-center max-w-3xl mx-auto animate-fade-up">
-          <h2 className="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Our Approach</h2>
-          <h3 className="text-3xl font-black text-neutral-dark dark:text-white sm:text-4xl">Access. Innovate. Transform.</h3>
+          <h2 className="text-secondary tracking-wide uppercase text-sm mb-2">Our Approach</h2>
+          <h3 className="text-3xl text-neutral-dark dark:text-white sm:text-4xl">Access. Innovate. Transform.</h3>
           <p className="mt-4 text-lg text-neutral-gray dark:text-gray-400">
             Our work is guided by a simple belief that people are better positioned to shape their lives and communities when they can access the resources and opportunities they need, have the space to imagine and develop solutions, and are able to participate in the decisions that affect them.
           </p>
@@ -68,7 +68,7 @@ export default function PhilosophySection() {
               />
             </div>
             <div>
-              <h4 className="mb-4 text-2xl lg:text-3xl font-bold text-neutral-dark dark:text-white">{pillar.title}</h4>
+              <h4 className="mb-4 text-2xl lg:text-3xl text-neutral-dark dark:text-white">{pillar.title}</h4>
               <div className="space-y-4">
                 {pillar.paragraphs.map((paragraph, pIndex) => (
                   <p key={pIndex} className="text-neutral-gray dark:text-gray-400 leading-relaxed">

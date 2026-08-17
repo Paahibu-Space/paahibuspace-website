@@ -7,11 +7,11 @@ export default function HeroSectionTwo() {
       <div className="w-full lg:w-3/5 flex flex-col gap-8 lg:pr-12 z-10">
         <div className="flex flex-col gap-4">
 
-          <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
             Hey Sis,<br />
             <span className="text-primary dark:text-blue-400">You Belong in Tech Too</span>
           </h1>
-          <h2 className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-normal leading-relaxed max-w-xl">
+          <h2 className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
             Increasing the agency of the next generation of African women with the skills, mentorship, and community needed to thrive in the global
             technology ecosystem. We&apos;re building the future, one line of code at a time.
           </h2>

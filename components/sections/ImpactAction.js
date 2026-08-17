@@ -9,7 +9,7 @@ export default function ImpactAction() {
               <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
                 Impact in Action
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-neutral-dark dark:text-white mb-6 animate-fade-up">
+              <h2 className="text-3xl md:text-5xl font-display text-neutral-dark dark:text-white mb-6 animate-fade-up">
                  Empowering Rural Economies
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
@@ -21,7 +21,7 @@ export default function ImpactAction() {
                       <span className="h-2 w-2 rounded-full bg-green-500"></span>
                       Success Story
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-neutral-dark dark:text-white">Project: Digital Market Access</h3>
+                  <h3 className="text-2xl mb-4 text-neutral-dark dark:text-white">Project: Digital Market Access</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                       Sarah identified that women in her local market were losing sales due to lack of digital payment options. Through the Ambassador program, she organized training sessions partnering with local fintechs.
                   </p>

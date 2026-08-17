@@ -150,7 +150,7 @@ export default function ResearchInsightsPage() {
         <div className="max-w-7xl mx-auto relative z-10 w-full">
           <div className="max-w-2xl space-y-6">
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
               Research, Evidence &amp; Insights
             </h1>
             <p className="text-blue-100 text-lg md:text-xl leading-relaxed max-w-xl">
@@ -169,7 +169,7 @@ export default function ResearchInsightsPage() {
             <span className="text-secondary font-bold text-sm uppercase tracking-widest">
               Why It Matters
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary dark:text-white leading-tight">
+            <h2 className="font-display text-3xl md:text-4xl text-primary dark:text-white leading-tight">
               Understanding the experiences and systems that shape everyday life
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">

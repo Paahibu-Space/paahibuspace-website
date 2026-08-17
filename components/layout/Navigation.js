@@ -81,7 +81,7 @@ export default function Navigation() {
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-9 grid grid-cols-3 gap-6">
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">
+                <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-4">
                   Digital Skills
                 </h3>
                 <Link
@@ -131,7 +131,7 @@ export default function Navigation() {
                 </Link>
               </div>
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">
+                <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-4">
                   Entrepreneurship & Leadership
                 </h3>
                 <Link
@@ -184,7 +184,7 @@ export default function Navigation() {
                 </Link>
               </div>
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">
+                <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-4">
                   Business & Platforms
                 </h3>
                 <Link
@@ -232,7 +232,7 @@ export default function Navigation() {
               {openPrograms.length > 0 ? (
                 <>
                   <div>
-                    <h3 className="text-lg font-bold text-primary dark:text-white mb-2">
+                    <h3 className="text-lg text-primary dark:text-white mb-2">
                        Applications Open
                     </h3>
                     <div className="space-y-3 mb-4">
@@ -254,7 +254,7 @@ export default function Navigation() {
               ) : (
                 <>
                   <div>
-                    <h3 className="text-lg font-bold text-primary dark:text-white mb-2">
+                    <h3 className="text-lg text-primary dark:text-white mb-2">
                       Next Cohort
                     </h3>
                     <p className="text-sm text-neutral-gray dark:text-gray-400 mb-4">

@@ -256,7 +256,7 @@ export default async function Skills2WorkProgram() {
           <div className="grid lg:grid-cols-[1fr_320px] gap-12 lg:gap-16 items-start">
             <div>
 
-              <h1 className="font-display text-5xl md:text-8xl font-bold leading-[0.95] tracking-tight text-primary dark:text-white mb-7">
+              <h1 className="font-display text-5xl md:text-8xl leading-[0.95] tracking-tight text-primary dark:text-white mb-7">
                 Skills<span className="text-secondary">2</span>Work
               </h1>
               <p className="text-lg leading-[1.65] text-gray-700 dark:text-gray-200 max-w-lg mb-4">
@@ -337,7 +337,7 @@ export default async function Skills2WorkProgram() {
                   <span className="flex items-center justify-center leading-none w-9 h-9 rounded-full bg-primary text-white text-sm font-bold mb-6">
                     {i + 1}
                   </span>
-                  <h3 className="text-xl font-bold leading-[1.2] tracking-tight text-primary dark:text-white mb-3">
+                  <h3 className="text-xl leading-[1.2] tracking-tight text-primary dark:text-white mb-3">
                     {step.phase}
                   </h3>
                   <p className="text-base leading-[1.65] text-gray-500 dark:text-gray-400">
@@ -373,7 +373,7 @@ export default async function Skills2WorkProgram() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-secondary mb-5">
               Who Is Skills2Work For?
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-[1.15] tracking-tight text-primary dark:text-white">
+            <h2 className="font-display text-3xl md:text-4xl leading-[1.15] tracking-tight text-primary dark:text-white">
               Skills2Work is designed for women who want to build practical digital capabilities and
               explore new pathways to work and income.
             </h2>
@@ -411,7 +411,7 @@ export default async function Skills2WorkProgram() {
               <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-3">
                 Start With the Foundations
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white">
+              <h2 className="font-display text-3xl md:text-4xl leading-[1.1] tracking-tight text-primary dark:text-white">
                 Freelancing Foundations
               </h2>
             </div>
@@ -468,7 +468,7 @@ export default async function Skills2WorkProgram() {
                     <p className="text-xs font-bold tracking-[0.14em] uppercase mb-2 text-secondary">
                       {track.number}
                     </p>
-                    <h3 className="text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-primary dark:text-white">
+                    <h3 className="text-2xl md:text-3xl leading-[1.15] tracking-tight text-primary dark:text-white">
                       {track.name}
                     </h3>
                     <p className="text-base text-gray-500 dark:text-gray-400 mt-1.5">{track.tagline}</p>
@@ -520,7 +520,7 @@ export default async function Skills2WorkProgram() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-white/55 mb-5">
               All Participants — Additional Module
             </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight text-white mb-6">
+            <h2 className="font-display text-3xl md:text-5xl leading-[1.1] tracking-tight text-white mb-6">
               Create &amp; Sell Digital Products
             </h2>
             <p className="text-base leading-[1.75] text-white/80 mb-2">
@@ -558,7 +558,7 @@ export default async function Skills2WorkProgram() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-5">
               Professional Development
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white mb-5">
+            <h2 className="font-display text-3xl md:text-4xl leading-[1.1] tracking-tight text-primary dark:text-white mb-5">
               Build Your Professional Brand
             </h2>
             <p className="text-base leading-[1.7] text-gray-500 dark:text-gray-400 mb-3">
@@ -577,7 +577,7 @@ export default async function Skills2WorkProgram() {
                   i < 3 ? "border-b border-gray-200 dark:border-white/10" : ""
                 }`}
               >
-                <h3 className="text-lg font-bold text-primary dark:text-white mb-2.5 leading-tight">
+                <h3 className="text-lg text-primary dark:text-white mb-2.5 leading-tight">
                   {area.title}
                 </h3>
                 <p className="text-base leading-[1.65] text-gray-500 dark:text-gray-400">{area.body}</p>
@@ -593,7 +593,7 @@ export default async function Skills2WorkProgram() {
           <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-4">
             Training & Support
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white mb-5">
+          <h2 className="font-display text-3xl md:text-4xl leading-[1.1] tracking-tight text-primary dark:text-white mb-5">
             Training &amp; Support
           </h2>
           <p className="text-base leading-[1.65] text-gray-600 dark:text-gray-300 max-w-2xl mb-12">
@@ -608,7 +608,7 @@ export default async function Skills2WorkProgram() {
                   i < 5 ? "border-b border-gray-200 dark:border-white/10" : ""
                 }`}
               >
-                <h3 className="text-base font-bold text-primary dark:text-white mb-2 leading-snug">
+                <h3 className="text-base text-primary dark:text-white mb-2 leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-xs leading-relaxed text-gray-500 dark:text-gray-400">{item.body}</p>
@@ -624,7 +624,7 @@ export default async function Skills2WorkProgram() {
           <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-4">
             Programme Outcomes
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white mb-5">
+          <h2 className="font-display text-3xl md:text-4xl leading-[1.1] tracking-tight text-primary dark:text-white mb-5">
             What You Should Leave With
           </h2>
           <p className="text-base leading-[1.65] text-gray-600 dark:text-gray-300 max-w-2xl mb-4">
@@ -669,7 +669,7 @@ export default async function Skills2WorkProgram() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-5">
               After the Programme
             </p>
-            <h3 className="text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-primary dark:text-white mb-4">
+            <h3 className="text-2xl md:text-3xl leading-[1.15] tracking-tight text-primary dark:text-white mb-4">
               Skills2Work Community
             </h3>
             <p className="text-base leading-[1.7] text-gray-600 dark:text-gray-300 mb-4">
@@ -686,7 +686,7 @@ export default async function Skills2WorkProgram() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-white/50 mb-5">
               Next Stage
             </p>
-            <h3 className="text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight text-white mb-2">
+            <h3 className="text-2xl md:text-3xl leading-[1.15] tracking-tight text-white mb-2">
               Skills2Work Advanced
             </h3>
             <p className="text-base font-semibold text-secondary mb-4">
@@ -723,7 +723,7 @@ export default async function Skills2WorkProgram() {
           <p className="text-xs font-bold tracking-[0.16em] uppercase text-secondary mb-6">
             Join Cohort One
           </p>
-          <h2 className="font-display text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white mb-6">
+          <h2 className="font-display text-4xl md:text-6xl leading-[1.1] tracking-tight text-primary dark:text-white mb-6">
             Build a Skill. Build Your
             <br />
             Professional Presence. Build Your Path to Work.

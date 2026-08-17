@@ -9,7 +9,7 @@ export default function LeadershipTeam({ members = [] }) {
     <section className="py-5 px-6 md:px-12 bg-background-light dark:bg-background-dark/50">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl text-primary dark:text-white mb-4">
             Leadership Team
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
@@ -38,7 +38,7 @@ export default function LeadershipTeam({ members = [] }) {
                     "linear-gradient(to top, rgba(39, 41, 116, 0.95) 0%, rgba(39, 41, 116, 0.4) 50%, transparent 100%)",
                 }}
               >
-                <h3 className="text-white text-xl font-bold translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-white text-xl translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
                   {leader.name}
                 </h3>
                 <p className="text-secondary dark:text-secondary font-medium text-sm translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 delay-75">

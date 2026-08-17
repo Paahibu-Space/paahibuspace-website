@@ -14,7 +14,7 @@ export default function MissionPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6 text-center lg:text-left order-2 lg:order-1">
               <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-dark dark:text-white leading-[1.1]">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight text-neutral-dark dark:text-white leading-[1.1]">
                   Empowering African <span className="text-primary">Women in Tech</span>
                 </h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
@@ -61,7 +61,7 @@ export default function MissionPage() {
             <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
               Our Purpose
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-dark dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl text-neutral-dark dark:text-white mb-4">
               Our Mission
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -76,7 +76,7 @@ export default function MissionPage() {
                   door_open
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-primary dark:text-white mb-3">
+              <h3 className="text-2xl text-primary dark:text-white mb-3">
                 Access
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow">
@@ -106,7 +106,7 @@ export default function MissionPage() {
                   lightbulb
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-primary dark:text-white mb-3">
+              <h3 className="text-2xl text-primary dark:text-white mb-3">
                 Innovate
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow">
@@ -136,7 +136,7 @@ export default function MissionPage() {
                   trending_up
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-primary dark:text-white mb-3">
+              <h3 className="text-2xl text-primary dark:text-white mb-3">
                 Transform
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow">
@@ -175,7 +175,7 @@ export default function MissionPage() {
 
       <section className="w-full bg-[#faf9fb] dark:bg-[#1a141e] py-10">
         <div className="container mx-auto px-6 max-w-[960px] text-center">
-          <h2 className="text-[#161019] dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-4">
+          <h2 className="text-[#161019] dark:text-white text-3xl md:text-4xl leading-tight tracking-tight mb-4">
             Why Join Hands With Us?
           </h2>
           <p className="text-[#555] dark:text-[#bbb] text-lg max-w-2xl mx-auto">
@@ -197,7 +197,7 @@ export default function MissionPage() {
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <h3 className="text-2xl font-bold text-[#161019] dark:text-white">
+              <h3 className="text-2xl text-[#161019] dark:text-white">
                 Collaborative Impact
               </h3>
               <p className="text-[#555] dark:text-[#bbb] leading-relaxed">
@@ -222,7 +222,7 @@ export default function MissionPage() {
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <h3 className="text-2xl font-bold text-[#161019] dark:text-white">
+              <h3 className="text-2xl text-[#161019] dark:text-white">
                 Long-Term Sustainability
               </h3>
               <p className="text-[#555] dark:text-[#bbb] leading-relaxed">
@@ -247,7 +247,7 @@ export default function MissionPage() {
               />
             </div>
             <div className="w-full md:w-1/2 dark:bg-[#251d2b] p-10 rounded-lg flex flex-col gap-4 justify-center h-fit">
-              <h3 className="text-2xl font-bold text-[#161019] dark:text-white">
+              <h3 className="text-2xl text-[#161019] dark:text-white">
                 Governance & Leadership
               </h3>
               <p className="text-[#555] dark:text-[#bbb] leading-relaxed">

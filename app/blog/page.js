@@ -17,7 +17,7 @@ export default async function BlogListingPage() {
       return (
         <main className="flex-grow flex justify-center py-20 px-4 mt-[64px] bg-background-light dark:bg-background-dark">
             <div className="text-center">
-                <h1 className="text-2xl font-bold dark:text-white mb-2">No Posts Found</h1>
+                <h1 className="text-2xl dark:text-white mb-2">No Posts Found</h1>
                 <p className="text-gray-500">Check back later for updates.</p>
             </div>
         </main>
@@ -30,7 +30,7 @@ export default async function BlogListingPage() {
         {/* Page Header */}
         <section className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between border-b border-gray-200 dark:border-[#2b2c40] pb-6">
           <div>
-            <h1 className="text-4xl font-bold tracking-tight text-primary dark:text-white">Blog & Updates</h1>
+            <h1 className="text-4xl tracking-tight text-primary dark:text-white">Blog & Updates</h1>
             <p className="mt-2 text-lg text-gray-500 dark:text-gray-400">Insights, news, and stories from our community.</p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -64,7 +64,7 @@ export default async function BlogListingPage() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                   </div>
                   <div className="flex flex-1 flex-col p-5">
-                    <h3 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white group-hover:text-secondary transition-colors">
+                    <h3 className="mb-2 text-xl leading-tight text-gray-900 dark:text-white group-hover:text-secondary transition-colors">
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h3>
                     <p className="mb-4 flex-1 text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
@@ -104,7 +104,7 @@ export default async function BlogListingPage() {
             <SidebarNewsletter />
             {/* Trending Topics - Mock */}
             <div className="bg-white dark:bg-[#1f202e] p-6 border border-gray-100 dark:border-[#2b2c40]">
-              <h3 className="mb-4 text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              <h3 className="mb-4 text-lg text-gray-900 dark:text-white flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-xl">trending_up</span>
                 Trending Now
               </h3>
@@ -120,7 +120,7 @@ export default async function BlogListingPage() {
                       {item.id}
                     </span>
                       <div>
-                        <h4 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                        <h4 className="text-sm text-gray-900 dark:text-white group-hover:text-primary transition-colors">
                           {item.title}
                         </h4>
                         <span className="text-xs text-gray-500">{item.views}</span>

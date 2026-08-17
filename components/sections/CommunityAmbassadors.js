@@ -10,7 +10,7 @@ export default function CommunityAmbassadors({ members = [] }) {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div className="mb-6 md:mb-0">
-                <h2 className="text-3xl font-bold text-primary dark:text-white">Community Ambassadors</h2>
+                <h2 className="text-3xl text-primary dark:text-white">Community Ambassadors</h2>
                 <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-lg">
                     Ensuring community voices shape our programs across 30+ communities.
                 </p>
@@ -23,7 +23,7 @@ export default function CommunityAmbassadors({ members = [] }) {
                         <Image alt={ambassador.name} className="object-cover"
                             src={ambassador.image_url} fill sizes="96px" />
                     </div>
-                    <h3 className="font-bold text-primary dark:text-white">{ambassador.name}</h3>
+                    <h3 className="text-primary dark:text-white">{ambassador.name}</h3>
                     <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{ambassador.role}</p>
                 </div>
             ))}

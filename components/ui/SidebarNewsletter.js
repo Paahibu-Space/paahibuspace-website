@@ -51,7 +51,7 @@ export default function SidebarNewsletter() {
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
         <span className="material-symbols-outlined text-2xl">mail</span>
       </div>
-      <h3 className="mb-2 text-xl font-bold">Join the Community</h3>
+      <h3 className="mb-2 text-xl">Join the Community</h3>
       <p className="mb-4 text-sm text-blue-100">
         Get the latest updates on our programs and tech stories delivered to your inbox.
       </p>

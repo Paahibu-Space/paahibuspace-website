@@ -120,7 +120,7 @@ export default async function DigitalWalansiProgram() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  lg:pt-28 lg:pb-20">
 
-          <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mb-6">
+          <h1 className="text-5xl md:text-7xl text-white leading-[1.05] tracking-tight mb-6">
             Digital <span className="text-secondary">Walansi</span>
           </h1>
 
@@ -153,7 +153,7 @@ export default async function DigitalWalansiProgram() {
               <span className="text-xs tracking-[0.25em] uppercase text-white/50 font-bold block mb-6">
                 The Problem We Are Addressing
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-8">
+              <h2 className="text-4xl md:text-5xl text-white leading-tight mb-8">
                 The gap between aspiration and <span className="text-secondary">safety</span>
               </h2>
 
@@ -217,7 +217,7 @@ export default async function DigitalWalansiProgram() {
               <span className="text-xs tracking-[0.25em] uppercase text-secondary font-bold block mb-4">
                 Training & Deployment
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl text-primary dark:text-white leading-tight mb-6">
                 Thirty Fellows, carrying skills into <span className="text-secondary">schools</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
@@ -255,7 +255,7 @@ export default async function DigitalWalansiProgram() {
               <span className="text-xs tracking-[0.25em] uppercase text-secondary font-bold block mb-4">
                 The Technology Component
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl text-primary dark:text-white leading-tight mb-6">
                 Walansi <span className="text-secondary">Kontonbile</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
@@ -284,7 +284,7 @@ export default async function DigitalWalansiProgram() {
             {kontonbileFunctions.map((f) => (
               <div key={f.title} className="bg-white dark:bg-surface-dark p-8">
 
-                <h3 className="text-lg font-bold text-primary dark:text-white mb-3">{f.title}</h3>
+                <h3 className="text-lg text-primary dark:text-white mb-3">{f.title}</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">{f.body}</p>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <Image
@@ -335,7 +335,7 @@ export default async function DigitalWalansiProgram() {
               <span className="text-xs tracking-[0.25em] uppercase text-secondary font-bold block mb-4">
                 Evidence & Research
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl text-primary dark:text-white leading-tight mb-6">
                 Learning as we <span className="text-secondary">go</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -366,7 +366,7 @@ export default async function DigitalWalansiProgram() {
             <span className="text-xs tracking-[0.25em] uppercase text-secondary font-bold block mb-4">
               What Distinguishes This Programme
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl text-primary dark:text-white leading-tight">
               Principles that <span className="text-secondary">define the work</span>
             </h2>
           </div>
@@ -377,7 +377,7 @@ export default async function DigitalWalansiProgram() {
                 key={p.title}
                 className="bg-white dark:bg-surface-dark p-8 hover:bg-background-light dark:hover:bg-white/5 transition-colors group"
               >
-                <h3 className="text-xl font-bold text-primary dark:text-white mb-4 leading-tight group-hover:text-secondary transition-colors">
+                <h3 className="text-xl text-primary dark:text-white mb-4 leading-tight group-hover:text-secondary transition-colors">
                   {p.title}
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{p.body}</p>
@@ -405,7 +405,7 @@ export default async function DigitalWalansiProgram() {
               <span className="text-xs tracking-[0.25em] uppercase text-secondary font-bold block mb-4">
                 The Fellows
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-primary dark:text-white leading-tight">
+              <h2 className="text-4xl md:text-5xl text-primary dark:text-white leading-tight">
                 Cohort 1 <span className="text-secondary">Walansi Fellows</span>
               </h2>
             </div>
@@ -475,7 +475,7 @@ export default async function DigitalWalansiProgram() {
               <span className="text-xs tracking-[0.25em] uppercase text-white/40 font-bold block mb-4">
                 Partners & Funders
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+              <h2 className="text-4xl md:text-5xl text-white leading-tight">
                 Partner with <span className="text-secondary">Digital Walansi</span>
               </h2>
             </div>

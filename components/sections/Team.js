@@ -7,7 +7,7 @@ export default function Team() {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-[600px]">
-            <h2 className="text-neutral-dark dark:text-white text-3xl font-bold mb-4">
+            <h2 className="text-neutral-dark dark:text-white text-3xl mb-4">
               Meet the Team
             </h2>
             <p className="text-gray-600 dark:text-gray-300">
@@ -38,7 +38,7 @@ export default function Team() {
               />
             </div>
             <div>
-              <h3 className="text-neutral-dark dark:text-white text-lg font-bold">
+              <h3 className="text-neutral-dark dark:text-white text-lg">
                 Amina Diop
               </h3>
               <p className="text-primary dark:text-secondary text-sm font-medium">Founder & CEO</p>
@@ -56,7 +56,7 @@ export default function Team() {
               />
             </div>
             <div>
-              <h3 className="text-neutral-dark dark:text-white text-lg font-bold">
+              <h3 className="text-neutral-dark dark:text-white text-lg">
                 Sarah Okafor
               </h3>
               <p className="text-primary dark:text-secondary text-sm font-medium">
@@ -76,7 +76,7 @@ export default function Team() {
               />
             </div>
             <div>
-              <h3 className="text-neutral-dark dark:text-white text-lg font-bold">
+              <h3 className="text-neutral-dark dark:text-white text-lg">
                 Kwame Mensah
               </h3>
               <p className="text-primary dark:text-secondary text-sm font-medium">
@@ -96,7 +96,7 @@ export default function Team() {
               />
             </div>
             <div>
-              <h3 className="text-neutral-dark dark:text-white text-lg font-bold">
+              <h3 className="text-neutral-dark dark:text-white text-lg">
                 Zola Abebe
               </h3>
               <p className="text-primary dark:text-secondary text-sm font-medium">

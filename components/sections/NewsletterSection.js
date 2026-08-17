@@ -52,7 +52,7 @@ export default function NewsletterSection() {
         <div className="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-blue-100/50 dark:bg-primary/10 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -ml-16 -mb-16 h-64 w-64 rounded-full bg-orange-100/30 dark:bg-orange-500/10 blur-3xl"></div>
         <div className="relative flex flex-col items-center px-6 py-12 sm:px-12 sm:py-16 text-center">
-          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-primary dark:text-blue-200 sm:text-4xl">
+          <h2 className="mb-4 text-3xl tracking-tight text-primary dark:text-blue-200 sm:text-4xl">
             Join the Movement
           </h2>
           <p className="mb-8 max-w-2xl text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">

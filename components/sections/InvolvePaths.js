@@ -10,7 +10,7 @@ export default function InvolvePaths() {
           </span>
         </div>
         <div className="flex flex-col gap-4 max-w-md">
-          <h2 className="text-white font-display font-bold text-3xl lg:text-4xl tracking-tight">
+          <h2 className="text-white font-display text-3xl lg:text-4xl tracking-tight">
             Become a Mentor
           </h2>
           <p className="text-white/90 text-lg leading-relaxed">
@@ -31,7 +31,7 @@ export default function InvolvePaths() {
           </span>
         </div>
         <div className="flex flex-col gap-4 max-w-md">
-          <h2 className="text-white font-display font-bold text-3xl lg:text-4xl tracking-tight">
+          <h2 className="text-white font-display text-3xl lg:text-4xl tracking-tight">
             Join GROW Program
           </h2>
           <p className="text-white/90 text-lg leading-relaxed">

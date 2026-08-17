@@ -12,7 +12,7 @@ export default function ProgramObjectives({ objectives }) {
     <section className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-display font-bold text-primary dark:text-white">
+          <h2 className="text-3xl font-display text-primary dark:text-white">
             Program Objectives
           </h2>
           <div className="w-24 h-1.5 bg-secondary mx-auto rounded-full mt-4"></div>
@@ -28,7 +28,7 @@ export default function ProgramObjectives({ objectives }) {
                   {icons[obj.iconKey] || "star"}
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-primary dark:text-white mb-3">
+              <h3 className="text-xl text-primary dark:text-white mb-3">
                 {obj.title}
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">

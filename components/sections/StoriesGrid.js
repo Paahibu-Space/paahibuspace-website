@@ -77,7 +77,7 @@ export default function StoriesGrid({ initialStories = [] }) {
                     </span>
                     <span>{story.program}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-primary dark:text-white mb-3 leading-snug group-hover:text-primary dark:group-hover:text-secondary transition-colors">
+                  <h3 className="text-xl text-primary dark:text-white mb-3 leading-snug group-hover:text-primary dark:group-hover:text-secondary transition-colors">
                     {story.name}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">

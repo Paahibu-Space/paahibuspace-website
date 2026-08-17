@@ -14,7 +14,7 @@ export default function RootError({ error, reset }) {
       <div className="max-w-xl w-full text-center">
         <div className="  p-8  mb-8 inline-block">
           <span className="material-symbols-outlined text-6xl text-red-500 mb-4 block">error</span>
-          <h1 className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white mb-2">
+          <h1 className="text-2xl md:text-3xl font-display text-gray-900 dark:text-white mb-2">
             Something went wrong
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-sm italic">

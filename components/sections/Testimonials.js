@@ -4,7 +4,7 @@ export default function Testimonials({ testimonials }) {
   return (
     <section className="py-20 bg-background-light dark:bg-background-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-display font-bold text-center text-primary dark:text-white mb-12">
+        <h2 className="text-3xl font-display text-center text-primary dark:text-white mb-12">
           Voices of Change
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
@@ -25,7 +25,7 @@ export default function Testimonials({ testimonials }) {
                   height={64}
                 />
                 <div>
-                  <h4 className="font-bold text-primary dark:text-white">
+                  <h4 className="text-primary dark:text-white">
                     {testimonial.author}
                   </h4>
                   <p className="text-sm text-secondary-dark dark:text-secondary">{testimonial.role}</p>

@@ -34,7 +34,7 @@ export default function ImpactSpotlight({
               <span className="h-px w-10 bg-secondary"></span>
               <span className="text-secondary font-bold uppercase tracking-wider text-sm">Success Story</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl mb-6 leading-tight">
               {title}
             </h2>
             <p className="text-gray-300 mb-6 leading-relaxed">

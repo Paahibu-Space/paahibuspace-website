@@ -88,7 +88,7 @@ export default function NdiaraPage() {
               <p className="text-xs font-bold tracking-[0.16em] uppercase text-secondary mb-5">
                 Digital Business Platform for Women Entrepreneurs
               </p>
-              <h1 className="font-display text-6xl md:text-9xl font-bold leading-[0.95] tracking-tight text-primary dark:text-white mb-6">
+              <h1 className="font-display text-6xl md:text-9xl leading-[0.95] tracking-tight text-primary dark:text-white mb-6">
                 Ndiara
               </h1>
               <p className="italic font-light text-xl md:text-2xl leading-[1.4] text-gray-500 dark:text-gray-400 max-w-lg">
@@ -132,7 +132,7 @@ export default function NdiaraPage() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-white/50 mb-6">
               What Ndiara Does
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-[1.2] tracking-tight text-white mb-6">
+            <h2 className="font-display text-3xl md:text-4xl leading-[1.2] tracking-tight text-white mb-6">
               Supporting Different Parts of Running a Business
             </h2>
             <p className="text-base leading-[1.75] text-white/75 max-w-md">
@@ -151,7 +151,7 @@ export default function NdiaraPage() {
                 key={pillar.word}
                 className="border-r border-b border-gray-200 dark:border-white/10 p-7 pb-12"
               >
-                <h3 className="text-4xl font-bold tracking-tight mb-5 leading-none text-primary dark:text-white">
+                <h3 className="text-4xl tracking-tight mb-5 leading-none text-primary dark:text-white">
                   {pillar.word}
                 </h3>
                 <p className="text-base leading-[1.7] text-gray-600 dark:text-gray-300">
@@ -170,7 +170,7 @@ export default function NdiaraPage() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 dark:text-gray-400 mb-5">
               Co-Design &amp; Research
             </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight text-primary dark:text-white mb-6">
+            <h2 className="font-display text-3xl md:text-5xl leading-[1.1] tracking-tight text-primary dark:text-white mb-6">
               Designed With Women Entrepreneurs
             </h2>
             <p className="text-base leading-[1.75] text-gray-600 dark:text-gray-300 mb-4">
@@ -205,7 +205,7 @@ export default function NdiaraPage() {
             <p className="text-xs font-bold tracking-[0.16em] uppercase text-white/50 mb-5">
               Learning &amp; Knowledge Sharing
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight text-white mb-6">
+            <h2 className="font-display text-4xl md:text-5xl leading-[1.1] tracking-tight text-white mb-6">
               Ndiara Academy
             </h2>
             <p className="text-base leading-[1.75] text-white/80 mb-4">
@@ -231,7 +231,7 @@ export default function NdiaraPage() {
                 className="bg-white/5 border border-white/10 rounded-lg px-7 py-6 flex gap-5 items-start"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2 tracking-tight">
+                  <h3 className="text-xl text-white mb-2 tracking-tight">
                     {item.heading}
                   </h3>
                   <p className="text-base leading-[1.65] text-white/65">{item.body}</p>
@@ -273,7 +273,7 @@ export default function NdiaraPage() {
                   i < 2 ? "border-b md:border-b-0 md:border-r border-gray-200 dark:border-white/10" : ""
                 }`}
               >
-                <h3 className="text-xl font-bold leading-[1.2] tracking-tight text-primary dark:text-white mb-4">
+                <h3 className="text-xl leading-[1.2] tracking-tight text-primary dark:text-white mb-4">
                   {item.audience}
                 </h3>
                 <p className="text-base leading-[1.7] text-gray-500 dark:text-gray-400 mb-6 flex-1">

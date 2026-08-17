@@ -40,7 +40,7 @@ export default async function WideiProgramPage() {
                      <span className="w-8 h-[2px] bg-secondary"></span>
                      Women in Digital Economy Initiative
                  </div>
-                 <h1 className="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                 <h1 className="text-white text-4xl md:text-6xl leading-tight tracking-tight">
                      Bridging the Tradition <span className="text-secondary">Digital Gap</span>
                  </h1>
                  <p className="text-gray-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0 font-light">
@@ -84,7 +84,7 @@ Space and the WiDiB Initiative&quot;
      {/* Mission & Stats Section */}
      <section className="py-16 md:py-24 px-4 md:px-10 bg-background-light dark:bg-background-dark">
          <div className="max-w-4xl mx-auto text-center mb-16">
-             <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-neutral-dark dark:text-white">Digitizing the Informal Sector</h2>
+             <h2 className="text-3xl md:text-4xl mb-6 tracking-tight text-neutral-dark dark:text-white">Digitizing the Informal Sector</h2>
              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                  We focus on women-led businesses in rural and underrepresented communities. By equipping them with
                  skills to digitize traditional practices—like weaving, pottery, and trading—we strengthen their economic
@@ -113,8 +113,8 @@ Space and the WiDiB Initiative&quot;
          <div className="max-w-7xl mx-auto">
              <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
                  <div>
-                     <h2 className="text-primary font-bold uppercase tracking-wider text-sm mb-2 dark:text-white">Our Methodology</h2>
-                     <h3 className="text-3xl md:text-4xl font-bold text-neutral-dark dark:text-white">Tradition Meets Tech</h3>
+                     <h2 className="text-primary uppercase tracking-wider text-sm mb-2 dark:text-white">Our Methodology</h2>
+                     <h3 className="text-3xl md:text-4xl text-neutral-dark dark:text-white">Tradition Meets Tech</h3>
                  </div>
                   <p className="max-w-md text-gray-600 dark:text-gray-400 text-sm md:text-base text-right md:text-left">
                       We don&apos;t just teach code; we integrate digital tools into the daily fabric of market life.
@@ -154,7 +154,7 @@ Space and the WiDiB Initiative&quot;
                              }`}
                          >
 
-                             <h4 className="text-xl font-bold">{item.title}</h4>
+                             <h4 className="text-xl">{item.title}</h4>
                              <p className={`text-sm leading-relaxed ${dark ? "text-white/80" : "text-gray-600 dark:text-gray-400"}`}>
                                  {item.desc}
                              </p>
@@ -168,7 +168,7 @@ Space and the WiDiB Initiative&quot;
      {/* Roadmap */}
      <section className="py-20 bg-background-light dark:bg-background-dark px-4 md:px-10">
          <div className="max-w-5xl mx-auto">
-             <h2 className="text-center text-3xl font-bold mb-16 text-neutral-dark dark:text-white">The Journey to Independence</h2>
+             <h2 className="text-center text-3xl mb-16 text-neutral-dark dark:text-white">The Journey to Independence</h2>
              <div className="relative">
                  {/* Vertical Line */}
                  <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-white/10 md:-ml-[1px]"></div>
@@ -177,7 +177,7 @@ Space and the WiDiB Initiative&quot;
                  <div className="relative flex flex-col md:flex-row items-center gap-8 mb-16 group">
                      <div className="md:w-1/2 flex md:justify-end">
                          <div className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 md:text-right w-full md:w-auto md:max-w-md">
-                             <h4 className="text-xl font-bold text-primary dark:text-white mb-2">Community Entry</h4>
+                             <h4 className="text-xl text-primary dark:text-white mb-2">Community Entry</h4>
                              <p className="text-gray-600 dark:text-gray-300 text-sm">We engage community leaders and trade unions to build trust and understand specific local needs before any training begins.</p>
                          </div>
                      </div>
@@ -195,7 +195,7 @@ Space and the WiDiB Initiative&quot;
                      </div>
                      <div className="w-full md:w-1/2 pl-16 md:pl-0">
                          <div className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 w-full md:max-w-md">
-                             <h4 className="text-xl font-bold text-primary dark:text-white mb-2">Skills Transfer</h4>
+                             <h4 className="text-xl text-primary dark:text-white mb-2">Skills Transfer</h4>
                              <p className="text-gray-600 dark:text-gray-300 text-sm">Conducting practical, trade-based workshops. Women learn to create digital catalogues, manage customer contacts, and process digital payments.</p>
                          </div>
                      </div>
@@ -205,7 +205,7 @@ Space and the WiDiB Initiative&quot;
                  <div className="relative flex flex-col md:flex-row items-center gap-8 group">
                      <div className="md:w-1/2 flex md:justify-end">
                          <div className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-white/10 md:text-right w-full md:w-auto md:max-w-md">
-                             <h4 className="text-xl font-bold text-primary dark:text-white mb-2">Sustainable Growth</h4>
+                             <h4 className="text-xl text-primary dark:text-white mb-2">Sustainable Growth</h4>
                               <p className="text-gray-600 dark:text-gray-300 text-sm">Long-term mentorship and access to a network of women entrepreneurs ensuring businesses don&apos;t just survive, but thrive online.</p>
                          </div>
                      </div>
@@ -240,7 +240,7 @@ Space and the WiDiB Initiative&quot;
                              <span className="h-px w-10 bg-primary dark:bg-secondary"></span>
                              <span className="text-primary font-bold uppercase tracking-wider text-sm dark:text-secondary">Meet Vivian Ackon - CEO, Divine Apparel</span>
                          </div>
-                         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-neutral-dark dark:text-white leading-tight">
+                         <h2 className="text-3xl md:text-4xl mb-6 text-neutral-dark dark:text-white leading-tight">
                              From Concept to Branded Reality
                          </h2>
                           <div className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed space-y-4">
@@ -267,7 +267,7 @@ Space and the WiDiB Initiative&quot;
      {/* Activity Gallery */}
      <section className="py-20 px-4 md:px-10 bg-background-light dark:bg-background-dark">
          <div className="max-w-7xl mx-auto">
-             <h2 className="text-3xl font-bold mb-10 text-center text-neutral-dark dark:text-white">Program in Action</h2>
+             <h2 className="text-3xl mb-10 text-center text-neutral-dark dark:text-white">Program in Action</h2>
              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
                  {/* Large Item */}
                  <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl">
@@ -276,7 +276,7 @@ Space and the WiDiB Initiative&quot;
                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
                      <div className="absolute bottom-0 left-0 p-6">
                          <span className="bg-primary text-[#0d1b12] text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Training</span>
-                         <h3 className="text-white text-xl font-bold">Outdoor Digital Literacy Class</h3>
+                         <h3 className="text-white text-xl">Outdoor Digital Literacy Class</h3>
                      </div>
                  </div>
                  {/* Small Item */}
@@ -284,7 +284,7 @@ Space and the WiDiB Initiative&quot;
                      <Image className="object-cover group-hover:scale-105 transition-transform duration-700" 
                          src="/assets/images/programs/widei-action3.png" alt="Mobile tools" fill sizes="(max-width: 768px) 100vw, 33vw" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
-                         <h3 className="text-white text-sm font-bold">Mobile Money Tools</h3>
+                         <h3 className="text-white text-sm">Mobile Money Tools</h3>
                      </div>
                  </div>
                  {/* Small Item */}
@@ -292,7 +292,7 @@ Space and the WiDiB Initiative&quot;
                      <Image className="object-cover group-hover:scale-105 transition-transform duration-700" 
                          src="/assets/images/programs/widei-action2.png" alt="Empowerment" fill sizes="(max-width: 768px) 100vw, 33vw" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
-                         <h3 className="text-white text-sm font-bold">Empowerment</h3>
+                         <h3 className="text-white text-sm">Empowerment</h3>
                      </div>
                  </div>
                  {/* Wide Item */}
@@ -300,7 +300,7 @@ Space and the WiDiB Initiative&quot;
                      <Image className="object-cover group-hover:scale-105 transition-transform duration-700" 
                          src="/assets/images/programs/widei-action4.png" alt="Peer Mentorship" fill sizes="(max-width: 768px) 100vw, 33vw" />
                      <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 w-full">
-                         <h3 className="text-white text-sm font-bold">Peer Mentorship</h3>
+                         <h3 className="text-white text-sm">Peer Mentorship</h3>
                      </div>
                  </div>
              </div>

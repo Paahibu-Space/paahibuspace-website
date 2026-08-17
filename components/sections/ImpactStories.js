@@ -28,7 +28,7 @@ export default function ImpactStories() {
     <section className="py-20 bg-background-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center md:text-left mb-12">
-            <h2 className="text-3xl font-bold text-neutral-dark mb-4">Success Stories</h2>
+            <h2 className="text-3xl text-neutral-dark mb-4">Success Stories</h2>
             <p className="text-gray-600 max-w-2xl">Real stories from the women and girls whose lives have been transformed by our programs.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -51,7 +51,7 @@ export default function ImpactStories() {
                     {story.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-neutral-dark mb-3">
+                <h3 className="text-xl text-neutral-dark mb-3">
                   {story.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
@@ -83,7 +83,7 @@ export default function ImpactStories() {
                   Expansion
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-2xl text-white mb-4">
                 Program Extensions
               </h3>
               <p className="text-white/80 text-base leading-relaxed mb-8">

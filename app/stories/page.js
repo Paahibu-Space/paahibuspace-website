@@ -20,7 +20,7 @@ export default async function StoriesPage() {
                     <span className="text-gray-300 dark:text-gray-600">/</span>
                     <span className="text-primary dark:text-white font-semibold">Stories</span>
                 </nav>
-                <h1 className="text-4xl md:text-5xl font-extrabold text-primary dark:text-white tracking-tight mb-4 leading-tight">
+                <h1 className="text-4xl md:text-5xl text-primary dark:text-white tracking-tight mb-4 leading-tight">
                     Stories
                 </h1>
                 <p className="text-lg md:text-xl text-gray-500 dark:text-gray-300 max-w-2xl leading-relaxed">

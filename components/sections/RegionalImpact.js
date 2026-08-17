@@ -10,7 +10,7 @@ export default function RegionalImpact() {
             <span className="text-secondary-dark dark:text-secondary font-bold tracking-widest uppercase text-sm">
               Where We Work
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-dark dark:text-white mt-2 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-neutral-dark dark:text-white mt-2 mb-6 leading-tight">
               Rooted in the Upper West Region
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-lg">

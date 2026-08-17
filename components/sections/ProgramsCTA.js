@@ -6,7 +6,7 @@ export default function ProgramsCTA() {
       <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-secondary rounded-full opacity-20 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-purple-500 rounded-full opacity-20 pointer-events-none"></div>
       <div className="max-w-4xl mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl md:text-5xl mb-6">
           Ready to Transform Your Future?
         </h2>
         <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">

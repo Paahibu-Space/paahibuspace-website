@@ -59,10 +59,10 @@ export default async function GrowProgramPage() {
         <div className="max-w-7xl w-full mx-auto px-5 md:px-10 py-20">
           <div className="max-w-3xl flex flex-col gap-6 items-start text-left">
             <div className="flex flex-col gap-2">
-              <h1 className="text-white font-display text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+              <h1 className="text-white font-display text-5xl md:text-7xl leading-tight tracking-tight">
                 The GROW Network
               </h1>
-              <h2 className="text-secondary text-xl md:text-2xl font-medium tracking-wide">
+              <h2 className="text-secondary text-xl md:text-2xl tracking-wide">
                 Girls & Women Rising on the Web
               </h2>
             </div>
@@ -85,7 +85,7 @@ export default async function GrowProgramPage() {
       <section className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="flex flex-col gap-6 max-w-3xl">
-            <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl font-bold leading-tight">
+            <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl leading-tight">
               Empowering Women, Building Networks
             </h2>
             <div className="w-16 h-1 bg-primary rounded-full"></div>
@@ -116,7 +116,7 @@ export default async function GrowProgramPage() {
       >
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <h2 className="text-white font-display text-4xl md:text-6xl font-black leading-tight">
+            <h2 className="text-white font-display text-4xl md:text-6xl leading-tight">
               Key Project
               <br />
               Activities
@@ -128,7 +128,7 @@ export default async function GrowProgramPage() {
                   01
                 </div>
                 <div className="flex-1 bg-sky-50 pl-12 pr-6 py-5 flex flex-col md:flex-row md:items-start gap-2 md:gap-6">
-                  <h3 className="font-bold text-navy text-lg md:w-44 flex-shrink-0">
+                  <h3 className="text-navy text-lg md:w-44 flex-shrink-0">
                     Nhanga Sessions
                   </h3>
                   <p className="text-navy/80 text-sm leading-relaxed">
@@ -143,7 +143,7 @@ export default async function GrowProgramPage() {
                   02
                 </div>
                 <div className="flex-1 bg-navy pl-12 pr-6 py-5 flex flex-col md:flex-row md:items-start gap-2 md:gap-6">
-                  <h3 className="font-bold text-white text-lg md:w-44 flex-shrink-0">
+                  <h3 className="text-white text-lg md:w-44 flex-shrink-0">
                     Digital & Business Skills Training
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
@@ -159,7 +159,7 @@ export default async function GrowProgramPage() {
                   03
                 </div>
                 <div className="flex-1 bg-sky-50 pl-12 pr-6 py-5 flex flex-col md:flex-row md:items-start gap-2 md:gap-6">
-                  <h3 className="font-bold text-navy text-lg md:w-44 flex-shrink-0">
+                  <h3 className="text-navy text-lg md:w-44 flex-shrink-0">
                     Policy Literacy & Development
                   </h3>
                   <p className="text-navy/80 text-sm leading-relaxed">
@@ -182,7 +182,7 @@ export default async function GrowProgramPage() {
         }}
       >
         <div className="max-w-7xl mx-auto px-5 md:px-10">
-          <h2 className="text-white font-display text-4xl md:text-6xl font-black text-center tracking-wide mb-16">
+          <h2 className="text-white font-display text-4xl md:text-6xl text-center tracking-wide mb-16">
             GROW Outcomes
           </h2>
 
@@ -190,7 +190,7 @@ export default async function GrowProgramPage() {
             {/* Left column */}
             <div className="space-y-14 order-1">
               <div>
-                <h3 className="text-white font-bold text-xl mb-3">
+                <h3 className="text-white text-xl mb-3">
                   Increased Digital Literacy
                 </h3>
                 <p className="text-white/80 leading-relaxed">
@@ -200,7 +200,7 @@ export default async function GrowProgramPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-white font-bold text-xl mb-3">
+                <h3 className="text-white text-xl mb-3">
                   Nhanga Became Structured
                 </h3>
                 <p className="text-white/80 leading-relaxed">
@@ -241,7 +241,7 @@ export default async function GrowProgramPage() {
             {/* Right column */}
             <div className="space-y-14 order-2 md:order-3">
               <div>
-                <h3 className="text-white font-bold text-xl mb-3">
+                <h3 className="text-white text-xl mb-3">
                   Policy Influence & Agency Reclaimed
                 </h3>
                 <p className="text-white/80 leading-relaxed">
@@ -252,7 +252,7 @@ export default async function GrowProgramPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-white font-bold text-xl mb-3">
+                <h3 className="text-white text-xl mb-3">
                   Trust Rebuilt & Community Ownership
                 </h3>
                 <p className="text-white/80 leading-relaxed">
@@ -270,7 +270,7 @@ export default async function GrowProgramPage() {
       <section className="py-20 bg-white dark:bg-black/20">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl mb-4">
               Key Focus Areas
             </h2>
             <p className="text-navy/60 dark:text-gray-400 text-lg">
@@ -289,7 +289,7 @@ export default async function GrowProgramPage() {
                   groups
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-navy dark:text-white mb-3">
+              <h3 className="text-xl text-navy dark:text-white mb-3">
                 Community & Networking
               </h3>
               <p className="text-navy/70 dark:text-gray-300 leading-relaxed">
@@ -308,7 +308,7 @@ export default async function GrowProgramPage() {
                   trending_up
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-navy dark:text-white mb-3">
+              <h3 className="text-xl text-navy dark:text-white mb-3">
                 Personal & Professional Development
               </h3>
               <p className="text-navy/70 dark:text-gray-300 leading-relaxed">
@@ -326,7 +326,7 @@ export default async function GrowProgramPage() {
                   campaign
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-navy dark:text-white mb-3">
+              <h3 className="text-xl text-navy dark:text-white mb-3">
                 Advocacy & Policy Change
               </h3>
               <p className="text-navy/70 dark:text-gray-300 leading-relaxed">
@@ -346,7 +346,7 @@ export default async function GrowProgramPage() {
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
-              <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl mb-6">
                 Benefits for Members
               </h2>
               <p className="text-navy/70 dark:text-gray-300 text-lg mb-8">
@@ -425,7 +425,7 @@ export default async function GrowProgramPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-start justify-between mb-16">
             <div className="relative inline-block">
-              <h2 className="inline-block border-2 border-dashed border-navy/60 dark:border-white/40 text-navy dark:text-white font-display text-3xl md:text-5xl font-black px-10 py-4">
+              <h2 className="inline-block border-2 border-dashed border-navy/60 dark:border-white/40 text-navy dark:text-white font-display text-3xl md:text-5xl px-10 py-4">
                 Evidence Found
               </h2>
               <div className="absolute left-0 bottom-0 translate-y-1/2 w-24 h-3 bg-secondary"></div>
@@ -439,7 +439,7 @@ export default async function GrowProgramPage() {
                 95.7%
               </div>
               <div className="w-12 h-1 bg-secondary mb-4"></div>
-              <h3 className="text-lg font-bold text-navy dark:text-white mb-3">
+              <h3 className="text-lg text-navy dark:text-white mb-3">
                 Smart Phone Ownership
               </h3>
               <ul className="text-navy/70 dark:text-gray-300 text-sm leading-relaxed space-y-2 list-disc list-outside pl-4">
@@ -460,7 +460,7 @@ export default async function GrowProgramPage() {
                 87%
               </div>
               <div className="w-12 h-1 bg-secondary mb-4"></div>
-              <h3 className="text-lg font-bold text-navy dark:text-white mb-3">
+              <h3 className="text-lg text-navy dark:text-white mb-3">
                 Business Growth Aspirations
               </h3>
               <ul className="text-navy/70 dark:text-gray-300 text-sm leading-relaxed space-y-2 list-disc list-outside pl-4">
@@ -482,7 +482,7 @@ export default async function GrowProgramPage() {
                 97.1%
               </div>
               <div className="w-12 h-1 bg-secondary mb-4"></div>
-              <h3 className="text-lg font-bold text-navy dark:text-white mb-3">
+              <h3 className="text-lg text-navy dark:text-white mb-3">
                 Network Demand
               </h3>
               <ul className="text-navy/70 dark:text-gray-300 text-sm leading-relaxed space-y-2 list-disc list-outside pl-4">
@@ -505,7 +505,7 @@ export default async function GrowProgramPage() {
 
       <section className="py-20 bg-white dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
-          <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-navy dark:text-white font-display text-3xl md:text-4xl text-center mb-16">
             Stories from GROW
           </h2>
           <GrowStoriesSlider />
@@ -514,7 +514,7 @@ export default async function GrowProgramPage() {
 
       <section className="py-24 bg-background-light dark:bg-background-dark border-t border-navy/5 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-5 text-center">
-          <h2 className="text-navy dark:text-white font-display text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-navy dark:text-white font-display text-4xl md:text-5xl mb-6">
             Ready to GROW?
           </h2>
           <p className="text-navy/60 dark:text-gray-400 text-xl mb-10 max-w-2xl mx-auto">

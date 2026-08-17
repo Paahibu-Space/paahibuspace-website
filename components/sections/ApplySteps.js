@@ -6,7 +6,7 @@ export default function ApplySteps({ steps }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-display font-bold text-primary dark:text-white mb-8 animate-fade-up">
+            <h2 className="text-3xl font-display text-primary dark:text-white mb-8 animate-fade-up">
               How to Apply
             </h2>
             <div className="relative">
@@ -22,7 +22,7 @@ export default function ApplySteps({ steps }) {
                     {index + 1}
                   </div>
                   <div>
-                    <h4 className="font-bold text-neutral-dark dark:text-white">
+                    <h4 className="text-neutral-dark dark:text-white">
                       {step.title}
                     </h4>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -34,7 +34,7 @@ export default function ApplySteps({ steps }) {
             </div>
           </div>
           <div className="mt-12 lg:mt-0 bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-            <h3 className="text-xl font-bold text-primary dark:text-white mb-4">
+            <h3 className="text-xl text-primary dark:text-white mb-4">
               Applications are Open!
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">

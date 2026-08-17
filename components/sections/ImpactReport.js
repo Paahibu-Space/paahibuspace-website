@@ -4,7 +4,7 @@ export default function ImpactReport() {
       <div className="max-w-7xl mx-auto px-4 sm:px-10">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/3">
-            <h2 className="text-neutral-dark text-3xl font-bold leading-tight mb-4">
+            <h2 className="text-neutral-dark text-3xl leading-tight mb-4">
               Annual Impact Report
             </h2>
             <p className="text-gray-600 text-lg mb-8">

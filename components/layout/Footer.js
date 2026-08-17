@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">
+            <h3 className="text-sm leading-6 text-white uppercase tracking-wider mb-6">
               Explore
             </h3>
             <ul role="list" className="space-y-4">
@@ -154,7 +154,7 @@ export default function Footer() {
 
           {/* Column 3: Contact Info */}
           <div>
-            <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">
+            <h3 className="text-sm leading-6 text-white uppercase tracking-wider mb-6">
               Contact Us
             </h3>
             <ul role="list" className="space-y-4">
@@ -195,7 +195,7 @@ export default function Footer() {
 
           {/* Column 4: Hours & Legal */}
           <div>
-            <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider mb-6">
+            <h3 className="text-sm leading-6 text-white uppercase tracking-wider mb-6">
               Office Hours
             </h3>
             <div>

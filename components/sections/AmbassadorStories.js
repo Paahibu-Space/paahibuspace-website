@@ -90,7 +90,7 @@ export default function AmbassadorStories({ stories: initialStories = [] }) {
                 
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-8 animate-fade-in" key={activeStory}>
-                        <h2 className="text-4xl font-extrabold leading-tight min-h-[120px]">
+                        <h2 className="text-4xl leading-tight min-h-[120px]">
                             &quot;{normalizedStory.quote}&quot;
                         </h2>
                         <div className="flex items-center gap-4">
@@ -113,7 +113,7 @@ export default function AmbassadorStories({ stories: initialStories = [] }) {
                      {/* Mini Case Study Card */}
                      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm animate-fade-in" key={`card-${activeStory}`}>
 
-                        <h3 className="text-2xl font-bold mb-4">{normalizedStory.project.title}</h3>
+                        <h3 className="text-2xl mb-4">{normalizedStory.project.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed min-h-[80px]">
                             {normalizedStory.project.desc}
                         </p>

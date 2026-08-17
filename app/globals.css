@@ -62,6 +62,14 @@
     font-weight: 400;
   }
 
+  /* Subheadings stay on Ubuntu, also at Regular weight by default */
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+  }
+
   /* Manual dark mode overrides if needed for specific variables */
   :root[class~="dark"] {
     --color-background: var(--color-background-dark);

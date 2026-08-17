@@ -13,7 +13,7 @@ export default function ProgramsPage() {
     <>
       <PageHero
         title={
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl text-white mb-6 leading-tight">
             Empowering Innovation <br />
             <span className="text-secondary">Through Action</span>
           </h1>

@@ -66,7 +66,7 @@ export default function PartnersTabs({ partners = [] }) {
               <div className="flex items-start gap-4">
 
                 <div>
-                  <h3 className="text-base font-bold text-white mb-2 leading-tight">{b.title}</h3>
+                  <h3 className="text-base text-white mb-2 leading-tight">{b.title}</h3>
                   <p className="text-white/50 text-sm leading-relaxed">{b.body}</p>
                 </div>
               </div>

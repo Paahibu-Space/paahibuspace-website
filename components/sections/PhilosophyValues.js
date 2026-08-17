@@ -68,7 +68,7 @@ export default function PhilosophyValues() {
         </div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl text-primary dark:text-white mb-4">
             Our Philosophy
           </h2>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
@@ -87,7 +87,7 @@ export default function PhilosophyValues() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full text-white">
-                <h3 className="font-bold text-2xl mb-2">
+                <h3 className="text-2xl mb-2">
                   {activeValue.caption}
                 </h3>
                 <p className="text-sm text-blue-100 opacity-90">
@@ -124,7 +124,7 @@ export default function PhilosophyValues() {
                   className="p-6 cursor-pointer flex justify-between items-center"
                   onClick={() => setActiveIndex(index)}
                 >
-                  <h3 className="font-bold text-xl text-primary dark:text-white flex items-center gap-3">
+                  <h3 className="text-xl text-primary dark:text-white flex items-center gap-3">
                     <span className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary text-sm font-bold">
                       {item.id}
                     </span>

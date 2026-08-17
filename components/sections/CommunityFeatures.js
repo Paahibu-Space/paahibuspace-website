@@ -5,7 +5,7 @@ export default function CommunityFeatures() {
     <>
       <section className="w-full bg-[#faf9fb] dark:bg-background-dark py-10">
         <div className="container mx-auto px-6 max-w-[960px] text-center">
-          <h2 className="text-neutral-dark dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-4 animate-fade-up">
+          <h2 className="text-neutral-dark dark:text-white text-3xl md:text-4xl leading-tight tracking-tight mb-4 animate-fade-up">
             Why Join Hands With Us?
           </h2>
           <p className="text-[#555] dark:text-gray-300 text-lg max-w-2xl mx-auto">
@@ -32,7 +32,7 @@ export default function CommunityFeatures() {
               <div className="size-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-blue-400 mb-2">
                 <span className="material-symbols-outlined">handshake</span>
               </div>
-              <h3 className="text-2xl font-bold text-neutral-dark dark:text-white">
+              <h3 className="text-2xl text-neutral-dark dark:text-white">
                 Building Relationships
               </h3>
               <p className="text-[#555] dark:text-gray-300 leading-relaxed">
@@ -67,7 +67,7 @@ export default function CommunityFeatures() {
               <div className="size-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-blue-400 mb-2">
                 <span className="material-symbols-outlined">diversity_1</span>
               </div>
-              <h3 className="text-2xl font-bold text-neutral-dark dark:text-white">
+              <h3 className="text-2xl text-neutral-dark dark:text-white">
                 One Big Family
               </h3>
               <p className="text-[#555] dark:text-gray-300 leading-relaxed">
@@ -102,7 +102,7 @@ export default function CommunityFeatures() {
               <div className="size-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-blue-400 mb-2">
                 <span className="material-symbols-outlined">stars</span>
               </div>
-              <h3 className="text-2xl font-bold text-neutral-dark dark:text-white">
+              <h3 className="text-2xl text-neutral-dark dark:text-white">
                 Standing Out
               </h3>
               <p className="text-[#555] dark:text-gray-300 leading-relaxed">

@@ -11,7 +11,7 @@ export default function ProgramOverview({ title, description, image, features })
             <span className="text-secondary-dark dark:text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
               Overview
             </span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-dark dark:text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-display text-neutral-dark dark:text-white mb-6">
               {title}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">

@@ -54,7 +54,7 @@ export default function CommunityPage() {
     <>
       <PageHero
         title={
-          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+          <h1 className="text-4xl md:text-6xl leading-tight tracking-[-0.033em]">
             Communities That Continue <br className="hidden md:block" />
             Beyond Programmes
           </h1>
@@ -102,7 +102,7 @@ export default function CommunityPage() {
                   <span className="text-secondary font-bold tracking-wider text-sm uppercase">
                     {network.label}
                   </span>
-                  <h2 className="text-neutral-dark dark:text-white text-3xl md:text-4xl font-black leading-tight mt-2">
+                  <h2 className="text-neutral-dark dark:text-white text-3xl md:text-4xl leading-tight mt-2">
                     {network.title}
                   </h2>
                 </div>

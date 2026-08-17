@@ -88,7 +88,7 @@ export default function CommunityStories({ stories = defaultStories }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="mb-10 lg:mb-16 animate-fade-up">
           <span className="text-primary dark:text-gray-200 font-bold text-sm tracking-widest uppercase mb-2 block">Community Stories</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-gray-900 dark:text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 dark:text-white leading-tight">
             Voices of Paahibu
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
@@ -179,7 +179,7 @@ export default function CommunityStories({ stories = defaultStories }) {
                 onMouseLeave={() => setIsPaused(false)}
             >
               <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
-                <h3 className="font-heading font-bold text-gray-900 dark:text-white">More Stories</h3>
+                <h3 className="font-heading text-gray-900 dark:text-white">More Stories</h3>
                 <button
                     onClick={() => setIsPaused(!isPaused)}
                     aria-label={isPaused ? "Resume autoplay" : "Pause autoplay"}

@@ -3,7 +3,7 @@ export default function Mission() {
     <section className="w-full px-4 py-16 bg-background-light dark:bg-background-dark/50">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
         <div className="text-center max-w-[700px] mx-auto">
-          <h2 className="text-neutral-dark dark:text-white text-3xl font-bold leading-tight mb-4">
+          <h2 className="text-neutral-dark dark:text-white text-3xl leading-tight mb-4">
             Mission, Vision & Values
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg">
@@ -18,7 +18,7 @@ export default function Mission() {
                 track_changes
               </span>
             </div>
-            <h3 className="text-neutral-dark dark:text-white text-xl font-bold">
+            <h3 className="text-neutral-dark dark:text-white text-xl">
               Our Mission
             </h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -32,7 +32,7 @@ export default function Mission() {
              <div className="size-12 rounded-full bg-primary/10 dark:bg-orange-500/20 flex items-center justify-center text-secondary mb-2">
               <span className="material-symbols-outlined text-3xl">visibility</span>
             </div>
-            <h3 className="text-neutral-dark dark:text-white text-xl font-bold">
+            <h3 className="text-neutral-dark dark:text-white text-xl">
               Our Vision
             </h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -48,7 +48,7 @@ export default function Mission() {
                 lightbulb
               </span>
             </div>
-            <h3 className="text-neutral-dark dark:text-white text-xl font-bold">
+            <h3 className="text-neutral-dark dark:text-white text-xl">
               Why We Do It
             </h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">

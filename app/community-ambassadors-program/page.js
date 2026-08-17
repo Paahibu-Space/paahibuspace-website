@@ -61,7 +61,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                      <div className="inline-flex items-center gap-2 bg-orange-900/30 border border-orange-500/30 rounded-full px-4 py-1 text-orange-400 font-bold text-sm tracking-wide uppercase mb-6">
                          Community Leadership
                      </div>
-                     <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+                     <h1 className="text-5xl md:text-6xl text-white mb-6 leading-tight">
                          Leading Change <span className="text-secondary">From Within</span>
                      </h1>
                      <p className="text-xl text-gray-400 mb-8 leading-relaxed">
@@ -124,7 +124,7 @@ export default async function CommunityAmbassadorsProgramPage() {
      <section className="py-24 bg-white dark:bg-background-dark">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              <div className="text-center mb-16">
-                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Role of a Community Ambassador</h2>
+                 <h2 className="text-3xl text-gray-900 dark:text-white mb-4">Role of a Community Ambassador</h2>
                  <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                      Community Ambassadors bridge the gap between Paahibu Space and grassroots communities.
                  </p>
@@ -141,7 +141,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                              <span className="material-symbols-outlined text-3xl">{role.icon}</span>
                          </div>
                          <div>
-                             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{role.title}</h3>
+                             <h3 className="text-xl text-gray-900 dark:text-white mb-2">{role.title}</h3>
                              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{role.desc}</p>
                          </div>
                      </div>
@@ -155,7 +155,7 @@ export default async function CommunityAmbassadorsProgramPage() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                     <div>
-                        <h2 className="text-[#0b1120] dark:text-white text-3xl sm:text-4xl font-bold">Meet Our Community Ambassadors</h2>
+                        <h2 className="text-[#0b1120] dark:text-white text-3xl sm:text-4xl">Meet Our Community Ambassadors</h2>
                         <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">Leading change across Africa.</p>
                     </div>
                     <Link className="text-secondary font-bold flex items-center gap-1 hover:underline" href="/team">
@@ -177,7 +177,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                               <div className="flex items-center gap-2 mb-2">
                                   <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">{ambassador.location || 'Community Ambassador'}</span>
                               </div>
-                              <h3 className="text-white text-xl font-bold">{ambassador.name}</h3>
+                              <h3 className="text-white text-xl">{ambassador.name}</h3>
                               <p className="text-gray-200 text-sm mt-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 line-clamp-2">
                                   {ambassador.bio_short || ambassador.role}
                               </p>
@@ -195,7 +195,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                             style={{backgroundImage: "radial-gradient(#fff 1px, transparent 1px)", backgroundSize: "20px 20px"}}>
                         </div>
                         <span className="material-symbols-outlined text-secondary text-6xl mb-4">public</span>
-                        <h3 className="text-white text-xl font-bold z-10">Join the Network</h3>
+                        <h3 className="text-white text-xl z-10">Join the Network</h3>
                         <p className="text-gray-300 text-sm mt-2 z-10 mb-6">
                             Represent your community on the map.
                         </p>
@@ -218,7 +218,7 @@ export default async function CommunityAmbassadorsProgramPage() {
             <div className="flex flex-col md:flex-row max-w-[960px] flex-1 gap-12 items-center">
                 <div className="flex-1 space-y-8">
                     <div>
-                        <h2 className="text-[#0d0e1b] dark:text-white text-[32px] font-bold leading-tight mb-4">Why Join the Movement?</h2>
+                        <h2 className="text-[#0d0e1b] dark:text-white text-[32px] leading-tight mb-4">Why Join the Movement?</h2>
                         <p className="text-slate-600 dark:text-slate-400 text-lg">Beyond making an impact, you&apos;ll grow your career and network.</p>
                     </div>
                     <div className="space-y-4">
@@ -227,7 +227,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                                 <span className="material-symbols-outlined">check_circle</span>
                             </div>
                             <div>
-                                <h4 className="font-bold text-[#0d0e1b] dark:text-white">Global Certification</h4>
+                                <h4 className="text-[#0d0e1b] dark:text-white">Global Certification</h4>
                                 <p className="text-sm text-slate-600 dark:text-slate-400">Receive a recognized certificate of leadership upon program completion.</p>
                             </div>
                         </div>
@@ -236,7 +236,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                                 <span className="material-symbols-outlined">check_circle</span>
                             </div>
                             <div>
-                                <h4 className="font-bold text-[#0d0e1b] dark:text-white">Exclusive Mentorship</h4>
+                                <h4 className="text-[#0d0e1b] dark:text-white">Exclusive Mentorship</h4>
                                 <p className="text-sm text-slate-600 dark:text-slate-400">Get paired with industry leaders in technology and social entrepreneurship.</p>
                             </div>
                         </div>
@@ -245,7 +245,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                                 <span className="material-symbols-outlined">check_circle</span>
                             </div>
                             <div>
-                                <h4 className="font-bold text-[#0d0e1b] dark:text-white">Resource Kit &amp; Swag</h4>
+                                <h4 className="text-[#0d0e1b] dark:text-white">Resource Kit &amp; Swag</h4>
                                 <p className="text-sm text-slate-600 dark:text-slate-400">Access to presentation decks, branding materials, and official Paahibu merchandise.</p>
                             </div>
                         </div>
@@ -254,7 +254,7 @@ export default async function CommunityAmbassadorsProgramPage() {
                                 <span className="material-symbols-outlined">check_circle</span>
                             </div>
                             <div>
-                                <h4 className="font-bold text-[#0d0e1b] dark:text-white">Annual Summit Invite</h4>
+                                <h4 className="text-[#0d0e1b] dark:text-white">Annual Summit Invite</h4>
                                 <p className="text-sm text-slate-600 dark:text-slate-400">An all-expenses-paid trip to our annual leadership summit for top performers.</p>
                             </div>
                         </div>

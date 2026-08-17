@@ -3,7 +3,7 @@ export default function ProgramRoadmap({ steps }) {
     <section className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-display font-bold text-primary dark:text-white">
+          <h2 className="text-3xl font-display text-primary dark:text-white">
             Program Roadmap
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mt-2">
@@ -15,7 +15,7 @@ export default function ProgramRoadmap({ steps }) {
             <div key={index} className="relative pl-10 md:pl-16">
               <span className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-secondary border-4 border-white dark:border-gray-800"></span>
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                <h3 className="text-xl font-bold text-primary dark:text-white">
+                <h3 className="text-xl text-primary dark:text-white">
                   {step.title}
                 </h3>
                 {step.tag && (

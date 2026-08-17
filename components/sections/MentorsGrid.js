@@ -9,7 +9,7 @@ export default function MentorsGrid({ mentors }) {
             <span className="text-secondary-dark dark:text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
               Mentorship
             </span>
-            <h2 className="text-3xl font-display font-bold text-primary dark:text-white">
+            <h2 className="text-3xl font-display text-primary dark:text-white">
               Meet Our Mentors
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mt-2 max-w-xl">
@@ -42,7 +42,7 @@ export default function MentorsGrid({ mentors }) {
                 />
               </div>
               <div>
-                <h4 className="text-secondary-dark dark:text-secondary font-bold text-lg">
+                <h4 className="text-secondary-dark dark:text-secondary text-lg">
                   {mentor.name}
                 </h4>
                 <p className="text-primary dark:text-gray-200 font-medium text-sm mb-2">

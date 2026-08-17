@@ -37,7 +37,7 @@ export default function ImpactCommunity() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex flex-col gap-6 lg:w-1/3 sticky top-24">
-            <h2 className="text-neutral-dark dark:text-white text-3xl lg:text-4xl font-black leading-tight animate-fade-up">
+            <h2 className="text-neutral-dark dark:text-white text-3xl lg:text-4xl leading-tight animate-fade-up">
               Impact &amp; Community
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
@@ -59,7 +59,7 @@ export default function ImpactCommunity() {
                     {feature.icon}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-neutral-dark dark:text-white">
+                <h3 className="text-xl text-neutral-dark dark:text-white">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>

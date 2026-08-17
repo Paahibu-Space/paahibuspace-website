@@ -13,7 +13,7 @@ export default function TeamCTA() {
         }}
       ></div>
       <div className="relative max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl md:text-5xl mb-6">
           Passionate about empowering women?
         </h2>
         <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">

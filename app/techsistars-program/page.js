@@ -66,7 +66,7 @@ export default async function TechsiStarsProgram() {
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-secondary/80 text-primary-700 dark:text-primary-300 border border-purple-200 dark:border-purple-800 mb-6">
                         <span className="text-xs font-bold uppercase tracking-wider">Aspiring Women in Tech</span>
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white leading-[1.1] mb-6 tracking-tight">
+                    <h1 className="text-5xl md:text-7xl text-gray-900 dark:text-white leading-[1.1] mb-6 tracking-tight">
                         TechsiStars <span className="text-primary dark:text-secondary">Mentorship Bootcamp</span>
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
@@ -102,21 +102,21 @@ export default async function TechsiStarsProgram() {
             <div className="grid lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-5">
                     <span className="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Why We Need This</span>
-                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">The Digital Divide is Real</h2>
+                    <h2 className="text-4xl text-gray-900 dark:text-white mb-6">The Digital Divide is Real</h2>
                     <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 leading-relaxed">
                         Despite the tech boom in Africa, women remain vastly underrepresented in technical roles. The
                         gap isn&apos;t just about coding skills—it&apos;s about access to networks, mentorship, and confidence.
                     </p>
                     <div className="grid gap-6">
                         <div className="bg-purple-50 dark:bg-purple-900/10 p-6 rounded-xl border border-purple-100 dark:border-purple-500/20">
-                            <h3 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+                            <h3 className="text-gray-900 dark:text-white mb-2 flex items-center gap-2">
                                 Limited Access to Mentorship
                             </h3>
                             <p className="text-sm text-gray-600 dark:text-gray-400">Many young women lack role models who look like them
                                 in senior tech positions.</p>
                         </div>
                         <div className="bg-purple-50 dark:bg-purple-900/10 p-6 rounded-xl border border-purple-100 dark:border-purple-500/20">
-                            <h3 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+                            <h3 className="text-gray-900 dark:text-white mb-2 flex items-center gap-2">
                                 The &quot;Skills Gap&quot; Myth
                             </h3>
                             <p className="text-sm text-gray-600 dark:text-gray-400">It&apos;s often not a lack of ability, but a lack of
@@ -127,7 +127,7 @@ export default async function TechsiStarsProgram() {
                 <div className="lg:col-span-7">
                     <div className="bg-gray-900 rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-secondary rounded-full blur-[80px] opacity-50"></div>
-                        <h3 className="text-2xl font-bold mb-10 relative z-10">Representation Matters</h3>
+                        <h3 className="text-2xl mb-10 relative z-10">Representation Matters</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 relative z-10">
                             <div>
                                 <p className="text-5xl font-black text-primary-400 mb-2">24%</p>
@@ -152,7 +152,7 @@ export default async function TechsiStarsProgram() {
       <section className="py-20 bg-[#fbf9fd] dark:bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Core Objectives</h2>
+                <h2 className="text-3xl md:text-4xl text-gray-900 dark:text-white mb-4">Our Core Objectives</h2>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">We focus on holistic development to ensure our graduates are
                     industry-ready.</p>
             </div>
@@ -167,7 +167,7 @@ export default async function TechsiStarsProgram() {
                         <div className="w-12 h-12 bg-purple-100 dark:bg-secondary/80 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
                             <span className="material-symbols-outlined">{item.icon}</span>
                         </div>
-                        <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                        <h3 className="text-lg text-gray-900 dark:text-white mb-2">{item.title}</h3>
                         <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                 ))}
@@ -190,14 +190,14 @@ export default async function TechsiStarsProgram() {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2">
-                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">What You Will Gain</h2>
+                    <h2 className="text-4xl text-gray-900 dark:text-white mb-8">What You Will Gain</h2>
                     <div className="space-y-8">
                         <div className="flex items-start gap-4">
                             <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-secondary/80 text-primary flex items-center justify-center shrink-0">
                                 <span className="material-symbols-outlined">supervisor_account</span>
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Experienced Female Mentors</h3>
+                                <h3 className="text-xl text-gray-900 dark:text-white mb-2">Experienced Female Mentors</h3>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                                     Get paired with a senior professional tailored to your career path. Bi-weekly 1:1 sessions
                                     to guide your growth.
@@ -209,7 +209,7 @@ export default async function TechsiStarsProgram() {
                                 <span className="material-symbols-outlined">rocket_launch</span>
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Tech Career Exposure</h3>
+                                <h3 className="text-xl text-gray-900 dark:text-white mb-2">Tech Career Exposure</h3>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                                     Exclusive webinars with tech giants, office tours (virtual/physical), and direct job
                                     application channels.
@@ -221,7 +221,7 @@ export default async function TechsiStarsProgram() {
                                 <span className="material-symbols-outlined">construction</span>
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Hands-on Capacity Building</h3>
+                                <h3 className="text-xl text-gray-900 dark:text-white mb-2">Hands-on Capacity Building</h3>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                                     Don&apos;t just learn theory. Build a real-world project in a team of 4, presenting it to a
                                     panel of judges at graduation.
@@ -238,14 +238,14 @@ export default async function TechsiStarsProgram() {
     <section className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-                <h2 className="text-3xl font-display font-bold text-primary dark:text-white">Program Roadmap</h2>
+                <h2 className="text-3xl font-display text-primary dark:text-white">Program Roadmap</h2>
                 <p className="text-gray-600 dark:text-gray-300 mt-2">A 6-week journey of intensive learning and growth.</p>
             </div>
             <div className="relative border-l-2 border-gray-200 dark:border-gray-700 ml-6 md:ml-10 space-y-12">
                 <div className="relative pl-10 md:pl-16">
                     <span className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-secondary border-4 border-white dark:border-background-dark"></span>
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-primary dark:text-white">Weeks 1-2: Foundations</h3>
+                        <h3 className="text-xl text-primary dark:text-white">Weeks 1-2: Foundations</h3>
                         <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Virtual</span>
                     </div>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">Introduction to tech ecosystems, digital literacy,
@@ -258,7 +258,7 @@ export default async function TechsiStarsProgram() {
                 <div className="relative pl-10 md:pl-16">
                     <span className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-white dark:border-background-dark"></span>
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-primary dark:text-white">Weeks 3-4: Deep Dive</h3>
+                        <h3 className="text-xl text-primary dark:text-white">Weeks 3-4: Deep Dive</h3>
                         <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Hybrid</span>
                     </div>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">specialized tracks: choose between Coding, Design,
@@ -271,7 +271,7 @@ export default async function TechsiStarsProgram() {
                 <div className="relative pl-10 md:pl-16">
                     <span className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-white dark:border-background-dark"></span>
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-primary dark:text-white">Weeks 5-6: Capstone &amp; Launch</h3>
+                        <h3 className="text-xl text-primary dark:text-white">Weeks 5-6: Capstone &amp; Launch</h3>
                         <span className="text-sm font-semibold text-secondary uppercase tracking-wider">In-Person</span>
                     </div>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">Final project presentation, career fair, and
@@ -290,7 +290,7 @@ export default async function TechsiStarsProgram() {
         <div className="max-w-[1440px] mx-auto">
             <div className="flex justify-between items-end mb-12">
                 <div>
-                    <h2 className="text-secondary text-4xl font-heading font-bold mb-4">Meet Our Mentors</h2>
+                    <h2 className="text-secondary text-4xl font-heading mb-4">Meet Our Mentors</h2>
                     <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">Industry leaders from top tech companies dedicating their
                         time to guide the next generation.</p>
                 </div>
@@ -310,7 +310,7 @@ export default async function TechsiStarsProgram() {
                             />
                         </div>
                         <div>
-                            <h4 className="text-secondary font-bold text-lg">{mentor.name}</h4>
+                            <h4 className="text-secondary text-lg">{mentor.name}</h4>
                             <p className="text-primary dark:text-gray-200 font-medium text-sm mb-2">{mentor.role || mentor.designation}</p>
                             <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2 italic">
                                 &quot;{mentor.bio_short || mentor.quote || "Dedicated to empowering the next generation of women in tech."}&quot;
@@ -334,7 +334,7 @@ export default async function TechsiStarsProgram() {
       {/* Testimonials */}
     <section className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-display font-bold text-center text-primary dark:text-white mb-12">Alumnae Spotlight
+            <h2 className="text-3xl font-display text-center text-primary dark:text-white mb-12">Alumnae Spotlight
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
                 {techsistarsStories.length > 0 ? techsistarsStories.map((story, index) => (
@@ -345,7 +345,7 @@ export default async function TechsiStarsProgram() {
                                 className="rounded-full object-cover border-2 border-secondary h-16 w-16"
                                 src={story.image_url || story.image || "/assets/images/placeholder-user.png"} width={64} height={64} />
                             <div>
-                                <h4 className="font-bold text-primary dark:text-white">{story.name}</h4>
+                                <h4 className="text-primary dark:text-white">{story.name}</h4>
                                 <p className="text-sm text-secondary font-medium">{story.role || story.program || "Alumna"}</p>
                             </div>
                         </div>
@@ -367,7 +367,7 @@ export default async function TechsiStarsProgram() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-8">
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">How to Apply</h2>
+                    <h2 className="text-3xl text-gray-900 dark:text-white mb-8">How to Apply</h2>
                     <div className="space-y-8">
                         {[
                             { step: "01", title: "Submit Application", desc: "Fill out the online form telling us about your background and motivation." },
@@ -377,7 +377,7 @@ export default async function TechsiStarsProgram() {
                             <div key={i} className="flex gap-6">
                                 <span className="text-4xl font-black text-primary-200">{s.step}</span>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{s.title}</h3>
+                                    <h3 className="text-xl text-gray-900 dark:text-white mb-2">{s.title}</h3>
                                     <p className="text-gray-600 dark:text-gray-400">{s.desc}</p>
                                 </div>
                             </div>
@@ -386,7 +386,7 @@ export default async function TechsiStarsProgram() {
                 </div>
                 <div className="lg:col-span-4">
                     <div className="bg-primary text-white p-8 rounded-2xl shadow-2xl sticky top-8">
-                        <h3 className="text-2xl font-bold mb-6">Ready to Start?</h3>
+                        <h3 className="text-2xl mb-6">Ready to Start?</h3>
                         <div className="space-y-4 mb-8">
                             <div className="flex justify-between border-b border-purple-500 pb-2">
                                 <span className="opacity-80">Next Cohort:</span>
@@ -414,7 +414,7 @@ export default async function TechsiStarsProgram() {
       {/* FAQ */}
       <section className="py-20 bg-[#fbf9fd] dark:bg-gray-800/30">
         <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+            <h2 className="text-3xl text-center mb-10 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
             <div className="space-y-4">
                 {[
                     { q: "Do I need to know how to code?", a: "No, we have tracks for beginners. However, basic computer literacy is required." },

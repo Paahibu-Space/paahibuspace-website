@@ -16,7 +16,7 @@ export default async function PartnersPage() {
     <main className="flex-grow bg-background-light dark:bg-background-dark">
       <PageHero
         title={
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 font-display">
+          <h1 className="text-4xl md:text-6xl mb-6 font-display">
             Building Change Through Partnership
           </h1>
         }
@@ -32,7 +32,7 @@ export default async function PartnersPage() {
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
             <div className="max-w-3xl mb-10">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-primary dark:text-white tracking-tight">
+              <h2 className="text-2xl md:text-3xl text-primary dark:text-white tracking-tight">
                 {category.name}
               </h2>
               {category.description && (
@@ -90,7 +90,7 @@ export default async function PartnersPage() {
       {/* CTA */}
       <section className="bg-primary">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20 text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl md:text-4xl text-white tracking-tight">
             Partner With Paahibu Space
           </h2>
           <p className="mt-6 text-base md:text-lg leading-relaxed text-gray-200">

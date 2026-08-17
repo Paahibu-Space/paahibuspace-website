@@ -16,8 +16,8 @@ export default async function ImpactSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
           <div className="animate-fade-up">
-            <h2 className="text-secondary font-bold tracking-wide uppercase text-sm mb-2">Our Impact</h2>
-            <h3 className="text-3xl font-black text-white sm:text-4xl mb-6">Changing the Face of Tech</h3>
+            <h2 className="text-secondary tracking-wide uppercase text-sm mb-2">Our Impact</h2>
+            <h3 className="text-3xl text-white sm:text-4xl mb-6">Changing the Face of Tech</h3>
             <p className="text-white/80 text-lg mb-10 max-w-md">Since our inception, we&apos;ve been dedicated to creating tangible change in the tech ecosystem across Africa.</p>
             <div className="grid grid-cols-2 gap-8">
               {stats.slice(0, 4).map((stat, idx) => (
@@ -40,7 +40,7 @@ export default async function ImpactSection() {
                 />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-neutral-dark dark:text-white">Poula Anek</h4>
+                <h4 className="text-lg text-neutral-dark dark:text-white">Poula Anek</h4>
                 <p className="text-sm text-neutral-gray dark:text-gray-400">Data Entry Intern</p>
               </div>
             </div>

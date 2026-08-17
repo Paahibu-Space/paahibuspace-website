@@ -6,7 +6,7 @@ export default function ProgramCommunity({ title, description, benefits }) {
        
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-             <h2 className="text-3xl sm:text-5xl font-black mb-6 leading-tight">
+             <h2 className="text-3xl sm:text-5xl mb-6 leading-tight">
                 {title}
              </h2>
              <p className="text-blue-100 text-lg mb-10 leading-relaxed">

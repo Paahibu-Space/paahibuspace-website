@@ -7,7 +7,7 @@ export default function ProgramBenefits({ title, description, benefits, image, c
       <div className="flex flex-col md:flex-row max-w-[1080px] flex-1 gap-12 items-center">
         <div className="flex-1 space-y-8">
           <div>
-            <h2 className="text-3xl font-display font-bold text-neutral-dark dark:text-white leading-tight mb-4">
+            <h2 className="text-3xl font-display text-neutral-dark dark:text-white leading-tight mb-4">
               {title}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
@@ -21,7 +21,7 @@ export default function ProgramBenefits({ title, description, benefits, image, c
                   <span className="material-symbols-outlined">check_circle</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-neutral-dark dark:text-white">
+                  <h4 className="text-neutral-dark dark:text-white">
                     {benefit.title}
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">

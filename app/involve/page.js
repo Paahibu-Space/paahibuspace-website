@@ -54,7 +54,7 @@ export default function InvolvePage() {
         </div>
         <div className="max-w-7xl mx-auto relative z-10 w-full">
           <div className="max-w-2xl space-y-6">
-            <h1 className="text-white text-4xl lg:text-6xl font-black leading-tight tracking-tight">
+            <h1 className="text-white text-4xl lg:text-6xl leading-tight tracking-tight">
               Be Part of What We Are Building
             </h1>
             <p className="text-blue-100 text-lg lg:text-xl leading-relaxed">
@@ -78,7 +78,7 @@ export default function InvolvePage() {
                 } ${index < 2 ? "sm:border-b" : ""}`}
               >
   
-                <h2 className="text-2xl font-bold text-neutral-dark dark:text-white">
+                <h2 className="text-2xl text-neutral-dark dark:text-white">
                   {path.title}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed flex-1">
