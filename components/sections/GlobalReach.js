@@ -63,7 +63,7 @@ export default function GlobalReach() {
                     <div className="w-3 h-3 bg-secondary rounded-full"></div>
                     <span className="text-xs font-bold text-gray-700 dark:text-gray-200">Active Chapters</span>
                 </div>
-                <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-tight">Driving grassroots change and ensuring community voices shape our programs across 3 countries.</p>
+                <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-tight">Driving grassroots change and ensuring community voices shape our programs across 30+ communities.</p>
             </div>
         </div>
 

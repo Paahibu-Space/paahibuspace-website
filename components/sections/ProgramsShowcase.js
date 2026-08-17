@@ -1,369 +1,189 @@
 "use client";
 
-import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import ProgramCTA, {
-  isApplicationAccessible,
-} from "@/components/ui/ProgramCTA";
+import { cn } from "@/lib/utils";
+
+const pillars = [
+  {
+    id: "technology",
+    title: "Technology & Digital Futures",
+    tagline:
+      "Building the skills, safety and locally relevant technologies people need to participate meaningfully in an increasingly digital and AI-driven world.",
+    paragraphs: [
+      "We work with women, girls and young people to strengthen their ability to participate safely, critically and productively in an increasingly digital and AI-driven world.",
+      "Our work includes digital skills, AI literacy, Media and Information Literacy, online safety, responsible technology and the prevention of Technology-Facilitated Gender-Based Violence.",
+      "We also develop locally relevant technologies informed by the experiences and needs of the people expected to use them.",
+    ],
+  },
+  {
+    id: "education",
+    title: "Education & Youth Development",
+    tagline:
+      "Creating accessible learning opportunities that strengthen knowledge, critical thinking, leadership and pathways to opportunity.",
+    paragraphs: [
+      "We create accessible learning opportunities that strengthen knowledge, critical thinking, digital capabilities, leadership and people's ability to navigate changing education, work and social environments.",
+      "Our work takes place across schools, communities and digital spaces and includes peer learning, mentorship and opportunities that connect learning to real-world application.",
+    ],
+  },
+  {
+    id: "entrepreneurship",
+    title: "Entrepreneurship & Economic Opportunity",
+    tagline:
+      "Supporting women entrepreneurs and young people with business knowledge, technology, networks, enterprise support and pathways to stronger livelihoods.",
+    paragraphs: [
+      "We work with women entrepreneurs and young people to strengthen businesses, increase access to appropriate business knowledge and technology, and expand pathways to livelihoods and economic participation.",
+      "Our work combines entrepreneurship education, enterprise support, access to finance and networks, locally relevant digital solutions and opportunities for entrepreneurs to learn from one another.",
+    ],
+  },
+  {
+    id: "policy",
+    title: "Policy Advocacy, Leadership & Participation",
+    tagline: "The experiences of communities should inform the decisions that affect them.",
+    paragraphs: [
+      "We generate evidence through our programmes, community research and direct engagement with women, girls and young people. We use this evidence to strengthen our own work and contribute community perspectives to wider policy and development conversations.",
+      "We also create and support pathways that connect women, girls and young people to decision-making spaces where they can speak for themselves, contribute their knowledge and participate in shaping policies, programmes and systems.",
+      "Our work places particular emphasis on women's and girls' leadership, civic and political participation, recognising that representation is not simply about being present, but having the agency, information and opportunity to influence what happens.",
+    ],
+  },
+  {
+    id: "community",
+    title: "Community Development",
+    tagline:
+      "We work alongside communities to identify priorities, strengthen local capacity and develop responses grounded in people's lived realities.",
+    paragraphs: [
+      "Rather than treating communities only as places where programmes are delivered, we recognise community members as partners, knowledge holders and contributors to the solutions being developed.",
+      "Our community networks also help relationships, knowledge and opportunities continue beyond individual programme cycles.",
+    ],
+  },
+];
 
 export default function ProgramsShowcase() {
-  // State to hold programs fetched from API
-  const [programs, setPrograms] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const triggerRefs = useRef([]);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
-    async function fetchPrograms() {
-      try {
-        const res = await fetch("/api/v1/programs");
-        if (res.ok) {
-          const json = await res.json();
-          setPrograms(json.data || []);
-        }
-      } catch (e) {
-        console.error("Failed to fetch programs", e);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchPrograms();
+    // IntersectionObserver with a center-line rootMargin: fires only when a
+    // trigger crosses the viewport's vertical middle, not on every scroll frame.
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(Number(entry.target.dataset.index));
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "-50% 0px -50% 0px" },
+    );
+
+    const nodes = triggerRefs.current;
+    nodes.forEach((node) => node && observer.observe(node));
+    return () => observer.disconnect();
   }, []);
 
-  // Find specific programs by ID or Name logic (since we want specific layouts)
-  const growProgram = programs.find((p) => p.name.includes("GROW")) || {
-    id: 99,
-    name: "GROW Program",
-    is_application_open: false, // Fallback default
-  };
-
-  const wideiProgram = programs.find((p) => p.name.includes("WiDEI")) || {
-    id: 100,
-    name: "WiDEI",
-    is_application_open: false,
-  };
-  const techstarProgram = programs.find((p) =>
-    p.name.includes("TechsiStars"),
-  ) || { id: 101, name: "TechsiStars", is_application_open: false };
-  const skillsProgram = programs.find((p) =>
-    p.name.includes("Skills2Work"),
-  ) || { id: 102, name: "Skills2Work", is_application_open: false };
-
-  const digitalWalansiProgram = programs.find(
-    (p) => p.slug === "digital-walansi" || p.name.includes("Digital Walansi"),
-  ) || {
-    id: 103,
-    name: "Digital Walansi",
-    slug: "digital-walansi",
-    is_application_open: false,
+  // Jump straight to a pillar instead of smooth-scrolling (and flipping) through every card in between.
+  const goToPillar = (index) => {
+    setActive(index);
+    triggerRefs.current[index]?.scrollIntoView({ behavior: "instant", block: "start" });
   };
 
   return (
-    <section className="lg:py-28 bg-[#f9f9fb] dark:bg-background-dark/50 transition-colors">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <span className="text-secondary font-bold tracking-wider uppercase text-sm">
-            Programs
-          </span>
-          <h2 className="font-display font-bold text-4xl lg:text-[48px] text-primary dark:text-white mt-2 mb-4">
-            What We Do
-          </h2>
-          <p className="max-w-2xl text-gray-600 dark:text-gray-300 text-lg">
-            At Paahibu Space, we empower women, girls, and youth with the tools,
-            skills, and networks they need to transform their lives.
-          </p>
-        </div>
+    <section className="bg-[#f9f9fb] dark:bg-background-dark/50 transition-colors">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 lg:pt-28">
+        <span className="text-secondary font-bold tracking-wider uppercase text-sm">
+          What We Do
+        </span>
+        <h2 className="font-display font-bold text-4xl lg:text-[48px] text-primary dark:text-white mt-2">
+          Where We Focus Our Work
+        </h2>
+      </div>
 
-        {/* Featured Program: GROW */}
-        <div className="dark:bg-gray-800 rounded-2xl overflow-hidden mb-12 flex flex-col lg:flex-row">
-          <div className="lg:w-2/5 h-64 lg:h-auto relative">
-            <Image
-              alt="Professional women in a meeting"
-              className="object-cover"
-              src="https://updates.paahibuspace.org/assets/frontend/images/grow-network.webp"
-              fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
-            />
-            <div className="absolute inset-0 bg-primary/10"></div>
-          </div>
-          <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-            <h3 className="font-display font-bold text-3xl text-primary dark:text-white mb-2">
-              {growProgram.name}
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-6 font-medium">
-              Girls and Women Rising On The Web
-            </p>
-            <div className="text-gray-600 dark:text-gray-300 mb-8 space-y-4">
-              <p>
-                A women-led initiative by Paahibu Space Designed to dismantle
-                these barriers and build a thriving ecosystem of women
-                entrepreneurs, creatives, freelancers and farmers equipped for
-                the digital economy .
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-3">
+      {/* Scroll track: one 100vh trigger zone per pillar, behind a single pinned stage */}
+      <div className="relative" style={{ height: `${pillars.length * 100}vh` }}>
+        {pillars.map((_, index) => (
+          <div
+            key={`trigger-${index}`}
+            ref={(node) => {
+              triggerRefs.current[index] = node;
+            }}
+            data-index={index}
+            className="absolute left-0 w-px h-screen"
+            style={{ top: `${index * 100}vh` }}
+          />
+        ))}
 
-                  <span>Build a digital support network for women.</span>
-                </li>
-                <li className="flex items-center gap-3">
-
-                  <span>Turn everyday spaces into learning hubs.</span>
-                </li>
-                <li className="flex items-center gap-3">
-
-                  <span>Create safe spaces for discussion and connection.</span>
-                </li>
-              </ul>
-            </div>
-            <div className="flex gap-4">
-              <ProgramCTA
-                program={growProgram}
-                labelOpen="Apply Now"
-                labelClosed={
-                  <>
-                    Join Waitlist{" "}
-                    <span className="material-symbols-outlined text-sm ml-2">
-                      notifications
-                    </span>
-                  </>
-                }
-                className="bg-secondary hover:bg-orange-600 text-white px-6 py-3"
-              />
-              <Link
-                href="/grow-program"
-                className="border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary px-6 py-3 rounded-lg font-semibold transition-colors"
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          {pillars.map((pillar, index) => {
+            return (
+              <div
+                key={pillar.id}
+                aria-hidden={active !== index}
+                className={cn(
+                  "absolute inset-0 flex transition-transform duration-500 ease-out motion-reduce:transition-none will-change-transform",
+                  index <= active
+                    ? "translate-y-0 pointer-events-auto"
+                    : "translate-y-full pointer-events-none",
+                )}
+                style={{ zIndex: index + 1 }}
               >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Program: Digital Walansi */}
-        <div className="dark:bg-gray-800 rounded-2xl overflow-hidden mb-12 flex flex-col lg:flex-row-reverse py-20">
-          <div className="lg:w-2/5 h-64 lg:h-auto relative">
-            <Image
-              alt="Digital Walansi Fellow leading a community session in northern Ghana"
-              className="object-cover"
-              src="/assets/images/commitment.png"
-              fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
-            />
-            <div className="absolute inset-0 bg-primary/10"></div>
-          </div>
-          <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-            <h3 className="font-display font-bold text-3xl text-primary dark:text-white mb-2">
-              {digitalWalansiProgram.name}
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-6 font-medium">
-              Digital Safety & Media Literacy, Upper West Region
-            </p>
-            <div className="text-gray-600 dark:text-gray-300 mb-8 space-y-4">
-              <p>
-                Training young women as Digital Walansi Fellows to carry digital
-                safety, media literacy, and civic rights education into schools
-                and communities across the Upper West Region of Ghana.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-3">
-
-                  <span>30 Fellows trained and deployed to 5 partner schools.</span>
-                </li>
-                <li className="flex items-center gap-3">
-
-                  <span>Student-led Digital Walansi Clubs and safety Corners.</span>
-                </li>
-                <li className="flex items-center gap-3">
-
-                  <span>2,000+ girls and young women reached.</span>
-                </li>
-              </ul>
-            </div>
-            <div className="flex gap-4">
-              <ProgramCTA
-                program={digitalWalansiProgram}
-                labelOpen="Apply Now"
-                labelClosed={
-                  <>
-                    Join Waitlist{" "}
-                    <span className="material-symbols-outlined text-sm ml-2">
-                      notifications
-                    </span>
-                  </>
-                }
-                className="bg-secondary hover:bg-orange-600 text-white px-6 py-3"
-              />
-              <Link
-                href="/digital-walansi-program"
-                className="border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Grid of Other Programs */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* WiDEI */}
-          <ProgramCard
-            program={wideiProgram}
-            title="WiDEI"
-            sub="Digital Inclusion"
-            desc="Women in Digital Economy Initiative. Bridging the digital divide."
-            icon="computer"
-            link="/widei-program"
-          />
-
-          {/* TechsiStars */}
-          <ProgramCard
-            program={techstarProgram}
-            title="TechsiStars"
-            sub="Coding Bootcamp"
-            desc="A 4-month hybrid mentorship program for girls and young women interested in
-STEM and entrepreneurship."
-            icon="code"
-            link="/techsistars-program"
-          />
-
-          {/* Skills2Work */}
-          <ProgramCard
-            program={skillsProgram}
-            title="Skills2Work"
-            sub="Employability"
-            desc="Soft skills and career readiness training to prepare graduates for the modern workplace."
-            icon="work"
-            link="#" // No page yet
-          />
-        </div>
-
-        {/* Upcoming Programs Section */}
-        <div className="mt-20 pt-16 border-t border-gray-200 dark:border-gray-700">
-          <div className="mb-12">
-            <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">
-              Upcoming Opportunities
-            </span>
-            <h3 className="text-3xl font-black text-primary dark:text-white sm:text-4xl">
-              Open Programs & Cohorts
-            </h3>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
-              Applications are currently open for these programs. Apply now to
-              secure your spot!
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {(() => {
-              const openPrograms = programs.filter((program) =>
-                isApplicationAccessible(program),
-              );
-
-              if (openPrograms.length === 0) {
-                return (
-                  <p className="col-span-full text-center text-gray-500 italic py-8">
-                    No programs currently accepting applications. Check back
-                    soon!
-                  </p>
-                );
-              }
-
-              return openPrograms.map((program) => {
-                const startDate = program.application_start_date
-                  ? new Date(program.application_start_date).toLocaleDateString(
-                      "en-US",
-                      { month: "short", day: "numeric", year: "numeric" },
-                    )
-                  : "TBA";
-
-                return (
-                  <div
-                    key={program.id}
-                    className="group flex flex-col justify-between overflow-hidden border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 transition-all hover:-translate-y-1"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-6">
-                        <span className="inline-flex items-center rounded-full px-3 py-0.5 text-xs font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
-                          Applications Open
-                        </span>
-                        <div className="text-gray-400 dark:text-gray-500">
-                          <span className="material-symbols-outlined">
-                            rocket_launch
-                          </span>
-                        </div>
-                      </div>
-                      <h4 className="text-2xl font-bold text-primary dark:text-white mb-3">
-                        {program.name}
-                      </h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-2">
-                        {program.description ||
-                          "Join our comprehensive program designed to empower the next generation of tech leaders."}
-                      </p>
-                      <div className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 mb-8">
-                        Starts: {startDate}
-                      </div>
+                <div className="relative flex-1 flex items-center justify-center overflow-y-auto bg-primary px-6 sm:px-12 lg:px-20 py-16">
+                  <div className="max-w-2xl text-center lg:text-left">
+                    <h3 className="font-bold text-3xl lg:text-5xl text-white mb-4">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-white/90 font-medium text-lg lg:text-xl mb-6 leading-relaxed">
+                      {pillar.tagline}
+                    </p>
+                    <div className="space-y-4">
+                      {pillar.paragraphs.map((paragraph, pIndex) => (
+                        <p key={pIndex} className="text-white/75 leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
                     </div>
-
-                    <ProgramCTA
-                      program={program}
-                      labelOpen="Apply Now"
-                      labelClosed="Notify Me"
-                      className="w-full bg-secondary hover:bg-orange-600 text-white"
-                    />
                   </div>
-                );
-              });
-            })()}
-          </div>
+                </div>
+
+                <div className="hidden md:flex">
+                  {pillars.map((tabPillar, tabIndex) => {
+                    const isTabActive = tabIndex === index;
+                    return (
+                      <button
+                        key={tabPillar.id}
+                        type="button"
+                        aria-current={isTabActive ? "true" : undefined}
+                        onClick={() => goToPillar(tabIndex)}
+                        className={cn(
+                          "w-16 lg:w-20 h-full flex items-center justify-center border-l border-white/15 cursor-pointer transition-colors",
+                          isTabActive ? "bg-secondary" : "bg-primary hover:bg-blue-900",
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            "font-bold tracking-wide text-sm [writing-mode:vertical-rl] rotate-180 whitespace-nowrap",
+                            isTabActive ? "text-white" : "text-white/80",
+                          )}
+                        >
+                          {tabPillar.title}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
+      </div>
+
+      <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-20 lg:pb-28 text-center">
+        <Link
+          href="/programs"
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-base font-bold text-white hover:bg-blue-900 hover:-translate-y-0.5 transition-all"
+        >
+          Explore What We Do →
+        </Link>
       </div>
     </section>
-  );
-}
-
-// Subcomponent for grid cards to reduce repetition
-function ProgramCard({ program, title, sub, desc, icon, link }) {
-  const open = isApplicationAccessible(program);
-
-  return (
-    <div className="border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-8 hover:scale-[1.02] transition-all duration-300 flex flex-col h-full">
-      <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-primary mb-6">
-        <span className="material-symbols-outlined text-3xl">{icon}</span>
-      </div>
-      <div className="flex items-center justify-between mb-3">
-        <h4 className="font-display font-bold text-xl text-primary dark:text-white">
-          {title}
-        </h4>
-        <span
-          className={`text-xs px-2 py-1 rounded border ${open ? "bg-green-50 text-green-600 border-green-200" : "bg-gray-100 text-gray-500 border-gray-200"}`}
-        >
-          {open ? "Open" : "Closed"}
-        </span>
-      </div>
-      <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3">
-        {desc}
-      </p>
-      <div className="mt-auto flex items-center justify-between gap-4">
-        <Link
-          className="text-secondary text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all"
-          href={link}
-        >
-          Learn More{" "}
-          <span className="material-symbols-outlined text-sm">
-            arrow_forward
-          </span>
-        </Link>
-
-        {/* Mini Action Button */}
-        <ProgramCTA
-          program={program}
-          labelOpen="Apply"
-          labelClosed="Waitlist"
-          className={`!px-3 !py-2 text-xs font-bold ${
-            open
-              ? "!bg-primary !text-white hover:!bg-primary/90"
-              : "!bg-white border border-primary !text-primary hover:!bg-gray-50"
-          }`}
-        />
-      </div>
-    </div>
   );
 }

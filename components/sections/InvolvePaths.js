@@ -13,7 +13,7 @@ export default function InvolvePaths() {
           <h2 className="text-white font-display font-bold text-3xl lg:text-4xl tracking-tight">
             Become a Mentor
           </h2>
-          <p className="text-white/90 font-display text-lg leading-relaxed">
+          <p className="text-white/90 text-lg leading-relaxed">
             Share your expertise to empower the next generation of African women
             in tech. Your guidance can shape careers and build the future.
           </p>
@@ -34,7 +34,7 @@ export default function InvolvePaths() {
           <h2 className="text-white font-display font-bold text-3xl lg:text-4xl tracking-tight">
             Join GROW Program
           </h2>
-          <p className="text-white/90 font-display text-lg leading-relaxed">
+          <p className="text-white/90 text-lg leading-relaxed">
             Join a community dedicated to your professional growth. Access
             exclusive resources, workshops, and peer support to accelerate your
             journey.

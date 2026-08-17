@@ -94,9 +94,9 @@ Space and the WiDiB Initiative&quot;
          <div className="max-w-5xl mx-auto rounded-3xl bg-primary text-white overflow-hidden shadow-xl shadow-primary/10">
              <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/15">
                  {[
-                     { icon: "school", value: "500+", label: "Women Trained" },
-                     { icon: "public", value: "30", label: "Communities Reached" },
-                     { icon: "trending_up", value: "40%", label: "Avg. Business Growth" },
+                     { icon: "school", value: "10,000+", label: "Girls and Women Trained" },
+                     { icon: "public", value: "62+", label: "Communities Reached" },
+                     { icon: "trending_up", value: "45+", label: "Jobs Created" },
                  ].map((stat) => (
                      <div key={stat.label} className="flex flex-col items-center text-center gap-3 p-10">
  

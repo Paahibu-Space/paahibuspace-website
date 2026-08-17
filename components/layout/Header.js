@@ -1,55 +1,45 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/layout/Navigation";
 import MobileMenu from "@/components/layout/MobileMenu";
+import { useTheme } from "@/lib/ThemeContext";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    // Check local storage or system preference on mount
-    const isDark =
-      localStorage.getItem("theme") === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    if (isDark) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    } else {
-        // Ensure strictly sync
-        setTheme("light");
-        document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 dark:border-gray-800 bg-white dark:bg-background-dark/95 backdrop-blur transition-colors duration-300">
+      <div className="hidden lg:block border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-black/20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 flex justify-end gap-6 py-2">
+          <Link href="/partners" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Partners
+          </Link>
+          <Link href="/team" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Leadership & Team
+          </Link>
+          <Link href="/careers" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Careers
+          </Link>
+          <Link href="/contact" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Contact
+          </Link>
+        </div>
+      </div>
       <nav className="mx-auto h-20 flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-1.5">
-            <span className="sr-only">Paahibu Space</span>
-            <div className="relative h-10 w-10">
-                 <Image src="/logo.png" alt="Paahibu Space Logo" fill className="object-contain" sizes="40px" priority />
-            </div>
-            <span className="font-bold text-xl tracking-tight text-primary dark:text-white">Paahibu Space</span>
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center">
+            <Image
+              src={theme === "dark" ? "/logo-white.png" : "/logo-dark.png"}
+              alt="Paahibu Space Logo"
+              width={theme === "dark" ? 628 : 815}
+              height={theme === "dark" ? 250 : 306}
+              className="h-15 w-auto object-contain"
+              priority
+            />
           </Link>
         </div>
         

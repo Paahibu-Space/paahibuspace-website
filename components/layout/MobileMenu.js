@@ -2,42 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, Fragment } from "react";
+import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/lib/ThemeContext";
 
 export default function MobileMenu({ open, setOpen }) {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    // Initialize theme
-    const isDark =
-      localStorage.getItem("theme") === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    if (isDark) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  };
+  const { theme, toggleTheme } = useTheme();
 
   const toggleSubmenu = (menu) => {
     setActiveSubmenu(activeSubmenu === menu ? null : menu);
@@ -75,13 +47,17 @@ export default function MobileMenu({ open, setOpen }) {
                 <Dialog.Panel className="pointer-events-auto w-screen sm:max-w-sm">
                   <div className="flex h-full flex-col overflow-y-auto bg-white dark:bg-background-dark px-6 py-6 border-l border-gray-100 dark:border-gray-800 shadow-2xl">
                     <div className="flex items-center justify-between">
-                      <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={closeMenu}>
-                        <div className="relative h-8 w-auto aspect-[3/1]">
-                          <Image src="/logo.png" alt="Paahibu Space Logo" fill className="object-contain" />
-                        </div>
-                        <Dialog.Title as="span" className="font-bold text-lg text-primary dark:text-white">
+                      <Link href="/" className="-m-1.5 p-1.5 flex items-center" onClick={closeMenu}>
+                        <Dialog.Title as="span" className="sr-only">
                           Paahibu Space
                         </Dialog.Title>
+                        <Image
+                          src={theme === "dark" ? "/logo-white.png" : "/logo-dark.png"}
+                          alt="Paahibu Space Logo"
+                          width={theme === "dark" ? 628 : 815}
+                          height={theme === "dark" ? 250 : 306}
+                          className="h-8 w-auto object-contain"
+                        />
                       </Link>
                       <div className="flex items-center gap-4">
                         <button
@@ -115,6 +91,13 @@ export default function MobileMenu({ open, setOpen }) {
                           >
                             Home
                           </Link>
+                          <Link
+                            href="/about"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                            onClick={closeMenu}
+                          >
+                            About
+                          </Link>
 
                           {/* Programs Submenu */}
                           <div>
@@ -123,7 +106,7 @@ export default function MobileMenu({ open, setOpen }) {
                               aria-expanded={activeSubmenu === "programs"}
                               className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                             >
-                              Programs
+                              What We Do
                               <span className={`material-symbols-outlined text-lg transition-transform ${activeSubmenu === "programs" ? "rotate-180" : ""}`}>expand_more</span>
                             </button>
                             {activeSubmenu === "programs" && (
@@ -146,38 +129,26 @@ export default function MobileMenu({ open, setOpen }) {
                                 <Link href="/community-ambassadors-program" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
                                   Community Ambassadors
                                 </Link>
-                              </div>
-                            )}
-                          </div>
-
-                          {/* About Submenu */}
-                          <div>
-                            <button
-                              onClick={() => toggleSubmenu("about")}
-                              aria-expanded={activeSubmenu === "about"}
-                              className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
-                            >
-                              About
-                              <span className={`material-symbols-outlined text-lg transition-transform ${activeSubmenu === "about" ? "rotate-180" : ""}`}>expand_more</span>
-                            </button>
-                            {activeSubmenu === "about" && (
-                              <div className="mt-2 space-y-2 pl-4">
-                                <Link href="/about" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                                  Overview
+                                <Link href="/ndiara" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                                  Ndiara
                                 </Link>
-                                <Link href="/mission" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                                  Our Mission
+                                <Link href="/skills2work-program" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                                  Skills2Work
                                 </Link>
-                                <Link href="/team" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                                  Leadership Team
-                                </Link>
-                                <Link href="/philosophy" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                                  Philosophy
+                                <Link href="/our-work#baabuh-enterprise-fund" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                                  Baabuh Enterprise Fund
                                 </Link>
                               </div>
                             )}
                           </div>
 
+                          <Link
+                            href="/our-work"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                            onClick={closeMenu}
+                          >
+                            Our Work
+                          </Link>
                           <Link
                             href="/impact"
                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -186,27 +157,44 @@ export default function MobileMenu({ open, setOpen }) {
                             Impact
                           </Link>
                           <Link
-                            href="/stories"
+                            href="/research-insights"
                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                             onClick={closeMenu}
                           >
-                            Stories
+                            Research & Insights
                           </Link>
                           <Link
-                            href="/blog"
+                            href="/community"
                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                             onClick={closeMenu}
                           >
-                            Blog
+                            Community
                           </Link>
                         </div>
-                        <div className="py-6">
+                        <div className="space-y-2 py-6">
                           <Link
                             href="/involve"
                             className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                             onClick={closeMenu}
                           >
-                            Join Us
+                            Get Involved
+                          </Link>
+                        </div>
+                        <div className="space-y-1 py-6">
+                          <p className="-mx-3 px-3 text-sm font-semibold uppercase tracking-wider text-gray-400">
+                            More
+                          </p>
+                          <Link href="/partners" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Partners
+                          </Link>
+                          <Link href="/team" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Leadership & Team
+                          </Link>
+                          <Link href="/careers" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Careers
+                          </Link>
+                          <Link href="/contact" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Contact
                           </Link>
                         </div>
                       </div>

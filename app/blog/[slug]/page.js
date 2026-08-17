@@ -74,7 +74,7 @@ export default async function BlogDetailPage({ params }) {
           </div>
           {/* Hero Content */}
           <div className="relative z-20 max-w-4xl mx-auto px-4 w-full text-center">
-            <span className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent border border-accent/30 text-xs font-bold font-display uppercase tracking-wider mb-6">
+            <span className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent border border-accent/30 text-xs font-bold uppercase tracking-wider mb-6">
               {post.category || "General"}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-8">
@@ -104,7 +104,7 @@ export default async function BlogDetailPage({ params }) {
             {/* Sidebar (Share & Sticky) */}
             <aside className="hidden lg:flex flex-col items-end w-24 pt-4 shrink-0">
               <div className="sticky top-32 flex flex-col gap-6 items-center">
-                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider font-display writing-mode-vertical transform rotate-180 mb-2" style={{writingMode: "vertical-rl"}}>
+                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider writing-mode-vertical transform rotate-180 mb-2" style={{ writingMode: "vertical-rl" }}>
                     Share this
                 </span>
                 <button className="w-10 h-10 rounded-full bg-surface-dark border border-white/5 text-gray-400 hover:text-white hover:border-accent hover:bg-accent hover:shadow-lg hover:shadow-accent/20 transition-all flex items-center justify-center group">
@@ -145,7 +145,7 @@ export default async function BlogDetailPage({ params }) {
               </div>
                 <div className="text-center sm:text-left flex-1">
                   <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:items-start mb-2">
-                    <h4 className="text-xl font-display font-bold text-white">{post.author}</h4>
+                    <h4 className="text-xl font-bold text-white">{post.author}</h4>
                     <button className="mt-2 sm:mt-0 px-4 py-1.5 rounded-full border border-white/20 text-xs font-medium text-white hover:bg-white hover:text-background-dark transition-colors">
                         Follow
                     </button>
@@ -184,7 +184,7 @@ export default async function BlogDetailPage({ params }) {
                     </div>
                     <div className="flex flex-col gap-2">
                       <span className="text-accent text-xs font-bold uppercase tracking-wider">{rPost.tag}</span>
-                      <h3 className="text-lg font-display font-bold text-white group-hover:text-accent transition-colors leading-snug">
+                      <h3 className="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">
                         {rPost.title}
                       </h3>
                       <p className="text-gray-400 text-sm line-clamp-2">{rPost.preview}</p>

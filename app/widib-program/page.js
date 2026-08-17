@@ -46,18 +46,18 @@ export default async function WidibProgramPage() {
                  alt="Women Business Owners" className="object-cover opacity-20" fill priority />
              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/40 "></div>
          </div>
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
              <div className="inline-flex items-center gap-2 bg-blue-500/30 backdrop-blur-sm border border-blue-400/30 rounded-full px-4 py-1 text-blue-100 font-bold text-sm tracking-wide uppercase mb-6">
                  For Early-Stage Entrepreneurs
              </div>
              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
                  Level Up Your <span className="text-blue-200">Side Hustle</span>
              </h1>
-             <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+             <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mb-10 leading-relaxed font-light">
                  Turn your passion project into a profitable digital business in just 5 weeks.
                  Practical social media marketing and financial literacy.
              </p>
-             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+             <div className="flex flex-col sm:flex-row gap-4">
                  <ProgramCTA 
                     program={widibProgram}
                     labelOpen="Apply Now"

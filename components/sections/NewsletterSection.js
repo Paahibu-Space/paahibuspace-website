@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { LinkedInIcon, XIcon, FacebookIcon, InstagramIcon } from "@/components/ui/Icons";
+import { LinkedInIcon, FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from "@/components/ui/Icons";
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -56,7 +56,7 @@ export default function NewsletterSection() {
             Join the Movement
           </h2>
           <p className="mb-8 max-w-2xl text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-            Empowering African women in technology. Get the latest opportunities, mentorship updates, and tech news delivered directly to your inbox.
+            Increasing the agency of African women in technology. Get the latest opportunities, mentorship updates, and tech news delivered directly to your inbox.
           </p>
           <div className="w-full max-w-lg">
             <form className="flex flex-col gap-3 sm:flex-row sm:items-stretch" onSubmit={handleSubscribe}>
@@ -66,7 +66,7 @@ export default function NewsletterSection() {
                 </div>
                 <input 
                   aria-label="Email address"
-                  className="block w-full rounded-lg border-0 bg-white dark:bg-zinc-700 py-3.5 pl-10 pr-4 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:ring-inset shadow-sm sm:text-sm sm:leading-6"
+                  className="block w-full rounded-lg border-0 bg-white dark:bg-zinc-700 py-3.5 pl-10 pr-4 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset shadow-sm sm:text-sm sm:leading-6"
                   placeholder="Enter your email address" 
                   required
                   type="email" 
@@ -97,29 +97,35 @@ export default function NewsletterSection() {
           <div className="flex flex-col items-center gap-4">
             <span className="text-sm font-semibold text-primary dark:text-blue-200 uppercase tracking-wider text-xs">Join our community</span>
             <div className="flex gap-4">
-              <Link className="group flex flex-col items-center gap-1" href="https://www.linkedin.com/company/questtechnovation/" target="_blank" rel="noopener noreferrer">
+              <Link className="group flex flex-col items-center gap-1" href="https://www.linkedin.com/company/paahibuspace/" target="_blank" rel="noopener noreferrer">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#0077b5]">
                   <LinkedInIcon className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">LinkedIn</span>
               </Link>
-              <Link className="group flex flex-col items-center gap-1" href="https://twitter.com/paahibuspace" target="_blank" rel="noopener noreferrer">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-black dark:group-hover:text-white">
-                  <XIcon className="w-5 h-5" />
+              <Link className="group flex flex-col items-center gap-1" href="https://www.instagram.com/paahibuspace?igsh=bmx1eTh6ZmRuZm5h" target="_blank" rel="noopener noreferrer">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#E1306C]">
+                  <InstagramIcon className="w-5 h-5" />
                 </div>
-                <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">X</span>
+                <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">Instagram</span>
               </Link>
-              <Link className="group flex flex-col items-center gap-1" href="https://web.facebook.com/paahibuspace" target="_blank" rel="noopener noreferrer">
+              <Link className="group flex flex-col items-center gap-1" href="https://www.facebook.com/share/19F93yo1ko/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#4267B2]">
                   <FacebookIcon className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">Facebook</span>
               </Link>
-              <Link className="group flex flex-col items-center gap-1" href="https://www.instagram.com/paahibuspace?igsh=MWZpbWkyaDliajdrNw==" target="_blank" rel="noopener noreferrer">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#E1306C]">
-                  <InstagramIcon className="w-5 h-5" />
+              <Link className="group flex flex-col items-center gap-1" href="https://www.tiktok.com/@paahibu.space?_r=1&_t=ZS-98uBlsOHjK3" target="_blank" rel="noopener noreferrer">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-black dark:group-hover:text-white">
+                  <TikTokIcon className="w-5 h-5" />
                 </div>
-                <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">Instagram</span>
+                <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">TikTok</span>
+              </Link>
+              <Link className="group flex flex-col items-center gap-1" href="https://whatsapp.com/channel/0029VaJvEH6HwXbKRSOk783K" target="_blank" rel="noopener noreferrer">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-700 text-slate-600 dark:text-slate-300 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:text-[#25D366]">
+                  <WhatsAppIcon className="w-5 h-5" />
+                </div>
+                <span className="text-[10px] font-medium text-slate-500 opacity-0 transition-opacity group-hover:opacity-100">WhatsApp</span>
               </Link>
             </div>
           </div>

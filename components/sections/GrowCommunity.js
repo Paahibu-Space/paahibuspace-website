@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function GrowCommunity() {
   return (
     <section className="w-full relative py-24 px-4 overflow-hidden bg-primary dark:bg-background-dark">
@@ -21,11 +23,12 @@ export default function GrowCommunity() {
           and leadership development. Join us in creating lasting change for African women in tech.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <button
+          <Link
+            href="/partners"
             aria-label="Become a partner organization"
             className="flex items-center justify-center h-12 px-8 bg-white dark:bg-secondary text-primary dark:text-white text-base font-bold rounded-lg hover:bg-gray-100 dark:hover:bg-orange-600 transition-colors cursor-pointer">
             Partner With Us
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -64,7 +64,7 @@ export default function PhilosophyValues() {
   return (
     <section className="py-24 px-6 md:px-12 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10rem] md:text-[15rem] font-black text-gray-200/50 dark:text-gray-700/20 select-none z-0 pointer-events-none">
-            VALUES
+            Values
         </div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">

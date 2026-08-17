@@ -19,7 +19,7 @@ export default function RegionalImpact() {
               tech ecosystem right here in the Upper West Region of Ghana, proving that innovation
               knows no geography.
             </p>
-            <ul className="space-y-4 mb-10 text-left inline-block lg:block">
+            {/* <ul className="space-y-4 mb-10 text-left inline-block lg:block">
               <li className="flex items-start gap-4 text-gray-700 dark:text-gray-300">
                 <span className="material-symbols-outlined text-secondary text-2xl shrink-0">
                   check_circle
@@ -38,10 +38,8 @@ export default function RegionalImpact() {
                 </span>
                 <span className="text-lg">Partnerships with local schools</span>
               </li>
-            </ul>
-            <div className="flex justify-center lg:justify-start">
-              <Button size="lg" className="px-10 h-14 rounded-xl text-lg shadow-xl shadow-primary/10">Visit Our Office</Button>
-            </div>
+            </ul> */}
+
           </div>
           
           <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
@@ -60,7 +58,7 @@ export default function RegionalImpact() {
               
               {/* Floating Stat - Adjusted for Mobile */}
               <div className="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 bg-secondary text-white p-5 sm:p-8 rounded-2xl shadow-2xl z-20 max-w-[200px] sm:max-w-xs animate-float">
-                <p className="font-black text-3xl sm:text-5xl leading-none mb-1 shadow-sm">500+</p>
+                <p className="font-black text-3xl sm:text-5xl leading-none mb-1 shadow-sm">10,000+</p>
                 <p className="text-xs sm:text-sm font-bold uppercase tracking-wider opacity-90">
                   Women & Girls Trained
                 </p>

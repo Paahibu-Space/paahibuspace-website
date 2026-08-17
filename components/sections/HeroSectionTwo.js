@@ -12,7 +12,7 @@ export default function HeroSectionTwo() {
             <span className="text-primary dark:text-blue-400">You Belong in Tech Too</span>
           </h1>
           <h2 className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-normal leading-relaxed max-w-xl">
-            Empowering African women with the skills, mentorship, and community needed to thrive in the global
+            Increasing the agency of the next generation of African women with the skills, mentorship, and community needed to thrive in the global
             technology ecosystem. We&apos;re building the future, one line of code at a time.
           </h2>
         </div>

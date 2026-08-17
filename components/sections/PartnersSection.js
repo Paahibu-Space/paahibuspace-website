@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { fetchAPI } from "@/lib/api";
 
 export default async function PartnersSection() {
@@ -35,9 +36,12 @@ export default async function PartnersSection() {
               )}
             </div>
             <div className="flex flex-col items-center gap-6">
-              <button className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-transparent border-2 border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-colors duration-300 text-base font-bold leading-normal tracking-[0.015em]">
+              <Link
+                href="/partners"
+                className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-transparent border-2 border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-colors duration-300 text-base font-bold leading-normal tracking-[0.015em]"
+              >
                 <span className="truncate">Become a Partner</span>
-              </button>
+              </Link>
             </div>
       </div>
     </div>

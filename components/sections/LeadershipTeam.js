@@ -6,14 +6,13 @@ export default function LeadershipTeam({ members = [] }) {
   const leaders = members;
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-background-light dark:bg-background-dark/50">
+    <section className="py-5 px-6 md:px-12 bg-background-light dark:bg-background-dark/50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4">
             Leadership Team
           </h2>
-          <div className="h-1 w-24 bg-primary dark:bg-secondary mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
             Our executive team brings decades of experience in technology,
             education, and social entrepreneurship to guide Paahibu Space.
           </p>

@@ -21,10 +21,10 @@ export default function Mission() {
             <h3 className="text-neutral-dark dark:text-white text-xl font-bold">
               Our Mission
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               We equip businesses and nonprofits with the competencies to leverage technology,
               while educating and empowering African women and girls in STEAM, innovation,
-              and leadership — with a vision to reach millions more across the continent.
+              and leadership with a vision to reach millions more across the continent.
             </p>
           </div>
           {/* Card 2 */}
@@ -35,7 +35,7 @@ export default function Mission() {
             <h3 className="text-neutral-dark dark:text-white text-xl font-bold">
               Our Vision
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               A world where all people can lead free and dignified lives by inviting people
               everywhere to access, innovate, connect, and transform communities and
               systems sustainably.
@@ -51,7 +51,7 @@ export default function Mission() {
             <h3 className="text-neutral-dark dark:text-white text-xl font-bold">
               Why We Do It
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               We see the tangible impact in the lives of women we support. We witness young girls developing tech solutions, and female entrepreneurs creating job opportunities.
             </p>
           </div>

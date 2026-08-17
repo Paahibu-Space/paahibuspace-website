@@ -12,7 +12,7 @@ export default function CommunityAmbassadors({ members = [] }) {
             <div className="mb-6 md:mb-0">
                 <h2 className="text-3xl font-bold text-primary dark:text-white">Community Ambassadors</h2>
                 <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-lg">
-                    Ensuring community voices shape our programs across 15+ campuses in 3 countries.
+                    Ensuring community voices shape our programs across 30+ communities.
                 </p>
             </div>
         </div>

@@ -12,7 +12,7 @@ export default function RootError({ error, reset }) {
   return (
     <main className="flex-grow flex items-center justify-center py-24 px-6 md:px-12 bg-background-light dark:bg-background-dark">
       <div className="max-w-xl w-full text-center">
-        <div className="bg-red-50 dark:bg-red-900/20 p-8 rounded-3xl border border-red-100 dark:border-red-900/30 mb-8 inline-block">
+        <div className="  p-8  mb-8 inline-block">
           <span className="material-symbols-outlined text-6xl text-red-500 mb-4 block">error</span>
           <h1 className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white mb-2">
             Something went wrong

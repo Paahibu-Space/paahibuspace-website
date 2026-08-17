@@ -77,7 +77,7 @@ export default function MissionPage() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-primary dark:text-white mb-3">
-                ACCESS
+                Access
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow">
                 Bridging the digital divide by providing essential resources to those who need them most. We
@@ -107,7 +107,7 @@ export default function MissionPage() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-primary dark:text-white mb-3">
-                INNOVATE
+                Innovate
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow">
                 Fostering creativity and technical excellence through hands-on experimentation. We create
@@ -137,7 +137,7 @@ export default function MissionPage() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-primary dark:text-white mb-3">
-                TRANSFORM
+                Transform
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow">
                 Changing career trajectories and leadership landscapes permanently. We don&apos;t just teach
