@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { fetchAPI } from "@/lib/api";
 import StoriesGrid from "@/components/sections/StoriesGrid";
+import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {
   title: "Our Impact",
@@ -41,69 +42,32 @@ export default async function ImpactPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-          <div
-            className="bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden relative min-h-[480px] flex items-center justify-center shadow-xl"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(39, 41, 116, 0.8) 100%), url("/assets/images/impact-stories.png")',
-            }}
-          >
-            <div className="relative z-10 text-center max-w-4xl px-4 flex flex-col items-center gap-6">
-              <span className="bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-2 shadow-sm">
-                Real Impact • Real Stories • Real Change
-              </span>
-              <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-black leading-tight tracking-tight drop-shadow-sm font-display">
-                Transforming African Futures <br className="hidden md:block" />
-                Through Technology
-              </h1>
-              <p className="text-gray-100 text-lg md:text-xl max-w-2xl font-normal leading-relaxed text-shadow">
-                From rural villages to global tech hubs, meet the women and youth reshaping
-                Africa&apos;s digital landscape through resilience, innovation, and code.
-              </p>
-              
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title={
+          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+            Transforming African Futures <br className="hidden md:block" />
+            Through Technology
+          </h1>
+        }
+        description="From rural villages to global tech hubs, meet the women and youth reshaping Africa's digital landscape through resilience, innovation, and code."
+        backgroundImage="/assets/images/impact-stories.png"
+      />
 
       {/* Stats Section with API Data */}
       <ImpactStatsSection />
 
-      {/* Featured Project */}
-      <section className="w-full py-20 dark:bg-background-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col lg:flex-row">
-            <div className="lg:w-1/2 relative min-h-[300px] lg:min-h-full">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    'url("/assets/images/women-empowerment.png")',
-                }}
-              />
-              <div className="absolute inset-0 bg-primary/80 mix-blend-multiply opacity-60" />
-            </div>
-            <div className="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center">
-              <h3 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-6 leading-tight">
-                GROW Program
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-10">
-                Our premier accelerator tailored for women-led startups and professionals
-                looking to break the glass ceiling. We combine rigorous training, mentorship,
-                and access to capital to accelerate professional journeys.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-sm font-bold hover:bg-white hover:text-primary border-2 border-primary transition-colors">
-                  Join GROW
-                </button>
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-transparent border-2 border-gray-200 dark:border-gray-600 text-primary dark:text-white text-sm font-bold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                  See Success Stories
-                </button>
-              </div>
-            </div>
-          </div>
+      {/* Beyond the Numbers */}
+      <section className="w-full py-20 bg-white dark:bg-background-dark">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-800 dark:text-gray-200 text-xl md:text-2xl font-semibold leading-relaxed mb-6">
+            These numbers tell us about reach. They do not tell the whole story.
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+            Across our work, we also look at whether people can apply what they have learned, make more informed choices, strengthen their livelihoods, participate more safely, access new opportunities, exercise leadership and contribute to decisions that affect them.
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+            We are interested in changes that can continue beyond a single training or programme: greater agency, stronger voice, resilience, economic opportunity and sustained improvements in people&apos;s lives and communities.
+          </p>
         </div>
       </section>
 

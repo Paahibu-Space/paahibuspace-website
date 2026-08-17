@@ -10,7 +10,6 @@ export default function Navigation() {
   const [theme, setTheme] = useState("light");
   const [openPrograms, setOpenPrograms] = useState([]);
   const [programsMenuOpen, setProgramsMenuOpen] = useState(false);
-  const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
   
   const isActive = (path) => pathname === path;
 
@@ -48,7 +47,6 @@ export default function Navigation() {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         setProgramsMenuOpen(false);
-        setAboutMenuOpen(false);
       }
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -78,6 +76,15 @@ export default function Navigation() {
       >
         Home
       </Link>
+      <Link
+        href="/about"
+        className={cn(
+          "text-sm font-medium transition-colors hover:text-secondary",
+          isActive("/about") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
+        )}
+      >
+        About
+      </Link>
       {/* Programs Mega Menu */}
       <div className="group relative">
         <button
@@ -89,7 +96,7 @@ export default function Navigation() {
           "flex items-center gap-1 text-sm font-medium transition-colors py-6 hover:text-secondary",
            isActive("/programs") || isActive("/techsistars-program") || isActive("/grow-program") || isActive("/widei-program") || isActive("/widib-program") || isActive("/community-ambassadors-program") || isActive("/digital-walansi-program") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
         )}>
-          Programs
+          What We Do
           <span className="material-symbols-outlined text-lg">expand_more</span>
         </button>
         <div className={cn(
@@ -161,7 +168,7 @@ export default function Navigation() {
                   </div> */}
                   <div>
                     <div className="text-sm font-bold text-neutral-dark dark:text-white group-hover/item:text-primary dark:group-hover/item:text-white transition-colors">
-                      GROW Incubator
+                      GROW Network
                     </div>
                     <div className="text-xs text-neutral-gray dark:text-gray-400 mt-1">
                       For Aspiring Founders
@@ -244,50 +251,14 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-      {/* About Mega Menu */}
-      <div className="group relative">
-        <button
-          type="button"
-          aria-expanded={aboutMenuOpen}
-          aria-haspopup="true"
-          onClick={() => setAboutMenuOpen((prev) => !prev)}
-          className={cn(
-          "flex items-center gap-1 text-sm font-medium transition-colors py-6 hover:text-secondary",
-           isActive("/about") || isActive("/mission") || isActive("/team") || isActive("/philosophy") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
+      <Link
+        href="/our-work"
+         className={cn(
+          "text-sm font-medium transition-colors hover:text-secondary",
+          isActive("/our-work") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
         )}>
-          About
-          <span className="material-symbols-outlined text-lg">expand_more</span>
-        </button>
-        <div className={cn(
-          "mega-menu absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 focus-within:opacity-100 focus-within:visible focus-within:translate-y-0 transition-all duration-200 ease-out bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 p-2 z-50",
-          aboutMenuOpen && "opacity-100 visible translate-y-0"
-        )}>
-          <Link
-            href="/about"
-            className="block px-4 py-2 text-sm text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary rounded-lg"
-          >
-            Overview
-          </Link>
-          <Link
-            href="/mission"
-            className="block px-4 py-2 text-sm text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary rounded-lg"
-          >
-            Our Mission
-          </Link>
-          <Link
-            href="/team"
-            className="block px-4 py-2 text-sm text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary rounded-lg"
-          >
-            Leadership Team
-          </Link>
-          <Link
-            href="/philosophy"
-            className="block px-4 py-2 text-sm text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary rounded-lg"
-          >
-            Philosophy
-          </Link>
-        </div>
-      </div>
+        Our Work
+      </Link>
       <Link
         href="/impact"
          className={cn(
@@ -297,22 +268,22 @@ export default function Navigation() {
         Impact
       </Link>
       <Link
-        href="/stories"
+        href="/research-insights"
          className={cn(
           "text-sm font-medium transition-colors hover:text-secondary",
-          isActive("/stories") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
+          isActive("/research-insights") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
         )}>
-        Stories
+        Research & Insights
       </Link>
       <Link
-        href="/blog"
+        href="/community"
          className={cn(
           "text-sm font-medium transition-colors hover:text-secondary",
-          isActive("/blog") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
+          isActive("/community") ? "text-secondary font-bold" : "text-neutral-dark dark:text-white"
         )}>
-        Blog
+        Community
       </Link>
-      
+
       <div className="ml-4 flex items-center gap-4">
         <button
           onClick={toggleTheme}

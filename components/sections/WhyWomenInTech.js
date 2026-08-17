@@ -6,10 +6,13 @@ export default function WhyWomenInTech() {
       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-100 dark:bg-orange-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/2 translate-y-1/2"></div>
       <div className="container mx-auto px-6 relative z-10">
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white">
-            Why Female Perspectives in Tech Matter
+        <div className="mb-12 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-3">
+            Why Female Perspectives in Technology Matter
           </h2>
+          <p className="text-lg md:text-xl font-semibold text-secondary">
+            Technology Should Reflect the People Expected to Live With It
+          </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           <div className="lg:col-span-5 flex flex-col h-full">
@@ -57,61 +60,29 @@ export default function WhyWomenInTech() {
             </div>
           </div>
           <div className="lg:col-span-7 flex flex-col justify-center gap-6">
-            <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
-              We believe that diversity isn&apos;t just a metric to be met—it&apos;s the
-              engine of progress. When women lead in technology, the entire
-              ecosystem evolves.
-            </p>
-            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
-              <div className="flex-shrink-0 bg-orange-50 dark:bg-orange-500/20 w-16 h-16 rounded-full flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined text-4xl">
-                  lightbulb
-                </span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
-                  Increased Innovation
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Diverse teams bring wider perspectives that solve complex
-                  problems faster. Women introduce unique insights that drive
-                  breakthrough solutions in software and hardware development.
-                </p>
-              </div>
+            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+              <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
+                More Than Users
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Women and girls are not simply users of technology. They are students, entrepreneurs, workers, creators, community leaders and problem-solvers whose experiences should influence how technology is designed, governed and used.
+              </p>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
-              <div className="flex-shrink-0 bg-orange-50 dark:bg-orange-500/20 w-16 h-16 rounded-full flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined text-4xl">
-                  diversity_3
-                </span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
-                  Effective Leadership
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Female leaders are proven to foster more inclusive cultures
-                  and higher team engagement. Empathy-driven leadership results
-                  in sustainable organizational growth and retention.
-                </p>
-              </div>
+            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+              <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
+                Barriers That Remain
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Yet unequal access, online harms, limited representation and exclusion from technology decision-making continue to shape who benefits from digital transformation.
+              </p>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
-              <div className="flex-shrink-0 bg-orange-50 dark:bg-orange-500/20 w-16 h-16 rounded-full flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined text-4xl">
-                  rocket_launch
-                </span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
-                  Entrepreneurship Growth
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Women-led startups generate more revenue per dollar invested.
-                  Supporting female entrepreneurs unlocks a massive, untapped
-                  market potential across the African continent.
-                </p>
-              </div>
+            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+              <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
+                Our Approach
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Paahibu Space works to increase the participation and agency of girls and women across the technology ecosystem—from strengthening digital and AI capabilities and creating safer pathways for online participation to supporting women entrepreneurs to use technology and involving girls and women in developing locally relevant solutions. We believe better technology is built when the people affected by it have meaningful opportunities to shape it.
+              </p>
             </div>
           </div>
         </div>

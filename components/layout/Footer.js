@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { XIcon, LinkedInIcon, FacebookIcon, InstagramIcon } from "@/components/ui/Icons";
+import { LinkedInIcon, FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from "@/components/ui/Icons";
 
 export default function Footer() {
   return (
@@ -20,40 +20,49 @@ export default function Footer() {
             </p>
             <div className="flex gap-4 pt-2">
               <a
-                aria-label="X (Twitter)"
-                className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
-                href="https://twitter.com/paahibuspace"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <XIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-              <a
                 aria-label="LinkedIn"
                 className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
-                href="https://www.linkedin.com/company/questtechnovation/"
+                href="https://www.linkedin.com/company/paahibuspace/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkedInIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a
+                aria-label="Instagram"
+                className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
+                href="https://www.instagram.com/paahibuspace?igsh=bmx1eTh6ZmRuZm5h"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
                 aria-label="Facebook"
                 className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
-                href="https://web.facebook.com/paahibuspace"
+                href="https://www.facebook.com/share/19F93yo1ko/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FacebookIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a
-                aria-label="Instagram"
+                aria-label="TikTok"
                 className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
-                href="https://www.instagram.com/paahibuspace?igsh=MWZpbWkyaDliajdrNw=="
+                href="https://www.tiktok.com/@paahibu.space?_r=1&_t=ZS-98uBlsOHjK3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <InstagramIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <TikTokIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                aria-label="WhatsApp"
+                className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
+                href="https://whatsapp.com/channel/0029VaJvEH6HwXbKRSOk783K"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
             </div>
           </div>
@@ -83,7 +92,18 @@ export default function Footer() {
                   <span className="material-symbols-outlined text-[16px]">
                     chevron_right
                   </span>
-                  Our Programs
+                  What We Do
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-sm leading-6 text-gray-300 hover:text-secondary transition-colors flex items-center gap-2"
+                  href="/our-work"
+                >
+                  <span className="material-symbols-outlined text-[16px]">
+                    chevron_right
+                  </span>
+                  Our Work
                 </Link>
               </li>
               <li>
@@ -100,12 +120,23 @@ export default function Footer() {
               <li>
                 <Link
                   className="text-sm leading-6 text-gray-300 hover:text-secondary transition-colors flex items-center gap-2"
-                  href="/blog"
+                  href="/research-insights"
                 >
                   <span className="material-symbols-outlined text-[16px]">
                     chevron_right
                   </span>
-                  Blog
+                  Research & Insights
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-sm leading-6 text-gray-300 hover:text-secondary transition-colors flex items-center gap-2"
+                  href="/community"
+                >
+                  <span className="material-symbols-outlined text-[16px]">
+                    chevron_right
+                  </span>
+                  Community
                 </Link>
               </li>
               <li>
@@ -117,17 +148,6 @@ export default function Footer() {
                     chevron_right
                   </span>
                   Get Involved
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-sm leading-6 text-gray-300 hover:text-secondary transition-colors flex items-center gap-2"
-                  href="/donate"
-                >
-                  <span className="material-symbols-outlined text-[16px]">
-                    chevron_right
-                  </span>
-                  Donate
                 </Link>
               </li>
             </ul>
@@ -212,21 +232,45 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link
               className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
+              href="/partners"
+            >
+              Partners
+            </Link>
+            <Link
+              className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
+              href="/team"
+            >
+              Leadership & Team
+            </Link>
+            <Link
+              className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
+              href="/careers"
+            >
+              Careers
+            </Link>
+            <Link
+              className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
+              href="/contact"
+            >
+              Contact
+            </Link>
+            <Link
+              className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
+              href="/safeguarding"
+            >
+              Safeguarding
+            </Link>
+            <Link
+              className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
               href="/privacy"
             >
-              Privacy Policy
+              Privacy
             </Link>
             <Link
               className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
-              href="/terms"
+              href="/resources"
             >
-              Terms of Service
-            </Link>
-            <Link
-              className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
-              href="/cookies"
-            >
-              Cookie Policy
+              Resources
             </Link>
           </div>
         </div>

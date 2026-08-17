@@ -8,8 +8,8 @@ import { fetchAPI } from "@/lib/api";
 import GrowStoriesSlider from "@/components/sections/GrowStoriesSlider";
 
 export const metadata = {
-  title: "GROW Incubator Program",
-  description: "The GROW Incubator equips aspiring African women founders with the mentorship, funding pathways, and business skills to launch and scale their ventures.",
+  title: "GROW Network Program",
+  description: "The GROW Network equips aspiring African women founders with the mentorship, funding pathways, and business skills to launch and scale their ventures.",
 };
 
 export default async function GrowProgramPage() {

@@ -115,6 +115,13 @@ export default function MobileMenu({ open, setOpen }) {
                           >
                             Home
                           </Link>
+                          <Link
+                            href="/about"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                            onClick={closeMenu}
+                          >
+                            About
+                          </Link>
 
                           {/* Programs Submenu */}
                           <div>
@@ -123,7 +130,7 @@ export default function MobileMenu({ open, setOpen }) {
                               aria-expanded={activeSubmenu === "programs"}
                               className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                             >
-                              Programs
+                              What We Do
                               <span className={`material-symbols-outlined text-lg transition-transform ${activeSubmenu === "programs" ? "rotate-180" : ""}`}>expand_more</span>
                             </button>
                             {activeSubmenu === "programs" && (
@@ -150,34 +157,13 @@ export default function MobileMenu({ open, setOpen }) {
                             )}
                           </div>
 
-                          {/* About Submenu */}
-                          <div>
-                            <button
-                              onClick={() => toggleSubmenu("about")}
-                              aria-expanded={activeSubmenu === "about"}
-                              className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
-                            >
-                              About
-                              <span className={`material-symbols-outlined text-lg transition-transform ${activeSubmenu === "about" ? "rotate-180" : ""}`}>expand_more</span>
-                            </button>
-                            {activeSubmenu === "about" && (
-                              <div className="mt-2 space-y-2 pl-4">
-                                <Link href="/about" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                                  Overview
-                                </Link>
-                                <Link href="/mission" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                                  Our Mission
-                                </Link>
-                                <Link href="/team" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                                  Leadership Team
-                                </Link>
-                                <Link href="/philosophy" onClick={closeMenu} className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                                  Philosophy
-                                </Link>
-                              </div>
-                            )}
-                          </div>
-
+                          <Link
+                            href="/our-work"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                            onClick={closeMenu}
+                          >
+                            Our Work
+                          </Link>
                           <Link
                             href="/impact"
                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -186,27 +172,44 @@ export default function MobileMenu({ open, setOpen }) {
                             Impact
                           </Link>
                           <Link
-                            href="/stories"
+                            href="/research-insights"
                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                             onClick={closeMenu}
                           >
-                            Stories
+                            Research & Insights
                           </Link>
                           <Link
-                            href="/blog"
+                            href="/community"
                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                             onClick={closeMenu}
                           >
-                            Blog
+                            Community
                           </Link>
                         </div>
-                        <div className="py-6">
+                        <div className="space-y-2 py-6">
                           <Link
                             href="/involve"
                             className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                             onClick={closeMenu}
                           >
-                            Join Us
+                            Get Involved
+                          </Link>
+                        </div>
+                        <div className="space-y-1 py-6">
+                          <p className="-mx-3 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                            More
+                          </p>
+                          <Link href="/partners" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Partners
+                          </Link>
+                          <Link href="/team" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Leadership & Team
+                          </Link>
+                          <Link href="/careers" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Careers
+                          </Link>
+                          <Link href="/contact" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Contact
                           </Link>
                         </div>
                       </div>

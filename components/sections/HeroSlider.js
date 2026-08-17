@@ -1,69 +1,34 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 export default function HeroSlider() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const totalSlides = 2;
-
-  useEffect(() => {
-    if (isVideoOpen) return; // Pause auto-slide when video is open
-
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 6000); // Auto slide every 6 seconds
-
-    return () => clearInterval(timer);
-  }, [isVideoOpen]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
   return (
     <div className="relative overflow-hidden w-full bg-white dark:bg-background-dark transition-colors duration-300">
-      <div 
-        className="flex transition-transform duration-700 ease-in-out h-full"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
-        {/* Slide 1 - From HeroSectionOne.js */}
-        <section className="w-full shrink-0 flex items-center pt-12 pb-20 lg:pt-24 lg:pb-32 relative" aria-hidden={currentSlide !== 0}>
+      <div className="flex h-full">
+        {/* Slide 1 */}
+        <section className="w-full shrink-0 flex items-center pt-12 pb-20 lg:pt-24 lg:pb-32 relative">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8 items-center">
               <div className="flex flex-col gap-6 max-w-2xl animate-fade-up">
-   
-                {currentSlide === 0 ? (
-                  <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
-                    Hey sis, you belong in tech too.
-                  </h1>
-                ) : (
-                  <h2 className="text-5xl font-black leading-[1.1] tracking-tight text-neutral-dark dark:text-white sm:text-6xl lg:text-7xl">
-                    Hey sis, you belong in tech too.
-                  </h2>
-                )}
+                <h1 className="text-2xl font-black leading-[1.15] tracking-tight text-neutral-dark dark:text-white sm:text-4xl lg:text-3xl">
+                  Increasing Agency. Amplifying Voice. Building Resilience.
+                </h1>
                 <p className="text-lg leading-relaxed text-neutral-gray dark:text-gray-300 max-w-lg">
-                  Increasing the agency of African women and youth through technology and entrepreneurship. We are bridging the gender gap by providing safe spaces, education, and mentorship.
+                  Paahibu Space is a youth-led organisation working with women, girls, and hard-to-reach and at-risk youth to increase their agency, strengthen their voice and resilience, and contribute to sustained improvements in their lives and communities.
+                </p>
+                <p className="text-lg leading-relaxed text-neutral-gray dark:text-gray-300 max-w-lg">
+                  We work across technology, education, entrepreneurship, policy advocacy and community development to expand access to opportunities, develop locally relevant solutions and strengthen participation in the decisions that shape people&apos;s lives.
                 </p>
                 <div className="flex flex-wrap items-center gap-4 pt-4">
-                  <Link href="/programs"
-                    tabIndex={currentSlide !== 0 ? -1 : undefined}
+                  <Link href="/our-work"
                     className="rounded-full bg-primary px-8 py-3.5 text-base font-bold text-white hover:bg-blue-900 hover:-translate-y-0.5 transition-all">
-                    See Our Programs
+                    Explore Our Work
                   </Link>
-                  <button
-                    onClick={() => setIsVideoOpen(true)}
-                    tabIndex={currentSlide !== 0 ? -1 : undefined}
+                  <Link href="/partners"
                     className="flex items-center gap-2 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-3.5 text-base font-semibold text-neutral-dark dark:text-white hover:border-primary/30 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
-                    <span className="material-symbols-outlined text-accent filled">play_circle</span>
-                    Watch Our Story
-                  </button>
+                    Partner With Us
+                  </Link>
                 </div>
               </div>
               <div className="relative lg:h-full w-full flex items-center justify-center">
@@ -84,28 +49,18 @@ export default function HeroSlider() {
           </div>
         </section>
 
-
-
-        {/* Slide 2 - From HeroSectionTwo.js */}
-        <section className="w-full shrink-0 flex items-center py-8 lg:py-16 relative" aria-hidden={currentSlide !== 1}>
+        {/* Slide 2 - commented out, kept for reference
+        <section className="w-full shrink-0 flex items-center py-8 lg:py-16 relative">
              <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 lg:gap-8 items-center">
               <div className="w-full lg:w-3/5 flex flex-col gap-8 lg:pr-12 z-10">
                 <div className="flex flex-col gap-4">
-
-                  {currentSlide === 1 ? (
-                    <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
-                      Hey Sis,<br />
-                      You Belong in Tech Too
-                    </h1>
-                  ) : (
-                    <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
-                      Hey Sis,<br />
-                      You Belong in Tech Too
-                    </h2>
-                  )}
+                  <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] text-neutral-dark dark:text-white tracking-tight">
+                    Hey Sis,<br />
+                    You Belong in Tech Too
+                  </h1>
                   <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-normal leading-relaxed max-w-xl">
                     Increasing the agency of the next generation of African women with the skills, mentorship, and community needed to thrive in the global
-                    technology ecosystem. We&apos;re building the future, one line of code at a time.
+                    technology ecosystem. We're building the future, one line of code at a time.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 py-4 border-y border-gray-100 dark:border-gray-800">
@@ -124,13 +79,11 @@ export default function HeroSlider() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Link href="/programs"
-                    tabIndex={currentSlide !== 1 ? -1 : undefined}
                     className="flex items-center justify-center h-12 px-8 rounded-lg bg-primary hover:bg-blue-900 text-white font-bold transition-all group">
                     <span>Join the New Cohort</span>
                     <span className="material-symbols-outlined ml-2 text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </Link>
                   <Link href="/stories"
-                    tabIndex={currentSlide !== 1 ? -1 : undefined}
                     className="flex items-center justify-center h-12 px-8 rounded-lg border-2 border-primary dark:border-blue-400 hover:bg-primary hover:text-white text-primary dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-900/30 font-bold transition-all bg-transparent">
                     <span>Impact Stories</span>
                   </Link>
@@ -157,70 +110,8 @@ export default function HeroSlider() {
               </div>
             </div>
         </section>
+        */}
       </div>
-
-       {/* Slider Controls */}
-       <button
-        onClick={prevSlide}
-        aria-label="Previous slide"
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all z-40 hidden md:flex"
-      >
-        <span className="material-symbols-outlined" aria-hidden="true">chevron_left</span>
-      </button>
-
-      <button
-        onClick={nextSlide}
-        aria-label="Next slide"
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all z-40 hidden md:flex"
-      >
-        <span className="material-symbols-outlined" aria-hidden="true">chevron_right</span>
-      </button>
-
-      {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1 z-40">
-        {[...Array(totalSlides)].map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrentSlide(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            aria-current={currentSlide === i ? "true" : undefined}
-            className="w-9 h-9 flex items-center justify-center"
-          >
-            <span
-              className={cn(
-                "block h-2.5 rounded-full transition-all",
-                currentSlide === i ? "bg-primary w-8" : "bg-gray-300 dark:bg-gray-600 hover:bg-primary/50 w-2.5"
-              )}
-            />
-          </button>
-        ))}
-      </div>
-
-
-      
-      {/* Video Modal - Placed outside the slider transform container */}
-      {isVideoOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-          <div className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden aspect-video">
-            <button
-              onClick={() => setIsVideoOpen(false)}
-              aria-label="Close video"
-              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10 bg-black/50 rounded-full p-2 transition-colors"
-            >
-              <span className="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
-            </button>
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src="https://www.youtube.com/embed/TXlUCuEc6Qw?autoplay=1" 
-              title="Paahibu Space Story" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

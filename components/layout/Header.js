@@ -42,6 +42,22 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 dark:border-gray-800 bg-white dark:bg-background-dark/95 backdrop-blur transition-colors duration-300">
+      <div className="hidden lg:block border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-black/20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 flex justify-end gap-6 py-2">
+          <Link href="/partners" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Partners
+          </Link>
+          <Link href="/team" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Leadership & Team
+          </Link>
+          <Link href="/careers" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Careers
+          </Link>
+          <Link href="/contact" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Contact
+          </Link>
+        </div>
+      </div>
       <nav className="mx-auto h-20 flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-1.5">
