@@ -2,6 +2,7 @@ import { Teko, Ubuntu } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
+import { ThemeProvider } from "@/lib/ThemeContext";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -69,10 +70,12 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className="font-sans antialiased bg-background-light text-neutral-dark dark:bg-background-dark dark:text-white min-h-screen flex flex-col transition-colors duration-300">
-        <Header />
-        {children}
-        <Footer />
-        <ScrollToTop />
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+          <ScrollToTop />
+        </ThemeProvider>
       </body>
     </html>
   );

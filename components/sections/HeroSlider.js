@@ -11,7 +11,7 @@ export default function HeroSlider() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8 items-center">
               <div className="flex flex-col gap-6 max-w-2xl animate-fade-up">
-                <h1 className="text-2xl font-black leading-[1.15] tracking-tight text-neutral-dark dark:text-white sm:text-4xl lg:text-5xl">
+                <h1 className="text-3xl font-black leading-[1.15] tracking-tight text-neutral-dark dark:text-white sm:text-4xl lg:text-5xl">
                   Increasing Agency. Amplifying Voice. Building Resilience.
                 </h1>
                 <p className="text-lg leading-relaxed text-neutral-gray dark:text-gray-300 max-w-lg">

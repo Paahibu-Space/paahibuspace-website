@@ -4,30 +4,17 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/lib/ThemeContext";
 
 export default function Navigation() {
   const pathname = usePathname();
-  const [theme, setTheme] = useState("light");
+  const { theme, toggleTheme } = useTheme();
   const [openPrograms, setOpenPrograms] = useState([]);
   const [programsMenuOpen, setProgramsMenuOpen] = useState(false);
-  
+
   const isActive = (path) => pathname === path;
 
   useEffect(() => {
-    // Check local storage or system preference
-    const isDark =
-      localStorage.getItem("theme") === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    if (isDark) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      document.documentElement.classList.remove("dark");
-    }
-
     async function getPrograms() {
       try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/v1/programs`);
@@ -52,18 +39,6 @@ export default function Navigation() {
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  };
 
   return (
     <div className="flex items-center gap-6 lg:gap-8">

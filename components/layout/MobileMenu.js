@@ -2,42 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, Fragment } from "react";
+import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/lib/ThemeContext";
 
 export default function MobileMenu({ open, setOpen }) {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    // Initialize theme
-    const isDark =
-      localStorage.getItem("theme") === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    if (isDark) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  };
+  const { theme, toggleTheme } = useTheme();
 
   const toggleSubmenu = (menu) => {
     setActiveSubmenu(activeSubmenu === menu ? null : menu);
@@ -75,13 +47,17 @@ export default function MobileMenu({ open, setOpen }) {
                 <Dialog.Panel className="pointer-events-auto w-screen sm:max-w-sm">
                   <div className="flex h-full flex-col overflow-y-auto bg-white dark:bg-background-dark px-6 py-6 border-l border-gray-100 dark:border-gray-800 shadow-2xl">
                     <div className="flex items-center justify-between">
-                      <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={closeMenu}>
-                        <div className="relative h-8 w-auto aspect-[3/1]">
-                          <Image src="/logo.png" alt="Paahibu Space Logo" fill className="object-contain" />
-                        </div>
-                        <Dialog.Title as="span" className="font-bold text-lg text-primary dark:text-white">
+                      <Link href="/" className="-m-1.5 p-1.5 flex items-center" onClick={closeMenu}>
+                        <Dialog.Title as="span" className="sr-only">
                           Paahibu Space
                         </Dialog.Title>
+                        <Image
+                          src={theme === "dark" ? "/logo-white.png" : "/logo-dark.png"}
+                          alt="Paahibu Space Logo"
+                          width={theme === "dark" ? 628 : 815}
+                          height={theme === "dark" ? 250 : 306}
+                          className="h-8 w-auto object-contain"
+                        />
                       </Link>
                       <div className="flex items-center gap-4">
                         <button

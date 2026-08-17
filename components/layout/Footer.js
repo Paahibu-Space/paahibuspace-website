@@ -10,9 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1: Brand & About */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Paahibu Space Logo" width={48} height={48} className="h-12 w-auto object-contain bg-white rounded-full p-1" />
-              <span className="text-xl font-bold tracking-wide">Paahibu Space</span>
+            <div className="flex items-center">
+              <Image src="/logo-white.png" alt="Paahibu Space Logo" width={628} height={250} className="h-17 w-auto object-contain" />
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Bridging the gender gap in technology through education, mentorship,
@@ -266,12 +265,12 @@ export default function Footer() {
             >
               Privacy
             </Link>
-            <Link
+            {/* <Link
               className="text-xs leading-5 text-gray-400 hover:text-white transition-colors"
               href="/resources"
             >
               Resources
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
