@@ -1,4 +1,3 @@
-import PageHero from "@/components/sections/PageHero";
 import DirectorMessage from "@/components/sections/DirectorMessage";
 import LeadershipTeam from "@/components/sections/LeadershipTeam";
 import AdvisoryBoard from "@/components/sections/AdvisoryBoard";
@@ -54,16 +53,6 @@ export default async function TeamPage() {
 
   return (
     <>
-      <PageHero
-        title={
-          <h1 className="text-4xl md:text-6xl mb-6 font-display">
-            The People Behind Paahibu Space
-          </h1>
-        }
-        description="Paahibu Space brings together people working across technology, education, entrepreneurship, policy and advocacy, research, communications, operations and community development. Our team reflects the multidisciplinary nature of our work and our belief that lasting change requires people who understand both the communities we work with and the systems we seek to influence."
-        backgroundImage="/assets/images/bg/team-with-grow.webp"
-        className="bg-secondary"
-      />
       <DirectorMessage />
       {/* Sections are rendered in the order configured for each category in the admin CMS */}
       {sections.map(({ slug, title, Component, members }) => (

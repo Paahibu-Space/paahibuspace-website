@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LinkedInIcon, FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from "@/components/ui/Icons";
+import { LinkedInIcon, FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon, YouTubeIcon } from "@/components/ui/Icons";
 
 export default function Footer() {
   return (
@@ -53,6 +53,15 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <TikTokIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                aria-label="YouTube"
+                className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-300 group"
+                href="https://youtube.com/@paahibuspace?si=V__5RwZUwu7e0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <YouTubeIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a
                 aria-label="WhatsApp"
@@ -174,9 +183,9 @@ export default function Footer() {
                 </span>
                 <a
                   className="text-sm leading-6 text-gray-300 hover:text-white"
-                  href="tel:+233247254326"
+                  href="tel:+233556410924"
                 >
-                  +233 24 725 4326
+                  +233 55 641 0924
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -210,7 +219,7 @@ export default function Footer() {
               <div className="space-y-2 mt-3">
                 <div className="flex justify-between text-sm text-gray-300">
                   <span>Mon - Fri</span>
-                  <span className="text-white font-medium">9am - 5pm</span>
+                  <span className="text-white font-medium">10am - 4pm</span>
                 </div>
                 <div className="flex justify-between text-sm text-gray-300">
                   <span>Weekends</span>
