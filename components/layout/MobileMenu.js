@@ -196,6 +196,9 @@ export default function MobileMenu({ open, setOpen }) {
                           <Link href="/contact" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
                             Contact
                           </Link>
+                          <Link href="/donate" onClick={closeMenu} className="-mx-3 block rounded-lg px-3 py-2 text-sm font-medium text-neutral-dark dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
+                            Donate
+                          </Link>
                         </div>
                       </div>
                     </div>

@@ -27,6 +27,9 @@ export default function Header() {
           <Link href="/contact" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
             Contact
           </Link>
+          <Link href="/donate" className="text-xs font-medium text-neutral-gray dark:text-gray-400 hover:text-secondary transition-colors">
+            Donate
+          </Link>
         </div>
       </div>
       <nav className="mx-auto h-20 flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
