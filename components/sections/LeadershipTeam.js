@@ -22,29 +22,29 @@ export default function LeadershipTeam({ members = [] }) {
           {leaders.length > 0 ? leaders.map((leader, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-200 dark:bg-gray-700"
+              className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-200 dark:bg-gray-700"
             >
               <Image
                 alt={leader.name}
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover"
                 src={leader.image_url}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div
-                className="absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 pb-4 sm:pb-6"
+                className="absolute inset-0 flex flex-col justify-end p-6 pb-4 sm:pb-6"
                 style={{
                   background:
                     "linear-gradient(to top, rgba(39, 41, 116, 0.95) 0%, rgba(39, 41, 116, 0.4) 50%, transparent 100%)",
                 }}
               >
-                <h3 className="text-white text-xl translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-white text-xl">
                   {leader.name}
                 </h3>
-                <p className="text-secondary dark:text-secondary font-medium text-sm translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                <p className="text-secondary dark:text-secondary font-medium text-sm">
                   {leader.role}
                 </p>
-                <div className="flex gap-3 mt-4 translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300 delay-100">
+                <div className="flex gap-3 mt-4">
                   <a
                     className="text-white hover:text-secondary dark:hover:text-secondary"
                     href={leader.linkedin_url || "#"}

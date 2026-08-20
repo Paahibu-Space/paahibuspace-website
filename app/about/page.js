@@ -38,7 +38,6 @@ export default async function AboutPage() {
       <Mission />
       <WhyWomenInTech />
       <Stats />
-      <LeadershipTeam members={leadership} />
       <GrowCommunity />
     </>
   );

@@ -14,17 +14,17 @@ export default function TeamCategorySection({ title, members = [] }) {
           {members.map((member, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-200 dark:bg-gray-700"
+              className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-200 dark:bg-gray-700"
             >
               <Image
                 alt={member.name}
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover"
                 src={member.image_url}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div
-                className="absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+                className="absolute inset-0 flex flex-col justify-end p-6"
                 style={{
                   background:
                     "linear-gradient(to top, rgba(39, 41, 116, 0.95) 0%, rgba(39, 41, 116, 0.4) 50%, transparent 100%)",

@@ -4,20 +4,20 @@ export default function DirectorMessage() {
   return (
     <section className="bg-primary">
       <div className="flex flex-col lg:flex-row-reverse lg:items-stretch">
-        <div className="relative w-full aspect-[4/5] lg:w-2/5 lg:aspect-auto">
+        <div className="relative w-full aspect-video lg:w-5/12 lg:aspect-auto">
           <Image
             alt="Hiqmat Sungdeme Saani, Founder and Executive Director of Paahibu Space"
             src="/assets/images/team/director_quote.webp"
             fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 40vw"
+            className="object-cover object-[68%_center]"
+            sizes="(max-width: 1024px) 100vw, 42vw"
           />
         </div>
 
-        <div className="w-full lg:w-3/5 flex items-center py-12 md:py-16 lg:py-20">
+        <div className="w-full lg:w-7/12 flex items-center py-12 md:py-16 lg:py-20">
           <div className="w-full px-6 md:px-12 lg:px-16">
             <blockquote>
-              <p className="text-white text-2xl md:text-4xl font-display font-normal leading-snug mb-6">
+              <p className="text-white text-5xl md:text-5xl font-display font-normal leading-snug mb-6">
                 Seeing is Believing and Believing is Becoming
               </p>
               <div className="space-y-4 text-blue-100 text-lg leading-relaxed">
